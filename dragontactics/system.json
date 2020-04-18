@@ -5,7 +5,9 @@
   "version": "0.0.1",
   "templateVersion": 2,
   "author": "Joseph Meehan",
-  "minimumCoreVersion": "0.5.5",
+  "minimumCoreVersion": "0.5.2",
+  "compatibleCoreVersion": "0.5.5",
+  "templateVersion": 1,
   "scripts": [
     "scripts/dragontactics-script-1.js",
     "scripts/dragontactics-script-2.js"
@@ -86,8 +88,8 @@
   "initiative": "1d54",
   "gridDistance": 5,
   "gridUnits": "ft",
-  "primaryTokenAttribute": "resources.health",
-  "secondaryTokenAttribute": "resources.surges",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "surges",
   "url": "https://kanka.io/en-US/campaign/6529",
   "manifest": "https://github.com/JPMeehan/DragonTactics-Foundry/raw/master/dragontactics/system.json",
   "download": "https://github.com/JPMeehan/DragonTactics-Foundry/raw/master/dragontactics.zip"
