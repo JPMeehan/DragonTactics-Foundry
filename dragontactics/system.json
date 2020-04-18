@@ -4,9 +4,8 @@
   "description": "A 4th Edition D&D Variant",
   "version": "0.1",
   "minimumCoreVersion": "0.5.5",
-  "templateVersion": 2,
-  "author": "Joseph Meehan",
   "templateVersion": 1,
+  "author": "Joseph Meehan",
   "scripts": [
     "scripts/dragontactics-script-1.js",
     "scripts/dragontactics-script-2.js"
