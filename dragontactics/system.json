@@ -2,10 +2,10 @@
   "name": "Dragon Tactics",
   "title": "A 4e Variant",
   "description": "Many details here.",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "templateVersion": 2,
   "author": "Joseph Meehan",
-  "minimumCoreVersion": 0.5.5,
+  "minimumCoreVersion": "0.5.5",
   "scripts": [
     "scripts/dragontactics-script-1.js",
     "scripts/dragontactics-script-2.js"
@@ -89,6 +89,6 @@
   "primaryTokenAttribute": "resources.health",
   "secondaryTokenAttribute": "resources.surges",
   "url": "https://kanka.io/en-US/campaign/6529",
-  "manifest": "https://github.com/JPMeehan/DragonTactics-Foundry/blob/master/dragontactics/system.json",
-  "download": "https://github.com/JPMeehan/DragonTactics-Foundry/blob/master/dragontactics.zip"
+  "manifest": "https://github.com/JPMeehan/DragonTactics-Foundry/raw/master/dragontactics/system.json",
+  "download": "https://github.com/JPMeehan/DragonTactics-Foundry/raw/master/dragontactics.zip"
 }
