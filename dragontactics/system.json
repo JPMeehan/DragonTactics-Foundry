@@ -1,7 +1,7 @@
 {
-  "name": "Dragon Tactics",
-  "title": "A 4e Variant",
-  "description": "Many details here.",
+  "name": "dragontactics",
+  "title": "Dragon Tactics",
+  "description": "A 4th Edition D&D Variant",
   "version": "0.0.1",
   "templateVersion": 2,
   "author": "Joseph Meehan",
