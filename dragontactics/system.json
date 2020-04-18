@@ -6,7 +6,6 @@
   "templateVersion": 2,
   "author": "Joseph Meehan",
   "minimumCoreVersion": "0.5.2",
-  "compatibleCoreVersion": "0.5.5",
   "templateVersion": 1,
   "scripts": [
     "scripts/dragontactics-script-1.js",
