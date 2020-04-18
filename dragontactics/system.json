@@ -35,7 +35,7 @@
       "module": "dragontactics",
       "path": "packs/equipment.db",
       "entity": "Item"
-    }
+    },
 	{
       "name": "classes",
       "label": "Classes",
@@ -43,7 +43,7 @@
       "module": "dragontactics",
       "path": "packs/classes.db",
       "entity": "Item"
-    }
+    },
 	{
       "name": "powers",
       "label": "Powers",
@@ -51,7 +51,7 @@
       "module": "dragontactics",
       "path": "packs/powers.db",
       "entity": "Item"
-    }
+    },
 	{
       "name": "rituals",
       "label": "Rituals",
@@ -59,7 +59,7 @@
       "module": "dragontactics",
       "path": "packs/rituals.db",
       "entity": "Item"
-    }
+    },
 	{
       "name": "feats",
       "label": "Feats",
@@ -67,7 +67,7 @@
       "module": "dragontactics",
       "path": "packs/feats.db",
       "entity": "Item"
-    }
+    },
 	{
       "name": "competencies",
       "label": "Competencies",
