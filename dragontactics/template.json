@@ -38,20 +38,50 @@
   }
 },
 "Item": {
-  "types": ["weapon", "spell"],
+  "types": ["class", "competency", "equipment", "feats", "power", "race","ritual"],
   "templates": {
-    "rarity": {
-      "rarity": "Common",
-      "price": 20
+    "basic": {
+      "name": "Name",
+      "description": "Flavor Text"
     }
   },
-  "weapon": {
-    "templates": ["rarity"],
-    "damage": 5
+  "class": {
+    "templates": ["basic"]
   },
-  "spell": {
-    "templates": ["rarity"],
-    "cost": 2
+  "competency": {
+    "templates": ["basic"]
+  },
+  "equipment": {
+    "templates": ["basic"]
+  },
+  "feat": {
+    "templates": ["basic"]
+  },
+  "power": {
+    "templates": ["basic"]
+  },
+  "race": {
+    "templates": ["basic"],
+    "ASI": {
+      "Primary": "Strength",
+      "SecondaryA": "Dexterity",
+      "SecondaryB": "Constitution"
+    },
+    "Size": "Medium (Height: 5’6”-6’2” Weight: 135-220 lbs.)",
+    "Speed": "30 ft.",
+    "Vision": "Nightblind",
+    "Languages": "Common, One Other",
+    "Skill": "+2 Athletics",
+    "Competencies": "Knowledge of Geography (Five Nations)",
+    "Features": {}
+  },
+  "ritual": {
+    "templates": ["basic"],
+    "Market Price": "25 gp",
+    "Category": "Divination",
+    "Component Cost": "5 gp",
+    "Casting Time": "10 minutes",
+    "Duration": "Instantaneous"
   }
 }
 }
