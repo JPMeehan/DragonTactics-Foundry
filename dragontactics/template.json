@@ -43,16 +43,45 @@
     "basic": {
       "name": "Name",
       "description": "Flavor Text"
+    },
+    "equipment": {
+      "quantity": 1,
+      "price": "5 gp",
+      "size": "2 slots",
+      "type": "Mundane"
     }
   },
   "class": {
-    "templates": ["basic"]
+    "templates": ["basic"],
+    "source": "Martial",
+    "role": "Defender",
+    "keyabilities": "Strength, Dexterity, Constitution",
+    "hp_base": 12,
+    "hp_level": 5,
+    "surges": 6,
+    "defense": {
+      "Fortitude": 0,
+      "Reflex": 0,
+      "Will": 0
+    },
+    "features": "",
+    "profs": {
+      "armor": "Cloth",
+      "weapon": "Simple Melee, Simple Ranged",
+      "implement": "Staff"
+    }
   },
   "competency": {
     "templates": ["basic"]
   },
-  "equipment": {
-    "templates": ["basic"]
+  "weapon": {
+    "templates": ["basic", "equipment"]
+  },
+  "armor": {
+    "templates": ["basic", "equipment"]
+  },
+  "implement": {
+    "templates": ["basic", "equipment"]
   },
   "feat": {
     "templates": ["basic"]
@@ -62,26 +91,26 @@
   },
   "race": {
     "templates": ["basic"],
-    "ASI": {
-      "Primary": "Strength",
-      "SecondaryA": "Dexterity",
-      "SecondaryB": "Constitution"
+    "asi": {
+      "primary": "Strength",
+      "secondaryA": "Dexterity",
+      "secondaryB": "Constitution"
     },
-    "Size": "Medium (Height: 5’6”-6’2” Weight: 135-220 lbs.)",
-    "Speed": "30 ft.",
-    "Vision": "Nightblind",
-    "Languages": "Common, One Other",
-    "Skill": "+2 Athletics",
-    "Competencies": "Knowledge of Geography (Five Nations)",
-    "Features": {}
+    "size": "Medium (Height: 5’6”-6’2” Weight: 135-220 lbs.)",
+    "speed": "30 ft.",
+    "vision": "Nightblind",
+    "languages": "Common, One Other",
+    "skill": "+2 Athletics",
+    "competencies": "Knowledge of Geography (Five Nations)",
+    "features": {}
   },
   "ritual": {
     "templates": ["basic"],
-    "Market Price": "25 gp",
-    "Category": "Divination",
-    "Component Cost": "5 gp",
-    "Casting Time": "10 minutes",
-    "Duration": "Instantaneous"
+    "market price": "25 gp",
+    "category": "Divination",
+    "component cost": "5 gp",
+    "casting time": "10 minutes",
+    "duration": "Instantaneous"
   }
 }
 }
