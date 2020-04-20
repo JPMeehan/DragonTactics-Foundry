@@ -6,6 +6,7 @@
         "race": "Human",
         "height": "6 ft",
         "weight": "200 lbs.",
+        "quick": "Typical peasant",
         "kanka": "Link here"
       },
       "defenses": {
@@ -193,7 +194,7 @@
       }
     },
     "combatant": {
-      "templates": ["resources"]
+      "templates": ["defenses"]
     },
     "npc": {
       "templates": ["description"],
