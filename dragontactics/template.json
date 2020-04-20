@@ -158,33 +158,37 @@
         "flaws": [],
         "competencies": []
       },
-      "equipment_worn": {
-        "head": {
-          "name": null,
-          "description": null
+      "equipment": { 
+        "worn": {
+          "head": {
+            "name": null,
+            "description": null
+          },
+          "neck": {
+            "name": null,
+            "description": null
+          },
+          "arms": {
+            "name": null,
+            "description": null,
+            "shield": 0,
+            "armorcheck_shield": 0
+          },
+          "hands": {
+            "name": null,
+            "description": null
+          },
+          "waist": {
+            "name": null,
+            "description": null
+          },
+          "feet": {
+            "name": null,
+            "description": null
+          }
         },
-        "neck": {
-          "name": null,
-          "description": null
-        },
-        "arms": {
-          "name": null,
-          "description": null,
-          "shield": 0,
-          "armorcheck_shield": 0
-        },
-        "hands": {
-          "name": null,
-          "description": null
-        },
-        "waist": {
-          "name": null,
-          "description": null
-        },
-        "feet": {
-          "name": null,
-          "description": null
-        },
+        "carried": [],
+        "home": []
       },
       "currency": {
         "platinum": 0,
