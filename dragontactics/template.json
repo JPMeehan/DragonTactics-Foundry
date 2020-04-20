@@ -1,28 +1,31 @@
 {
   "Actor": {
-    "types": ["hero", "pawn", "villain"],
+    "types": ["hero", "combatant", "npc"],
     "templates": {
-      "background": {
-        "biography": "",
-        "haircolor": "blue"
-      },
-      "resources": {
-        "health": {
-          "min": 0,
-          "value": 20,
-          "max": 20
-        },
-        "surges": {
-          "min": 0,
-          "value": 6,
-          "max": 6
-        }
+      "description":{
+        "race": "Human",
+        "height": "6 ft",
+        "weight": "200 lbs.",
+        "kanka": "Link here"
       },
       "defenses": {
         "ac": 10,
         "fortitude": 10,
         "reflex": 10,
-        "will": 10
+        "will": 10,
+        "health": {
+          "min": 0,
+          "value": 20,
+          "max": 20,
+          "temp": 0
+        },
+        "surges": {
+          "min": 0,
+          "value": 6,
+          "max": 6,
+          "heal": 5
+        },
+        "movement": "30 ft."
       },
       "attributes": {
         "strength": {
@@ -139,20 +142,68 @@
       }
     },
     "hero": {
-      "templates": ["background", "resources"],
-      "goodness": {
-        "value": 5,
-        "max": 10
+      "templates": ["description", "defenses", "attributes", "skill"],
+      "class": {
+        "name": "Fighter",
+        "paragon": null,
+        "destiny": null,
+        "level": 1,
+        "quest": 0
+      },
+      "features": {
+        "race": [],
+        "class": [],
+        "feats": [],
+        "flaws": [],
+        "competencies": []
+      },
+      "equipment_worn": {
+        "head": {
+          "name": null,
+          "description": null
+        },
+        "neck": {
+          "name": null,
+          "description": null
+        },
+        "arms": {
+          "name": null,
+          "description": null,
+          "shield": 0,
+          "armorcheck_shield": 0
+        },
+        "hands": {
+          "name": null,
+          "description": null
+        },
+        "waist": {
+          "name": null,
+          "description": null
+        },
+        "feet": {
+          "name": null,
+          "description": null
+        },
+      },
+      "currency": {
+        "platinum": 0,
+        "gold": 0,
+        "silver": 0,
+        "copper": 0
       }
     },
-    "pawn": {
+    "combatant": {
       "templates": ["resources"]
     },
-    "villain": {
-      "templates": ["background", "resources"],
-      "wickedness": {
-        "value": 5,
-        "max": 100
+    "npc": {
+      "templates": ["description"],
+      "roleplay": {
+        "speech": null,
+        "tic": null,
+        "desire": null,
+        "fear": null,
+        "weakness": null,
+        "secret": null
       }
     }
   },
