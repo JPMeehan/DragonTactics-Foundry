@@ -3,11 +3,16 @@
  * Author: ChaosOS
  */
  
+import { DragonTacticsActor } from "./actors/entity.js";
 import { HeroDragonTacticsActorSheet } from "./actors/hero.js";
+import { CombatantNPCDragonTacticsActorSheet } from "./actors/combatant.js";
+import { NPCDragonTacticsActorSheet } from "./actors/npc.js";
 
+import { DragonTacticsItemSheet } from "./items/item-sheet.js"
+import { DragonTacticsItem } from "./items/entity.js"
 
 Hooks.once("init", function() {
-  console.log(`D&D5e | Initializing Dungeons & Dragons 5th Edition System\n${DND5E.ASCII}`);
+  console.log(`Initializing Dragon Tactics System`);
 
   // Create a D&D5E namespace within the game global
   // game.dnd5e = {
@@ -19,9 +24,8 @@ Hooks.once("init", function() {
   // };
 
   // Record Configuration Values
-  // CONFIG.DND5E = DND5E;
-  // CONFIG.Actor.entityClass = Actor5e;
-  // CONFIG.Item.entityClass = Item5e;
+  CONFIG.Actor.entityClass = DragonTacticsActor;
+  CONFIG.Item.entityClass = DragonTacticsItem;
 
   // Register System Settings
   // registerSystemSettings();
@@ -31,11 +35,12 @@ Hooks.once("init", function() {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("dnd5e", ActorSheet5eCharacter, { types: ["character"], makeDefault: true });
-  Actors.registerSheet("dnd5e", ActorSheet5eNPC, { types: ["npc"], makeDefault: true });
+  Actors.registerSheet("dragontactics", HeroDragonTacticsActorSheet, { types: ["hero"], makeDefault: true });
+  Actors.registerSheet("dragontactics", CombatantNPCDragonTacticsActorSheet, { types: ["combatant"], makeDefault: true });
+  Actors.registerSheet("dragontactics", NPCDragonTacticsActorSheet, { types: ["combatant"], makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("dnd5e", ItemSheet5e, {makeDefault: true});
+  Items.registerSheet("dragontactics", DragonTacticsItemSheet, {makeDefault: true});
 
   // Preload Handlebars Templates
-  preloadHandlebarsTemplates();
+  // preloadHandlebarsTemplates();
 });
