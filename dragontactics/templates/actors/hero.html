@@ -21,7 +21,10 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
+		<a class="item" data-tab="abilities">Abilities</a>
 		<a class="item" data-tab="combat">Combat</a>
+		<a class="item" data-tab="features">Features</a>
+		<a class="item" data-tab="equipment">Equipment</a>
         <a class="item" data-tab="items">Items</a>
         <a class="item" data-tab="attributes">Attributes</a>
     </nav>
@@ -31,20 +34,44 @@
 
         {{!-- Biography Tab --}}
         <div class="tab biography active" data-group="primary" data-tab="description">
-            {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+            <!-- {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}} -->
+            <h2>Basic Info</h2>
+        </div>
+
+        {{ !-- Abilities and Skills Tab --}}
+        <div class="tab abilities" data-group="primary" data-tab="abilities">
+            <h2>Abilities</h2>
+            <h3>Skills</h3>
         </div>
 		
 		{{ !-- Combat Tab --}}
 		<div class="tab combat" data-group="primary" data-tab="combat">
-            <ol class="items-list">
+            <h2>Combat</h2>
+            <h3>Defenses</h3>
+            <h3>Powers</h3>
+
+            
+            <!-- <ol class="items-list">
                 {{#each }}
                 <li class="">
-                    
+
                 </li>
                 {{/each}}
-            </ol>
+            </ol> -->
 		
-		</div>
+        </div>
+        
+        <div class="tab features" data-group="primary" data-tab="features">
+            <h2>Features</h2>
+            <h3>Class Features</h3>
+            <h3>Competencies</h3>
+        </div>
+
+        <div class="tab equipment" data-group="primary" data-tab="equipment">
+            <h2>Equipment</h2>
+            <h3>Worn</h3>
+            <h3>Carried</h3>
+        </div>
 		
         {{!-- Owned Items Tab --}}
         <div class="tab items" data-group="primary" data-tab="items">
