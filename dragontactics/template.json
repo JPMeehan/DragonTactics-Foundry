@@ -144,6 +144,7 @@
     },
     "hero": {
       "templates": ["description", "defenses", "attributes", "skill"],
+      "playername": null,
       "class": {
         "name": "Fighter",
         "paragon": null,
