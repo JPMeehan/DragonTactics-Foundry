@@ -197,11 +197,8 @@
         "copper": 0
       }
     },
-    "combatant": {
-      "templates": ["defenses"]
-    },
     "npc": {
-      "templates": ["description"],
+      "templates": ["defenses","description"],
       "roleplay": {
         "speech": null,
         "tic": null,
