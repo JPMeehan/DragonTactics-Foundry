@@ -1,0 +1,47 @@
+<form class="{{cssClass}}" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+            <div class="resource">
+                <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
+                <span> / </span>
+                <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
+            </div>
+            <div class="resource">
+                <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number"/>
+                <span> / </span>
+                <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number"/>
+            </div>
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">Description</a>
+        <a class="item" data-tab="items">Items</a>
+        <a class="item" data-tab="attributes">Attributes</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Biography Tab --}}
+        <div class="tab biography" data-group="primary" data-tab="description">
+            <h1>Biography</h1>
+        </div>
+
+        {{!-- Owned Items Tab --}}
+        <div class="tab items" data-group="primary" data-tab="items">
+            <h1>Owned Items</h1>
+        </div>
+
+        {{!-- Attributes Tab --}}
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+            <h1>Attributes</h1>
+        </div>
+    </section>
+</form>
+
