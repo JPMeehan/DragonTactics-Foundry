@@ -24,7 +24,6 @@
 
         {{!-- Biography Tab --}}
         <div class="tab biography active" data-group="primary" data-tab="description">
-            <!-- {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}} -->
             <h2>Basic Info</h2>
             <input type="text" name="data.description.race"  data-dtype="String" placeholder="Race"/>
             <input type="text" name="data.description.height"  data-dtype="String" placeholder="Height"/>
@@ -40,13 +39,14 @@
             <ol class="items-list">
                 {{#each data.attributes as |attr key|}}
                 
-                    <li  class="attribute flexrow"  data-attribute="{{key}}">
+                    <li data-attribute="{{key}}">
 
-                        <span  class="attribute-label flexrow"  name="data.attributes.{{key}}.label">{{label}}</span>
+                        <span name="data.attributes.{{key}}.label">{{label}}</span>
                         
-                        <div  class="attribute-editbox flexrow">
-                        
-                        <input  class="attribute-value"  type="text"  name="data.attributes.{{key}}.value"  value="{{attrib.value}}"  data-dtype="Number"  />
+                        <input type="number"  name="data.attributes.{{key}}.score"  value="{{attr.score}}"  data-dtype="Number"  />
+
+
+                        <span name="data.attributes.{{key}}.modifier">{{modifier}}</span>
                         
                         </div>  
                     </li>
@@ -54,19 +54,57 @@
                 {{/each}}
             </ol>
             <h3>Skills</h3>
+            <ol class="items-list">
+                {{#each data.skill as |skill key|}}
+                
+                    <li data-attribute="{{key}}">
+
+                        <span name="data.attributes.{{key}}.label">{{label}}</span>
+                        
+                        <select name="data.attributes.{{key}}.rank"  value="{{attr.rank}}"  data-dtype="String" >
+                            <option value="Untrained" selected>Untrained</option>
+                            <option value="Adept">Adept</option>
+                            <option value="Trained">Trained</option>
+                            <option value="Experienced">Experienced</option>
+                            <option value="Expert">Expert</option>
+                            <option value="Master">Master</option>
+                        </select>
+
+                        <input type="number"  name="data.attributes.{{key}}.miscbonus"  value="{{attr.miscbonus}}"  data-dtype="Number"  />
+
+
+                        <span name="data.attributes.{{key}}.ability">{{ability}}</span>
+
+                        <span name="data.attributes.{{key}}.modifier">{{modifier}}</span>
+                        
+                        </div>  
+                    </li>
+    
+                {{/each}}
+            </ol>
         </div>
 		
 		{{!-- Combat Tab --}}
 		<div class="tab combat" data-group="primary" data-tab="combat">
             <h2>Combat</h2>
             <h3>Defenses</h3>
-            <div class="resource">
-                <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
-                <span> / </span>
-                <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
-            </div>
+            <input type="number" name="data.defenses.ac" value="{{data.defenses.ac}}" data-dtype="Number"/>
+            <input type="number" name="data.defenses.fortitude" value="{{data.defenses.fortitude}}" data-dtype="Number"/>
+            <input type="number" name="data.defenses.reflex" value="{{data.defenses.reflex}}" data-dtype="Number"/>
+            <input type="number" name="data.defenses.will" value="{{data.defenses.will}}" data-dtype="Number"/>
+            <input type="text" name="data.defenses.health.value" value="{{data.defenses.health.value}}" data-dtype="Number"/>
+            <input type="text" name="data.defenses.health.max" value="{{data.defenses.health.max}}" data-dtype="Number"/>
+            <input type="text" name="data.defenses.health.bloodied" value="{{data.defenses.health.bloodied}}" data-dtype="Number"/>
+            <input type="number" name="data.defenses.health.temp" value="{{data.defenses.health.temp}}" data-dtype="Number"/>
+            <input type="number" name="data.defenses.surges.value" value="{{data.defenses.surges.value}}" data-dtype="Number"/>
+            <input type="number" name="data.defenses.surges.max" value="{{data.defenses.surges.max}}" data-dtype="Number"/>
+            <input type="number" name="data.defenses.surges.heal" value="{{data.defenses.surges.heal}}" data-dtype="Number"/>
+            <input type="number" name="data.defenses.movement" value="{{data.defenses.movement}}" data-dtype="String"/>
             <h3>Powers</h3>
-		
+            <ol class="powers-list">
+                {{#each data.powers as |power key|}}
+                {{/each}}
+            </ol>
         </div>
         
         {{!-- Features Tab --}}

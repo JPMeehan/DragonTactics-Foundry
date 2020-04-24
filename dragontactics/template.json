@@ -2,7 +2,7 @@
   "Actor": {
     "types": ["hero", "combatant", "npc"],
     "templates": {
-      "description":{
+      "description": {
         "race": "Human",
         "height": "6 ft",
         "weight": "200 lbs.",
@@ -17,6 +17,7 @@
         "health": {
           "min": 0,
           "value": 20,
+          "bloodied": 10,
           "max": 20,
           "temp": 0
         },
@@ -30,115 +31,138 @@
       },
       "attributes": {
         "strength": {
+          "label": "Strength",
           "score": 10,
           "modifier": 0
         },
         "constitution": {
+          "label": "Constitution",
           "score": 10,
           "modifier": 0
         },
         "dexterity": {
+          "label": "Dexterity",
           "score": 10,
           "modifier": 0
         },
         "intelligence": {
+          "label": "Intelligence",
           "score": 10,
           "modifier": 0
         },
         "wisdom": {
+          "label": "Wisdom",
           "score": 10,
           "modifier": 0
         },
         "charisma": {
+          "label": "Charisma",
           "score": 10,
           "modifier": 0
         }
       },
       "skill": {
         "acrobatics": {
+          "label": "Acrobatics",
           "ability": "Dexterity",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "appeal": {
+          "label": "Appeal",
           "ability": "Charisma",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "arcana": {
+          "label": "Arcana",
           "ability": "Intelligence",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "athletics": {
+          "label": "Athletics",
           "ability": "Strength",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "debate": {
+          "label": "Debate",
           "ability": "Intelligence",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "endurance": {
+          "label": "Endurance",
           "ability": "Constitution",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "handle_animal": {
+          "label": "Handle Animal",
           "ability": "Wisdom",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "impress": {
+          "label": "Impress",
           "ability": "Charisma",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "insight": {
+          "label": "Insight",
           "ability": "Wisdom",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "medicine": {
+          "label": "Medicine",
           "ability": "Wisdom",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "perception": {
+          "label": "Perception",
           "ability": "Wisdom",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "repair": {
+          "label": "Repair",
           "ability": "Intelligence",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "research": {
+          "label": "Research",
           "ability": "Intelligence",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "sleight_of_hand": {
+          "label": "Sleight of Hand",
           "ability": "Dexterity",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "socialize": {
+          "label": "Socialize",
           "ability": "Charisma",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "stealth": {
+          "label": "Stealth",
           "ability": "Dexterity",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         },
         "survival": {
+          "label": "Survival",
           "ability": "Wisdom",
           "rank": "Untrained",
-          "misc-bonus": 0
+          "miscbonus": 0
         }
       }
     },
@@ -160,7 +184,7 @@
         "flaws": [],
         "competencies": []
       },
-      "equipment": { 
+      "equipment": {
         "worn": {
           "head": {
             "name": null,
@@ -203,7 +227,7 @@
       }
     },
     "npc": {
-      "templates": ["defenses","description"],
+      "templates": ["defenses", "description"],
       "roleplay": {
         "speech": null,
         "tic": null,
