@@ -1,7 +1,8 @@
 /**
- * Extend the basic ActorSheet with some very simple modifications
- * @extends {ActorSheet}
+ * Extend the DragonTacticsActorSheet for use with Heros (PCs)
+ * @extends {DragonTacticsActorSheet}
  */
+
 
 import {
   DragonTacticsActorSheet

@@ -1,5 +1,5 @@
 /**
- * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
+ * Extend the base Actor entity for the Dragon Tactics System
  * @extends {Actor}
  */
 export class DragonTacticsActor extends Actor {
