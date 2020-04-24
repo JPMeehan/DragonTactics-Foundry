@@ -211,7 +211,7 @@
     }
   },
   "Item": {
-    "types": ["class", "competency", "weapon", "armor", "implement", "supplies", "feat", "power", "race", "ritual"],
+    "types": ["armor", "class", "competency", "feat", "implement", "power", "race", "ritual", "supplies", "weapon"],
     "templates": {
       "basic": {
         "name": "Name",
