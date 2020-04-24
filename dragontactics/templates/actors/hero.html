@@ -40,7 +40,7 @@
             <h2>Abilities</h2>
             
             <ol class="items-list">
-                {{#each actor.data.attributes as |attrib key|}}
+                {{#each data.attributes as |attr key|}}
                 
                     <li  class="attribute flexrow"  data-attribute="{{key}}">
 
@@ -68,15 +68,6 @@
                 <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
             </div>
             <h3>Powers</h3>
-
-            
-            <!-- <ol class="items-list">
-                {{#each }}
-                <li class="">
-
-                </li>
-                {{/each}}
-            </ol> -->
 		
         </div>
         

@@ -152,6 +152,7 @@
         "level": 1,
         "quest": 0
       },
+      "powers": {},
       "features": {
         "race": [],
         "class": [],
@@ -186,7 +187,10 @@
           "feet": {
             "name": null,
             "description": null
-          }
+          },
+          "armor": null,
+          "weapons": [],
+          "implements": []
         },
         "carried": [],
         "home": []

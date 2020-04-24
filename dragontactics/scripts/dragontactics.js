@@ -77,7 +77,7 @@ Hooks.once("init", function () {
     makeDefault: true
   });
   Actors.registerSheet("dragontactics", NPCDragonTacticsActorSheet, {
-    types: ["combatant"],
+    types: ["npc"],
     makeDefault: true
   });
   Items.unregisterSheet("core", ItemSheet);
