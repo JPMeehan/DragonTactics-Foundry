@@ -6,7 +6,7 @@
 
 import {
   DragonTacticsActorSheet
-} from "./base";
+} from "./base.js";
 
 export class HeroDragonTacticsActorSheet extends DragonTacticsActorSheet {
 

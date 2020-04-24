@@ -5,7 +5,7 @@
 
 import {
     DragonTacticsItemSheet
-} from "./item-sheet"
+} from "./item-sheet.js"
 
 export class DragonTacticsItemSheet_competency extends DragonTacticsItemSheet {
     /** @override */

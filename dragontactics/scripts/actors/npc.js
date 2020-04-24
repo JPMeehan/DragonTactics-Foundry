@@ -5,7 +5,7 @@
 
 import {
   DragonTacticsActorSheet
-} from "./base"
+} from "./base.js"
 
 export class NPCDragonTacticsActorSheet extends DragonTacticsActorSheet {
 
