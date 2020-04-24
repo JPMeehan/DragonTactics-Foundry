@@ -1,8 +1,13 @@
+/**
+ * Extend the DragonTacticsItemSheet for supplies
+ * @extends {DragonTacticsItemSheet}
+ */
+
 import {
     DragonTacticsItemSheet
 } from "./item-sheet"
 
-export class DragonTacticsItem_supplies extends DragonTacticsItemSheet {
+export class DragonTacticsItemSheet_supplies extends DragonTacticsItemSheet {
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {

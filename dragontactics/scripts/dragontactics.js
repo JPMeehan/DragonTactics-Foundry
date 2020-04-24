@@ -15,37 +15,37 @@ import {
 
 import {
   DragonTacticsItem
-} from "./items/entity.js"
+} from "./items/entity.js";
 import {
   DragonTacticsItemSheet_armor
-} from "./items/sheets/armor.js"
+} from "./items/sheets/armor.js";
 import {
   DragonTacticsItemSheet_class
-} from "./items/sheets/class.js"
+} from "./items/sheets/class.js";
 import {
   DragonTacticsItemSheet_competency
-} from "./items/sheets/competency.js"
+} from "./items/sheets/competency.js";
 import {
   DragonTacticsItemSheet_feat
-} from "./items/sheets/feat.js"
+} from "./items/sheets/feat.js";
 import {
   DragonTacticsItemSheet_implement
-} from "./items/sheets/implement.js"
+} from "./items/sheets/implement.js";
 import {
   DragonTacticsItemSheet_power
-} from "./items/sheets/power.js"
+} from "./items/sheets/power.js";
 import {
   DragonTacticsItemSheet_race
-} from "./items/sheets/race.js"
+} from "./items/sheets/race.js";
 import {
   DragonTacticsItemSheet_ritual
-} from "./items/sheets/ritual.js"
+} from "./items/sheets/ritual.js";
 import {
   DragonTacticsItemSheet_supplies
-} from "./items/sheets/supplies.js"
+} from "./items/sheets/supplies.js";
 import {
   DragonTacticsItemSheet_weapon
-} from "./items/sheets/weapon.js"
+} from "./items/sheets/weapon.js";
 
 
 Hooks.once("init", function () {
