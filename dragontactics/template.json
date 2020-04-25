@@ -172,7 +172,7 @@
       "class": {
         "name": "Fighter",
         "paragon": null,
-        "destiny": null,
+        "epic": null,
         "level": 1,
         "quest": 0
       },
@@ -212,7 +212,12 @@
             "name": null,
             "description": null
           },
-          "armor": null,
+          "armor": {
+            "name": null,
+            "description": null,
+            "bonus": 0,
+            "armorcheck": 0
+          },
           "weapons": [],
           "implements": []
         },
@@ -239,7 +244,7 @@
     }
   },
   "Item": {
-    "types": ["armor", "class", "competency", "feat", "implement", "power", "race", "ritual", "supplies", "weapon"],
+    "types": ["armor", "class", "feat", "implement", "power", "race", "ritual", "supplies", "weapon"],
     "templates": {
       "basic": {
         "name": "Name",
@@ -273,9 +278,6 @@
         "implement": null
       }
     },
-    "competency": {
-      "templates": ["basic"]
-    },
     "weapon": {
       "templates": ["basic", "equipment"],
       "proficiency": 3,
@@ -297,8 +299,9 @@
     "supplies": {
       "templates": ["basic", "equipment"]
     },
-    "feat": {
-      "templates": ["basic"]
+    "feature": {
+      "templates": ["basic"],
+      "type": null
     },
     "power": {
       "templates": ["basic"],

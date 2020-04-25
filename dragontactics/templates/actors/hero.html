@@ -30,6 +30,11 @@
             <input type="text" name="data.description.weight"  data-dtype="String" placeholder="Weight"/>
             <input type="text" name="data.description.quick"  data-dtype="String" placeholder="Quick Description"/>
             <input type="text" name="data.description.kanka"  data-dtype="String" placeholder="Kanka URL"/>
+            <input type="text" name="data.class.name"  data-dtype="String" placeholder="Class"/>
+            <input type="text" name="data.class.paragon"  data-dtype="String" placeholder="Paragon Path"/>
+            <input type="text" name="data.description.epic"  data-dtype="String" placeholder="Epic Destiny"/>
+            <input type="number" name="data.class.level"  data-dtype="Number" />
+            <input type="number" name="data.class.quest"  data-dtype="Number" />
         </div>
 
         {{!-- Abilities and Skills Tab --}}
@@ -110,14 +115,67 @@
         {{!-- Features Tab --}}
         <div class="tab features" data-group="primary" data-tab="features">
             <h2>Features</h2>
+            <h3>Race Features</h3>
+            <ol>
+                {{#each data.features.race as |feat key|}}
+                <li>
+                    <span>Name</span>
+                    <span>Description</span>
+                </li>
+                {{/each}}
+            </ol>
+
             <h3>Class Features</h3>
+            <ol>
+                {{#each data.features.class as |feat key|}}
+                <li>
+                    <span>Name</span>
+                    <span>Description</span>
+                </li>
+                {{/each}}
+            </ol>
             <h3>Competencies</h3>
+            <ol>
+                {{#each data.features.competencies as |feat key|}}
+                <li>
+                    <span>Name</span>
+                    <span>Description</span>
+                </li>
+                {{/each}}
+            </ol>
+            <h3>Feats</h3>
+            <ol>
+                {{#each data.features.feats as |feat key|}}
+                <li>
+                    <span>Name</span>
+                    <span>Description</span>
+                </li>
+                {{/each}}
+            </ol>
+            <h3>Flaws</h3>
+            <ol>
+                {{#each data.features.flaws as |feat key|}}
+                <li>
+                    <span>Name</span>
+                    <span>Description</span>
+                </li>
+                {{/each}}
+            </ol>
         </div>
 
         {{!-- Equipment Tab --}}
         <div class="tab equipment" data-group="primary" data-tab="equipment">
             <h2>Equipment</h2>
             <h3>Worn</h3>
+            <div>
+                <input type="text" name="data.equipment.worn.head.name"  data-dtype="String" placeholder="Head"/>
+                <input type="text" name="data.equipment.worn.neck.name"  data-dtype="String" placeholder="Neck"/>
+                <input type="text" name="data.equipment.worn.arms.name"  data-dtype="String" placeholder="Arms"/>
+                <input type="text" name="data.equipment.worn.hands.name"  data-dtype="String" placeholder="Hands"/>
+                <input type="text" name="data.equipment.worn.waist.name"  data-dtype="String" placeholder="Waist"/>
+                <input type="text" name="data.equipment.worn.feet.name"  data-dtype="String" placeholder="Feet"/>
+                <input type="text" name="data.equipment.worn.armor.name"  data-dtype="String" placeholder="Armor"/>
+            </div>
             <h3>Carried</h3>
         </div>
 <!-- 		

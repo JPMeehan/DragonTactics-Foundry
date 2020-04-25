@@ -23,9 +23,6 @@ import {
   DragonTacticsItemSheet_class
 } from "./items/sheets/class.js";
 import {
-  DragonTacticsItemSheet_competency
-} from "./items/sheets/competency.js";
-import {
   DragonTacticsItemSheet_feat
 } from "./items/sheets/feat.js";
 import {
@@ -87,10 +84,6 @@ Hooks.once("init", function () {
   })
   Items.registerSheet("dragontactics", DragonTacticsItemSheet_class, {
     types: ["class"],
-    makeDefault: true
-  })
-  Items.registerSheet("dragontactics", DragonTacticsItemSheet_competency, {
-    types: ["competency"],
     makeDefault: true
   })
   Items.registerSheet("dragontactics", DragonTacticsItemSheet_feat, {
