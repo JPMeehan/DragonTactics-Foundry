@@ -7,12 +7,12 @@ import {
     DragonTacticsItemSheet
 } from "./item-sheet.js"
 
-export class DragonTacticsItemSheet_feat extends DragonTacticsItemSheet {
+export class DragonTacticsItemSheet_feature extends DragonTacticsItemSheet {
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["dragontactics", "sheet", "item"],
-            template: "systems/dragontactics/templates/items/feat.html",
+            template: "systems/dragontactics/templates/items/feature.html",
             width: 520,
             height: 480,
             tabs: [{
