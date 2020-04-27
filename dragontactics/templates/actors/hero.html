@@ -61,11 +61,8 @@
             <h3>Skills</h3>
             <ol class="items-list">
                 {{#each data.skill as |skill key|}}
-                
                     <li data-attribute="{{key}}">
-
                         <h4 class="label" name="data.skill.{{key}}.label">{{label}}</h4>
-                        
                         <select class="rank" name="data.skill.{{key}}.rank"  value="{{skill.rank}}"  data-dtype="String" >
                             <option value="Untrained" selected>Untrained</option>
                             <option value="Adept">Adept</option>
@@ -74,17 +71,11 @@
                             <option value="Expert">Expert</option>
                             <option value="Master">Master</option>
                         </select>
-
                         <input type="number"  name="data.skill.{{key}}.miscbonus"  value="{{skill.miscbonus}}"  data-dtype="Number"  />
-
-
                         <span class="ability" name="data.skill.{{key}}.ability">{{ability}}</span>
-
                         <span class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</span>
-                        
                         </div>  
                     </li>
-    
                 {{/each}}
             </ol>
         </div>
@@ -94,18 +85,18 @@
             <h2>Combat</h2>
             <h3>Defenses</h3>
             <div class="defenses">
-                <input class="ac" type="number" name="data.defenses.ac" value="{{data.defenses.ac}}" data-dtype="Number"/>
-                <input class="nad"  type="number" name="data.defenses.fortitude" value="{{data.defenses.fortitude}}" data-dtype="Number"/>
-                <input class="nad" type="number" name="data.defenses.reflex" value="{{data.defenses.reflex}}" data-dtype="Number"/>
-                <input class="nad" type="number" name="data.defenses.will" value="{{data.defenses.will}}" data-dtype="Number"/>
-                <input class="health current" type="text" name="data.defenses.health.value" value="{{data.defenses.health.value}}" data-dtype="Number"/>
-                <input class="health max" type="text" name="data.defenses.health.max" value="{{data.defenses.health.max}}" data-dtype="Number"/>
-                <input class="health bloodied" type="text" name="data.defenses.health.bloodied" value="{{data.defenses.health.bloodied}}" data-dtype="Number"/>
-                <input class="health temp" type="number" name="data.defenses.health.temp" value="{{data.defenses.health.temp}}" data-dtype="Number"/>
-                <input class="surges current" type="number" name="data.defenses.surges.value" value="{{data.defenses.surges.value}}" data-dtype="Number"/>
-                <input class="surges max" type="number" name="data.defenses.surges.max" value="{{data.defenses.surges.max}}" data-dtype="Number"/>
-                <input class="surges heal" type="number" name="data.defenses.surges.heal" value="{{data.defenses.surges.heal}}" data-dtype="Number"/>
-                <input class="movement" type="number" name="data.defenses.movement" value="{{data.defenses.movement}}" data-dtype="String"/>
+                <div class="numblock"><span>AC</span><input class="ac" type="number" name="data.defenses.ac" value="{{data.defenses.ac}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>Fort</span><input class="nad" type="number" name="data.defenses.fortitude" value="{{data.defenses.fortitude}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>Ref</span><input class="nad" type="number" name="data.defenses.reflex" value="{{data.defenses.reflex}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>Will</span><input class="nad" type="number" name="data.defenses.will" value="{{data.defenses.will}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>Current HP</span><input class="health current" type="number" name="data.defenses.health.value" value="{{data.defenses.health.value}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>Max HP</span><input class="health max" type="number" name="data.defenses.health.max" value="{{data.defenses.health.max}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>Bloodied</span><input class="health bloodied" type="number" name="data.defenses.health.bloodied" value="{{data.defenses.health.bloodied}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>THP</span><input class="health temp" type="number" name="data.defenses.health.temp" value="{{data.defenses.health.temp}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>Surges</span><input class="surges current" type="number" name="data.defenses.surges.value" value="{{data.defenses.surges.value}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>Max Surges</span><input class="surges max" type="number" name="data.defenses.surges.max" value="{{data.defenses.surges.max}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>Surge Value</span><input class="surges heal" type="number" name="data.defenses.surges.heal" value="{{data.defenses.surges.heal}}" data-dtype="Number"/></div>
+                <div class="numblock"><span>Movement</span><input class="movement" type="text" name="data.defenses.movement" value="{{data.defenses.movement}}" data-dtype="String"/></div>
             </div>
             <h3>Powers</h3>
             <ol class="powers-list">
