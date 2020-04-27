@@ -118,84 +118,99 @@
         {{!-- Features Tab --}}
         <div class="tab features" data-group="primary" data-tab="features">
             <h2>Features</h2>
-            <h3>Race Features</h3>
-            <ol class="race features">
-                {{#each data.features.race as |feat key|}}
-                <li>
-                    <h4>Name</h4>
-                    <p>Description</p>
-                </li>
-                {{/each}}
-            </ol>
-            <h3>Class Features</h3>
-            <ol class="class features">
-                {{#each data.features.class as |feat key|}}
-                <li>
-                    <h4>Name</h4>
-                    <p>Description</p>
-                </li>
-                {{/each}}
-            </ol>
-            <h3>Competencies</h3>
-            <ol class="competencies features">
-                {{#each data.features.competencies as |feat key|}}
-                <li>
-                    <h4>Name</h4>
-                    <p>Description</p>
-                </li>
-                {{/each}}
-            </ol>
-            <h3>Feats</h3>
-            <ol class="feats features">
-                {{#each data.features.feats as |feat key|}}
-                <li>
-                    <h4>Name</h4>
-                    <p>Description</p>
-                </li>
-                {{/each}}
-            </ol>
-            <h3>Flaws</h3>
-            <ol class="flaws features">
-                {{#each data.features.flaws as |feat key|}}
-                <li>
-                    <h4>Name</h4>
-                    <p>Description</p>
-                </li>
-                {{/each}}
-            </ol>
+            <div class="race">
+                <h3>Race Features</h3>
+                <ol>
+                    {{#each data.features.race as |feat key|}}
+                    <li>
+                        <h4>Name</h4>
+                        <p>Description</p>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+            <div class="class">
+                <h3>Class Features</h3>
+                <ol>
+                    {{#each data.features.class as |feat key|}}
+                    <li>
+                        <h4>Name</h4>
+                        <p>Description</p>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+            <div class="competencies">
+                <h3>Competencies</h3>
+                <ol>
+                    {{#each data.features.competencies as |feat key|}}
+                    <li>
+                        <h4>Name</h4>
+                        <p>Description</p>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+            <div class="feats">
+                <h3>Feats</h3>
+                <ol>
+                    {{#each data.features.feats as |feat key|}}
+                    <li>
+                        <h4>Name</h4>
+                        <p>Description</p>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+            <div class="flaws">
+                <h3>Flaws</h3>
+                <ol>
+                    {{#each data.features.flaws as |feat key|}}
+                    <li>
+                        <h4>Name</h4>
+                        <p>Description</p>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
         </div>
 
         {{!-- Equipment Tab --}}
         <div class="tab equipment" data-group="primary" data-tab="equipment">
             <h2>Equipment</h2>
-            <h3>Worn</h3>
             <div class="worn">
-                <input type="text" name="data.equipment.worn.head.name"  data-dtype="String" placeholder="Head"/>
-                <input type="text" name="data.equipment.worn.neck.name"  data-dtype="String" placeholder="Neck"/>
-                <input type="text" name="data.equipment.worn.arms.name"  data-dtype="String" placeholder="Arms"/>
-                <input type="text" name="data.equipment.worn.hands.name"  data-dtype="String" placeholder="Hands"/>
-                <input type="text" name="data.equipment.worn.waist.name"  data-dtype="String" placeholder="Waist"/>
-                <input type="text" name="data.equipment.worn.feet.name"  data-dtype="String" placeholder="Feet"/>
-                <input type="text" name="data.equipment.worn.armor.name"  data-dtype="String" placeholder="Armor"/>
+                <h3>Worn</h3>
+                <input class="head" type="text" name="data.equipment.worn.head.name"  data-dtype="String" placeholder="Head"/>
+                <input class="neck"  type="text" name="data.equipment.worn.neck.name"  data-dtype="String" placeholder="Neck"/>
+                <input class="arms"  type="text" name="data.equipment.worn.arms.name"  data-dtype="String" placeholder="Arms"/>
+                <input class="hands"  type="text" name="data.equipment.worn.hands.name"  data-dtype="String" placeholder="Hands"/>
+                <input class="waist"  type="text" name="data.equipment.worn.waist.name"  data-dtype="String" placeholder="Waist"/>
+                <input class="feet"  type="text" name="data.equipment.worn.feet.name"  data-dtype="String" placeholder="Feet"/>
+                <input class="armor"  type="text" name="data.equipment.worn.armor.name"  data-dtype="String" placeholder="Armor"/>
             </div>
-            <h3>Carried</h3>
-            <ol>
-                {{#each data.equipment.carried as |carried key|}}
-                <li>
-                    <h4>Name</h4>
-                    <p>Description</p>
-                </li>
-                {{/each}}
-            </ol>
-            <h3>Kept at Home</h3>
-            <ol>
-                {{#each data.equipment.home as |home key|}}
-                <li>
-                    <h4>Name</h4>
-                    <p>Description</p>
-                </li>
-                {{/each}}
-            </ol>
+            <div class="carried">
+                <h3>Carried</h3>
+                <ol>
+                    {{#each data.equipment.carried as |carried key|}}
+                    <li>
+                        <h4>Name</h4>
+                        <p>Description</p>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+            <div class="home">
+                <h3>Kept at Home</h3>
+                <ol>
+                    {{#each data.equipment.home as |home key|}}
+                    <li>
+                        <h4>Name</h4>
+                        <p>Description</p>
+                    </li>
+                    {{/each}}
+                </ol>
+
+            </div>
         </div>
 <!-- 		
         {{!-- Owned Items Tab --}}
