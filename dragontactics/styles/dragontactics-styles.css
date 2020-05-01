@@ -103,9 +103,10 @@
 .dragontactics .editor,
 .dragontactics .editor-content {
   height: 100%;
+  min-height: 150px;
 }
 .dragontactics div.descriptiontextarea {
-  min-height: 200px;
+  min-height: 150px;
 }
 .dragontactics .items-list {
   list-style: none;
