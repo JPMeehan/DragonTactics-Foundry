@@ -18,6 +18,36 @@
             {{!-- Description Tab --}}
             <div class="tab" data-group="primary" data-tab="description">
                 <h1>Description Entry</h1>
+                <div class="descriptiontextarea">
+                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                </div>
+                <label>Quantity:
+                    <input type="number" name="data.equipment.quantity" value="{{data.equipment.quantity}}" data-dtype="Number" />
+                </label>
+                <label>Price: 
+                    <input type="number" name="data.equipment.price" value="{{data.equipment.price}}" data-dtype="Number" />
+                </label>
+                <label>Size: 
+                    <input type="number" name="data.equipment.size" value="{{data.equipment.size}}" data-dtype="Number" />
+                </label>
+                <label>Type: 
+                    <input type="text" name="data.equipment.type" value="{{data.equipment.type}}" data-dtype="String" placeholder="Light Armor"/>
+                </label>
+                <label>Equipped? 
+                    <input type="checkbox" name="data.equipment.equipped" {{checked data.equipment.equipped}} />
+                </label> 
+                <label>AC Bonus:
+                    <input type="number" name="data.ac" value="{{data.ac}}" data-dtype="Number" />
+                </label>
+                <label>Armor Check Penalty:
+                    <input type="number" name="data.penalty" value="{{data.penalty}}" data-dtype="Number" />
+                </label>
+                <label>Speed Penalty:
+                    <input type="text" name="data.speed" value="{{data.speed}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
+                <div class="descriptiontextarea">
+                    {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}
+                </div>
             </div>
 
             {{!-- Attributes Tab --}}
