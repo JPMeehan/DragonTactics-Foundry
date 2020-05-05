@@ -8,51 +8,69 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="display">Display</a>
+        <a class="item" data-tab="input">Input</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
-            {{!-- Description Tab --}}
-            <div class="tab" data-group="primary" data-tab="description">
-                <h1>Description Entry</h1>
+            {{!-- Display Tab --}}
+            <div class="tab display" data-group="primary" data-tab="display">
+                <h1>Display</h1>
                 <div class="descriptiontextarea">
                     {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
-                <label>Quantity:
-                    <input type="number" name="data.equipment.quantity" value="{{data.equipment.quantity}}" data-dtype="Number" />
-                </label>
-                <label>Price: 
-                    <input type="number" name="data.equipment.price" value="{{data.equipment.price}}" data-dtype="Number" />
-                </label>
-                <label>Size: 
-                    <input type="number" name="data.equipment.size" value="{{data.equipment.size}}" data-dtype="Number" />
-                </label>
-                <label>Type: 
-                    <input type="text" name="data.equipment.type" value="{{data.equipment.type}}" data-dtype="String" placeholder="Light Armor"/>
-                </label>
-                <label>Equipped? 
-                    <input type="checkbox" name="data.equipment.equipped" {{checked data.equipment.equipped}} />
-                </label> 
-                <label>AC Bonus:
-                    <input type="number" name="data.ac" value="{{data.ac}}" data-dtype="Number" />
-                </label>
-                <label>Armor Check Penalty:
-                    <input type="number" name="data.penalty" value="{{data.penalty}}" data-dtype="Number" />
-                </label>
-                <label>Speed Penalty:
-                    <input type="text" name="data.speed" value="{{data.speed}}" data-dtype="String" placeholder="No adjustment" />
-                </label>
+                <p class="equipment quantity">Quantity:
+                    <span name="data.quantity" ></span>
+                </p>
+                <p class="equipment price">Price: 
+                    <span name="data.price" ></span>
+                </p>
+                <p class="equipment size">Size: 
+                    <span name="data.size" ></span>
+                </p>
+                <p class="equipment type">Type: 
+                    <span name="data.type" ></span>
+                </p>
+                <p class="equipment acbon">Armor Bonus:
+                    <span name="data.ac" ></span>
+                </p>
+                <p class="equipment acpen">Armor Check Penalty:
+                    <span name="data.penalty" ></span>
+                </p>
+                <p class="equipment speedpen">Speed Penalty:
+                    <span name="data.speed" ></span>
+                </p>
                 <div class="descriptiontextarea">
                     {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}
                 </div>
             </div>
 
-            {{!-- Attributes Tab --}}
-            <div class="tab attributes" data-group="primary" data-tab="attributes">
-                <h1>Attributes Entry</h1>
+            {{!-- Input Tab --}}
+            <div class="tab input" data-group="primary" data-tab="input">
+                <h1>Input</h1>
+                <label class="equipment quantity">Quantity:
+                    <input type="number" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" />
+                </label>
+                <label class="equipment price">Price: 
+                    <input type="number" name="data.price" value="{{data.price}}" data-dtype="Number" />
+                </label>
+                <label class="equipment size">Size: 
+                    <input type="number" name="data.size" value="{{data.size}}" data-dtype="Number" />
+                </label>
+                <label class="equipment type">Type: 
+                    <input type="text" name="data.type" value="{{data.type}}" data-dtype="String" placeholder="Light Armor"/>
+                </label>
+                <label class="equipment acbon">Armor Bonus:
+                    <input type="number" name="data.ac" value="{{data.ac}}" data-dtype="Number" />
+                </label>
+                <label class="equipment acpen">Armor Check Penalty:
+                    <input type="number" name="data.penalty" value="{{data.penalty}}" data-dtype="Number" />
+                </label>
+                <label class="equipment speedpen">Speed Penalty:
+                    <input type="text" name="data.speed" value="{{data.speed}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
             </div>
     </section>
 </form>

@@ -253,17 +253,16 @@
         "quantity": 1,
         "price": "5 gp",
         "size": "2 slots",
-        "type": "Mundane",
-        "equipped": false
+        "type": "Mundane"
       }
     },
     "class": {
       "templates": ["basic"],
       "source": "Martial",
       "role": "Defender",
-      "keyabilities": "Strength, Dexterity, Constitution",
-      "hp_base": 12,
-      "hp_level": 5,
+      "keyAbilities": "Strength, Dexterity, Constitution",
+      "hpBase": 12,
+      "hpLevel": 5,
       "surges": 6,
       "defense": {
         "fortitude": 0,
@@ -274,7 +273,7 @@
       "profs": {
         "armor": "Cloth",
         "weapon": "Simple Melee, Simple Ranged",
-        "implement": null
+        "implement": ""
       }
     },
     "weapon": {
@@ -313,33 +312,29 @@
       "attack": null,
       "hit": null,
       "miss": null,
-      "attack_secondary": null,
-      "hit_secondary": null,
-      "miss_secondary": null,
+      "attackSecondary": null,
+      "hitSecondary": null,
+      "missSecondary": null,
       "effect": null,
       "sustain": null
     },
     "race": {
       "templates": ["basic"],
-      "asi": {
-        "primary": "Strength",
-        "secondarya": "Dexterity",
-        "secondaryb": "Constitution"
-      },
+      "asi": "+2 Strength, +2 Dexterity or Constitution",
       "size": "Medium (Height: 5’6”-6’2” Weight: 135-220 lbs.)",
       "speed": "30 ft.",
       "vision": "Nightblind",
       "languages": "Common, One Other",
       "skill": "+2 Athletics",
       "competencies": "Knowledge of Geography (Five Nations)",
-      "features": []
+      "features": {}
     },
     "ritual": {
       "templates": ["basic"],
-      "market price": "25 gp",
+      "marketPrice": "25 gp",
       "category": "Divination",
-      "component cost": "5 gp",
-      "casting time": "10 minutes",
+      "componentCost": "5 gp",
+      "castingTime": "10 minutes",
       "duration": "Instantaneous"
     }
   }

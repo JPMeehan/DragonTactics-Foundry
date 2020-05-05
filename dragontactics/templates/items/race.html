@@ -8,21 +8,87 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="display">Display</a>
+        <a class="item" data-tab="input">Input</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
-            {{!-- Description Tab --}}
-            <div class="tab" data-group="primary" data-tab="description">
-                <h1>Description Entry</h1>
+            {{!-- Display Tab --}}
+            <div class="tab display" data-group="primary" data-tab="display">
+                <h1>Display</h1>
+                <div class="descriptiontextarea">
+                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                </div>
+                <p class="race asi">Ability Score Increase:
+                    <span name="data.asi" ></span>
+                </p>
+                <p class="race size">Size: 
+                    <span name="data.size" ></span>
+                </p>
+                <p class="race speed">Movement:
+                    <span name="data.speed" ></span>
+                </p>
+                <p class="race vision">Vision: 
+                    <span name="data.vision" ></span>
+                </p>
+                <p class="race languages">Languages: 
+                    <span name="data.languages" ></span>
+                </p>
+                <p class="race skill">Skills:
+                    <span name="data.skill" ></span>
+                </p>
+                <p class="race competencies">Competencies:
+                    <span name="data.competencies" ></span>
+                </p>
+                <div class="descriptiontextarea">
+                    {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}
+                </div>
+                <div class="race features">
+                    <h2>Features</h2>
+                    <header class="attributes-header flexrow">
+                        <span class="attribute-key">Feature Key</span>
+                        <span class="attribute-label">Name</span>
+                        <span class="attribute-value">Text</span>
+                        <a class="attribute-control" data-action="create"><i class="fas fa-plus"></i></a>
+                    </header>
+                    <ol class="attributes-list">
+                    {{#each data.features as |attr key|}}
+                        <li class="attribute flexrow" data-attribute="{{key}}">
+                            <input class="attribute-key" type="text" name="data.attributes.{{key}}.key" value="{{key}}"/>
+                            <input class="attribute-label" type="text" name="data.attributes.{{key}}.label" value="{{attr.label}}"/>
+                            <input class="attribute-value" type="text" name="data.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="String"/>
+                            <a class="attribute-control" data-action="delete"><i class="fas fa-trash"></i></a>
+                        </li>
+                    {{/each}}        
+                </div>
             </div>
 
-            {{!-- Attributes Tab --}}
-            <div class="tab attributes" data-group="primary" data-tab="attributes">
-                <h1>Attributes Entry</h1>
+            {{!-- Input Tab --}}
+            <div class="tab input" data-group="primary" data-tab="input">
+                <h1>Input</h1>
+                <label class="race quantity">Ability Score Increase:
+                    <input type="text" name="data.asi" value="{{data.asi}}" data-dtype="String" />
+                </label>
+                <label class="race price">Size: 
+                    <input type="text" name="data.size" value="{{data.size}}" data-dtype="String" />
+                </label>
+                <label class="race speed">Movement:
+                    <input type="text" name="data.speed" value="{{data.speed}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
+                <label class="race vision">Vision: 
+                    <input type="text" name="data.vision" value="{{data.vision}}" data-dtype="String" />
+                </label>
+                <label class="race languages">Languages: 
+                    <input type="text" name="data.languages" value="{{data.languages}}" data-dtype="String" placeholder="Light Armor"/>
+                </label>
+                <label class="race skills">Skills:
+                    <input type="text" name="data.skill" value="{{data.skill}}" data-dtype="String" />
+                </label>
+                <label class="race competencies">Competencies:
+                    <input type="text" name="data.competencies" value="{{data.competencies}}" data-dtype="String" />
+                </label>
             </div>
     </section>
 </form>

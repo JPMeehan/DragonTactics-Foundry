@@ -8,21 +8,111 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="display">Display</a>
+        <a class="item" data-tab="input">Input</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
-            {{!-- Description Tab --}}
-            <div class="tab" data-group="primary" data-tab="description">
-                <h1>Description Entry</h1>
+            {{!-- Display Tab --}}
+            <div class="tab display" data-group="primary" data-tab="display">
+                <h1>Display</h1>
+                <div class="descriptiontextarea">
+                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                </div>
+                <p class="power action">Quantity:
+                    <span name="data.action" ></span>
+                </p>
+                <p class="power recharge">Recharge: 
+                    <span name="data.recharge" ></span>
+                </p>
+                <p class="power trigger">Trigger: 
+                    <span name="data.trigger" ></span>
+                </p>
+                <p class="power type">Type: 
+                    <span name="data.requirement" ></span>
+                </p>
+                <p class="power range">Range:
+                    <span name="data.range" ></span>
+                </p>
+                <p class="power target">Target:
+                    <span name="data.target" ></span>
+                </p>
+                <p class="power attack primary">Attack:
+                    <input type="text" name="data.attack" ></span>
+                </p>
+                <p class="power hit primary">Hit:
+                    <input type="text" name="data.hit" ></span>
+                </p>
+                <p class="power miss primary">Miss:
+                    <input type="text" name="data.miss" ></span>
+                </p>
+                <p class="power attack secondary">Secondary Attack:
+                    <input type="text" name="data.attackSecondary" ></span>
+                </p>
+                <p class="power hit secondary">Secondary Hit:
+                    <input type="text" name="data.hitSecondary" ></span>
+                </p>
+                <p class="power attack secondary">Secondary Miss:
+                    <input type="text" name="data.missSecondary" ></span>
+                </p>
+                <p class="power effect">Effect:
+                    <input type="text" name="data.effect" ></span>
+                </p>
+                <p class="power sustain">Sustain:
+                    <input type="text" name="data.sustain" ></span>
+                </p>
+                <div class="descriptiontextarea">
+                    {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}
+                </div>
             </div>
 
-            {{!-- Attributes Tab --}}
-            <div class="tab attributes" data-group="primary" data-tab="attributes">
-                <h1>Attributes Entry</h1>
+            {{!-- Input Tab --}}
+            <div class="tab input" data-group="primary" data-tab="input">
+                <h1>Input</h1>
+                <label class="power action">Action:
+                    <input type="text" name="data.action" value="{{data.action}}" data-dtype="String" />
+                </label>
+                <label class="power recharge">Recharge: 
+                    <input type="text" name="data.recharge" value="{{data.recharge}}" data-dtype="String" />
+                </label>
+                <label class="power trigger">Trigger: 
+                    <input type="text" name="data.trigger" value="{{data.trigger}}" data-dtype="String" />
+                </label>
+                <label class="power type">Type: 
+                    <input type="text" name="data.requirement" value="{{data.requirement}}" data-dtype="String" placeholder="Light Armor"/>
+                </label>
+                <label class="power range">Range:
+                    <input type="text" name="data.range" value="{{data.range}}" data-dtype="String" />
+                </label>
+                <label class="power target">Target:
+                    <input type="text" name="data.target" value="{{data.target}}" data-dtype="String" />
+                </label>
+                <label class="power attack primary">Attack:
+                    <input type="text" name="data.attack" value="{{data.attack}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
+                <label class="power hit primary">Hit:
+                    <input type="text" name="data.hit" value="{{data.hit}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
+                <label class="power miss primary">Miss:
+                    <input type="text" name="data.miss" value="{{data.miss}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
+                <label class="power attack secondary">Secondary Attack:
+                    <input type="text" name="data.attackSecondary" value="{{data.attackSecondary}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
+                <label class="power hit secondary">Secondary Hit:
+                    <input type="text" name="data.hitSecondary" value="{{data.hitSecondary}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
+                <label class="power attack secondary">Secondary Miss:
+                    <input type="text" name="data.missSecondary" value="{{data.missSecondary}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
+                <label class="power effect">Effect:
+                    <input type="text" name="data.effect" value="{{data.effect}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
+                <label class="power sustain">Sustain:
+                    <input type="text" name="data.sustain" value="{{data.sustain}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
             </div>
     </section>
 </form>

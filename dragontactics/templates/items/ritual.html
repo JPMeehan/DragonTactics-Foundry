@@ -8,21 +8,57 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="display">Display</a>
+        <a class="item" data-tab="input">Input</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
-            {{!-- Description Tab --}}
-            <div class="tab" data-group="primary" data-tab="description">
-                <h1>Description Entry</h1>
+            {{!-- Display Tab --}}
+            <div class="tab display" data-group="primary" data-tab="display">
+                <h1>Display</h1>
+                <div class="descriptiontextarea">
+                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                </div>
+                <p class="ritual marketprice">Market Price:
+                    <span name="data.marketPrice" ></span>
+                </p>
+                <p class="ritual category">Category: 
+                    <span name="data.category" ></span>
+                </p>
+                <p class="ritual componentcost">Component Cost: 
+                    <span name="data.componentCost" ></span>
+                </p>
+                <p class="ritual castingtime">Casting Time: 
+                    <span name="data.castingTime" ></span>
+                </p>
+                <p class="ritual duration">Duration:
+                    <span name="data.duration" ></span>
+                </p>
+                <div class="descriptiontextarea">
+                    {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}
+                </div>
             </div>
 
-            {{!-- Attributes Tab --}}
-            <div class="tab attributes" data-group="primary" data-tab="attributes">
-                <h1>Attributes Entry</h1>
+            {{!-- Input Tab --}}
+            <div class="tab input" data-group="primary" data-tab="input">
+                <h1>Input</h1>
+                <label class="ritual marketprice">Market Price:
+                    <input type="number" name="data.marketPrice" value="{{data.marketPrice}}" data-dtype="Number" />
+                </label>
+                <label class="ritual category">Category: 
+                    <input type="number" name="data.category" value="{{data.category}}" data-dtype="Number" />
+                </label>
+                <label class="ritual componentcost">Component Cost: 
+                    <input type="number" name="data.componentCost" value="{{data.componentCost}}" data-dtype="Number" />
+                </label>
+                <label class="ritual castingtime">Casting Time: 
+                    <input type="text" name="data.castingTime" value="{{data.castingTime}}" data-dtype="String" placeholder="Light Armor"/>
+                </label>
+                <label class="ritual duration">Duration:
+                    <input type="text" name="data.duration" value="{{data.duration}}" data-dtype="String" placeholder="No adjustment" />
+                </label>
             </div>
     </section>
 </form>
