@@ -27,10 +27,27 @@
             <div class="tab input" data-group="primary" data-tab="input">
                 <h1>Input</h1>
                 <label class="power action">Action:
-                    <input type="text" name="data.action" value="{{data.action}}" data-dtype="String" placeholder="Action"/>
+                    <select name="data.action">
+                        {{#select data.action}}
+                        <option selected value="Standard">Standard</option>
+                        <option value="Move">Move</option>
+                        <option value="Minor">Minor</option>
+                        <option value="Immediate Interrupt">Immediate Interupt</option>
+                        <option value="Immediate Reaction">Immediate Reaction</option>
+                        <option value="Free Interrupt">Free Interrupt</option>
+                        <option value="Free Reaction">Free Reaction</option>
+                        {{/select}}
+                    </select>
                 </label>
-                <label class="power recharge">Recharge: 
-                    <input type="text" name="data.recharge" value="{{data.recharge}}" data-dtype="String" placeholder="Recharge"/>
+                <label class="power recharge">Recharge:
+                    <select name="data.recharge">
+                        {{#select data.recharge}}
+                        <option selected value="None">None</option>
+                        <option value="Short Rest">Short Rest</option>
+                        <option value="Long Rest">Long Rest</option>
+                        <option value="Special">Special</option>
+                        {{/select}}
+                    </select>
                 </label>
                 <label class="power trigger">Trigger: 
                     <input type="text" name="data.trigger" value="{{data.trigger}}" data-dtype="String" placeholder="Trigger"/>

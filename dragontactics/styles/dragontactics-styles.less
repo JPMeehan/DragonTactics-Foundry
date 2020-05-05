@@ -1,203 +1,337 @@
 .dragontactics {
-    .window-content {
-      height: 100%;
-      padding: 5px;
-      overflow-y: hidden;
+  .window-content {
+    height: 100%;
+    padding: 5px;
+    overflow-y: hidden;
+  }
+
+  input[type="number"] {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid #7a7971;
+  }
+
+  .sheet-header {
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+
+    .profile-img {
+      flex: 0 0 100px;
+      height: 100px;
+      margin-right: 10px;
     }
 
-    input[type="number"] {
-      background-color: rgba(0, 0, 0, 0.05);
-      border: 1px solid #7a7971;
-    }
-  
-    .sheet-header {
+    .header-fields {
+      flex: 1;
       height: 100px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      margin-bottom: 10px;
-  
-      .profile-img {
-        flex: 0 0 100px;
-        height: 100px;
-        margin-right: 10px;
-      }
-  
-      .header-fields {
-        flex: 1;
-        height: 100px;
-      }
-  
-      h1.charname {
-        height: 50px;
-        padding: 0px;
-        margin: 5px 0;
-        border-bottom: 0;
-        input {
-          width: 100%;
-          height: 100%;
-          margin: 0;
-        }
-      }
     }
-  
-    div.numblock {
-      border-radius: 5px;
-      background-color: black;
-      color: white;
-      padding: 0;
-      text-align: center;
-      font-size: 11px;
-      display: inline-block;
-      margin-bottom: 3px;
-      overflow: hidden;
-      span {
-        display: block;
-        font-size: large;
-        height: 50%;
-        padding: 5px;
-        margin-top: 2px;
-      }
+
+    h1.charname {
+      height: 50px;
+      padding: 0px;
+      margin: 5px 0;
+      border-bottom: 0;
+
       input {
         width: 100%;
-        text-align: center;
-        border-radius: 0;
-        background-color: white;
-        font-size: large;
-        &[type=number]{
-          width: 75px;
-        }
-      }
-    }
-
-    .resource {
-      width: 50%;
-      height: 40px;
-      margin-top: 10px;
-      float: left;
-      text-align: center;
-      input {
-        width: 100px;
-        height: 28px;
-      }
-    }
-  
-    /* Sheet Tabs */
-    .tabs {
-      height: 40px;
-      border-top: 1px solid #AAA;
-      border-bottom: 1px solid #AAA;
-  
-      .item {
-        line-height: 40px;
-        font-weight: bold;
-      }
-  
-      .item.active {
-        text-decoration: underline;
-        text-shadow: none;
-      }
-    }
-  
-    .sheet-body {
-      overflow: hidden;
-      .tab {
         height: 100%;
-        overflow-y: auto;
-      }
-    }
-  
-    .editor, .editor-content {
-      height: 100%;
-      min-height: 150px;
-    }
-    
-    div.tinymceeditorbox {
-      min-height: 150px;
-    }
-
-
-    /* Items List */
-    .items-list {
-      list-style: none;
-      margin: 7px 0;
-      padding: 0;
-      overflow-y: auto;
-  
-      .item {
-        height: 30px;
-        line-height: 24px;
-        padding: 3px 0;
-        border-bottom: 1px solid #BBB;
-  
-        img {
-          flex: 0 0 24px;
-          margin-right: 5px;
-        }
-      }
-  
-      .item-name {
         margin: 0;
       }
-  
-      .item-controls {
-        flex: 0 0 36px;
-      }
     }
-  
-    /* Attributes */
-    .attributes-header {
+  }
+
+  div.numblock {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 0;
+    text-align: center;
+    font-size: 11px;
+    display: inline-block;
+    margin-bottom: 3px;
+    overflow: hidden;
+
+    span {
+      display: block;
+      font-size: large;
+      height: 50%;
       padding: 5px;
-      margin: 5px 0;
-      background: rgba(0, 0, 0, 0.05);
-      border: 1px solid #AAA;
-      border-radius: 2px;
+      margin-top: 2px;
+    }
+
+    input {
+      width: 100%;
       text-align: center;
+      border-radius: 0;
+      background-color: white;
+      font-size: large;
+
+      &[type=number] {
+        width: 75px;
+      }
+    }
+  }
+
+  .resource {
+    width: 50%;
+    height: 40px;
+    margin-top: 10px;
+    float: left;
+    text-align: center;
+
+    input {
+      width: 100px;
+      height: 28px;
+    }
+  }
+
+  /* Sheet Tabs */
+  .tabs {
+    height: 40px;
+    border-top: 1px solid #AAA;
+    border-bottom: 1px solid #AAA;
+
+    .item {
+      line-height: 40px;
       font-weight: bold;
-  
-      .attribute-label {
-        flex: 1.5;
-      }
-  
-      .attribute-control {
-        flex: 0 0 20px;
+    }
+
+    .item.active {
+      text-decoration: underline;
+      text-shadow: none;
+    }
+  }
+
+  .sheet-body {
+    overflow: hidden;
+
+    .tab {
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
+
+  .editor,
+  .editor-content {
+    height: 100%;
+    min-height: 150px;
+  }
+
+  label.class {
+
+    &.source,
+    &.role {
+      input {
+        width: 100px;
       }
     }
-  
-    .attributes-list {
-      list-style: none;
+
+    &.keyabilities {
+      input {
+        width: 250px;
+      }
+    }
+
+    &.hp,
+    &.surges,
+    &.defense {
+      input {
+        width: 28px;
+      }
+    }
+  }
+
+  label.equipment {
+    &.price {
+      input {
+        width: 80px
+      }
+    }
+
+    &.size,
+    &.prof {
+      input {
+        width: 28px
+      }
+    }
+
+    &.quantity {
+      input {
+        width: 40px
+      }
+    }
+
+    &.type {
+      input {
+        width: 150px
+      }
+    }
+
+    &.range {
+      input {
+        width: 100px
+      }
+    }
+
+    &.damage {
+      input {
+        width: 90px;
+      }
+    }
+  }
+
+  label.ritual {
+
+    &.marketprice,
+    &.componentcost {
+      input {
+        width: 70px
+      }
+    }
+
+    &.category {
+      input {
+        width: 130px
+      }
+    }
+
+    &.castingtime {
+      input {
+        width: 100px
+      }
+    }
+
+    &.duration {
+      input {
+        width: 400px;
+      }
+    }
+  }
+
+  label.race {
+    &.asi {
+      input {
+        width: 260px;
+      }
+    }
+
+    &.size {
+      input {
+        width: 300px;
+      }
+    }
+
+    &.speed {
+      input {
+        width: 80px;
+      }
+    }
+
+    &.vision {
+      input {
+        width: 100px;
+      }
+    }
+    &.languages {
+      input {
+        width: 200px;
+      }
+    }
+
+    &.skills {
+      input {
+        width: 250px;
+      }
+    }
+  }
+
+  div.tinymceeditorbox {
+    min-height: 150px;
+  }
+
+
+  /* Items List */
+  .items-list {
+    list-style: none;
+    margin: 7px 0;
+    padding: 0;
+    overflow-y: auto;
+
+    .item {
+      height: 30px;
+      line-height: 24px;
+      padding: 3px 0;
+      border-bottom: 1px solid #BBB;
+
+      img {
+        flex: 0 0 24px;
+        margin-right: 5px;
+      }
+    }
+
+    .item-name {
       margin: 0;
-      padding: 0;
-  
-      li > * {
-        margin: 0 3px;
-        height: 28px;
-        line-height: 24px;
-        background: transparent;
-        border: none;
-        border-radius: 0;
-        border-bottom: 1px solid #AAA;
-      }
-  
-      a.attribute-control {
-        flex: 0 0 20px;
-        text-align: center;
-        line-height: 28px;
-        border: none;
-      }
+    }
+
+    .item-controls {
+      flex: 0 0 36px;
     }
   }
-  
-  .dragontactics.sheet.actor {
-    min-width: 560px;
-    min-height: 420px;
+
+  /* Attributes */
+  .attributes-header {
+    padding: 5px;
+    margin: 5px 0;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: bold;
+
+    .attribute-label {
+      flex: 1.5;
+    }
+
+    .attribute-control {
+      flex: 0 0 20px;
+    }
   }
-  
-  
-  .dragontactics.sheet.item {
-    min-width: 460px;
-    min-height: 400px;
+
+  .attributes-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li>* {
+      margin: 0 3px;
+      height: 28px;
+      line-height: 24px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #AAA;
+    }
+
+    a.attribute-control {
+      flex: 0 0 20px;
+      text-align: center;
+      line-height: 28px;
+      border: none;
+    }
   }
-  
+}
+
+.dragontactics.sheet.actor {
+  min-width: 560px;
+  min-height: 420px;
+}
+
+
+.dragontactics.sheet.item {
+  min-width: 460px;
+  min-height: 400px;
+}
