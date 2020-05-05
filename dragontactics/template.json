@@ -168,11 +168,11 @@
     },
     "hero": {
       "templates": ["description", "defenses", "attributes", "skill"],
-      "playername": null,
+      "playername": "",
       "class": {
         "name": "Fighter",
-        "paragon": null,
-        "epic": null,
+        "paragon": "",
+        "epic": "",
         "level": 1,
         "quest": 0
       },
@@ -187,34 +187,34 @@
       "equipment": {
         "worn": {
           "head": {
-            "name": null,
-            "description": null
+            "name": "",
+            "description": ""
           },
           "neck": {
-            "name": null,
-            "description": null
+            "name": "",
+            "description": ""
           },
           "arms": {
-            "name": null,
-            "description": null,
+            "name": "",
+            "description": "",
             "shield": 0,
             "armorcheck_shield": 0
           },
           "hands": {
-            "name": null,
-            "description": null
+            "name": "",
+            "description": ""
           },
           "waist": {
-            "name": null,
-            "description": null
+            "name": "",
+            "description": ""
           },
           "feet": {
-            "name": null,
-            "description": null
+            "name": "",
+            "description": ""
           },
           "armor": {
-            "name": null,
-            "description": null,
+            "name": "",
+            "description": "",
             "bonus": 0,
             "armorcheck": 0
           },
@@ -234,12 +234,12 @@
     "npc": {
       "templates": ["defenses", "description"],
       "roleplay": {
-        "speech": null,
-        "tic": null,
-        "desire": null,
-        "fear": null,
-        "weakness": null,
-        "secret": null
+        "speech": "",
+        "tic": "",
+        "desire": "",
+        "fear": "",
+        "weakness": "",
+        "secret": ""
       }
     }
   },
@@ -247,20 +247,20 @@
     "types": ["armor", "class", "feature", "implement", "power", "race", "ritual", "supplies", "weapon"],
     "templates": {
       "basic": { 
-        "description": "Flavor Text"
+        "description": "Description"
       },
       "equipment": {
         "quantity": 1,
-        "price": "5 gp",
-        "size": "2 slots",
-        "type": "Mundane"
+        "price": "",
+        "size": 2,
+        "type": ""
       }
     },
     "class": {
       "templates": ["basic"],
-      "source": "Martial",
-      "role": "Defender",
-      "keyAbilities": "Strength, Dexterity, Constitution",
+      "source": "",
+      "role": "",
+      "keyAbilities": "",
       "hpBase": 12,
       "hpLevel": 5,
       "surges": 6,
@@ -271,52 +271,52 @@
       },
       "features": [],
       "profs": {
-        "armor": "Cloth",
-        "weapon": "Simple Melee, Simple Ranged",
+        "armor": "",
+        "weapon": "",
         "implement": ""
       }
     },
     "weapon": {
       "templates": ["basic", "equipment"],
       "proficiency": 3,
-      "damage": "1d8",
-      "range": "-",
-      "properties": "Versatile (1d10)"
+      "damage": "",
+      "range": "",
+      "properties": ""
     },
     "armor": {
       "templates": ["basic", "equipment"],
       "ac": 0,
       "penalty": 0,
-      "speed": "-5 ft.",
-      "properties": "None"
+      "speed": "",
+      "properties": ""
     },
     "implement": {
       "templates": ["basic", "equipment"],
-      "properties": "+1 to hit"
+      "properties": ""
     },
     "supplies": {
       "templates": ["basic", "equipment"]
     },
     "feature": {
       "templates": ["basic"],
-      "type": null
+      "type": ""
     },
     "power": {
       "templates": ["basic"],
-      "action": "Standard",
-      "recharge": "None",
-      "trigger": null,
-      "requirement": null,
-      "range": "Personal",
-      "target": null,
-      "attack": null,
-      "hit": null,
-      "miss": null,
-      "attackSecondary": null,
-      "hitSecondary": null,
-      "missSecondary": null,
-      "effect": null,
-      "sustain": null
+      "action": "",
+      "recharge": "",
+      "trigger": "",
+      "requirement": "",
+      "range": "",
+      "target": "",
+      "attack": "",
+      "hit": "",
+      "miss": "",
+      "attackSecondary": "",
+      "hitSecondary": "",
+      "missSecondary": "",
+      "effect": "",
+      "sustain": ""
     },
     "race": {
       "templates": ["basic"],

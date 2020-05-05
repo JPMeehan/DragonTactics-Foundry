@@ -18,33 +18,35 @@
             {{!-- Display Tab --}}
             <div class="tab display" data-group="primary" data-tab="display">
                 <h1>Display</h1>
-                <div class="descriptiontextarea">
+                <div class="description tinymceeditorbox">
                     {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
-                <p class="race asi">Ability Score Increase:
-                    <span name="data.asi" ></span>
-                </p>
-                <p class="race size">Size: 
-                    <span name="data.size" ></span>
-                </p>
-                <p class="race speed">Movement:
-                    <span name="data.speed" ></span>
-                </p>
-                <p class="race vision">Vision: 
-                    <span name="data.vision" ></span>
-                </p>
-                <p class="race languages">Languages: 
-                    <span name="data.languages" ></span>
-                </p>
-                <p class="race skill">Skills:
-                    <span name="data.skill" ></span>
-                </p>
-                <p class="race competencies">Competencies:
-                    <span name="data.competencies" ></span>
-                </p>
-                <div class="descriptiontextarea">
-                    {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}
-                </div>
+            </div>
+
+            {{!-- Input Tab --}}
+            <div class="tab input" data-group="primary" data-tab="input">
+                <h1>Input</h1>
+                <label class="race quantity">Ability Score Increase:
+                    <input type="text" name="data.asi" value="{{data.asi}}" data-dtype="String" placeholder="Ability Score Increases"/>
+                </label>
+                <label class="race price">Size: 
+                    <input type="text" name="data.size" value="{{data.size}}" data-dtype="String" placeholder="Size"/>
+                </label>
+                <label class="race speed">Movement:
+                    <input type="text" name="data.speed" value="{{data.speed}}" data-dtype="String" placeholder="Movement"/>
+                </label>
+                <label class="race vision">Vision: 
+                    <input type="text" name="data.vision" value="{{data.vision}}" data-dtype="String" placeholder="Vision"/>
+                </label>
+                <label class="race languages">Languages: 
+                    <input type="text" name="data.languages" value="{{data.languages}}" data-dtype="String" placeholder="Languages"/>
+                </label>
+                <label class="race skills">Skills:
+                    <input type="text" name="data.skill" value="{{data.skill}}" data-dtype="String" placeholder="Skills"/>
+                </label>
+                <label class="race competencies">Competencies:
+                    <input type="text" name="data.competencies" value="{{data.competencies}}" data-dtype="String" placeholder="Competencies"/>
+                </label>
                 <div class="race features">
                     <h2>Features</h2>
                     <header class="attributes-header flexrow">
@@ -63,32 +65,6 @@
                         </li>
                     {{/each}}        
                 </div>
-            </div>
-
-            {{!-- Input Tab --}}
-            <div class="tab input" data-group="primary" data-tab="input">
-                <h1>Input</h1>
-                <label class="race quantity">Ability Score Increase:
-                    <input type="text" name="data.asi" value="{{data.asi}}" data-dtype="String" />
-                </label>
-                <label class="race price">Size: 
-                    <input type="text" name="data.size" value="{{data.size}}" data-dtype="String" />
-                </label>
-                <label class="race speed">Movement:
-                    <input type="text" name="data.speed" value="{{data.speed}}" data-dtype="String" placeholder="No adjustment" />
-                </label>
-                <label class="race vision">Vision: 
-                    <input type="text" name="data.vision" value="{{data.vision}}" data-dtype="String" />
-                </label>
-                <label class="race languages">Languages: 
-                    <input type="text" name="data.languages" value="{{data.languages}}" data-dtype="String" placeholder="Light Armor"/>
-                </label>
-                <label class="race skills">Skills:
-                    <input type="text" name="data.skill" value="{{data.skill}}" data-dtype="String" />
-                </label>
-                <label class="race competencies">Competencies:
-                    <input type="text" name="data.competencies" value="{{data.competencies}}" data-dtype="String" />
-                </label>
             </div>
     </section>
 </form>

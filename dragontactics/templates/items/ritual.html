@@ -18,26 +18,8 @@
             {{!-- Display Tab --}}
             <div class="tab display" data-group="primary" data-tab="display">
                 <h1>Display</h1>
-                <div class="descriptiontextarea">
+                <div class="description tinymceeditorbox">
                     {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-                </div>
-                <p class="ritual marketprice">Market Price:
-                    <span name="data.marketPrice" ></span>
-                </p>
-                <p class="ritual category">Category: 
-                    <span name="data.category" ></span>
-                </p>
-                <p class="ritual componentcost">Component Cost: 
-                    <span name="data.componentCost" ></span>
-                </p>
-                <p class="ritual castingtime">Casting Time: 
-                    <span name="data.castingTime" ></span>
-                </p>
-                <p class="ritual duration">Duration:
-                    <span name="data.duration" ></span>
-                </p>
-                <div class="descriptiontextarea">
-                    {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}
                 </div>
             </div>
 
@@ -45,20 +27,23 @@
             <div class="tab input" data-group="primary" data-tab="input">
                 <h1>Input</h1>
                 <label class="ritual marketprice">Market Price:
-                    <input type="number" name="data.marketPrice" value="{{data.marketPrice}}" data-dtype="Number" />
+                    <input type="text" name="data.marketPrice" value="{{data.marketPrice}}" data-dtype="String" placeholder="Market Price"/>
                 </label>
                 <label class="ritual category">Category: 
-                    <input type="number" name="data.category" value="{{data.category}}" data-dtype="Number" />
+                    <input type="text" name="data.category" value="{{data.category}}" data-dtype="String" placeholder="Category" />
                 </label>
                 <label class="ritual componentcost">Component Cost: 
-                    <input type="number" name="data.componentCost" value="{{data.componentCost}}" data-dtype="Number" />
+                    <input type="text" name="data.componentCost" value="{{data.componentCost}}" data-dtype="String" placeholder="Component Cost"/>
                 </label>
                 <label class="ritual castingtime">Casting Time: 
-                    <input type="text" name="data.castingTime" value="{{data.castingTime}}" data-dtype="String" placeholder="Light Armor"/>
+                    <input type="text" name="data.castingTime" value="{{data.castingTime}}" data-dtype="String" placeholder="Casting Time"/>
                 </label>
                 <label class="ritual duration">Duration:
-                    <input type="text" name="data.duration" value="{{data.duration}}" data-dtype="String" placeholder="No adjustment" />
+                    <input type="text" name="data.duration" value="{{data.duration}}" data-dtype="String" placeholder="Duration" />
                 </label>
+                <div class="tinymceeditorbox">
+                    {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}
+                </div>
             </div>
     </section>
 </form>

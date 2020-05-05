@@ -18,48 +18,50 @@
             {{!-- Description Tab --}}
             <div class="tab" data-group="primary" data-tab="display">
                 <h1>Display</h1>
-                <div class="class descriptiontextarea">
+                <div class="description tinymceeditorbox">
                     {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
-                <p class="class source">Source:
-                    <span name="data.source" ></span>
-                </p>
-                <p class="class role">Role: 
-                    <span name="data.role" ></span>
-                </p>
-                <p class="class keyabilities">Key Abilities: 
-                    <span name="data.keyAbilities" ></span>
-                </p>
-                <p class="class hp base">Base Hit Points: 
-                    <span name="data.hpBase" ></span>
-                </p>
-                <p class="class hp level">Hit Points per Level:
-                    <span name="data.hpLevel" ></span>
-                </p>
-                <p class="class surges">Surges:
-                    <span name="data.surges" ></span>
-                </p>
-                <p class="class defense fortitude">Fortitude:
-                    <span name="data.defense.fortitude" ></span>
-                </p>
-                <p class="class defense reflex">Reflex:
-                    <span name="data.defense.reflex" ></span>
-                </p>
-                <p class="class defense will">Will:
-                    <span name="data.defense.will" ></span>
-                </p>
-                <p class="class profs armor">Armor Proficiencies:
-                    <input type="text" name="data.profs.armor" ></span>
-                </p>
-                <p class="class profs weapon">Weapon Proficiencies:
-                    <input type="text" name="data.profs.weapon" ></span>
-                </p>
-                <p class="class profs implement">Implement Proficiencies:
-                    <input type="text" name="data.profs.implement" ></span>
-                </p>
-                <div class="class descriptiontextarea">
-                    {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}
-                </div>
+            </div>
+
+            {{!-- Attributes Tab --}}
+            <div class="tab attributes" data-group="primary" data-tab="input">
+                <h1>Input</h1>
+                <label class="class source">Source:
+                    <input type="text" name="data.source" value="{{data.source}}" data-dtype="String" placeholder="Source"/>
+                </label>
+                <label class="class role">Role: 
+                    <input type="text" name="data.role" value="{{data.role}}" data-dtype="String" placeholder="Role"/>
+                </label>
+                <label class="class keyabilities">Key Abilities: 
+                    <input type="text" name="data.keyAbilities" value="{{data.keyAbilities}}" data-dtype="String" placeholder="Strength, Dexterity, Constitution"/>
+                </label>
+                <label class="class hp base">Base Hit Points: 
+                    <input type="number" name="data.hpBase" value="{{data.hpBase}}" data-dtype="Number" >
+                </label>
+                <label class="class hp level">Hit Points per Level:
+                    <input type="number" name="data.hpLevel" value="{{data.hpLevel}}" data-dtype="Number" />
+                </label>
+                <label class="class surges">Surges:
+                    <input type="number" name="data.surges" value="{{data.surges}}" data-dtype="Number" />
+                </label>
+                <label class="class defense fortitude">Fortitude:
+                    <input type="number" name="data.defense.fortitude" value="{{data.defense.fortitude}}" data-dtype="Number" />
+                </label>
+                <label class="class defense reflex">Reflex:
+                    <input type="number" name="data.defense.reflex" value="{{data.defense.reflex}}" data-dtype="Number" />
+                </label>
+                <label class="class defense will">Will:
+                    <input type="number" name="data.defense.will" value="{{data.defense.will}}" data-dtype="Number" />
+                </label>
+                <label class="class profs armor">Armor Proficiencies:
+                    <input type="text" name="data.profs.armor" value="{{data.profs.armor}}" data-dtype="String" placeholder="Armor Proficiencies"/>
+                </label>
+                <label class="class profs weapon">Weapon Proficiencies:
+                    <input type="text" name="data.profs.weapon" value="{{data.profs.weapon}}" data-dtype="String" placeholder="Weapon Proficiencies"/>
+                </label>
+                <label class="class profs implement">Implement Proficiencies:
+                    <input type="text" name="data.profs.implement" value="{{data.profs.implement}}" data-dtype="String" placeholder="Implement Proficiencies"/>
+                </label>
                 <div class="class features">
                     <h2>Features</h2>
                     <header class="attributes-header flexrow">
@@ -78,47 +80,6 @@
                         </li>
                     {{/each}}        
                 </div>
-            </div>
-
-            {{!-- Attributes Tab --}}
-            <div class="tab attributes" data-group="primary" data-tab="input">
-                <h1>Input</h1>
-                <label class="class source">Source:
-                    <input type="number" name="data.source" value="{{data.source}}" data-dtype="Number" />
-                </label>
-                <label class="class role">Role: 
-                    <input type="number" name="data.role" value="{{data.role}}" data-dtype="Number" />
-                </label>
-                <label class="class keyabilities">Key Abilities: 
-                    <input type="number" name="data.keyAbilities" value="{{data.keyAbilities}}" data-dtype="Number" />
-                </label>
-                <label class="class hp base">Base Hit Points: 
-                    <input type="text" name="data.hpBase" value="{{data.hpBase}}" data-dtype="String" placeholder="Light Armor"/>
-                </label>
-                <label class="class hp level">Hit Points per Level:
-                    <input type="number" name="data.hpLevel" value="{{data.hpLevel}}" data-dtype="Number" />
-                </label>
-                <label class="class surges">Surges:
-                    <input type="number" name="data.surges" value="{{data.surges}}" data-dtype="Number" />
-                </label>
-                <label class="class defense fortitude">Fortitude:
-                    <input type="number" name="data.defense.fortitude" value="{{data.defense.fortitude}}" data-dtype="Number" />
-                </label>
-                <label class="class defense reflex">Reflex:
-                    <input type="number" name="data.defense.reflex" value="{{data.defense.reflex}}" data-dtype="Number" />
-                </label>
-                <label class="class defense will">Will:
-                    <input type="number" name="data.defense.will" value="{{data.defense.will}}" data-dtype="Number" />
-                </label>
-                <label class="class profs armor">Armor Proficiencies:
-                    <input type="text" name="data.profs.armor" value="{{data.profs.armor}}" data-dtype="String" />
-                </label>
-                <label class="class profs weapon">Weapon Proficiencies:
-                    <input type="text" name="data.profs.weapon" value="{{data.profs.weapon}}" data-dtype="String" />
-                </label>
-                <label class="class profs implement">Implement Proficiencies:
-                    <input type="text" name="data.profs.implement" value="{{data.profs.implement}}" data-dtype="String" />
-                </label>
             </div>
     </section>
 </form>
