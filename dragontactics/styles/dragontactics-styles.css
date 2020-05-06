@@ -121,7 +121,9 @@
   width: 80px;
 }
 .dragontactics label.equipment.size input,
-.dragontactics label.equipment.prof input {
+.dragontactics label.equipment.prof input,
+.dragontactics label.equipment.acbon input,
+.dragontactics label.equipment.acpen input {
   width: 28px;
 }
 .dragontactics label.equipment.quantity input {
@@ -130,7 +132,8 @@
 .dragontactics label.equipment.type input {
   width: 150px;
 }
-.dragontactics label.equipment.range input {
+.dragontactics label.equipment.range input,
+.dragontactics label.equipment.speedpen input {
   width: 100px;
 }
 .dragontactics label.equipment.damage input {
@@ -155,9 +158,17 @@
 .dragontactics label.race.size input {
   width: 300px;
 }
-.dragontactics label.race.vision input,
+.dragontactics label.race.speed input {
+  width: 80px;
+}
+.dragontactics label.race.vision input {
+  width: 100px;
+}
 .dragontactics label.race.languages input {
-  width: 48%;
+  width: 200px;
+}
+.dragontactics label.race.skills input {
+  width: 250px;
 }
 .dragontactics div.tinymceeditorbox {
   min-height: 150px;

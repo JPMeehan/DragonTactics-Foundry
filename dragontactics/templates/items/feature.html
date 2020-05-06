@@ -5,13 +5,6 @@
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
         </div>
     </header>
-<!-- 
-    {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="display">Display</a>
-        <a class="item" data-tab="input">Input</a>
-    </nav> -->
-
     {{!-- Sheet Body --}}
     <section class="sheet-body">
         <label class="equipment type">Type: 
@@ -20,15 +13,5 @@
         <div class="description tinymceeditorbox">
             {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
         </div>
-<!-- 
-            {{!-- Display Tab --}}
-            <div class="tab display" data-group="primary" data-tab="display">
-                <h1>Display</h1>
-            </div>
-
-            {{!-- Input Tab --}}
-            <div class="tab input" data-group="primary" data-tab="input">
-                <h1>Input</h1>
-            </div> -->
     </section>
 </form>
