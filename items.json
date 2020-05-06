@@ -1,0 +1,1196 @@
+{
+    "_id": "5jUTgkKnL6mVcEED",
+    "name": "test ritual",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "ritual",
+    "data": {
+        "description": "Description",
+        "marketPrice": "5000 gp",
+        "category": "Deception (Illusion)",
+        "componentCost": "1000 gp",
+        "castingTime": "24 hours",
+        "duration": "8 hours, or until you take a bathroom break"
+    },
+    "folder": null,
+    "sort": 700001,
+    "flags": {}
+}, {
+    "_id": "NDaXzIeyWIZYDBpL",
+    "name": "test race",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "race",
+    "data": {
+        "description": "Description",
+        "asi": "+2 Strength, +2 Dexterity or Constitution",
+        "size": "Medium (Height: 5’6”-6’2” Weight: 135-220 lbs.)",
+        "speed": "30 ft.",
+        "vision": "Nightblind",
+        "languages": "Common, Elvish, Gnomish, Goblin",
+        "skill": "+2 Sleight of Hand, +2 Animal Handling",
+        "competencies": "Knowledge of Geography (Five Nations)",
+        "features": {}
+    },
+    "folder": null,
+    "sort": 600001,
+    "flags": {}
+}, {
+    "_id": "Pi45aAT7KSVE2ff0",
+    "name": "test feature",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "feature",
+    "data": {
+        "description": "Description",
+        "type": ""
+    },
+    "folder": null,
+    "sort": 300001,
+    "flags": {}
+}, {
+    "_id": "StwEzwEtdWW3qvpm",
+    "name": "Fighter",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "class",
+    "data": {
+        "description": "Description",
+        "source": "Martial",
+        "role": "Defender",
+        "keyAbilities": "Strength, Constitution, Dexterity, Wisdom",
+        "hpBase": 15,
+        "hpLevel": 6,
+        "surges": 9,
+        "defense": {
+            "fortitude": 2,
+            "reflex": 0,
+            "will": 0
+        },
+        "features": [],
+        "profs": {
+            "armor": "Cloth, Leather, Hide, Chainmail, Scale; Light Shield, Heavy Shield",
+            "weapon": "Simple Melee, Military Melee, Simple Ranged, Military Ranged",
+            "implement": "None"
+        }
+    },
+    "folder": null,
+    "sort": 200001,
+    "flags": {}
+}, {
+    "_id": "maHkI1hiQcS12CFt",
+    "name": "test supplies",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "supplies",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "Text",
+        "size": 2,
+        "type": "Text"
+    },
+    "folder": null,
+    "sort": 800001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "test weapon",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 999,
+        "price": "10,000 gp",
+        "size": 2,
+        "type": "Military Light Blade",
+        "proficiency": 3,
+        "damage": "",
+        "range": "",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}, {
+    "_id": "uuJZV2mj3l2xDyzs",
+    "name": "Cloth Armor",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "armor",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "0 gp",
+        "size": 2,
+        "type": "Light Armor",
+        "ac": 0,
+        "penalty": 0,
+        "speed": "None",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 100001,
+    "flags": {}
+}, {
+    "_id": "vwfEnbfV3IKbaqq1",
+    "name": "test power",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "power",
+    "data": {
+        "description": "Description",
+        "action": "Free Interrupt",
+        "recharge": "None",
+        "trigger": "",
+        "requirement": "",
+        "range": "",
+        "target": "",
+        "attack": "",
+        "hit": "",
+        "miss": "",
+        "attackSecondary": "",
+        "hitSecondary": "",
+        "missSecondary": "",
+        "effect": "",
+        "sustain": ""
+    },
+    "folder": null,
+    "sort": 500001,
+    "flags": {}
+}, {
+    "_id": "zlIV02qPbAFjvwGN",
+    "name": "test implement",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "implement",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "",
+        "size": 2,
+        "type": "",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 400001,
+    "flags": {}
+}, {
+    "_id": "5jUTgkKnL6mVcEED",
+    "name": "test ritual",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "ritual",
+    "data": {
+        "description": "Description",
+        "marketPrice": "5000 gp",
+        "category": "Deception (Illusion)",
+        "componentCost": "1000 gp",
+        "castingTime": "24 hours",
+        "duration": "8 hours, or until you take a bathroom break"
+    },
+    "folder": null,
+    "sort": 700001,
+    "flags": {}
+}, {
+    "_id": "NDaXzIeyWIZYDBpL",
+    "name": "test race",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "race",
+    "data": {
+        "description": "Description",
+        "asi": "+2 Strength, +2 Dexterity or Constitution",
+        "size": "Medium (Height: 5’6”-6’2” Weight: 135-220 lbs.)",
+        "speed": "30 ft.",
+        "vision": "Nightblind",
+        "languages": "Common, Elvish, Gnomish, Goblin",
+        "skill": "+2 Sleight of Hand, +2 Animal Handling",
+        "competencies": "Knowledge of Geography (Five Nations)",
+        "features": {}
+    },
+    "folder": null,
+    "sort": 600001,
+    "flags": {}
+}, {
+    "_id": "Pi45aAT7KSVE2ff0",
+    "name": "test feature",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "feature",
+    "data": {
+        "description": "Description",
+        "type": ""
+    },
+    "folder": null,
+    "sort": 300001,
+    "flags": {}
+}, {
+    "_id": "StwEzwEtdWW3qvpm",
+    "name": "Fighter",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "class",
+    "data": {
+        "description": "Description",
+        "source": "Martial",
+        "role": "Defender",
+        "keyAbilities": "Strength, Constitution, Dexterity, Wisdom",
+        "hpBase": 15,
+        "hpLevel": 6,
+        "surges": 9,
+        "defense": {
+            "fortitude": 2,
+            "reflex": 0,
+            "will": 0
+        },
+        "features": [],
+        "profs": {
+            "armor": "Cloth, Leather, Hide, Chainmail, Scale; Light Shield, Heavy Shield",
+            "weapon": "Simple Melee, Military Melee, Simple Ranged, Military Ranged",
+            "implement": "None"
+        }
+    },
+    "folder": null,
+    "sort": 200001,
+    "flags": {}
+}, {
+    "_id": "maHkI1hiQcS12CFt",
+    "name": "test supplies",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "supplies",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "Text",
+        "size": 2,
+        "type": "Text"
+    },
+    "folder": null,
+    "sort": 800001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "test weapon",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 999,
+        "price": "10,000 gp",
+        "size": 2,
+        "type": "Military Light Blade",
+        "proficiency": 3,
+        "damage": "",
+        "range": "",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}, {
+    "_id": "uuJZV2mj3l2xDyzs",
+    "name": "Cloth Armor",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "armor",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "0 gp",
+        "size": 2,
+        "type": "Light Armor",
+        "ac": 0,
+        "penalty": 0,
+        "speed": "None",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 100001,
+    "flags": {}
+}, {
+    "_id": "vwfEnbfV3IKbaqq1",
+    "name": "test power",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "power",
+    "data": {
+        "description": "Description",
+        "action": "Free Interrupt",
+        "recharge": "None",
+        "trigger": "",
+        "requirement": "",
+        "range": "",
+        "target": "",
+        "attack": "",
+        "hit": "",
+        "miss": "",
+        "attackSecondary": "",
+        "hitSecondary": "",
+        "missSecondary": "",
+        "effect": "",
+        "sustain": ""
+    },
+    "folder": null,
+    "sort": 500001,
+    "flags": {}
+}, {
+    "_id": "zlIV02qPbAFjvwGN",
+    "name": "test implement",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "implement",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "",
+        "size": 2,
+        "type": "",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 400001,
+    "flags": {}
+}, {
+    "_id": "Pi45aAT7KSVE2ff0",
+    "name": "Test Feature",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "feature",
+    "data": {
+        "description": "Description",
+        "type": ""
+    },
+    "folder": null,
+    "sort": 300001,
+    "flags": {}
+}, {
+    "_id": "Pi45aAT7KSVE2ff0",
+    "name": "Test Feature",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "feature",
+    "data": {
+        "description": "Description",
+        "type": "Type"
+    },
+    "folder": null,
+    "sort": 300001,
+    "flags": {}
+}, {
+    "_id": "Pi45aAT7KSVE2ff0",
+    "name": "Test Feature",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "feature",
+    "data": {
+        "description": "<p>Fun Description Times</p>",
+        "type": "Type"
+    },
+    "folder": null,
+    "sort": 300001,
+    "flags": {}
+}, {
+    "_id": "zlIV02qPbAFjvwGN",
+    "name": "Rod",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "implement",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "",
+        "size": 2,
+        "type": "",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 400001,
+    "flags": {}
+}, {
+    "_id": "zlIV02qPbAFjvwGN",
+    "name": "Rod",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "implement",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "12 gp",
+        "size": 2,
+        "type": "",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 400001,
+    "flags": {}
+}, {
+    "_id": "zlIV02qPbAFjvwGN",
+    "name": "Rod",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "implement",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "12 gp",
+        "size": 3,
+        "type": "",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 400001,
+    "flags": {}
+}, {
+    "_id": "zlIV02qPbAFjvwGN",
+    "name": "Rod",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "implement",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "12 gp",
+        "size": 3,
+        "type": "Mundane Implement",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 400001,
+    "flags": {}
+}, {
+    "_id": "vwfEnbfV3IKbaqq1",
+    "name": "Melee Basic Attack",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "power",
+    "data": {
+        "description": "Description",
+        "action": "Free Interrupt",
+        "recharge": "None",
+        "trigger": "",
+        "requirement": "",
+        "range": "",
+        "target": "",
+        "attack": "",
+        "hit": "",
+        "miss": "",
+        "attackSecondary": "",
+        "hitSecondary": "",
+        "missSecondary": "",
+        "effect": "",
+        "sustain": ""
+    },
+    "folder": null,
+    "sort": 500001,
+    "flags": {}
+}, {
+    "_id": "vwfEnbfV3IKbaqq1",
+    "name": "Melee Basic Attack",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "power",
+    "data": {
+        "description": "Description",
+        "action": "Standard",
+        "recharge": "None",
+        "trigger": "",
+        "requirement": "",
+        "range": "",
+        "target": "",
+        "attack": "",
+        "hit": "",
+        "miss": "",
+        "attackSecondary": "",
+        "hitSecondary": "",
+        "missSecondary": "",
+        "effect": "",
+        "sustain": ""
+    },
+    "folder": null,
+    "sort": 500001,
+    "flags": {}
+}, {
+    "_id": "vwfEnbfV3IKbaqq1",
+    "name": "Melee Basic Attack",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "power",
+    "data": {
+        "description": "Description",
+        "action": "Standard",
+        "recharge": "None",
+        "trigger": "",
+        "requirement": "",
+        "range": "Melee weapon",
+        "target": "",
+        "attack": "",
+        "hit": "",
+        "miss": "",
+        "attackSecondary": "",
+        "hitSecondary": "",
+        "missSecondary": "",
+        "effect": "",
+        "sustain": ""
+    },
+    "folder": null,
+    "sort": 500001,
+    "flags": {}
+}, {
+    "_id": "vwfEnbfV3IKbaqq1",
+    "name": "Melee Basic Attack",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "power",
+    "data": {
+        "description": "Description",
+        "action": "Standard",
+        "recharge": "None",
+        "trigger": "",
+        "requirement": "",
+        "range": "Melee weapon",
+        "target": "One creature",
+        "attack": "",
+        "hit": "",
+        "miss": "",
+        "attackSecondary": "",
+        "hitSecondary": "",
+        "missSecondary": "",
+        "effect": "",
+        "sustain": ""
+    },
+    "folder": null,
+    "sort": 500001,
+    "flags": {}
+}, {
+    "_id": "vwfEnbfV3IKbaqq1",
+    "name": "Melee Basic Attack",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "power",
+    "data": {
+        "description": "Description",
+        "action": "Standard",
+        "recharge": "None",
+        "trigger": "",
+        "requirement": "",
+        "range": "Melee weapon",
+        "target": "One creature",
+        "attack": "Strength vs. AC",
+        "hit": "",
+        "miss": "",
+        "attackSecondary": "",
+        "hitSecondary": "",
+        "missSecondary": "",
+        "effect": "",
+        "sustain": ""
+    },
+    "folder": null,
+    "sort": 500001,
+    "flags": {}
+}, {
+    "_id": "vwfEnbfV3IKbaqq1",
+    "name": "Melee Basic Attack",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "power",
+    "data": {
+        "description": "Description",
+        "action": "Standard",
+        "recharge": "None",
+        "trigger": "",
+        "requirement": "",
+        "range": "Melee weapon",
+        "target": "One creature",
+        "attack": "Strength vs. AC",
+        "hit": "1[W] + Strength damage",
+        "miss": "",
+        "attackSecondary": "",
+        "hitSecondary": "",
+        "missSecondary": "",
+        "effect": "",
+        "sustain": ""
+    },
+    "folder": null,
+    "sort": 500001,
+    "flags": {}
+}, {
+    "_id": "NDaXzIeyWIZYDBpL",
+    "name": "Human",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "race",
+    "data": {
+        "description": "Description",
+        "asi": "+2 Strength, +2 Dexterity or Constitution",
+        "size": "Medium (Height: 5’6”-6’2” Weight: 135-220 lbs.)",
+        "speed": "30 ft.",
+        "vision": "Nightblind",
+        "languages": "Common, Elvish, Gnomish, Goblin",
+        "skill": "+2 Sleight of Hand, +2 Animal Handling",
+        "competencies": "Knowledge of Geography (Five Nations)",
+        "features": {}
+    },
+    "folder": null,
+    "sort": 600001,
+    "flags": {}
+}, {
+    "_id": "NDaXzIeyWIZYDBpL",
+    "name": "Human",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "race",
+    "data": {
+        "description": "Description",
+        "asi": "+1 ",
+        "size": "Medium (Height: 5’6”-6’2” Weight: 135-220 lbs.)",
+        "speed": "30 ft.",
+        "vision": "Nightblind",
+        "languages": "Common, Elvish, Gnomish, Goblin",
+        "skill": "+2 Sleight of Hand, +2 Animal Handling",
+        "competencies": "Knowledge of Geography (Five Nations)",
+        "features": {}
+    },
+    "folder": null,
+    "sort": 600001,
+    "flags": {}
+}, {
+    "_id": "NDaXzIeyWIZYDBpL",
+    "name": "Human",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "race",
+    "data": {
+        "description": "Description",
+        "asi": "+2 to any one ability score",
+        "size": "Medium (Height: 5’6”-6’2” Weight: 135-220 lbs.)",
+        "speed": "30 ft.",
+        "vision": "Nightblind",
+        "languages": "Common, Elvish, Gnomish, Goblin",
+        "skill": "+2 Sleight of Hand, +2 Animal Handling",
+        "competencies": "Knowledge of Geography (Five Nations)",
+        "features": {}
+    },
+    "folder": null,
+    "sort": 600001,
+    "flags": {}
+}, {
+    "_id": "5jUTgkKnL6mVcEED",
+    "name": "test ritual",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "ritual",
+    "data": {
+        "description": "<p><em>With a little bit of magic you transfer the contents of a book or other piece of writing into a new book</em></p>\n<hr>\n<p>You completely and perfectly copy the writing in a book or other text onto new paper. If the original book was magical, the magic on the book is not copied. If this ritual is interrupted, unlike other rituals you get a partial effect of transcribing a percentage of the text equal to how much time you had spent casting the ritual. However, you also expend all of the component cost at the start of casting this ritual rather than just half.</p>",
+        "marketPrice": "5000 gp",
+        "category": "Deception (Illusion)",
+        "componentCost": "1000 gp",
+        "castingTime": "24 hours",
+        "duration": "8 hours, or until you take a bathroom break",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 700001,
+    "flags": {}
+}, {
+    "_id": "5jUTgkKnL6mVcEED",
+    "name": "test ritual",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "ritual",
+    "data": {
+        "description": "<p><em>With a little bit of magic you transfer the contents of a book or other piece of writing into a new book</em></p>\n<hr>\n<p>You completely and perfectly copy the writing in a book or other text onto new paper. If the original book was magical, the magic on the book is not copied. If this ritual is interrupted, unlike other rituals you get a partial effect of transcribing a percentage of the text equal to how much time you had spent casting the ritual. However, you also expend all of the component cost at the start of casting this ritual rather than just half.</p>",
+        "marketPrice": "25 gp",
+        "category": "Deception (Illusion)",
+        "componentCost": "1000 gp",
+        "castingTime": "24 hours",
+        "duration": "8 hours, or until you take a bathroom break",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 700001,
+    "flags": {}
+}, {
+    "_id": "5jUTgkKnL6mVcEED",
+    "name": "test ritual",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "ritual",
+    "data": {
+        "description": "<p><em>With a little bit of magic you transfer the contents of a book or other piece of writing into a new book</em></p>\n<hr>\n<p>You completely and perfectly copy the writing in a book or other text onto new paper. If the original book was magical, the magic on the book is not copied. If this ritual is interrupted, unlike other rituals you get a partial effect of transcribing a percentage of the text equal to how much time you had spent casting the ritual. However, you also expend all of the component cost at the start of casting this ritual rather than just half.</p>",
+        "marketPrice": "25 gp",
+        "category": "Creation",
+        "componentCost": "1000 gp",
+        "castingTime": "24 hours",
+        "duration": "8 hours, or until you take a bathroom break",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 700001,
+    "flags": {}
+}, {
+    "_id": "5jUTgkKnL6mVcEED",
+    "name": "test ritual",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "ritual",
+    "data": {
+        "description": "<p><em>With a little bit of magic you transfer the contents of a book or other piece of writing into a new book</em></p>\n<hr>\n<p>You completely and perfectly copy the writing in a book or other text onto new paper. If the original book was magical, the magic on the book is not copied. If this ritual is interrupted, unlike other rituals you get a partial effect of transcribing a percentage of the text equal to how much time you had spent casting the ritual. However, you also expend all of the component cost at the start of casting this ritual rather than just half.</p>",
+        "marketPrice": "25 gp",
+        "category": "Creation",
+        "componentCost": "5 gp",
+        "castingTime": "24 hours",
+        "duration": "8 hours, or until you take a bathroom break",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 700001,
+    "flags": {}
+}, {
+    "_id": "5jUTgkKnL6mVcEED",
+    "name": "test ritual",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "ritual",
+    "data": {
+        "description": "<p><em>With a little bit of magic you transfer the contents of a book or other piece of writing into a new book</em></p>\n<hr>\n<p>You completely and perfectly copy the writing in a book or other text onto new paper. If the original book was magical, the magic on the book is not copied. If this ritual is interrupted, unlike other rituals you get a partial effect of transcribing a percentage of the text equal to how much time you had spent casting the ritual. However, you also expend all of the component cost at the start of casting this ritual rather than just half.</p>",
+        "marketPrice": "25 gp",
+        "category": "Creation",
+        "componentCost": "5 gp, plus enough paper for the transcribed text",
+        "castingTime": "24 hours",
+        "duration": "8 hours, or until you take a bathroom break",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 700001,
+    "flags": {}
+}, {
+    "_id": "5jUTgkKnL6mVcEED",
+    "name": "test ritual",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "ritual",
+    "data": {
+        "description": "<p><em>With a little bit of magic you transfer the contents of a book or other piece of writing into a new book</em></p>\n<hr>\n<p>You completely and perfectly copy the writing in a book or other text onto new paper. If the original book was magical, the magic on the book is not copied. If this ritual is interrupted, unlike other rituals you get a partial effect of transcribing a percentage of the text equal to how much time you had spent casting the ritual. However, you also expend all of the component cost at the start of casting this ritual rather than just half.</p>",
+        "marketPrice": "25 gp",
+        "category": "Creation",
+        "componentCost": "5 gp, plus enough paper for the transcribed text",
+        "castingTime": "10 minutes",
+        "duration": "8 hours, or until you take a bathroom break",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 700001,
+    "flags": {}
+}, {
+    "_id": "5jUTgkKnL6mVcEED",
+    "name": "test ritual",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "ritual",
+    "data": {
+        "description": "<p><em>With a little bit of magic you transfer the contents of a book or other piece of writing into a new book</em></p>\n<hr>\n<p>You completely and perfectly copy the writing in a book or other text onto new paper. If the original book was magical, the magic on the book is not copied. If this ritual is interrupted, unlike other rituals you get a partial effect of transcribing a percentage of the text equal to how much time you had spent casting the ritual. However, you also expend all of the component cost at the start of casting this ritual rather than just half.</p>",
+        "marketPrice": "25 gp",
+        "category": "Creation",
+        "componentCost": "5 gp, plus enough paper for the transcribed text",
+        "castingTime": "10 minutes",
+        "duration": "Instantaneous",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 700001,
+    "flags": {}
+}, {
+    "_id": "5jUTgkKnL6mVcEED",
+    "name": "Amanuensis",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "ritual",
+    "data": {
+        "description": "<p><em>With a little bit of magic you transfer the contents of a book or other piece of writing into a new book</em></p>\n<hr>\n<p>You completely and perfectly copy the writing in a book or other text onto new paper. If the original book was magical, the magic on the book is not copied. If this ritual is interrupted, unlike other rituals you get a partial effect of transcribing a percentage of the text equal to how much time you had spent casting the ritual. However, you also expend all of the component cost at the start of casting this ritual rather than just half.</p>",
+        "marketPrice": "25 gp",
+        "category": "Creation",
+        "componentCost": "5 gp, plus enough paper for the transcribed text",
+        "castingTime": "10 minutes",
+        "duration": "Instantaneous",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 700001,
+    "flags": {}
+}, {
+    "_id": "maHkI1hiQcS12CFt",
+    "name": "Rations (1 day)",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "supplies",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "Text",
+        "size": 2,
+        "type": "Text"
+    },
+    "folder": null,
+    "sort": 800001,
+    "flags": {}
+}, {
+    "_id": "maHkI1hiQcS12CFt",
+    "name": "Rations (1 day)",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "supplies",
+    "data": {
+        "description": "<p>Rations usually consist of Ghallanda bread plus some mix of local fruits and vegetables. See survival rules for usage.</p>",
+        "quantity": 1,
+        "price": "Text",
+        "size": 2,
+        "type": "Text"
+    },
+    "folder": null,
+    "sort": 800001,
+    "flags": {}
+}, {
+    "_id": "maHkI1hiQcS12CFt",
+    "name": "Rations (1 day)",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "supplies",
+    "data": {
+        "description": "<p>Rations usually consist of Ghallanda bread plus some mix of local fruits and vegetables. See survival rules for usage.</p>",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": 2,
+        "type": "Text"
+    },
+    "folder": null,
+    "sort": 800001,
+    "flags": {}
+}, {
+    "_id": "maHkI1hiQcS12CFt",
+    "name": "Rations (1 day)",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "supplies",
+    "data": {
+        "description": "<p>Rations usually consist of Ghallanda bread plus some mix of local fruits and vegetables. See survival rules for usage.</p>",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": 1,
+        "type": "Text"
+    },
+    "folder": null,
+    "sort": 800001,
+    "flags": {}
+}, {
+    "_id": "maHkI1hiQcS12CFt",
+    "name": "Rations (1 day)",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "supplies",
+    "data": {
+        "description": "<p>Rations usually consist of Ghallanda bread plus some mix of local fruits and vegetables. See survival rules for usage.</p>",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": 1,
+        "type": "Mundane Equipment"
+    },
+    "folder": null,
+    "sort": 800001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "Dagger",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 999,
+        "price": "10,000 gp",
+        "size": 2,
+        "type": "Military Light Blade",
+        "proficiency": 3,
+        "damage": "",
+        "range": "",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "Dagger",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "10,000 gp",
+        "size": 2,
+        "type": "Military Light Blade",
+        "proficiency": 3,
+        "damage": "",
+        "range": "",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "Dagger",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": 2,
+        "type": "Military Light Blade",
+        "proficiency": 3,
+        "damage": "",
+        "range": "",
+        "properties": ""
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "Dagger",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": 2,
+        "type": "Military Light Blade",
+        "proficiency": 3,
+        "damage": "",
+        "range": "",
+        "properties": "<p>Light thrown: A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n<p>Off-hand: An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>"
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "Dagger",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": 2,
+        "type": "Military Light Blade",
+        "proficiency": 3,
+        "damage": "",
+        "range": "",
+        "properties": "<p>Light thrown: A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n<p>Off-hand: An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>"
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "Dagger",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": 3,
+        "type": "Military Light Blade",
+        "proficiency": 3,
+        "damage": "",
+        "range": "",
+        "properties": "<p>Light thrown: A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n<p>Off-hand: An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>"
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "Dagger",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": 3,
+        "type": "Mundane Weapon Simple Melee 1H",
+        "proficiency": 3,
+        "damage": "",
+        "range": "",
+        "properties": "<p>Light thrown: A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n<p>Off-hand: An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>"
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "Dagger",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": 3,
+        "type": "Mundane Weapon Simple Melee 1H",
+        "proficiency": 3,
+        "damage": "1d4",
+        "range": "",
+        "properties": "<p>Light thrown: A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n<p>Off-hand: An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>"
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}, {
+    "_id": "pI7AKh5khejqga0H",
+    "name": "Dagger",
+    "permission": {
+        "default": 0,
+        "Z2K6odDlDw62yzCl": 3
+    },
+    "type": "weapon",
+    "data": {
+        "description": "Description",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": 3,
+        "type": "Mundane Weapon Simple Melee 1H",
+        "proficiency": 3,
+        "damage": "1d4",
+        "range": "25'/50'",
+        "properties": "<p>Light thrown: A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n<p>Off-hand: An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>"
+    },
+    "folder": null,
+    "sort": 900001,
+    "flags": {}
+}
