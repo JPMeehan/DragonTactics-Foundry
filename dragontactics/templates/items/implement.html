@@ -8,16 +8,16 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="display">Display</a>
+        <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="input">Input</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
-            {{!-- Display Tab --}}
-            <div class="tab display" data-group="primary" data-tab="display">
-                <h1>Display</h1>
+            {{!-- Description Tab --}}
+            <div class="tab description" data-group="primary" data-tab="description">
+                <h1>Description</h1>
                 <div class="description tinymceeditorbox">
                     {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>

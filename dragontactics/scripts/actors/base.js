@@ -59,7 +59,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
   //   });
 
   //   // Add or Remove Attribute
-  //   html.find(".attributes").on("click", ".attribute-control", this._onClickAttributeControl.bind(this));
+  //   html.find(".attributes").on("click", ".feature-control", this._onClickAttributeControl.bind(this));
     }
 
   // /* -------------------------------------------- */

@@ -247,7 +247,7 @@
     "types": ["armor", "class", "feature", "implement", "power", "race", "ritual", "supplies", "weapon"],
     "templates": {
       "basic": { 
-        "description": "Description"
+        "description": "Edit me!"
       },
       "equipment": {
         "quantity": 1,

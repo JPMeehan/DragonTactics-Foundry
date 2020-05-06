@@ -172,6 +172,7 @@
 }
 .dragontactics div.tinymceeditorbox {
   min-height: 150px;
+  border: solid 1px black;
 }
 .dragontactics .items-list {
   list-style: none;
@@ -195,7 +196,7 @@
 .dragontactics .items-list .item-controls {
   flex: 0 0 36px;
 }
-.dragontactics .attributes-header {
+.dragontactics .features-header {
   padding: 5px;
   margin: 5px 0;
   background: rgba(0, 0, 0, 0.05);
@@ -204,18 +205,18 @@
   text-align: center;
   font-weight: bold;
 }
-.dragontactics .attributes-header .attribute-label {
+.dragontactics .features-header .feature-label {
   flex: 1.5;
 }
-.dragontactics .attributes-header .attribute-control {
+.dragontactics .features-header .feature-control {
   flex: 0 0 20px;
 }
-.dragontactics .attributes-list {
+.dragontactics .features-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.dragontactics .attributes-list li > * {
+.dragontactics .features-list li > * {
   margin: 0 3px;
   height: 28px;
   line-height: 24px;
@@ -224,7 +225,7 @@
   border-radius: 0;
   border-bottom: 1px solid #AAA;
 }
-.dragontactics .attributes-list a.attribute-control {
+.dragontactics .features-list a.feature-control {
   flex: 0 0 20px;
   text-align: center;
   line-height: 28px;

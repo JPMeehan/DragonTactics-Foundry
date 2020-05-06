@@ -8,7 +8,7 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="display">Display</a>
+        <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="input">Input</a>
     </nav>
 
@@ -17,14 +17,14 @@
 
             {{!-- Description Tab --}}
             <div class="tab" data-group="primary" data-tab="display">
-                <h1>Display</h1>
+                <h1>Description</h1>
                 <div class="description tinymceeditorbox">
                     {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
             </div>
 
-            {{!-- Attributes Tab --}}
-            <div class="tab attributes" data-group="primary" data-tab="input">
+            {{!-- Input Tab --}}
+            <div class="tab input" data-group="primary" data-tab="input">
                 <h1>Input</h1>
                 <label class="class source">Source:
                     <input type="text" name="data.source" value="{{data.source}}" data-dtype="String"
@@ -70,19 +70,19 @@
                 </label>
                 <div class="class features">
                     <h2>Features</h2>
-                    <header class="attributes-header flexrow">
-                        <span class="attribute-key">Feature Key</span>
-                        <span class="attribute-label">Name</span>
-                        <span class="attribute-value">Text</span>
-                        <a class="attribute-control" data-action="create"><i class="fas fa-plus"></i></a>
+                    <header class="features-header flexrow">
+                        <span class="feature-key">Feature Key</span>
+                        <span class="feature-label">Name</span>
+                        <span class="feature-value">Text</span>
+                        <a class="feature-control" data-action="create"><i class="fas fa-plus"></i></a>
                     </header>
-                    <ol class="attributes-list">
+                    <ol class="features-list">
                     {{#each data.features as |attr key|}}
                         <li class="attribute flexrow" data-attribute="{{key}}">
-                            <input class="attribute-key" type="text" name="data.attributes.{{key}}.key" value="{{key}}"/>
-                            <input class="attribute-label" type="text" name="data.attributes.{{key}}.label" value="{{attr.label}}"/>
-                            <input class="attribute-value" type="text" name="data.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="String"/>
-                            <a class="attribute-control" data-action="delete"><i class="fas fa-trash"></i></a>
+                            <input class="feature-key" type="text" name="data.attributes.{{key}}.key" value="{{key}}"/>
+                            <input class="feature-label" type="text" name="data.attributes.{{key}}.label" value="{{attr.label}}"/>
+                            <input class="feature-value" type="text" name="data.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="String"/>
+                            <a class="feature-control" data-action="delete"><i class="fas fa-trash"></i></a>
                         </li>
                     {{/each}}        
                 </div>

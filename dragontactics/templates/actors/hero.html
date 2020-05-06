@@ -222,24 +222,24 @@
 
         {{!-- Attributes Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
-            <header class="attributes-header flexrow">
-                <span class="attribute-key">Attribute Key</span>
-                <span class="attribute-value">Value</span>
-                <span class="attribute-label">Label</span>
+            <header class="features-header flexrow">
+                <span class="feature-key">Attribute Key</span>
+                <span class="feature-value">Value</span>
+                <span class="feature-label">Label</span>
                 <span class="attribute-dtype">Data Type</span>
-                <a class="attribute-control" data-action="create"><i class="fas fa-plus"></i></a>
+                <a class="feature-control" data-action="create"><i class="fas fa-plus"></i></a>
             </header>
 
-            <ol class="attributes-list">
+            <ol class="features-list">
             {{#each data.attributes as |attr key|}}
                 <li class="attribute flexrow" data-attribute="{{key}}">
-                    <input class="attribute-key" type="text" name="data.attributes.{{key}}.key" value="{{key}}"/>
+                    <input class="feature-key" type="text" name="data.attributes.{{key}}.key" value="{{key}}"/>
                     {{#if attr.isCheckbox}}
-                    <label class="attribute-value checkbox"><input type="checkbox" name="data.attributes.{{key}}.value" {{checked attr.value}}/></label>
+                    <label class="feature-value checkbox"><input type="checkbox" name="data.attributes.{{key}}.value" {{checked attr.value}}/></label>
                     {{else}}
-                    <input class="attribute-value" type="text" name="data.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="{{attr.dtype}}"/>
+                    <input class="feature-value" type="text" name="data.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="{{attr.dtype}}"/>
                     {{/if}}
-                    <input class="attribute-label" type="text" name="data.attributes.{{key}}.label" value="{{attr.label}}"/>
+                    <input class="feature-label" type="text" name="data.attributes.{{key}}.label" value="{{attr.label}}"/>
                     <select class="attribute-dtype" name="data.attributes.{{key}}.dtype">
                         {{#select attr.dtype}}
                         {{#each ../dtypes as |t|}}
@@ -247,7 +247,7 @@
                         {{/each}}
                         {{/select}}
                     </select>
-                    <a class="attribute-control" data-action="delete"><i class="fas fa-trash"></i></a>
+                    <a class="feature-control" data-action="delete"><i class="fas fa-trash"></i></a>
                 </li>
             {{/each}}
             </ol>

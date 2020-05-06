@@ -52,7 +52,7 @@ export class DragonTacticsItemSheet extends ItemSheet {
   //   if (!this.options.editable) return;
 
   //   // Add or Remove Attribute
-  //   html.find(".attributes").on("click", ".attribute-control", this._onClickAttributeControl.bind(this));
+  //   html.find(".attributes").on("click", ".feature-control", this._onClickAttributeControl.bind(this));
   // }
 
   // /* -------------------------------------------- */
