@@ -27,25 +27,32 @@
             <div class="tab input" data-group="primary" data-tab="input">
                 <h1>Input</h1>
                 <label class="equipment quantity">Quantity:
-                    <input type="number" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" />
+                    <input type="number" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" 
+                        title="Quantity"/>
                 </label>
                 <label class="equipment price">Price: 
-                    <input type="text" name="data.price" value="{{data.price}}" data-dtype="String" placeholder="Price" />
+                    <input type="text" name="data.price" value="{{data.price}}" data-dtype="String" 
+                        placeholder="Price" title="Price, e.g. 5 gp" />
                 </label>
                 <label class="equipment size">Size (Slots): 
-                    <input type="number" name="data.size" value="{{data.size}}" data-dtype="Number" />
+                    <input type="number" name="data.size" value="{{data.size}}" data-dtype="Number" 
+                        title="Size, in slots e.g. 2" />
                 </label>
                 <label class="equipment type">Type: 
-                    <input type="text" name="data.type" value="{{data.type}}" data-dtype="String" placeholder="Weapon Type"/>
+                    <input type="text" name="data.type" value="{{data.type}}" data-dtype="String" 
+                        placeholder="Weapon Type" title="Weapon type, e.g. Heavy Blade Polearm" />
                 </label>
                 <label class="equipment prof">Proficiency:
-                    <input type="number" name="data.proficiency" value="{{data.proficiency}}" data-dtype="Number" />
+                    <input type="number" name="data.proficiency" value="{{data.proficiency}}" data-dtype="Number" 
+                        title="Proficiency Bonus, which is added to your weapon attack rolls" />
                 </label>
                 <label class="equipment damage">Damage:
-                    <input type="text" name="data.damage" value="{{data.damage}}" data-dtype="String" placeholder="Damage Dice" />
+                    <input type="text" name="data.damage" value="{{data.damage}}" data-dtype="String" 
+                        placeholder="Damage Dice" title="Damage Dice, e.g. 1d8" />
                 </label>
                 <label class="equipment range">Range:
-                    <input type="text" name="data.range" value="{{data.range}}" data-dtype="String" placeholder="Weapon Range" />
+                    <input type="text" name="data.range" value="{{data.range}}" data-dtype="String" 
+                        placeholder="Weapon Range" title="Weapon Range, e.g. 30'/60'" />
                 </label>
                 <div class="tinymceeditorbox">
                     {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}

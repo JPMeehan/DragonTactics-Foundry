@@ -8,7 +8,8 @@
     {{!-- Sheet Body --}}
     <section class="sheet-body">
         <label class="equipment type">Type: 
-            <input type="text" name="data.type" value="{{data.type}}" data-dtype="String" placeholder="Feature Type"/>
+            <input type="text" name="data.type" value="{{data.type}}" data-dtype="String" 
+                placeholder="Feature Type" title="Type, e.g. Feat" />
         </label>
         <div class="description tinymceeditorbox">
             {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}

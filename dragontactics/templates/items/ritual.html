@@ -2,7 +2,8 @@
     <header class="sheet-header">
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
         <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}"
+						placeholder="Name" title="Name, e.g. " /></h1>
         </div>
     </header>
 
@@ -27,19 +28,24 @@
             <div class="tab input" data-group="primary" data-tab="input">
                 <h1>Input</h1>
                 <label class="ritual marketprice">Market Price:
-                    <input type="text" name="data.marketPrice" value="{{data.marketPrice}}" data-dtype="String" placeholder="Market Price"/>
+                    <input type="text" name="data.marketPrice" value="{{data.marketPrice}}" data-dtype="String"
+						placeholder="Market Price" title="Market Price, e.g. 25 gp" />
                 </label>
                 <label class="ritual category">Category: 
-                    <input type="text" name="data.category" value="{{data.category}}" data-dtype="String" placeholder="Category" />
+                    <input type="text" name="data.category" value="{{data.category}}" data-dtype="String"
+						placeholder="Category" title="Category, e.g. Deception (Illusion)" />
                 </label>
                 <label class="ritual componentcost">Component Cost: 
-                    <input type="text" name="data.componentCost" value="{{data.componentCost}}" data-dtype="String" placeholder="Component Cost"/>
+                    <input type="text" name="data.componentCost" value="{{data.componentCost}}" data-dtype="String"
+						placeholder="Component Cost" title="Component Cost, e.g. 5 gp" />
                 </label>
                 <label class="ritual castingtime">Casting Time: 
-                    <input type="text" name="data.castingTime" value="{{data.castingTime}}" data-dtype="String" placeholder="Casting Time"/>
+                    <input type="text" name="data.castingTime" value="{{data.castingTime}}" data-dtype="String"
+						placeholder="Casting Time" title="Casting Time, e.g. 1 hour" />
                 </label>
                 <label class="ritual duration">Duration:
-                    <input type="text" name="data.duration" value="{{data.duration}}" data-dtype="String" placeholder="Duration" />
+                    <input type="text" name="data.duration" value="{{data.duration}}" data-dtype="String"
+						placeholder="Duration" title="Duration, e.g. Instantaneous" />
                 </label>
                 <div class="tinymceeditorbox">
                     {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}

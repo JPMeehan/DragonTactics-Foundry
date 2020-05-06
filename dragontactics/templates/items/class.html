@@ -2,7 +2,7 @@
     <header class="sheet-header">
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
         <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" title="" /></h1>
         </div>
     </header>
 
@@ -27,13 +27,16 @@
             <div class="tab attributes" data-group="primary" data-tab="input">
                 <h1>Input</h1>
                 <label class="class source">Source:
-                    <input type="text" name="data.source" value="{{data.source}}" data-dtype="String" placeholder="Source"/>
+                    <input type="text" name="data.source" value="{{data.source}}" data-dtype="String"
+						placeholder="Source" title="Source, e.g. Martial" />
                 </label>
                 <label class="class role">Role: 
-                    <input type="text" name="data.role" value="{{data.role}}" data-dtype="String" placeholder="Role"/>
+                    <input type="text" name="data.role" value="{{data.role}}" data-dtype="String"
+						placeholder="Role" title="Role, e.g. Defender" />
                 </label>
                 <label class="class keyabilities">Key Abilities: 
-                    <input type="text" name="data.keyAbilities" value="{{data.keyAbilities}}" data-dtype="String" placeholder="Strength, Dexterity, Constitution"/>
+                    <input type="text" name="data.keyAbilities" value="{{data.keyAbilities}}" data-dtype="String" 
+                        placeholder="Key Abilities" title="Key Abilities, e.g. Strength, Dexterity, Constitution" />
                 </label>
                 <label class="class hp base">Base Hit Points: 
                     <input type="number" name="data.hpBase" value="{{data.hpBase}}" data-dtype="Number" >
@@ -54,13 +57,16 @@
                     <input type="number" name="data.defense.will" value="{{data.defense.will}}" data-dtype="Number" />
                 </label>
                 <label class="class profs armor">Armor Proficiencies:
-                    <input type="text" name="data.profs.armor" value="{{data.profs.armor}}" data-dtype="String" placeholder="Armor Proficiencies"/>
+                    <input type="text" name="data.profs.armor" value="{{data.profs.armor}}" data-dtype="String"
+						placeholder="Armor Proficiencies" title="Armor Proficiencies, e.g. Cloth" />
                 </label>
                 <label class="class profs weapon">Weapon Proficiencies:
-                    <input type="text" name="data.profs.weapon" value="{{data.profs.weapon}}" data-dtype="String" placeholder="Weapon Proficiencies"/>
+                    <input type="text" name="data.profs.weapon" value="{{data.profs.weapon}}" data-dtype="String"
+						placeholder="Weapon Proficiencies" title="Weapon Proficiencies, e.g. Simple Melee Weapons" />
                 </label>
                 <label class="class profs implement">Implement Proficiencies:
-                    <input type="text" name="data.profs.implement" value="{{data.profs.implement}}" data-dtype="String" placeholder="Implement Proficiencies"/>
+                    <input type="text" name="data.profs.implement" value="{{data.profs.implement}}" data-dtype="String"
+						placeholder="Implement Proficiencies" title="Implement Proficiencies, e.g. Rods" />
                 </label>
                 <div class="class features">
                     <h2>Features</h2>

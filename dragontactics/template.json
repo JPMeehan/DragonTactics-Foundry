@@ -303,17 +303,33 @@
     },
     "power": {
       "templates": ["basic"],
+      "keywords": "",
       "action": "",
       "recharge": "",
       "trigger": "",
       "requirement": "",
       "range": "",
       "target": "",
-      "attack": "",
-      "hit": "",
+      "attack": {
+        "stat": "",
+        "def": ""
+      },
+      "hit": {
+        "dice": "",
+        "flat": "",
+        "damageType": "",
+        "effect": ""
+      },
       "miss": "",
-      "attackSecondary": "",
-      "hitSecondary": "",
+      "attackSecondary": {
+        "stat": "",
+        "def": ""
+      },
+      "hitSecondary": {
+        "dice": "",
+        "flat": "",
+        "effect": ""
+      },
       "missSecondary": "",
       "effect": "",
       "sustain": ""

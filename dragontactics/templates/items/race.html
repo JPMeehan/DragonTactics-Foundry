@@ -2,7 +2,8 @@
     <header class="sheet-header">
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
         <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}"
+						placeholder="Name" title="" /></h1>
         </div>
     </header>
 
@@ -27,25 +28,32 @@
             <div class="tab input" data-group="primary" data-tab="input">
                 <h1>Input</h1>
                 <label class="race asi">Ability Score Increase:
-                    <input type="text" name="data.asi" value="{{data.asi}}" data-dtype="String" placeholder="Ability Score Increases"/>
+                    <input type="text" name="data.asi" value="{{data.asi}}" data-dtype="String"
+						placeholder="Ability Score Increases" title="Ability Score Increase, e.g. +2 Strength and +2 Dexterity or Constitution" />
                 </label>
                 <label class="race size">Size: 
-                    <input type="text" name="data.size" value="{{data.size}}" data-dtype="String" placeholder="Size"/>
+                    <input type="text" name="data.size" value="{{data.size}}" data-dtype="String"
+						placeholder="Size" title="Size, e.g. Medium (Height: 5’6”-6’2” Weight: 135-220 lbs.)" />
                 </label>
                 <label class="race speed">Movement:
-                    <input type="text" name="data.speed" value="{{data.speed}}" data-dtype="String" placeholder="Movement"/>
+                    <input type="text" name="data.speed" value="{{data.speed}}" data-dtype="String"
+						placeholder="Movement" title="Movement, e.g. 30 ft." />
                 </label>
                 <label class="race vision">Vision: 
-                    <input type="text" name="data.vision" value="{{data.vision}}" data-dtype="String" placeholder="Vision"/>
+                    <input type="text" name="data.vision" value="{{data.vision}}" data-dtype="String"
+						placeholder="Vision" title="Vision, e.g. Nightblind" />
                 </label>
                 <label class="race languages">Languages: 
-                    <input type="text" name="data.languages" value="{{data.languages}}" data-dtype="String" placeholder="Languages"/>
+                    <input type="text" name="data.languages" value="{{data.languages}}" data-dtype="String"
+						placeholder="Languages" title="Languages, e.g. Common, one other" />
                 </label>
                 <label class="race skills">Skills:
-                    <input type="text" name="data.skill" value="{{data.skill}}" data-dtype="String" placeholder="Skills"/>
+                    <input type="text" name="data.skill" value="{{data.skill}}" data-dtype="String"
+						placeholder="Skills" title="Skills, e.g. +2 Athletics" />
                 </label>
                 <label class="race competencies">Competencies:
-                    <input type="text" name="data.competencies" value="{{data.competencies}}" data-dtype="String" placeholder="Competencies"/>
+                    <input type="text" name="data.competencies" value="{{data.competencies}}" data-dtype="String"
+						placeholder="Competencies" title="Competencies, e.g. Knowledge of Creatures (Humanoids)" />
                 </label>
                 <div class="race features">
                     <h2>Features</h2>
