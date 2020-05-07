@@ -1,7 +1,7 @@
 .dragontactics {
   /* Sheet Tabs */
   /* Items List */
-  /* Attributes */
+  /* Feature List */
 }
 .dragontactics .window-content {
   height: 100%;
@@ -224,6 +224,9 @@
   border: none;
   border-radius: 0;
   border-bottom: 1px solid #AAA;
+}
+.dragontactics .features-list textarea.feature-value {
+  resize: vertical;
 }
 .dragontactics .features-list a.feature-control {
   flex: 0 0 20px;
