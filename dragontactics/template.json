@@ -32,32 +32,32 @@
       "abilities": {
         "abilities": {
           "strength": {
-            "label": "Strength",
+            "label": "Str",
             "score": 10,
             "modifier": 0
           },
           "constitution": {
-            "label": "Constitution",
+            "label": "Con",
             "score": 10,
             "modifier": 0
           },
           "dexterity": {
-            "label": "Dexterity",
+            "label": "Dex",
             "score": 10,
             "modifier": 0
           },
           "intelligence": {
-            "label": "Intelligence",
+            "label": "Int",
             "score": 10,
             "modifier": 0
           },
           "wisdom": {
-            "label": "Wisdom",
+            "label": "Wis",
             "score": 10,
             "modifier": 0
           },
           "charisma": {
-            "label": "Charisma",
+            "label": "Cha",
             "score": 10,
             "modifier": 0
           }

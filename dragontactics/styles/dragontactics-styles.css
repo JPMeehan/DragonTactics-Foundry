@@ -177,7 +177,7 @@
   border-radius: 5px;
   border: solid 1px black;
   margin: 2px;
-  padding: 3px 0;
+  padding: 3px;
 }
 .dragontactics ol.repeating-list li img {
   flex: 0 0 24px;
@@ -185,6 +185,14 @@
 }
 .dragontactics ol.repeating-list li div.config {
   display: none;
+}
+.dragontactics ol.repeating-list.ability li {
+  padding: 0;
+  width: 50px;
+  overflow: hidden;
+}
+.dragontactics ol.repeating-list.ability li input.score {
+  width: 100%;
 }
 .dragontactics ol.repeating-list .label {
   margin: 0;
