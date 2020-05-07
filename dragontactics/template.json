@@ -33,33 +33,39 @@
         "abilities": {
           "strength": {
             "label": "Str",
+            "full": "Strength",
             "score": 10,
-            "modifier": 0
+            "modifier": "+0"
           },
           "constitution": {
             "label": "Con",
+            "full": "Constitution",
             "score": 10,
-            "modifier": 0
+            "modifier": "+0"
           },
           "dexterity": {
             "label": "Dex",
+            "full": "Dexterity",
             "score": 10,
-            "modifier": 0
+            "modifier": "+0"
           },
           "intelligence": {
             "label": "Int",
+            "full": "Intelligence",
             "score": 10,
-            "modifier": 0
+            "modifier": "+0"
           },
           "wisdom": {
             "label": "Wis",
+            "full": "Wisdom",
             "score": 10,
-            "modifier": 0
+            "modifier": "+0"
           },
           "charisma": {
             "label": "Cha",
+            "full": "Charisma",
             "score": 10,
-            "modifier": 0
+            "modifier": "+0"
           }
         }
       },
@@ -69,103 +75,120 @@
             "label": "Acrobatics",
             "ability": "Dexterity",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "appeal": {
             "label": "Appeal",
             "ability": "Charisma",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "arcana": {
             "label": "Arcana",
             "ability": "Intelligence",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "athletics": {
             "label": "Athletics",
             "ability": "Strength",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "debate": {
             "label": "Debate",
             "ability": "Intelligence",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "endurance": {
             "label": "Endurance",
             "ability": "Constitution",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "handle_animal": {
             "label": "Handle Animal",
             "ability": "Wisdom",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "impress": {
             "label": "Impress",
             "ability": "Charisma",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "insight": {
             "label": "Insight",
             "ability": "Wisdom",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "medicine": {
             "label": "Medicine",
             "ability": "Wisdom",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "perception": {
             "label": "Perception",
             "ability": "Wisdom",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "repair": {
             "label": "Repair",
             "ability": "Intelligence",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "research": {
             "label": "Research",
             "ability": "Intelligence",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "sleight_of_hand": {
             "label": "Sleight of Hand",
             "ability": "Dexterity",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "socialize": {
             "label": "Socialize",
             "ability": "Charisma",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "stealth": {
             "label": "Stealth",
             "ability": "Dexterity",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           },
           "survival": {
             "label": "Survival",
             "ability": "Wisdom",
             "rank": "Untrained",
-            "miscbonus": 0
+            "miscbonus": 0,
+            "modifier": "+0"
           }
         }
       }

@@ -183,15 +183,20 @@
   flex: 0 0 24px;
   margin-right: 5px;
 }
-.dragontactics ol.repeating-list li div.config {
-  display: none;
-}
 .dragontactics ol.repeating-list.ability li {
   padding: 0;
   width: 50px;
   overflow: hidden;
 }
 .dragontactics ol.repeating-list.ability li input.score {
+  width: 100%;
+}
+.dragontactics ol.repeating-list.skill li div.config {
+  display: none;
+}
+.dragontactics ol.repeating-list.skill li div.config,
+.dragontactics ol.repeating-list.skill li div.display {
+  background-color: white;
   width: 100%;
 }
 .dragontactics ol.repeating-list .label {

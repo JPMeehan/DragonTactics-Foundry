@@ -67,8 +67,9 @@
                             <input class="miscbonus" type="number"  name="data.skill.{{key}}.miscbonus"  value="{{skill.miscbonus}}" 
                              data-dtype="Number" title="Miscellaneous bonuses, such as from your race, feats, or items" />
                         </div>
-                        <span class="ability" name="data.skill.{{key}}.ability">{{ability}}</span>
-                        <span class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</span> 
+                        <div class="display">
+                            <span class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</span> 
+                        </div>
                     </li>
                 {{/each}}
             </ol>
