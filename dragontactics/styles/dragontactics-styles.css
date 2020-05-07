@@ -63,7 +63,7 @@
   width: 100%;
   text-align: center;
   border-radius: 0;
-  background-color: white;
+  border: none;
   font-size: large;
 }
 .dragontactics div.numblock input[type=number] {
@@ -177,26 +177,35 @@
   border-radius: 5px;
   border: solid 1px black;
   margin: 2px;
-  padding: 3px;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
 }
 .dragontactics ol.repeating-list li img {
   flex: 0 0 24px;
   margin-right: 5px;
 }
+.dragontactics ol.repeating-list li:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
 .dragontactics ol.repeating-list.ability li {
-  padding: 0;
   width: 50px;
-  overflow: hidden;
 }
 .dragontactics ol.repeating-list.ability li input.score {
   width: 100%;
+  text-align: center;
+  border: none;
+}
+.dragontactics ol.repeating-list.skill li h4 {
+  padding: 3px;
 }
 .dragontactics ol.repeating-list.skill li div.config {
   display: none;
 }
 .dragontactics ol.repeating-list.skill li div.config,
 .dragontactics ol.repeating-list.skill li div.display {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.05);
   width: 100%;
 }
 .dragontactics ol.repeating-list .label {
