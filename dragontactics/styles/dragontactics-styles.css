@@ -69,17 +69,6 @@
 .dragontactics div.numblock input[type=number] {
   width: 75px;
 }
-.dragontactics .resource {
-  width: 50%;
-  height: 40px;
-  margin-top: 10px;
-  float: left;
-  text-align: center;
-}
-.dragontactics .resource input {
-  width: 100px;
-  height: 28px;
-}
 .dragontactics .tabs {
   height: 40px;
   border-top: 1px solid #AAA;
@@ -174,26 +163,26 @@
   min-height: 150px;
   border: solid 1px black;
 }
-.dragontactics .items-list {
-  list-style: none;
+.dragontactics ol.repeating-list {
+  list-style-type: none;
   margin: 7px 0;
   padding: 0;
   overflow-y: auto;
 }
-.dragontactics .items-list .item {
+.dragontactics ol.repeating-list li {
   height: 30px;
   line-height: 24px;
   padding: 3px 0;
   border-bottom: 1px solid #BBB;
 }
-.dragontactics .items-list .item img {
+.dragontactics ol.repeating-list li img {
   flex: 0 0 24px;
   margin-right: 5px;
 }
-.dragontactics .items-list .item-name {
+.dragontactics ol.repeating-list .repeating-name {
   margin: 0;
 }
-.dragontactics .items-list .item-controls {
+.dragontactics ol.repeating-list .repeating-controls {
   flex: 0 0 36px;
 }
 .dragontactics .features-header {
