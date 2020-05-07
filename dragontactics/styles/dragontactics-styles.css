@@ -168,18 +168,25 @@
   margin: 7px 0;
   padding: 0;
   overflow-y: auto;
+  width: calc(50% - 2px);
+  display: inline-block;
+  vertical-align: top;
 }
 .dragontactics ol.repeating-list li {
-  height: 30px;
-  line-height: 24px;
+  display: inline-block;
+  border-radius: 5px;
+  border: solid 1px black;
+  margin: 2px;
   padding: 3px 0;
-  border-bottom: 1px solid #BBB;
 }
 .dragontactics ol.repeating-list li img {
   flex: 0 0 24px;
   margin-right: 5px;
 }
-.dragontactics ol.repeating-list .repeating-name {
+.dragontactics ol.repeating-list li div.config {
+  display: none;
+}
+.dragontactics ol.repeating-list .label {
   margin: 0;
 }
 .dragontactics ol.repeating-list .repeating-controls {
