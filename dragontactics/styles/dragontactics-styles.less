@@ -251,20 +251,27 @@
     margin: 7px 0;
     padding: 0;
     overflow-y: auto;
+    width: calc(50% - 2px);
+    display: inline-block;
+    vertical-align: top;
 
     li {
-      height: 30px;
-      line-height: 24px;
+      display: inline-block;
+      border-radius: 5px;
+      border: solid 1px black;
+      margin: 2px;
       padding: 3px 0;
-      border-bottom: 1px solid #BBB;
 
       img {
         flex: 0 0 24px;
         margin-right: 5px;
       }
+      div.config {
+        display: none;
+      }
     }
 
-    .repeating-name {
+    .label {
       margin: 0;
     }
 

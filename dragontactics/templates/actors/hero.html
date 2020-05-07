@@ -4,8 +4,8 @@
     <header class="sheet-header">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-            <h1 class="playername"><input name="name_player" type="text" value={{data.playername}} /></h1>
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" title="Name, e.g. " /></h1>
+            <h1 class="playername"><input name="data.playername" type="text" value={{data.playername}} /></h1>
             
         </div>
     </header>
@@ -25,45 +25,48 @@
         {{!-- Biography Tab --}}
         <div class="tab biography active" data-group="primary" data-tab="description">
             <h2>Basic Info</h2>
-            <input type="text" name="data.race"  data-dtype="String" placeholder="Race"/>
-            <input type="text" name="data.height"  data-dtype="String" placeholder="Height"/>
-            <input type="text" name="data.weight"  data-dtype="String" placeholder="Weight"/>
-            <input type="text" name="data.quick"  data-dtype="String" placeholder="Quick Description"/>
-            <input type="text" name="data.kanka"  data-dtype="String" placeholder="Kanka URL"/>
-            <input type="text" name="data.class.name"  data-dtype="String" placeholder="Class"/>
-            <input type="text" name="data.class.paragon"  data-dtype="String" placeholder="Paragon Path"/>
-            <input type="text" name="data.epic"  data-dtype="String" placeholder="Epic Destiny"/>
+            <input type="text" name="data.race"  data-dtype="String" placeholder="Race" title="Race, e.g. Human" />
+            <input type="text" name="data.height"  data-dtype="String" placeholder="Height" title="Height, e.g. 6'1 " />
+            <input type="text" name="data.weight"  data-dtype="String" placeholder="Weight" title="Weight, e.g. 200 lbs." />
+            <input type="text" name="data.quick"  data-dtype="String" placeholder="Quick Description" title="Quick Description, e.g. A tall and muscular, dark-haired human (he/him)" />
+            <input type="text" name="data.kanka"  data-dtype="String" placeholder="Kanka URL" title="Kanka URL, e.g. https://kanka.io/en-US/campaign/6529/characters/50478" />
+            <input type="text" name="data.class.name"  data-dtype="String" placeholder="Class" title="Class, e.g. Fighter" />
+            <input type="text" name="data.class.paragon"  data-dtype="String" placeholder="Paragon Path" title="Paragon Path, e.g. Champion" />
+            <input type="text" name="data.epic"  data-dtype="String" placeholder="Epic Destiny" title="Epic Destiny, e.g. Demigod" />
             <input type="number" name="data.class.level"  data-dtype="Number" title="Character Level"/>
             <input type="number" name="data.class.quest"  data-dtype="Number" title="Quest Bonus"/>
         </div>
 
         {{!-- Abilities and Skills Tab --}}
         <div class="tab abilities" data-group="primary" data-tab="abilities">
-            <h2>Abilities</h2>
             
-            <ol class="repeating-list attribute">
-                {{#each data.attributes as |attr key|}}
+            <ol class="repeating-list ability">
+                <h2>Abilities</h2>
+                {{#each data.abilities as |attr key|}}
                     <li data-attribute="{{key}}">
-                        <h4 class="label" name="data.attributes.{{key}}.label">{{label}}</h4>
-                        <input class="" type="number"  name="data.attributes.{{key}}.score"  value="{{attr.score}}"  data-dtype="Number"  />
-                        <span name="data.attributes.{{key}}.modifier">{{modifier}}</span> 
+                        <h4 class="label" name="data.abilities.{{key}}.label">{{label}}</h4>
+                        <input class="score" type="number"  name="data.abilities.{{key}}.score"  value="{{attr.score}}"  data-dtype="Number" title="Ability Score" />
+                        <span class="modifier" name="data.abilities.{{key}}.modifier">{{modifier}}</span> 
                     </li>
                 {{/each}}
             </ol>
-            <h3>Skills</h3>
             <ol class="repeating-list skill">
+                <h2>Skills</h2>
                 {{#each data.skill as |skill key|}}
                     <li data-attribute="{{key}}">
                         <h4 class="label" name="data.skill.{{key}}.label">{{label}}</h4>
-                        <select class="rank" name="data.skill.{{key}}.rank"  value="{{skill.rank}}"  data-dtype="String" >
-                            <option value="Untrained" selected>Untrained</option>
-                            <option value="Adept">Adept</option>
-                            <option value="Trained">Trained</option>
-                            <option value="Experienced">Experienced</option>
-                            <option value="Expert">Expert</option>
-                            <option value="Master">Master</option>
-                        </select>
-                        <input type="number"  name="data.skill.{{key}}.miscbonus"  value="{{skill.miscbonus}}"  data-dtype="Number"  />
+                        <div class="config">
+                            <select class="rank" name="data.skill.{{key}}.rank"  value="{{skill.rank}}"  data-dtype="String" >
+                                <option value="Untrained" selected>Untrained</option>
+                                <option value="Adept">Adept</option>
+                                <option value="Trained">Trained</option>
+                                <option value="Experienced">Experienced</option>
+                                <option value="Expert">Expert</option>
+                                <option value="Master">Master</option>
+                            </select>
+                            <input class="miscbonus" type="number"  name="data.skill.{{key}}.miscbonus"  value="{{skill.miscbonus}}" 
+                             data-dtype="Number" title="Miscellaneous bonuses, such as from your race, feats, or items" />
+                        </div>
                         <span class="ability" name="data.skill.{{key}}.ability">{{ability}}</span>
                         <span class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</span> 
                     </li>
@@ -162,13 +165,13 @@
             <h2>Equipment</h2>
             <div class="worn">
                 <h3>Worn</h3>
-                <input class="head" type="text" name="data.equipment.worn.head.name"  data-dtype="String" placeholder="Head"/>
-                <input class="neck"  type="text" name="data.equipment.worn.neck.name"  data-dtype="String" placeholder="Neck"/>
-                <input class="arms"  type="text" name="data.equipment.worn.arms.name"  data-dtype="String" placeholder="Arms"/>
-                <input class="hands"  type="text" name="data.equipment.worn.hands.name"  data-dtype="String" placeholder="Hands"/>
-                <input class="waist"  type="text" name="data.equipment.worn.waist.name"  data-dtype="String" placeholder="Waist"/>
-                <input class="feet"  type="text" name="data.equipment.worn.feet.name"  data-dtype="String" placeholder="Feet"/>
-                <input class="armor"  type="text" name="data.equipment.worn.armor.name"  data-dtype="String" placeholder="Armor"/>
+                <input class="head" type="text" name="data.equipment.worn.head.name"  data-dtype="String" placeholder="Head" title="Head, e.g. " />
+                <input class="neck"  type="text" name="data.equipment.worn.neck.name"  data-dtype="String" placeholder="Neck" title="Neck, e.g. " />
+                <input class="arms"  type="text" name="data.equipment.worn.arms.name"  data-dtype="String" placeholder="Arms" title="Arms, e.g. " />
+                <input class="hands"  type="text" name="data.equipment.worn.hands.name"  data-dtype="String" placeholder="Hands" title="Hands, e.g. " />
+                <input class="waist"  type="text" name="data.equipment.worn.waist.name"  data-dtype="String" placeholder="Waist" title="Waist, e.g. " />
+                <input class="feet"  type="text" name="data.equipment.worn.feet.name"  data-dtype="String" placeholder="Feet" title="Feet, e.g. " />
+                <input class="armor"  type="text" name="data.equipment.worn.armor.name"  data-dtype="String" placeholder="Armor" title="Armor, e.g. " />
             </div>
             <div class="carried">
                 <h3>Carried</h3>

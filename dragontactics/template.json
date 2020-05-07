@@ -29,8 +29,8 @@
         },
         "movement": "30 ft."
       },
-      "attributes": {
-        "attributes": {
+      "abilities": {
+        "abilities": {
           "strength": {
             "label": "Strength",
             "score": 10,
@@ -171,7 +171,7 @@
       }
     },
     "hero": {
-      "templates": ["description", "defenses", "attributes", "skill"],
+      "templates": ["description", "defenses", "abilities", "skill"],
       "playername": "",
       "class": {
         "name": "Fighter",
