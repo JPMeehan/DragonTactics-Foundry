@@ -68,7 +68,7 @@
                         <li class="attribute flexrow" data-attribute="{{key}}">
                             <input class="feature-key" type="text" name="data.attributes.{{key}}.key" value="{{key}}"/>
                             <input class="feature-label" type="text" name="data.attributes.{{key}}.label" value="{{attr.label}}"/>
-                            <input class="feature-value" type="text" name="data.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="String"/>
+                            <textarea class="feature-value" name="data.attributes.{{key}}.value" data-dtype="String">{{attr.value}}</textarea>
                             <a class="feature-control" data-action="delete"><i class="fas fa-trash"></i></a>
                         </li>
                     {{/each}}        
