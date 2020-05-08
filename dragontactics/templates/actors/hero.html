@@ -78,8 +78,8 @@
 		<div class="tab combat" data-group="primary" data-tab="combat">
             <h2>Combat</h2>
             <h3>Defenses</h3>
-            <div class="attributes">
-                <div class="attribute health">
+            <ul class="attributes flexrow">
+                <li class="attribute health">
                     <h4 class="attribute-name box-title">Health</h4>
                     <div class="attribute-value multiple">
                         <input name="data.health.value" type="text" pattern="\d+" value="{{data.health.value}}"
@@ -89,13 +89,13 @@
                                data-dtype="Number" placeholder="10"/>
                     </div>
                     <footer class="attribute-footer">
-                        <input name="data.health.temp" type="text" pattern="\d+" class="temphp" placeholder="+Temp"
+                        <input name="data.health.temp" type="text" pattern="\d+" class="half" placeholder="+Temp"
                                value="{{data.health.temp}}" data-dtype="{{data.health.type}}"/>
-                        <input name="data.health.tempmax" type="text" pattern="(-)?\d+" class="temphp" placeholder="+{{ localize 'DND5E.Max' }}"
+                        <input name="data.health.tempmax" type="text" pattern="(-)?\d+" class="half" placeholder="+{{ localize 'DND5E.Max' }}"
                                value="{{data.health.tempmax}}" data-dtype="{{data.health.type}}"/>
                     </footer>
-                </div>
-                <div class="attribute defense">
+                </li>
+                <li class="attribute defense">
                     <h4 class="attribute-name box-title">AC</h4>
                     <div class="attribute-value">
                         <span class="ac" name="data.ac.value">{{data.ac.value}}</span>
@@ -104,8 +104,8 @@
                         <input  type="text" pattern="\d+" name="data.ac.miscbonus" value="{{data.ac.miscbonus}}"
                             placeholder="Misc. Bonus" data-dtype="Number"/>
                     </footer>
-                </div>
-                <div class="attribute defense">
+                </li>
+                <li class="attribute defense">
                     <h4 class="attribute-name box-title">Fortitude</h4>
                     <div class="attribute-value">
                         <span class="ac" name="data.fortitude.value">{{data.fortitude.value}}</span>
@@ -114,8 +114,8 @@
                         <input  type="text" pattern="\d+" name="data.fortitude.miscbonus" value="{{data.fortitude.miscbonus}}"
                             placeholder="Misc. Bonus" data-dtype="Number"/>
                     </footer>
-                </div>
-                <div class="attribute defense">
+                </li>
+                <li class="attribute defense">
                     <h4 class="attribute-name box-title">Reflex</h4>
                     <div class="attribute-value">
                         <span class="ac" name="data.reflex.value">{{data.reflex.value}}</span>
@@ -124,8 +124,8 @@
                         <input  type="text" pattern="\d+" name="data.reflex.miscbonus" value="{{data.reflex.miscbonus}}"
                             placeholder="Misc. Bonus" data-dtype="Number"/>
                     </footer>
-                </div>
-                <div class="attribute defense">
+                </li>
+                <li class="attribute defense">
                     <h4 class="attribute-name box-title">Will</h4>
                     <div class="attribute-value">
                         <span class="ac" name="data.will.value">{{data.will.value}}</span>
@@ -134,8 +134,8 @@
                         <input  type="text" pattern="\d+" name="data.will.miscbonus" value="{{data.will.miscbonus}}"
                             placeholder="Misc. Bonus" data-dtype="Number"/>
                     </footer>
-                </div>
-                <div class="attribute surges">
+                </li>
+                <li class="attribute surges">
                     <h4 class="attribute-name box-title">Surges</h4>
                     <div class="attribute-value multiple">
                         <input name="data.surges.value" type="text" pattern="\d+" value="{{data.surges.value}}"
@@ -147,8 +147,8 @@
                     <footer class="attribute-footer">
                         <span>Value: </span><span name="data.surges.heal">{{data.surges.heal}}</span>
                     </footer>
-                </div>
-                <div class="attribute movement">
+                </li>
+                <li class="attribute movement">
                     <h4 class="attribute-name box-title">Speed</h4>
                     <div class="attribute-value">
                         <input name="data.attributes.speed.value" type="text"
@@ -158,8 +158,8 @@
                         <input type="text" class="speed" name="data.attributes.speed.special"
                                value="{{data.attributes.speed.special}}" placeholder="Special Movement"/>
                     </footer>
-                </div>
-            </div>
+                </li>
+            </ul>
             <h3>Powers</h3>
             <ol class="powers repeating-list">
                 {{#each data.powers as |power key|}}

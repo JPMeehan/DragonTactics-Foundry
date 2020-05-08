@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Nodesto";
+  src: url("fonts/NodestoCapsCondensed.otf");
+}
+.nodesto {
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
+}
+
+
 .dragontactics {
   .window-content {
     height: 100%;
@@ -72,46 +82,71 @@
     }
   }
 
-  div.attributes {
+  ul.attributes {
+    list-style: none;
     height: 80px;
     margin: 0;
 
-    .attribute {
+    li.attribute {
       height: 80px;
-      margin: 0;
-      border: none;
-      border-right: 2px groove #eeede0;
-      border-radius: 0;
+      margin: 0 5px;
+      border: 2px groove #eeede0;
+      border-radius: 4px;
+      text-align: center;
+      .nodesto();
 
       &:last-child {
         border-right: none;
       }
 
-      .attribute-value {
-        margin: 5px 0 0;
-        height: 32px;
-        line-height: 32px;
-      }
 
       .attribute-name {
+        flex: 0 0 18px;
         margin-top: 6px;
       }
 
+      .attribute-value {
+        height: 28px;
+        line-height: 28px;
+        height: 32px;
+        line-height: 32px;
+
+        input {
+          display: inline;
+          max-width: 80%;
+          margin: 0;
+          font-size: 24px;
+        }
+
+        span.sep {
+          display: inline;
+          position: relative;
+          top: 2px;
+          font-size: 28px;
+          color: #7a7971;
+        }
+
+        &.multiple {
+          input {
+            max-width: 33%;
+          }
+        }
+
+      }
+
+
       .attribute-footer {
-        margin-bottom: 2px;
+        flex: 0 0 18px;
+        margin-top: -1px;
+        line-height: 18px;
+        font-family: "Signika", "Palatino Linotype", serif;
+        font-size: 12px;
+        input.half {
+          width: 48%;
+        }
       }
     }
-    a.rest {
-      border: 1px solid beige;
-      border-radius: 2px;
-      background: rgba(0, 0, 0, 0.05);
-      padding: 1px 3px;
-      margin: 0 6px;
-    }
 
-    .hit-dice {
-      font-size: 24px;
-    }
   }
 
 
@@ -266,6 +301,7 @@
         width: 100px;
       }
     }
+
     &.languages {
       input {
         width: 200px;
@@ -303,7 +339,7 @@
       padding: 0;
       overflow: hidden;
       text-align: center;
-      
+
       img {
         flex: 0 0 24px;
         margin-right: 5px;
@@ -330,12 +366,15 @@
       h4 {
         padding: 3px;
       }
+
       div.config {
         display: none;
       }
+
+      div.display {}
+
+      div.config,
       div.display {
-      }
-      div.config, div.display {
         background-color: rgba(0, 0, 0, 0.05);
         width: 100%;
       }
@@ -399,73 +438,90 @@
 
   div.powers {
     margin-bottom: 3px;
+
     /* Header */
     div.powerheader {
       border-radius: 5px 5px 0 0;
       border: 1px solid black;
+
       span.powername[type="text"] {
         width: calc(100% - 75px);
         background-color: transparent;
         border: none;
         color: white;
+
         &::placeholder {
           color: white;
         }
       }
     }
+
     &.atwill div.powerheader {
       background-color: rgba(0, 128, 0, .5);
+
       label.ready {
         display: none;
       }
     }
+
     &.encounter div.powerheader {
       background-color: rgba(255, 0, 0, .5);
     }
+
     &.daily div.powerheader {
       background-color: rgba(0, 0, 0, .5);
     }
+
     &.show div.powerheader {
       border-style: solid solid none;
     }
+
     /* Body */
     .powerbody {
       display: none;
-      background-color: rgba(255,255,255,0.8);
+      background-color: rgba(255, 255, 255, 0.8);
       border: 1px black;
       border-style: none solid solid;
       border-radius: 0 0 5px 5px;
       overflow: hidden;
+
       .powershow-row {
         padding: 3px 5px;
         font-size: 15px;
         overflow-wrap: break-word;
+
         &:nth-child(2n) {
-          background-color: rgba(211,211,211,0.5);
+          background-color: rgba(211, 211, 211, 0.5);
         }
+
         button[type="roll"] {
           margin: 0;
           padding: 0;
           font-size: inherit;
         }
-      } 
+      }
+
       span.trigger {
         font-style: italic;
       }
+
       div.rangetargets {
         display: inline-block;
         max-width: calc(100% - 65px);
       }
+
       label.ready {
         float: right;
         width: 62px;
         margin: 0;
         padding: 0;
         font-size: inherit;
+
         input {
           vertical-align: initial;
         }
       }
+
       span.powertext {
         font-size: 12px;
         font-style: italic;
@@ -485,4 +541,61 @@
 .dragontactics.sheet.item {
   min-width: 460px;
   min-height: 400px;
+}
+
+/* ----------------------------------------- */
+/*  Flexbox                                  */
+/* ----------------------------------------- */
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  >* {
+    flex: 1;
+  }
+
+  .flex1 {
+    flex: 1;
+  }
+
+  .flex2 {
+    flex: 2;
+  }
+
+  .flex3 {
+    flex: 3;
+  }
+
+  .flex4 {
+    flex: 4;
+  }
+}
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  >* {
+    flex: 1;
+  }
+
+  .flex1 {
+    flex: 1;
+  }
+
+  .flex2 {
+    flex: 2;
+  }
+
+  .flex3 {
+    flex: 3;
+  }
+
+  .flex4 {
+    flex: 4;
+  }
 }

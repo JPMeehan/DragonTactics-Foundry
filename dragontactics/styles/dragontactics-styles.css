@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Nodesto";
+  src: url("fonts/NodestoCapsCondensed.otf");
+}
+.nodesto {
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
+}
 .dragontactics {
   /* Sheet Tabs */
   /* Items List */
@@ -66,40 +74,58 @@
   border: none;
   font-size: large;
 }
-.dragontactics div.attributes {
+.dragontactics ul.attributes {
+  list-style: none;
   height: 80px;
   margin: 0;
 }
-.dragontactics div.attributes .attribute {
+.dragontactics ul.attributes li.attribute {
   height: 80px;
-  margin: 0;
-  border: none;
-  border-right: 2px groove #eeede0;
-  border-radius: 0;
+  margin: 0 5px;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+  text-align: center;
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
 }
-.dragontactics div.attributes .attribute:last-child {
+.dragontactics ul.attributes li.attribute:last-child {
   border-right: none;
 }
-.dragontactics div.attributes .attribute .attribute-value {
-  margin: 5px 0 0;
+.dragontactics ul.attributes li.attribute .attribute-name {
+  flex: 0 0 18px;
+  margin-top: 6px;
+}
+.dragontactics ul.attributes li.attribute .attribute-value {
+  height: 28px;
+  line-height: 28px;
   height: 32px;
   line-height: 32px;
 }
-.dragontactics div.attributes .attribute .attribute-name {
-  margin-top: 6px;
-}
-.dragontactics div.attributes .attribute .attribute-footer {
-  margin-bottom: 2px;
-}
-.dragontactics div.attributes a.rest {
-  border: 1px solid beige;
-  border-radius: 2px;
-  background: rgba(0, 0, 0, 0.05);
-  padding: 1px 3px;
-  margin: 0 6px;
-}
-.dragontactics div.attributes .hit-dice {
+.dragontactics ul.attributes li.attribute .attribute-value input {
+  display: inline;
+  max-width: 80%;
+  margin: 0;
   font-size: 24px;
+}
+.dragontactics ul.attributes li.attribute .attribute-value span.sep {
+  display: inline;
+  position: relative;
+  top: 2px;
+  font-size: 28px;
+  color: #7a7971;
+}
+.dragontactics ul.attributes li.attribute .attribute-value.multiple input {
+  max-width: 33%;
+}
+.dragontactics ul.attributes li.attribute .attribute-footer {
+  flex: 0 0 18px;
+  margin-top: -1px;
+  line-height: 18px;
+  font-family: "Signika", "Palatino Linotype", serif;
+  font-size: 12px;
+}
+.dragontactics ul.attributes li.attribute .attribute-footer input.half {
+  width: 48%;
 }
 .dragontactics .tabs {
   height: 40px;
@@ -366,4 +392,48 @@
 .dragontactics.sheet.item {
   min-width: 460px;
   min-height: 400px;
+}
+/* ----------------------------------------- */
+/*  Flexbox                                  */
+/* ----------------------------------------- */
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.flexrow > * {
+  flex: 1;
+}
+.flexrow .flex1 {
+  flex: 1;
+}
+.flexrow .flex2 {
+  flex: 2;
+}
+.flexrow .flex3 {
+  flex: 3;
+}
+.flexrow .flex4 {
+  flex: 4;
+}
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.flexcol > * {
+  flex: 1;
+}
+.flexcol .flex1 {
+  flex: 1;
+}
+.flexcol .flex2 {
+  flex: 2;
+}
+.flexcol .flex3 {
+  flex: 3;
+}
+.flexcol .flex4 {
+  flex: 4;
 }
