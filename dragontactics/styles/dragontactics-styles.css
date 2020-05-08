@@ -66,6 +66,41 @@
   border: none;
   font-size: large;
 }
+.dragontactics div.attributes {
+  height: 80px;
+  margin: 0;
+}
+.dragontactics div.attributes .attribute {
+  height: 80px;
+  margin: 0;
+  border: none;
+  border-right: 2px groove #eeede0;
+  border-radius: 0;
+}
+.dragontactics div.attributes .attribute:last-child {
+  border-right: none;
+}
+.dragontactics div.attributes .attribute .attribute-value {
+  margin: 5px 0 0;
+  height: 32px;
+  line-height: 32px;
+}
+.dragontactics div.attributes .attribute .attribute-name {
+  margin-top: 6px;
+}
+.dragontactics div.attributes .attribute .attribute-footer {
+  margin-bottom: 2px;
+}
+.dragontactics div.attributes a.rest {
+  border: 1px solid beige;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 3px;
+  margin: 0 6px;
+}
+.dragontactics div.attributes .hit-dice {
+  font-size: 24px;
+}
 .dragontactics .tabs {
   height: 40px;
   border-top: 1px solid #AAA;
