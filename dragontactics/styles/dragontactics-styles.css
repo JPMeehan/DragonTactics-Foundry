@@ -43,21 +43,21 @@
 }
 .dragontactics div.numblock {
   border-radius: 5px;
-  background-color: black;
-  color: white;
   padding: 0;
   text-align: center;
   font-size: 11px;
   display: inline-block;
   margin-bottom: 3px;
   overflow: hidden;
+  width: 90px;
 }
 .dragontactics div.numblock span {
   display: block;
   font-size: large;
+  background-color: black;
+  color: white;
   height: 50%;
   padding: 5px;
-  margin-top: 2px;
 }
 .dragontactics div.numblock input {
   width: 100%;
@@ -65,9 +65,6 @@
   border-radius: 0;
   border: none;
   font-size: large;
-}
-.dragontactics div.numblock input[type=number] {
-  width: 75px;
 }
 .dragontactics .tabs {
   height: 40px;
@@ -211,7 +208,7 @@
 .dragontactics ol.repeating-list .label {
   margin: 0;
 }
-.dragontactics ol.repeating-list .repeating-controls {
+.dragontactics ol.repeating-list .item-controls {
   flex: 0 0 36px;
 }
 .dragontactics .features-header {
@@ -251,6 +248,81 @@
   text-align: center;
   line-height: 28px;
   border: none;
+}
+.dragontactics div.powers {
+  margin-bottom: 3px;
+  /* Header */
+  /* Body */
+}
+.dragontactics div.powers div.powerheader {
+  border-radius: 5px 5px 0 0;
+  border: 1px solid black;
+}
+.dragontactics div.powers div.powerheader span.powername[type="text"] {
+  width: calc(100% - 75px);
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+.dragontactics div.powers div.powerheader span.powername[type="text"]::placeholder {
+  color: white;
+}
+.dragontactics div.powers.atwill div.powerheader {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+.dragontactics div.powers.atwill div.powerheader label.ready {
+  display: none;
+}
+.dragontactics div.powers.encounter div.powerheader {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.dragontactics div.powers.daily div.powerheader {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dragontactics div.powers.show div.powerheader {
+  border-style: solid solid none;
+}
+.dragontactics div.powers .powerbody {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px black;
+  border-style: none solid solid;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+}
+.dragontactics div.powers .powerbody .powershow-row {
+  padding: 3px 5px;
+  font-size: 15px;
+  overflow-wrap: break-word;
+}
+.dragontactics div.powers .powerbody .powershow-row:nth-child(2n) {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+.dragontactics div.powers .powerbody .powershow-row button[type="roll"] {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+.dragontactics div.powers .powerbody span.trigger {
+  font-style: italic;
+}
+.dragontactics div.powers .powerbody div.rangetargets {
+  display: inline-block;
+  max-width: calc(100% - 65px);
+}
+.dragontactics div.powers .powerbody label.ready {
+  float: right;
+  width: 62px;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+.dragontactics div.powers .powerbody label.ready input {
+  vertical-align: initial;
+}
+.dragontactics div.powers .powerbody span.powertext {
+  font-size: 12px;
+  font-style: italic;
 }
 .dragontactics.sheet.actor {
   min-width: 560px;

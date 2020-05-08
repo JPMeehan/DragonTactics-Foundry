@@ -93,9 +93,18 @@
                 <div class="numblock"><span>Movement</span><input class="movement" type="text" name="data.movement" value="{{data.movement}}" data-dtype="String"/></div>
             </div>
             <h3>Powers</h3>
-            <ol class="powers-list">
+            <ol class="powers repeating-list">
                 {{#each data.powers as |power key|}}
                 <h4>Name</h4>
+                <div class="powerhide">
+
+                </div>
+                <div class="powershow">
+                    
+                </div>
+                <div class="powerconfig">
+
+                </div>
                 {{/each}}
             </ol>
         </div>
