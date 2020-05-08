@@ -5,7 +5,7 @@
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" title="Name, e.g. " /></h1>
-            <h1 class="playername"><input name="data.playername" type="text" value={{data.playername}} /></h1>
+            <h2 class="playername"><input name="data.playername" type="text" value={{data.playername}} placeholder="Player Name"/></h2>
             
         </div>
     </header>
@@ -33,8 +33,8 @@
             <input type="text" name="data.class.name"  data-dtype="String" placeholder="Class" title="Class, e.g. Fighter" />
             <input type="text" name="data.class.paragon"  data-dtype="String" placeholder="Paragon Path" title="Paragon Path, e.g. Champion" />
             <input type="text" name="data.epic"  data-dtype="String" placeholder="Epic Destiny" title="Epic Destiny, e.g. Demigod" />
-            <input type="text" pattern="\d+" name="data.class.level"  data-dtype="Number" title="Character Level" max="30" min="0"/>
-            <input type="text" pattern="\d+" name="data.class.quest"  data-dtype="Number" title="Quest Bonus" max="10" min="0"/>
+            <input type="text" pattern="\d+" name="data.class.level"  data-dtype="Number" title="Character Level" placeholder="Character Level"/>
+            <input type="text" pattern="\d+" name="data.class.quest"  data-dtype="Number" title="Quest Bonus" placeholder="Quest Bonus"/>
         </div>
 
         {{!-- Abilities and Skills Tab --}}
@@ -95,6 +95,32 @@
                                value="{{data.health.tempmax}}" data-dtype="{{data.health.type}}"/>
                     </footer>
                 </li>
+                <li class="attribute surges">
+                    <h4 class="attribute-name box-title">Surges</h4>
+                    <div class="attribute-value multiple">
+                        <input name="data.surges.value" type="text" pattern="\d+" value="{{data.surges.value}}"
+                               data-dtype="Number" placeholder="6"/>
+                        <span class="sep"> / </span>
+                        <input name="data.surges.max" type="text" pattern="\d+" value="{{data.surges.max}}"
+                               data-dtype="Number" placeholder="6"/>
+                    </div>
+                    <footer class="attribute-footer">
+                        <span>Value: </span><span name="data.surges.heal">{{data.surges.heal}}</span>
+                    </footer>
+                </li>
+                <li class="attribute movement">
+                    <h4 class="attribute-name box-title">Speed</h4>
+                    <div class="attribute-value">
+                        <input name="data.attributes.speed.value" type="text"
+                               value="{{data.attributes.speed.value}}" placeholder="0"/>
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" class="speed" name="data.attributes.speed.special"
+                               value="{{data.attributes.speed.special}}" placeholder="Special Movement"/>
+                    </footer>
+                </li>
+            </ul>
+            <ul class="attributes flexrow">
                 <li class="attribute defense">
                     <h4 class="attribute-name box-title">AC</h4>
                     <div class="attribute-value">
@@ -133,30 +159,6 @@
                     <footer class="attribute-footer">
                         <input  type="text" pattern="\d+" name="data.will.miscbonus" value="{{data.will.miscbonus}}"
                             placeholder="Misc. Bonus" data-dtype="Number"/>
-                    </footer>
-                </li>
-                <li class="attribute surges">
-                    <h4 class="attribute-name box-title">Surges</h4>
-                    <div class="attribute-value multiple">
-                        <input name="data.surges.value" type="text" pattern="\d+" value="{{data.surges.value}}"
-                               data-dtype="Number" placeholder="6"/>
-                        <span class="sep"> / </span>
-                        <input name="data.surges.max" type="text" pattern="\d+" value="{{data.surges.max}}"
-                               data-dtype="Number" placeholder="6"/>
-                    </div>
-                    <footer class="attribute-footer">
-                        <span>Value: </span><span name="data.surges.heal">{{data.surges.heal}}</span>
-                    </footer>
-                </li>
-                <li class="attribute movement">
-                    <h4 class="attribute-name box-title">Speed</h4>
-                    <div class="attribute-value">
-                        <input name="data.attributes.speed.value" type="text"
-                               value="{{data.attributes.speed.value}}" placeholder="0"/>
-                    </div>
-                    <footer class="attribute-footer">
-                        <input type="text" class="speed" name="data.attributes.speed.special"
-                               value="{{data.attributes.speed.special}}" placeholder="Special Movement"/>
                     </footer>
                 </li>
             </ul>

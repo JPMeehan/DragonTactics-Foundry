@@ -49,6 +49,9 @@
   height: 100%;
   margin: 0;
 }
+.dragontactics .sheet-header h2.playername {
+  border: none;
+}
 .dragontactics div.numblock {
   border-radius: 5px;
   padding: 0;
@@ -78,6 +81,7 @@
   list-style: none;
   height: 80px;
   margin: 0;
+  padding: 0;
 }
 .dragontactics ul.attributes li.attribute {
   height: 80px;
@@ -88,12 +92,14 @@
   font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
   font-size: 20px;
 }
-.dragontactics ul.attributes li.attribute:last-child {
-  border-right: none;
+.dragontactics ul.attributes li.attribute.health {
+  width: 100px;
 }
-.dragontactics ul.attributes li.attribute .attribute-name {
-  flex: 0 0 18px;
-  margin-top: 6px;
+.dragontactics ul.attributes li.attribute h4.attribute-name {
+  line-height: 16px;
+  margin: 4px 8px 2px;
+  font-size: 18px;
+  border-bottom: 1px solid #b5b3a4;
 }
 .dragontactics ul.attributes li.attribute .attribute-value {
   height: 28px;
@@ -106,6 +112,8 @@
   max-width: 80%;
   margin: 0;
   font-size: 24px;
+  background-color: inherit;
+  border: none;
 }
 .dragontactics ul.attributes li.attribute .attribute-value span.sep {
   display: inline;
