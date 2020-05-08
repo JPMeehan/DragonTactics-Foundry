@@ -10,16 +10,29 @@
         "kanka": "Link here"
       },
       "defenses": {
-        "ac": 10,
-        "fortitude": 10,
-        "reflex": 10,
-        "will": 10,
+        "ac": {
+          "value": 10,
+          "miscbonus": ""
+        },
+        "fortitude": {
+          "value": 10,
+          "miscbonus": ""
+        },
+        "reflex": {
+          "value": 10,
+          "miscbonus": ""
+        },
+        "will": {
+          "value": 10,
+          "miscbonus": ""
+        },
         "health": {
           "min": 0,
           "value": 20,
           "bloodied": 10,
           "max": 20,
-          "temp": 0
+          "temp": 0,
+          "tempmax": 0
         },
         "surges": {
           "min": 0,
@@ -27,7 +40,10 @@
           "max": 6,
           "heal": 5
         },
-        "movement": "30 ft."
+        "speed": {
+          "value": "30 ft.",
+          "special": ""
+        }
       },
       "abilities": {
         "abilities": {
