@@ -182,23 +182,19 @@
                     </div>
                     <div class="power-row">
                         Attack: 
-                        <button type="roll" class="combatroll" name="roll_standard-attack"
-                            value="&{template:attack} {{name=@{standard-name}}} {{range=@{standard-range}}} {{targets=@{standard-targets}}} {{attack=[[1d20 @{standard-hitbonus}]]}} {{attackadv=[[1d20 @{standard-hitbonus}]]}} {{edge=[[1d4]]}} {{defense=@{standard-defselect}}}">
+                        
                                 <span name="data.powers.{{key}}.hitbonus">{{hitbonus}}</span> vs. <span name="data.powers.{{key}}.defselect">{{defselect}}</span>
-                        </button>
+                        
                     </div>
                     <div class="power-row">
-                        <button type="roll" class="combatroll" name="roll_standard-damage"
-                            value="&{template:damage} {{name=@{standard-name}}} {{damage=[[@{standard-damagedice} @{standard-flatdamage}]]}} {{dmgcrit=[[@{standard-critdice} + @{standard-critflat} @{standard-flatdamage}]]}} {{dmgtype=@{standard-damagetype}}}">
+                        
                             <span name="data.powers.{{key}}.damagedice">{{damagedice}}</span><span value="0" name="data.powers.{{key}}.flatdamage">{{flatdamage}}</span>
                             <span name="data.powers.{{key}}.damagetype">{{damaagetype}}</span> damage
-                        </button>
+                        
                     </div>
                     <div class="power-row">
-                        <button type="roll" class="combatroll" name="roll_standard-textout"
-                            value="&{template:powertext} {{name=@{standard-name}}} {{powertext=@{standard-power-text}}}">
+                        
                             Power Text
-                        </button>
                         <span class="powertext" name="data.powers.{{key}}.power-text">{{power-text}}</span>
                     </div>
                 </div>
