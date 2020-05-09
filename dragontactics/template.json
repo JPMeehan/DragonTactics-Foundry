@@ -90,6 +90,7 @@
           "acrobatics": {
             "label": "Acrobatics",
             "ability": "Dexterity",
+            "ability_lowercase": "dexterity",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -97,6 +98,7 @@
           "appeal": {
             "label": "Appeal",
             "ability": "Charisma",
+            "ability_lowercase": "charisma",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -104,6 +106,7 @@
           "arcana": {
             "label": "Arcana",
             "ability": "Intelligence",
+            "ability_lowercase": "intelligence",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -111,6 +114,7 @@
           "athletics": {
             "label": "Athletics",
             "ability": "Strength",
+            "ability_lowercase": "strength",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -118,6 +122,7 @@
           "debate": {
             "label": "Debate",
             "ability": "Intelligence",
+            "ability_lowercase": "intelligence",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -125,6 +130,7 @@
           "endurance": {
             "label": "Endurance",
             "ability": "Constitution",
+            "ability_lowercase": "constitution",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -132,6 +138,7 @@
           "handle_animal": {
             "label": "Handle Animal",
             "ability": "Wisdom",
+            "ability_lowercase": "wisdom",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -139,6 +146,7 @@
           "impress": {
             "label": "Impress",
             "ability": "Charisma",
+            "ability_lowercase": "charisma",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -146,6 +154,7 @@
           "insight": {
             "label": "Insight",
             "ability": "Wisdom",
+            "ability_lowercase": "wisdom",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -153,6 +162,7 @@
           "medicine": {
             "label": "Medicine",
             "ability": "Wisdom",
+            "ability_lowercase": "wisdom",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -160,6 +170,7 @@
           "perception": {
             "label": "Perception",
             "ability": "Wisdom",
+            "ability_lowercase": "wisdom",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -167,6 +178,7 @@
           "repair": {
             "label": "Repair",
             "ability": "Intelligence",
+            "ability_lowercase": "intelligence",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -174,6 +186,7 @@
           "research": {
             "label": "Research",
             "ability": "Intelligence",
+            "ability_lowercase": "intelligence",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -181,6 +194,7 @@
           "sleight_of_hand": {
             "label": "Sleight of Hand",
             "ability": "Dexterity",
+            "ability_lowercase": "dexterity",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -188,6 +202,7 @@
           "socialize": {
             "label": "Socialize",
             "ability": "Charisma",
+            "ability_lowercase": "charisma",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -195,6 +210,7 @@
           "stealth": {
             "label": "Stealth",
             "ability": "Dexterity",
+            "ability_lowercase": "dexterity",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"
@@ -202,6 +218,7 @@
           "survival": {
             "label": "Survival",
             "ability": "Wisdom",
+            "ability_lowercase": "wisdom",
             "rank": "Untrained",
             "miscbonus": 0,
             "modifier": "+0"

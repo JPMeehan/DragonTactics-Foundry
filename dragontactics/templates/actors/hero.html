@@ -52,7 +52,7 @@
             <ol class="repeating-list skill">
                 <h2>Skills</h2>
                 {{#each data.skill as |skill key|}}
-                    <li data-attribute="{{key}}">
+                    <li data-attribute="{{key}}" class="{{skill.ability_lowercase}}">
                         <h4 class="label" name="data.skill.{{key}}.label">{{label}}</h4>
                         <div class="config">
                             <select class="rank" name="data.skill.{{key}}.rank"  value="{{skill.rank}}"  data-dtype="String" >
@@ -79,6 +79,17 @@
             <h2>Combat</h2>
             <h3>Defenses</h3>
             <ul class="attributes flexrow">
+                <li class="attribute movement">
+                    <h4 class="attribute-name box-title">Speed</h4>
+                    <div class="attribute-value">
+                        <input name="data.attributes.speed.value" type="text"
+                               value="{{data.attributes.speed.value}}" placeholder="Land Speed"/>
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" class="speed" name="data.attributes.speed.special"
+                               value="{{data.attributes.speed.special}}" placeholder="Special Movement"/>
+                    </footer>
+                </li>
                 <li class="attribute health">
                     <h4 class="attribute-name box-title">Health</h4>
                     <div class="attribute-value multiple">
@@ -91,7 +102,7 @@
                     <footer class="attribute-footer">
                         <input name="data.health.temp" type="text" pattern="\d+" class="half" placeholder="+Temp"
                                value="{{data.health.temp}}" data-dtype="{{data.health.type}}"/>
-                        <input name="data.health.tempmax" type="text" pattern="(-)?\d+" class="half" placeholder="+{{ localize 'DND5E.Max' }}"
+                        <input name="data.health.tempmax" type="text" pattern="(-)?\d+" class="half" placeholder="+Temp Max"
                                value="{{data.health.tempmax}}" data-dtype="{{data.health.type}}"/>
                     </footer>
                 </li>
@@ -106,17 +117,6 @@
                     </div>
                     <footer class="attribute-footer">
                         <span>Value: </span><span name="data.surges.heal">{{data.surges.heal}}</span>
-                    </footer>
-                </li>
-                <li class="attribute movement">
-                    <h4 class="attribute-name box-title">Speed</h4>
-                    <div class="attribute-value">
-                        <input name="data.attributes.speed.value" type="text"
-                               value="{{data.attributes.speed.value}}" placeholder="0"/>
-                    </div>
-                    <footer class="attribute-footer">
-                        <input type="text" class="speed" name="data.attributes.speed.special"
-                               value="{{data.attributes.speed.special}}" placeholder="Special Movement"/>
                     </footer>
                 </li>
             </ul>
