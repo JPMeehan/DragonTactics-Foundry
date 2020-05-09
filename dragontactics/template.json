@@ -89,7 +89,7 @@
         "skill": {
           "acrobatics": {
             "label": "Acrobatics",
-            "ability": "Dexterity",
+            "ability": "Dex",
             "ability_lowercase": "dexterity",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -97,7 +97,7 @@
           },
           "appeal": {
             "label": "Appeal",
-            "ability": "Charisma",
+            "ability": "Cha",
             "ability_lowercase": "charisma",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -105,7 +105,7 @@
           },
           "arcana": {
             "label": "Arcana",
-            "ability": "Intelligence",
+            "ability": "Int",
             "ability_lowercase": "intelligence",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -113,7 +113,7 @@
           },
           "athletics": {
             "label": "Athletics",
-            "ability": "Strength",
+            "ability": "Str",
             "ability_lowercase": "strength",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -121,7 +121,7 @@
           },
           "debate": {
             "label": "Debate",
-            "ability": "Intelligence",
+            "ability": "Int",
             "ability_lowercase": "intelligence",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -129,7 +129,7 @@
           },
           "endurance": {
             "label": "Endurance",
-            "ability": "Constitution",
+            "ability": "Con",
             "ability_lowercase": "constitution",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -137,7 +137,7 @@
           },
           "handle_animal": {
             "label": "Handle Animal",
-            "ability": "Wisdom",
+            "ability": "Wis",
             "ability_lowercase": "wisdom",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -145,7 +145,7 @@
           },
           "impress": {
             "label": "Impress",
-            "ability": "Charisma",
+            "ability": "Cha",
             "ability_lowercase": "charisma",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -153,7 +153,7 @@
           },
           "insight": {
             "label": "Insight",
-            "ability": "Wisdom",
+            "ability": "Wis",
             "ability_lowercase": "wisdom",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -161,7 +161,7 @@
           },
           "medicine": {
             "label": "Medicine",
-            "ability": "Wisdom",
+            "ability": "Wis",
             "ability_lowercase": "wisdom",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -169,7 +169,7 @@
           },
           "perception": {
             "label": "Perception",
-            "ability": "Wisdom",
+            "ability": "Wis",
             "ability_lowercase": "wisdom",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -177,7 +177,7 @@
           },
           "repair": {
             "label": "Repair",
-            "ability": "Intelligence",
+            "ability": "Int",
             "ability_lowercase": "intelligence",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -185,7 +185,7 @@
           },
           "research": {
             "label": "Research",
-            "ability": "Intelligence",
+            "ability": "Int",
             "ability_lowercase": "intelligence",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -193,7 +193,7 @@
           },
           "sleight_of_hand": {
             "label": "Sleight of Hand",
-            "ability": "Dexterity",
+            "ability": "Dex",
             "ability_lowercase": "dexterity",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -201,7 +201,7 @@
           },
           "socialize": {
             "label": "Socialize",
-            "ability": "Charisma",
+            "ability": "Cha",
             "ability_lowercase": "charisma",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -209,7 +209,7 @@
           },
           "stealth": {
             "label": "Stealth",
-            "ability": "Dexterity",
+            "ability": "Dex",
             "ability_lowercase": "dexterity",
             "rank": "Untrained",
             "miscbonus": 0,
@@ -217,7 +217,7 @@
           },
           "survival": {
             "label": "Survival",
-            "ability": "Wisdom",
+            "ability": "Wis",
             "ability_lowercase": "wisdom",
             "rank": "Untrained",
             "miscbonus": 0,

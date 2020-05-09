@@ -40,7 +40,7 @@
         {{!-- Abilities and Skills Tab --}}
         <div class="tab abilities" data-group="primary" data-tab="abilities">
             
-            <ol class="repeating-list ability">
+            <ol class="block-list ability">
                 <h2>Abilities</h2>
                 {{#each data.abilities as |attr key|}}
                     <li data-attribute="{{key}}">
@@ -53,22 +53,19 @@
                 <h2>Skills</h2>
                 {{#each data.skill as |skill key|}}
                     <li data-attribute="{{key}}" class="{{skill.ability_lowercase}}">
-                        <h4 class="label" name="data.skill.{{key}}.label">{{label}}</h4>
-                        <div class="config">
-                            <select class="rank" name="data.skill.{{key}}.rank"  value="{{skill.rank}}"  data-dtype="String" >
-                                <option value="Untrained" selected>Untrained</option>
-                                <option value="Adept">Adept</option>
-                                <option value="Trained">Trained</option>
-                                <option value="Experienced">Experienced</option>
-                                <option value="Expert">Expert</option>
-                                <option value="Master">Master</option>
-                            </select>
-                            <input class="miscbonus" type="text" pattern="\d+"  name="data.skill.{{key}}.miscbonus"  value="{{skill.miscbonus}}" 
+                        <span class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</span>
+                        <span class="label" name="data.skill.{{key}}.label">{{label}}</span>
+                        <span class="ability">{{ability}}</span>
+                        <select class="rank" name="data.skill.{{key}}.rank"  value="{{skill.rank}}"  data-dtype="String" >
+                            <option value="Untrained" selected>Untrained</option>
+                            <option value="Adept">Adept</option>
+                            <option value="Trained">Trained</option>
+                            <option value="Experienced">Experienced</option>
+                            <option value="Expert">Expert</option>
+                            <option value="Master">Master</option>
+                        </select>
+                        <input class="miscbonus" type="text" pattern="\d+"  name="data.skill.{{key}}.miscbonus"  value="{{skill.miscbonus}}" 
                              data-dtype="Number" title="Miscellaneous bonuses, such as from your race, feats, or items" />
-                        </div>
-                        <div class="display">
-                            <span class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</span> 
-                        </div>
                     </li>
                 {{/each}}
             </ol>

@@ -79,12 +79,12 @@
 }
 .dragontactics ul.attributes {
   list-style: none;
-  height: 80px;
-  margin: 0;
+  height: 82px;
+  margin: 2px 0;
   padding: 0;
 }
 .dragontactics ul.attributes li.attribute {
-  height: 80px;
+  height: 82px;
   margin: 0 5px;
   border: 2px groove #eeede0;
   border-radius: 4px;
@@ -131,6 +131,9 @@
   line-height: 18px;
   font-family: "Signika", "Palatino Linotype", serif;
   font-size: 12px;
+}
+.dragontactics ul.attributes li.attribute .attribute-footer span {
+  font-size: larger;
 }
 .dragontactics ul.attributes li.attribute .attribute-footer input.half {
   width: 48%;
