@@ -267,14 +267,11 @@
 }
 .dragontactics ol.block-list.skill li h4 {
   padding: 3px;
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
 }
 .dragontactics ol.block-list.skill li div.config {
   display: none;
-}
-.dragontactics ol.block-list.skill li div.config,
-.dragontactics ol.block-list.skill li div.display {
-  background-color: rgba(0, 0, 0, 0.05);
-  width: 100%;
 }
 .dragontactics ol.block-list .label {
   margin: 0;
@@ -297,7 +294,7 @@
   font-size: larger;
 }
 .dragontactics ol.repeating-list.skill {
-  width: calc(100% - 172px);
+  width: calc(100% - 174px);
 }
 .dragontactics ol.repeating-list.skill p,
 .dragontactics ol.repeating-list.skill select,
