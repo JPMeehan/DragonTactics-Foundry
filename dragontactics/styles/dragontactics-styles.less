@@ -342,7 +342,6 @@
     margin: 7px 0;
     padding: 0;
     overflow-y: auto;
-    width: calc(50% - 2px);
     display: inline-block;
     vertical-align: top;
 
@@ -404,16 +403,38 @@
     }
   }
 
+
   ol.repeating-list {
+    list-style: none;
+    margin: 7px 0;
+    padding: 0;
+    overflow-y: auto;
+    width: calc(50% - 2px);
+    display: inline-block;
+    vertical-align: top;
+    li.head {
+      .nodesto();
+      font-size: larger;
+    }
+
     &.skill {
-      span.mod {
-        width: 30px;
+      width: calc(100% - 172px);
+
+
+
+      p, select, input {
+        display: inline-block;
       }
-      span.label {
-        width: 80px;
+
+      p.mod {
+        width: 25px;
       }
-      span.ability {
-        width: 40px;
+      p.label {
+        width: 100px;
+      }
+      p.ability {
+        width: calc(100% - 260px);
+        text-align: center;
       }
       select.rank {
         background-color: rgba(0, 0, 0, 0.05);
@@ -424,6 +445,12 @@
     }
   }
 
+  ol.skill {
+  }
+
+  ol.ability {
+    width: 170px;
+  }
 
   /* Feature List */
   .features-header {

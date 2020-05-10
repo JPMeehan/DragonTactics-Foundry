@@ -5,7 +5,7 @@
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" title="Name, e.g. " /></h1>
-            <h2 class="playername"><input name="data.playername" type="text" value={{data.playername}} placeholder="Player Name"/></h2>
+            <h2 class="playername"><input name="data.playername" type="text" value="{{data.playername}}" placeholder="Player Name"/></h2>
             
         </div>
     </header>
@@ -51,11 +51,18 @@
             </ol>
             <ol class="repeating-list skill">
                 <h2>Skills</h2>
+                <li class="head">
+                    <p class="mod">Mod</p>
+                    <p class="label">Skill</p>
+                    <p class="ability">Ability</p>
+                    <p class="rank">Rank</p>
+                    <p class="misc">Misc. Bonus</p>
+                </li>
                 {{#each data.skill as |skill key|}}
                     <li data-attribute="{{key}}" class="{{skill.ability_lowercase}}">
-                        <span class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</span>
-                        <span class="label" name="data.skill.{{key}}.label">{{label}}</span>
-                        <span class="ability">{{ability}}</span>
+                        <p class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</span>
+                        <p class="label" name="data.skill.{{key}}.label">{{label}}</span>
+                        <p class="ability">{{ability}}</span>
                         <select class="rank" name="data.skill.{{key}}.rank"  value="{{skill.rank}}"  data-dtype="String" >
                             <option value="Untrained" selected>Untrained</option>
                             <option value="Adept">Adept</option>
