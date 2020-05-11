@@ -11,18 +11,15 @@
 
 .dragontactics {
   height: 100%;
+
   .window-content {
     height: 100%;
     padding: 5px;
     overflow-y: hidden;
+
     form.editable {
       height: 100%;
     }
-  }
-
-  input[type="number"] {
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 1px solid #7a7971;
   }
 
   .sheet-header {
@@ -57,8 +54,63 @@
         margin: 0;
       }
     }
+
     h2.playername {
       border: none;
+    }
+  }
+
+  /* Sheet Tabs */
+  .tabs {
+    height: 40px;
+    border-top: 1px solid #AAA;
+    border-bottom: 1px solid #AAA;
+
+    .item {
+      line-height: 40px;
+      font-weight: bold;
+    }
+
+    .item.active {
+      text-decoration: underline;
+      text-shadow: none;
+    }
+  }
+
+  .sheet-body {
+
+    overflow: hidden;
+
+    .tab {
+      height: 98%;
+    }
+  }
+
+  .editor,
+  .editor-content {
+    height: 100%;
+    min-height: 150px;
+  }
+
+  /* Broad styles  */
+
+  textarea {
+    resize: vertical;
+  }
+
+  div.tinymceeditorbox {
+    min-height: 150px;
+    border: solid 1px black;
+  }
+
+  div.half {
+    width: calc(50% - 2px);
+    display: inline-block;
+    &.left {
+      float: left;
+    }
+    &.right {
+      float: right;
     }
   }
 
@@ -90,6 +142,164 @@
     }
   }
 
+  ol.block-list {
+    list-style-type: none;
+    margin: 7px 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    vertical-align: top;
+
+    li {
+      display: inline-block;
+      border-radius: 5px;
+      border: solid 1px black;
+      margin: 2px;
+      padding: 0;
+      overflow: hidden;
+      text-align: center;
+
+      img {
+        flex: 0 0 24px;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+    }
+
+    .label {
+      margin: 0;
+    }
+
+    .item-controls {
+      flex: 0 0 36px;
+    }
+  }
+
+  ol.repeating-list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    margin: 7px 0;
+    padding: 0;
+    overflow-y: auto;
+    display: inline-block;
+    vertical-align: top;
+
+    li.head {
+      .nodesto();
+      font-size: larger;
+
+    }
+  }
+
+  /* Feature List */
+  .features-header {
+    padding: 5px;
+    margin: 5px 0;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: bold;
+
+    .feature-label {
+      flex: 1.5;
+    }
+
+    .feature-control {
+      flex: 0 0 20px;
+    }
+  }
+
+  .features-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li>* {
+      margin: 0 3px;
+      height: 28px;
+      line-height: 24px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #AAA;
+    }
+
+    a.feature-control {
+      flex: 0 0 20px;
+      text-align: center;
+      line-height: 28px;
+      border: none;
+    }
+  }
+
+  /* Description Tab */
+
+
+
+  /* Abilities and Skills Tab */
+
+  div.ability {
+    width: 170px;
+    display: inline-block;
+
+    li {
+      width: 50px;
+
+      input.score {
+        width: 100%;
+        text-align: center;
+        border: none;
+      }
+    }
+  }
+
+  div.skill {
+    width: calc(100% - 174px);
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+
+    p,
+    select,
+    input {
+      display: inline-block;
+    }
+
+    p.mod {
+      width: 25px;
+    }
+
+    p.label {
+      width: 100px;
+    }
+
+    p.ability {
+      width: calc(100% - 260px);
+      text-align: center;
+    }
+
+    select.rank {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    input.miscbonus {
+      width: 30px;
+    }
+
+    p.misc {
+      float: right;
+    }
+  }
+
+  /* Combat Tab  */
+
   ul.attributes {
     list-style: none;
     height: 82px;
@@ -103,7 +313,7 @@
       border-radius: 4px;
       text-align: center;
       .nodesto();
-      
+
       &.health {
         width: 100px;
       }
@@ -168,39 +378,108 @@
 
   }
 
+  li.powers {
+    margin-bottom: 3px;
 
+    /* Header */
+    div.powerheader {
+      border-radius: 5px 5px 0 0;
+      border: 1px solid black;
 
-  /* Sheet Tabs */
-  .tabs {
-    height: 40px;
-    border-top: 1px solid #AAA;
-    border-bottom: 1px solid #AAA;
+      span.powername[type="text"] {
+        width: calc(100% - 75px);
+        background-color: transparent;
+        border: none;
+        color: white;
 
-    .item {
-      line-height: 40px;
-      font-weight: bold;
+        &::placeholder {
+          color: white;
+        }
+      }
     }
 
-    .item.active {
-      text-decoration: underline;
-      text-shadow: none;
+    &.atwill div.powerheader {
+      background-color: rgba(0, 128, 0, .5);
+
+      label.ready {
+        display: none;
+      }
+    }
+
+    &.encounter div.powerheader {
+      background-color: rgba(255, 0, 0, .5);
+    }
+
+    &.daily div.powerheader {
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    &.show div.powerheader {
+      border-style: solid solid none;
+    }
+
+    /* Body */
+    .powerbody {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px black;
+      border-style: none solid solid;
+      border-radius: 0 0 5px 5px;
+      overflow: hidden;
+
+      .powershow-row {
+        padding: 3px 5px;
+        font-size: 15px;
+        overflow-wrap: break-word;
+
+        &:nth-child(2n) {
+          background-color: rgba(211, 211, 211, 0.5);
+        }
+
+        button[type="roll"] {
+          margin: 0;
+          padding: 0;
+          font-size: inherit;
+        }
+      }
+
+      span.trigger {
+        font-style: italic;
+      }
+
+      div.rangetargets {
+        display: inline-block;
+        max-width: calc(100% - 65px);
+      }
+
+      label.ready {
+        float: right;
+        width: 62px;
+        margin: 0;
+        padding: 0;
+        font-size: inherit;
+
+        input {
+          vertical-align: initial;
+        }
+      }
+
+      span.powertext {
+        font-size: 12px;
+        font-style: italic;
+      }
     }
   }
 
-  .sheet-body {
+  /* Features Tab */
 
-    overflow: hidden;
 
-    .tab {
-      height: 98%;
-    }
-  }
 
-  .editor,
-  .editor-content {
-    height: 100%;
-    min-height: 150px;
-  }
+  /* Equipment Tab */
+
+
+
+  /* Items */
 
   label.class {
 
@@ -333,257 +612,12 @@
       }
     }
   }
-
-  div.tinymceeditorbox {
-    min-height: 150px;
-    border: solid 1px black;
-  }
-
-
-  /* numblock style list */
-  ol.block-list {
-    list-style-type: none;
-    margin: 7px 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    vertical-align: top;
-
-    li {
-      display: inline-block;
-      border-radius: 5px;
-      border: solid 1px black;
-      margin: 2px;
-      padding: 0;
-      overflow: hidden;
-      text-align: center;
-
-      img {
-        flex: 0 0 24px;
-        margin-right: 5px;
-      }
-
-      &:hover {
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-      }
-    }
-    .label {
-      margin: 0;
-    }
-
-    .item-controls {
-      flex: 0 0 36px;
-    }
-  }
-
-  div.ability {
-    width: 170px;
-    display: inline-block;
-    li {
-    width: 50px;
-
-      input.score {
-        width: 100%;
-        text-align: center;
-        border: none;
-      }
-    }
-  }
-
-  div.skill {
-    width: calc(100% - 174px);
-    height: 100%;
-    display: inline-block;
-    vertical-align: top;
-    p, select, input {
-      display: inline-block;
-    }
-    p.mod {
-      width: 25px;
-    }
-    p.label {
-      width: 100px;
-    }
-    p.ability {
-      width: calc(100% - 260px);
-      text-align: center;
-    }
-    select.rank {
-      background-color: rgba(0, 0, 0, 0.05);
-    }
-    input.miscbonus {
-      width: 30px;
-    }
-    p.misc {
-      float: right;
-    }
-  }
-
-
-  ol.repeating-list {
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    margin: 7px 0;
-    padding: 0;
-    overflow-y: auto;
-    display: inline-block;
-    vertical-align: top;
-    li.head {
-      .nodesto();
-      font-size: larger;
-
-    }
-  }
-
-  /* Feature List */
-  .features-header {
-    padding: 5px;
-    margin: 5px 0;
-    background: rgba(0, 0, 0, 0.05);
-    border: 1px solid #AAA;
-    border-radius: 2px;
-    text-align: center;
-    font-weight: bold;
-
-    .feature-label {
-      flex: 1.5;
-    }
-
-    .feature-control {
-      flex: 0 0 20px;
-    }
-  }
-
-  .features-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li>* {
-      margin: 0 3px;
-      height: 28px;
-      line-height: 24px;
-      background: transparent;
-      border: none;
-      border-radius: 0;
-      border-bottom: 1px solid #AAA;
-    }
-
-    textarea.feature-value {
-      resize: vertical;
-    }
-
-    a.feature-control {
-      flex: 0 0 20px;
-      text-align: center;
-      line-height: 28px;
-      border: none;
-    }
-  }
-
-
-  div.powers {
-    margin-bottom: 3px;
-
-    /* Header */
-    div.powerheader {
-      border-radius: 5px 5px 0 0;
-      border: 1px solid black;
-
-      span.powername[type="text"] {
-        width: calc(100% - 75px);
-        background-color: transparent;
-        border: none;
-        color: white;
-
-        &::placeholder {
-          color: white;
-        }
-      }
-    }
-
-    &.atwill div.powerheader {
-      background-color: rgba(0, 128, 0, .5);
-
-      label.ready {
-        display: none;
-      }
-    }
-
-    &.encounter div.powerheader {
-      background-color: rgba(255, 0, 0, .5);
-    }
-
-    &.daily div.powerheader {
-      background-color: rgba(0, 0, 0, .5);
-    }
-
-    &.show div.powerheader {
-      border-style: solid solid none;
-    }
-
-    /* Body */
-    .powerbody {
-      display: none;
-      background-color: rgba(255, 255, 255, 0.8);
-      border: 1px black;
-      border-style: none solid solid;
-      border-radius: 0 0 5px 5px;
-      overflow: hidden;
-
-      .powershow-row {
-        padding: 3px 5px;
-        font-size: 15px;
-        overflow-wrap: break-word;
-
-        &:nth-child(2n) {
-          background-color: rgba(211, 211, 211, 0.5);
-        }
-
-        button[type="roll"] {
-          margin: 0;
-          padding: 0;
-          font-size: inherit;
-        }
-      }
-
-      span.trigger {
-        font-style: italic;
-      }
-
-      div.rangetargets {
-        display: inline-block;
-        max-width: calc(100% - 65px);
-      }
-
-      label.ready {
-        float: right;
-        width: 62px;
-        margin: 0;
-        padding: 0;
-        font-size: inherit;
-
-        input {
-          vertical-align: initial;
-        }
-      }
-
-      span.powertext {
-        font-size: 12px;
-        font-style: italic;
-      }
-    }
-  }
-
-
 }
 
 .dragontactics.sheet.actor {
   min-width: 560px;
   min-height: 420px;
+
   .sheet-body {
     height: calc(100% - 150px);
   }

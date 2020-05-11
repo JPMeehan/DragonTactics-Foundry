@@ -9,8 +9,14 @@
 .dragontactics {
   height: 100%;
   /* Sheet Tabs */
-  /* numblock style list */
+  /* Broad styles  */
   /* Feature List */
+  /* Description Tab */
+  /* Abilities and Skills Tab */
+  /* Combat Tab  */
+  /* Features Tab */
+  /* Equipment Tab */
+  /* Items */
 }
 .dragontactics .window-content {
   height: 100%;
@@ -19,10 +25,6 @@
 }
 .dragontactics .window-content form.editable {
   height: 100%;
-}
-.dragontactics input[type="number"] {
-  background-color: rgba(0, 0, 0, 0.05);
-  border: 1px solid #7a7971;
 }
 .dragontactics .sheet-header {
   height: 100px;
@@ -56,6 +58,47 @@
 .dragontactics .sheet-header h2.playername {
   border: none;
 }
+.dragontactics .tabs {
+  height: 40px;
+  border-top: 1px solid #AAA;
+  border-bottom: 1px solid #AAA;
+}
+.dragontactics .tabs .item {
+  line-height: 40px;
+  font-weight: bold;
+}
+.dragontactics .tabs .item.active {
+  text-decoration: underline;
+  text-shadow: none;
+}
+.dragontactics .sheet-body {
+  overflow: hidden;
+}
+.dragontactics .sheet-body .tab {
+  height: 98%;
+}
+.dragontactics .editor,
+.dragontactics .editor-content {
+  height: 100%;
+  min-height: 150px;
+}
+.dragontactics textarea {
+  resize: vertical;
+}
+.dragontactics div.tinymceeditorbox {
+  min-height: 150px;
+  border: solid 1px black;
+}
+.dragontactics div.half {
+  width: calc(50% - 2px);
+  display: inline-block;
+}
+.dragontactics div.half.left {
+  float: left;
+}
+.dragontactics div.half.right {
+  float: right;
+}
 .dragontactics div.numblock {
   border-radius: 5px;
   padding: 0;
@@ -80,6 +123,130 @@
   border-radius: 0;
   border: none;
   font-size: large;
+}
+.dragontactics ol.block-list {
+  list-style-type: none;
+  margin: 7px 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  vertical-align: top;
+}
+.dragontactics ol.block-list li {
+  display: inline-block;
+  border-radius: 5px;
+  border: solid 1px black;
+  margin: 2px;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+.dragontactics ol.block-list li img {
+  flex: 0 0 24px;
+  margin-right: 5px;
+}
+.dragontactics ol.block-list li:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.dragontactics ol.block-list .label {
+  margin: 0;
+}
+.dragontactics ol.block-list .item-controls {
+  flex: 0 0 36px;
+}
+.dragontactics ol.repeating-list {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  margin: 7px 0;
+  padding: 0;
+  overflow-y: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+.dragontactics ol.repeating-list li.head {
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
+  font-size: larger;
+}
+.dragontactics .features-header {
+  padding: 5px;
+  margin: 5px 0;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #AAA;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: bold;
+}
+.dragontactics .features-header .feature-label {
+  flex: 1.5;
+}
+.dragontactics .features-header .feature-control {
+  flex: 0 0 20px;
+}
+.dragontactics .features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dragontactics .features-list li > * {
+  margin: 0 3px;
+  height: 28px;
+  line-height: 24px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #AAA;
+}
+.dragontactics .features-list a.feature-control {
+  flex: 0 0 20px;
+  text-align: center;
+  line-height: 28px;
+  border: none;
+}
+.dragontactics div.ability {
+  width: 170px;
+  display: inline-block;
+}
+.dragontactics div.ability li {
+  width: 50px;
+}
+.dragontactics div.ability li input.score {
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+.dragontactics div.skill {
+  width: calc(100% - 174px);
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.dragontactics div.skill p,
+.dragontactics div.skill select,
+.dragontactics div.skill input {
+  display: inline-block;
+}
+.dragontactics div.skill p.mod {
+  width: 25px;
+}
+.dragontactics div.skill p.label {
+  width: 100px;
+}
+.dragontactics div.skill p.ability {
+  width: calc(100% - 260px);
+  text-align: center;
+}
+.dragontactics div.skill select.rank {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.dragontactics div.skill input.miscbonus {
+  width: 30px;
+}
+.dragontactics div.skill p.misc {
+  float: right;
 }
 .dragontactics ul.attributes {
   list-style: none;
@@ -142,29 +309,80 @@
 .dragontactics ul.attributes li.attribute .attribute-footer input.half {
   width: 48%;
 }
-.dragontactics .tabs {
-  height: 40px;
-  border-top: 1px solid #AAA;
-  border-bottom: 1px solid #AAA;
+.dragontactics li.powers {
+  margin-bottom: 3px;
+  /* Header */
+  /* Body */
 }
-.dragontactics .tabs .item {
-  line-height: 40px;
-  font-weight: bold;
+.dragontactics li.powers div.powerheader {
+  border-radius: 5px 5px 0 0;
+  border: 1px solid black;
 }
-.dragontactics .tabs .item.active {
-  text-decoration: underline;
-  text-shadow: none;
+.dragontactics li.powers div.powerheader span.powername[type="text"] {
+  width: calc(100% - 75px);
+  background-color: transparent;
+  border: none;
+  color: white;
 }
-.dragontactics .sheet-body {
+.dragontactics li.powers div.powerheader span.powername[type="text"]::placeholder {
+  color: white;
+}
+.dragontactics li.powers.atwill div.powerheader {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+.dragontactics li.powers.atwill div.powerheader label.ready {
+  display: none;
+}
+.dragontactics li.powers.encounter div.powerheader {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.dragontactics li.powers.daily div.powerheader {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dragontactics li.powers.show div.powerheader {
+  border-style: solid solid none;
+}
+.dragontactics li.powers .powerbody {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px black;
+  border-style: none solid solid;
+  border-radius: 0 0 5px 5px;
   overflow: hidden;
 }
-.dragontactics .sheet-body .tab {
-  height: 98%;
+.dragontactics li.powers .powerbody .powershow-row {
+  padding: 3px 5px;
+  font-size: 15px;
+  overflow-wrap: break-word;
 }
-.dragontactics .editor,
-.dragontactics .editor-content {
-  height: 100%;
-  min-height: 150px;
+.dragontactics li.powers .powerbody .powershow-row:nth-child(2n) {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+.dragontactics li.powers .powerbody .powershow-row button[type="roll"] {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+.dragontactics li.powers .powerbody span.trigger {
+  font-style: italic;
+}
+.dragontactics li.powers .powerbody div.rangetargets {
+  display: inline-block;
+  max-width: calc(100% - 65px);
+}
+.dragontactics li.powers .powerbody label.ready {
+  float: right;
+  width: 62px;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+.dragontactics li.powers .powerbody label.ready input {
+  vertical-align: initial;
+}
+.dragontactics li.powers .powerbody span.powertext {
+  font-size: 12px;
+  font-style: italic;
 }
 .dragontactics label.class.source input,
 .dragontactics label.class.role input {
@@ -230,212 +448,6 @@
 }
 .dragontactics label.race.skills input {
   width: 250px;
-}
-.dragontactics div.tinymceeditorbox {
-  min-height: 150px;
-  border: solid 1px black;
-}
-.dragontactics ol.block-list {
-  list-style-type: none;
-  margin: 7px 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  vertical-align: top;
-}
-.dragontactics ol.block-list li {
-  display: inline-block;
-  border-radius: 5px;
-  border: solid 1px black;
-  margin: 2px;
-  padding: 0;
-  overflow: hidden;
-  text-align: center;
-}
-.dragontactics ol.block-list li img {
-  flex: 0 0 24px;
-  margin-right: 5px;
-}
-.dragontactics ol.block-list li:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-.dragontactics ol.block-list .label {
-  margin: 0;
-}
-.dragontactics ol.block-list .item-controls {
-  flex: 0 0 36px;
-}
-.dragontactics div.ability {
-  width: 170px;
-  display: inline-block;
-}
-.dragontactics div.ability li {
-  width: 50px;
-}
-.dragontactics div.ability li input.score {
-  width: 100%;
-  text-align: center;
-  border: none;
-}
-.dragontactics div.skill {
-  width: calc(100% - 174px);
-  height: 100%;
-  display: inline-block;
-  vertical-align: top;
-}
-.dragontactics div.skill p,
-.dragontactics div.skill select,
-.dragontactics div.skill input {
-  display: inline-block;
-}
-.dragontactics div.skill p.mod {
-  width: 25px;
-}
-.dragontactics div.skill p.label {
-  width: 100px;
-}
-.dragontactics div.skill p.ability {
-  width: calc(100% - 260px);
-  text-align: center;
-}
-.dragontactics div.skill select.rank {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-.dragontactics div.skill input.miscbonus {
-  width: 30px;
-}
-.dragontactics div.skill p.misc {
-  float: right;
-}
-.dragontactics ol.repeating-list {
-  list-style: none;
-  width: 100%;
-  height: 100%;
-  margin: 7px 0;
-  padding: 0;
-  overflow-y: auto;
-  display: inline-block;
-  vertical-align: top;
-}
-.dragontactics ol.repeating-list li.head {
-  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
-  font-size: 20px;
-  font-size: larger;
-}
-.dragontactics .features-header {
-  padding: 5px;
-  margin: 5px 0;
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid #AAA;
-  border-radius: 2px;
-  text-align: center;
-  font-weight: bold;
-}
-.dragontactics .features-header .feature-label {
-  flex: 1.5;
-}
-.dragontactics .features-header .feature-control {
-  flex: 0 0 20px;
-}
-.dragontactics .features-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.dragontactics .features-list li > * {
-  margin: 0 3px;
-  height: 28px;
-  line-height: 24px;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid #AAA;
-}
-.dragontactics .features-list textarea.feature-value {
-  resize: vertical;
-}
-.dragontactics .features-list a.feature-control {
-  flex: 0 0 20px;
-  text-align: center;
-  line-height: 28px;
-  border: none;
-}
-.dragontactics div.powers {
-  margin-bottom: 3px;
-  /* Header */
-  /* Body */
-}
-.dragontactics div.powers div.powerheader {
-  border-radius: 5px 5px 0 0;
-  border: 1px solid black;
-}
-.dragontactics div.powers div.powerheader span.powername[type="text"] {
-  width: calc(100% - 75px);
-  background-color: transparent;
-  border: none;
-  color: white;
-}
-.dragontactics div.powers div.powerheader span.powername[type="text"]::placeholder {
-  color: white;
-}
-.dragontactics div.powers.atwill div.powerheader {
-  background-color: rgba(0, 128, 0, 0.5);
-}
-.dragontactics div.powers.atwill div.powerheader label.ready {
-  display: none;
-}
-.dragontactics div.powers.encounter div.powerheader {
-  background-color: rgba(255, 0, 0, 0.5);
-}
-.dragontactics div.powers.daily div.powerheader {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.dragontactics div.powers.show div.powerheader {
-  border-style: solid solid none;
-}
-.dragontactics div.powers .powerbody {
-  display: none;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px black;
-  border-style: none solid solid;
-  border-radius: 0 0 5px 5px;
-  overflow: hidden;
-}
-.dragontactics div.powers .powerbody .powershow-row {
-  padding: 3px 5px;
-  font-size: 15px;
-  overflow-wrap: break-word;
-}
-.dragontactics div.powers .powerbody .powershow-row:nth-child(2n) {
-  background-color: rgba(211, 211, 211, 0.5);
-}
-.dragontactics div.powers .powerbody .powershow-row button[type="roll"] {
-  margin: 0;
-  padding: 0;
-  font-size: inherit;
-}
-.dragontactics div.powers .powerbody span.trigger {
-  font-style: italic;
-}
-.dragontactics div.powers .powerbody div.rangetargets {
-  display: inline-block;
-  max-width: calc(100% - 65px);
-}
-.dragontactics div.powers .powerbody label.ready {
-  float: right;
-  width: 62px;
-  margin: 0;
-  padding: 0;
-  font-size: inherit;
-}
-.dragontactics div.powers .powerbody label.ready input {
-  vertical-align: initial;
-}
-.dragontactics div.powers .powerbody span.powertext {
-  font-size: 12px;
-  font-style: italic;
 }
 .dragontactics.sheet.actor {
   min-width: 560px;
