@@ -17,6 +17,9 @@
   padding: 5px;
   overflow-y: hidden;
 }
+.dragontactics .window-content form.editable {
+  height: 100%;
+}
 .dragontactics input[type="number"] {
   background-color: rgba(0, 0, 0, 0.05);
   border: 1px solid #7a7971;
@@ -156,7 +159,7 @@
   overflow: hidden;
 }
 .dragontactics .sheet-body .tab {
-  height: 100%;
+  height: 98%;
 }
 .dragontactics .editor,
 .dragontactics .editor-content {
@@ -278,6 +281,9 @@
 }
 .dragontactics div.skill {
   width: calc(100% - 174px);
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
 }
 .dragontactics div.skill p,
 .dragontactics div.skill select,
@@ -436,7 +442,7 @@
   min-height: 420px;
 }
 .dragontactics.sheet.actor .sheet-body {
-  height: calc(100% - 140px);
+  height: calc(100% - 150px);
 }
 .dragontactics.sheet.item {
   min-width: 460px;
