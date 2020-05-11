@@ -92,6 +92,7 @@
 .dragontactics div.half {
   width: calc(50% - 2px);
   display: inline-block;
+  vertical-align: top;
 }
 .dragontactics div.half.left {
   float: left;
@@ -166,11 +167,6 @@
   display: inline-block;
   vertical-align: top;
 }
-.dragontactics ol.repeating-list li.head {
-  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
-  font-size: 20px;
-  font-size: larger;
-}
 .dragontactics .features-header {
   padding: 5px;
   margin: 5px 0;
@@ -206,46 +202,63 @@
   line-height: 28px;
   border: none;
 }
-.dragontactics div.ability {
+.dragontactics div.biography input.level,
+.dragontactics div.biography input.quest {
+  width: calc(50% - 2px);
+}
+.dragontactics div.abilities div.ability {
   width: 170px;
   display: inline-block;
 }
-.dragontactics div.ability li {
+.dragontactics div.abilities div.ability li {
   width: 50px;
 }
-.dragontactics div.ability li input.score {
+.dragontactics div.abilities div.ability li input.score {
   width: 100%;
   text-align: center;
   border: none;
 }
-.dragontactics div.skill {
+.dragontactics div.abilities div.skill {
   width: calc(100% - 174px);
-  height: 100%;
+  height: calc(100% - 54px);
   display: inline-block;
   vertical-align: top;
 }
-.dragontactics div.skill p,
-.dragontactics div.skill select,
-.dragontactics div.skill input {
+.dragontactics div.abilities div.skill h2,
+.dragontactics div.abilities div.skill ol {
+  margin: 0;
+}
+.dragontactics div.abilities div.skill div.head {
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
+  font-size: larger;
+}
+.dragontactics div.abilities div.skill p,
+.dragontactics div.abilities div.skill select,
+.dragontactics div.abilities div.skill input {
   display: inline-block;
 }
-.dragontactics div.skill p.mod {
+.dragontactics div.abilities div.skill p.mod {
   width: 25px;
 }
-.dragontactics div.skill p.label {
+.dragontactics div.abilities div.skill p.label {
   width: 100px;
 }
-.dragontactics div.skill p.ability {
+.dragontactics div.abilities div.skill ol p.label:hover {
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+.dragontactics div.abilities div.skill p.ability {
   width: calc(100% - 260px);
   text-align: center;
 }
-.dragontactics div.skill select.rank {
+.dragontactics div.abilities div.skill select.rank {
   background-color: rgba(0, 0, 0, 0.05);
 }
-.dragontactics div.skill input.miscbonus {
+.dragontactics div.abilities div.skill input.miscbonus {
   width: 30px;
 }
-.dragontactics div.skill p.misc {
+.dragontactics div.abilities div.skill p.misc {
   float: right;
 }
 .dragontactics ul.attributes {

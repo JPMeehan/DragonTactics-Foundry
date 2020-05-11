@@ -3,11 +3,11 @@
     "types": ["hero", "combatant", "npc"],
     "templates": {
       "description": {
-        "race": "Human",
-        "height": "6 ft",
-        "weight": "200 lbs.",
-        "quick": "Typical peasant",
-        "kanka": "Link here"
+        "race": "",
+        "height": "",
+        "weight": "",
+        "quick": "",
+        "kanka": ""
       },
       "defenses": {
         "ac": {
@@ -313,7 +313,8 @@
         "quantity": 1,
         "price": "",
         "size": 2,
-        "type": ""
+        "type": "",
+        "location": ""
       }
     },
     "class": {
