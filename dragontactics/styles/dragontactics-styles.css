@@ -257,6 +257,9 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+.dragontactics ol.block-list.ability {
+  width: 170px;
+}
 .dragontactics ol.block-list.ability li {
   width: 50px;
 }
@@ -265,26 +268,45 @@
   text-align: center;
   border: none;
 }
-.dragontactics ol.block-list.skill li h4 {
-  padding: 3px;
-  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
-  font-size: 20px;
-}
-.dragontactics ol.block-list.skill li div.config {
-  display: none;
-}
 .dragontactics ol.block-list .label {
   margin: 0;
 }
 .dragontactics ol.block-list .item-controls {
   flex: 0 0 36px;
 }
+.dragontactics div.skill {
+  width: calc(100% - 174px);
+}
+.dragontactics div.skill p,
+.dragontactics div.skill select,
+.dragontactics div.skill input {
+  display: inline-block;
+}
+.dragontactics div.skill p.mod {
+  width: 25px;
+}
+.dragontactics div.skill p.label {
+  width: 100px;
+}
+.dragontactics div.skill p.ability {
+  width: calc(100% - 260px);
+  text-align: center;
+}
+.dragontactics div.skill select.rank {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.dragontactics div.skill input.miscbonus {
+  width: 30px;
+}
+.dragontactics div.skill p.misc {
+  float: right;
+}
 .dragontactics ol.repeating-list {
   list-style: none;
+  height: 100%;
   margin: 7px 0;
   padding: 0;
   overflow-y: auto;
-  width: calc(50% - 2px);
   display: inline-block;
   vertical-align: top;
 }
@@ -292,33 +314,6 @@
   font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
   font-size: 20px;
   font-size: larger;
-}
-.dragontactics ol.repeating-list.skill {
-  width: calc(100% - 174px);
-}
-.dragontactics ol.repeating-list.skill p,
-.dragontactics ol.repeating-list.skill select,
-.dragontactics ol.repeating-list.skill input {
-  display: inline-block;
-}
-.dragontactics ol.repeating-list.skill p.mod {
-  width: 25px;
-}
-.dragontactics ol.repeating-list.skill p.label {
-  width: 100px;
-}
-.dragontactics ol.repeating-list.skill p.ability {
-  width: calc(100% - 260px);
-  text-align: center;
-}
-.dragontactics ol.repeating-list.skill select.rank {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-.dragontactics ol.repeating-list.skill input.miscbonus {
-  width: 30px;
-}
-.dragontactics ol.ability {
-  width: 170px;
 }
 .dragontactics .features-header {
   padding: 5px;
@@ -436,6 +431,9 @@
 .dragontactics.sheet.actor {
   min-width: 560px;
   min-height: 420px;
+}
+.dragontactics.sheet.actor .sheet-body {
+  height: calc(100% - 140px);
 }
 .dragontactics.sheet.item {
   min-width: 460px;

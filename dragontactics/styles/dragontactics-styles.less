@@ -184,6 +184,7 @@
   }
 
   .sheet-body {
+
     overflow: hidden;
 
     .tab {
@@ -365,25 +366,17 @@
       }
     }
 
-    &.ability li {
+    &.ability {
+      width: 170px;
+      li {
       width: 50px;
 
-      input.score {
-        width: 100%;
-        text-align: center;
-        // background-color: white;
-        border: none;
-      }
-    }
-
-    &.skill li {
-      h4 {
-        padding: 3px;
-        .nodesto();
-      }
-
-      div.config {
-        display: none;
+        input.score {
+          width: 100%;
+          text-align: center;
+          // background-color: white;
+          border: none;
+        }
       }
     }
 
@@ -396,53 +389,46 @@
     }
   }
 
+  div.skill {
+    width: calc(100% - 174px);
+    p, select, input {
+      display: inline-block;
+    }
+    p.mod {
+      width: 25px;
+    }
+    p.label {
+      width: 100px;
+    }
+    p.ability {
+      width: calc(100% - 260px);
+      text-align: center;
+    }
+    select.rank {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    input.miscbonus {
+      width: 30px;
+    }
+    p.misc {
+      float: right;
+    }
+  }
+
 
   ol.repeating-list {
     list-style: none;
+    height: 100%;
     margin: 7px 0;
     padding: 0;
     overflow-y: auto;
-    width: calc(50% - 2px);
     display: inline-block;
     vertical-align: top;
     li.head {
       .nodesto();
       font-size: larger;
+
     }
-
-    &.skill {
-      width: calc(100% - 174px);
-
-
-
-      p, select, input {
-        display: inline-block;
-      }
-
-      p.mod {
-        width: 25px;
-      }
-      p.label {
-        width: 100px;
-      }
-      p.ability {
-        width: calc(100% - 260px);
-        text-align: center;
-      }
-      select.rank {
-        background-color: rgba(0, 0, 0, 0.05);
-      }
-      input.miscbonus {
-        width: 30px;
-      }
-    }
-  }
-
-  ol.skill {
-  }
-
-  ol.ability {
-    width: 170px;
   }
 
   /* Feature List */
@@ -591,6 +577,9 @@
 .dragontactics.sheet.actor {
   min-width: 560px;
   min-height: 420px;
+  .sheet-body {
+    height: calc(100% - 140px);
+  }
 }
 
 

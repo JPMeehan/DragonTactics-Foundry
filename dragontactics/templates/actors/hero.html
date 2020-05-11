@@ -1,7 +1,7 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{cssClass}} flexcol" autocomplete="off">
 
     {{!-- Sheet Header --}}
-    <header class="sheet-header">
+    <header class="sheet-header flexrow">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" title="Name, e.g. " /></h1>
@@ -11,7 +11,7 @@
     </header>
 
     {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
+    <nav class="sheet-navigation tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
 		<a class="item" data-tab="abilities">Abilities</a>
 		<a class="item" data-tab="combat">Combat</a>
@@ -49,33 +49,36 @@
                     </li>
                 {{/each}}
             </ol>
-            <ol class="repeating-list skill">
+            <div class="skill">
                 <h2>Skills</h2>
-                <li class="head">
+                <div class="head">
                     <p class="mod">Mod</p>
                     <p class="label">Skill</p>
                     <p class="ability">Ability</p>
                     <p class="rank">Rank</p>
                     <p class="misc">Misc. Bonus</p>
-                </li>
-                {{#each data.skill as |skill key|}}
-                    <li data-attribute="{{key}}" class="{{skill.ability_lowercase}}">
-                        <p class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</p>
-                        <p class="label" name="data.skill.{{key}}.label">{{label}}</p>
-                        <p class="ability">{{ability}}</p>
-                        <select class="rank" name="data.skill.{{key}}.rank"  value="{{skill.rank}}"  data-dtype="String" >
-                            <option value="Untrained" selected>Untrained</option>
-                            <option value="Adept">Adept</option>
-                            <option value="Trained">Trained</option>
-                            <option value="Experienced">Experienced</option>
-                            <option value="Expert">Expert</option>
-                            <option value="Master">Master</option>
-                        </select>
-                        <input class="miscbonus" type="text" pattern="\d+"  name="data.skill.{{key}}.miscbonus"  value="{{skill.miscbonus}}" 
-                             data-dtype="Number" title="Miscellaneous bonuses, such as from your race, feats, or items" />
-                    </li>
-                {{/each}}
-            </ol>
+                </div>
+                <ol class="repeating-list skill">
+                    {{#each data.skill as |skill key|}}
+                        <li data-attribute="{{key}}" class="{{skill.ability_lowercase}}">
+                            <p class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</p>
+                            <p class="label" name="data.skill.{{key}}.label">{{label}}</p>
+                            <p class="ability">{{ability}}</p>
+                            <select class="rank" name="data.skill.{{key}}.rank"  value="{{skill.rank}}"  data-dtype="String" >
+                                <option value="Untrained" selected>Untrained</option>
+                                <option value="Adept">Adept</option>
+                                <option value="Trained">Trained</option>
+                                <option value="Experienced">Experienced</option>
+                                <option value="Expert">Expert</option>
+                                <option value="Master">Master</option>
+                            </select>
+                            <input class="miscbonus" type="text" pattern="\d+"  name="data.skill.{{key}}.miscbonus"  value="{{skill.miscbonus}}" 
+                                 data-dtype="Number" title="Miscellaneous bonuses, such as from your race, feats, or items" />
+                        </li>
+                    {{/each}}
+                </ol>
+
+            </div>
         </div>
 		
 		{{!-- Combat Tab --}}
