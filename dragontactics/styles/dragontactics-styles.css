@@ -7,6 +7,7 @@
   font-size: 20px;
 }
 .dragontactics {
+  height: 100%;
   /* Sheet Tabs */
   /* numblock style list */
   /* Feature List */
@@ -156,7 +157,6 @@
 }
 .dragontactics .sheet-body .tab {
   height: 100%;
-  overflow-y: auto;
 }
 .dragontactics .editor,
 .dragontactics .editor-content {
@@ -236,8 +236,9 @@
   list-style-type: none;
   margin: 7px 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
   overflow-y: auto;
-  display: inline-block;
   vertical-align: top;
 }
 .dragontactics ol.block-list li {
@@ -257,22 +258,23 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.dragontactics ol.block-list.ability {
-  width: 170px;
-}
-.dragontactics ol.block-list.ability li {
-  width: 50px;
-}
-.dragontactics ol.block-list.ability li input.score {
-  width: 100%;
-  text-align: center;
-  border: none;
-}
 .dragontactics ol.block-list .label {
   margin: 0;
 }
 .dragontactics ol.block-list .item-controls {
   flex: 0 0 36px;
+}
+.dragontactics div.ability {
+  width: 170px;
+  display: inline-block;
+}
+.dragontactics div.ability li {
+  width: 50px;
+}
+.dragontactics div.ability li input.score {
+  width: 100%;
+  text-align: center;
+  border: none;
 }
 .dragontactics div.skill {
   width: calc(100% - 174px);
@@ -303,6 +305,7 @@
 }
 .dragontactics ol.repeating-list {
   list-style: none;
+  width: 100%;
   height: 100%;
   margin: 7px 0;
   padding: 0;

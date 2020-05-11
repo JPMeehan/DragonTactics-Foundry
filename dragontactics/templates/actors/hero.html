@@ -1,4 +1,4 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">
+<form class="{{cssClass}}" autocomplete="off">
 
     {{!-- Sheet Header --}}
     <header class="sheet-header flexrow">
@@ -39,16 +39,18 @@
 
         {{!-- Abilities and Skills Tab --}}
         <div class="tab abilities" data-group="primary" data-tab="abilities">
-            
-            <ol class="block-list ability">
+            <div class="ability">
                 <h2>Abilities</h2>
-                {{#each data.abilities as |attr key|}}
-                    <li data-attribute="{{key}}">
-                        <h4 class="label" name="data.abilities.{{key}}.label">{{label}}</h4>
-                        <input class="score" type="text" pattern="\d+"  name="data.abilities.{{key}}.score"  value="{{attr.score}}"  data-dtype="Number" title="Ability Score" />
-                    </li>
-                {{/each}}
-            </ol>
+                <ol class="block-list">
+                    {{#each data.abilities as |attr key|}}
+                        <li data-attribute="{{key}}">
+                            <h4 class="label" name="data.abilities.{{key}}.label">{{label}}</h4>
+                            <input class="score" type="text" pattern="\d+"  name="data.abilities.{{key}}.score"  value="{{attr.score}}"  data-dtype="Number" title="Ability Score" />
+                        </li>
+                    {{/each}}
+                </ol>
+
+            </div>
             <div class="skill">
                 <h2>Skills</h2>
                 <div class="head">
