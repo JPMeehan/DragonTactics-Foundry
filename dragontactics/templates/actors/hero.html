@@ -89,12 +89,14 @@
                         <p class="label" name="data.skill.{{key}}.label">{{label}}</p>
                         <p class="ability">{{ability_short}}</p>
                         <select class="rank" name="data.skill.{{key}}.rank" data-dtype="String">
+                            {{#select skill.rank}}
                             <option value="Untrained" selected>Untrained</option>
                             <option value="Adept">Adept</option>
                             <option value="Trained">Trained</option>
                             <option value="Experienced">Experienced</option>
                             <option value="Expert">Expert</option>
                             <option value="Master">Master</option>
+                            {{/select}}
                         </select>
                         <input class="miscbonus" type="text" pattern="\d+" name="data.skill.{{key}}.miscbonus"
                             value="{{skill.miscbonus}}" data-dtype="Number"
