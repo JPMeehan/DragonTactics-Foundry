@@ -15,7 +15,7 @@ export class DragonTacticsActor extends Actor {
     // Ability scores
     for (let abl of Object.values(data.abilities)) {
       abl.mod = Math.floor((abl.score - 10) / 2);
-      if (abl.mod < 0) abl.modifier = "-" + abl.mod;
+      if (abl.mod < 0) abl.modifier = "" + abl.mod;
       else abl.modifier = "+" + abl.mod;
     }
     console.log("Ability scores done")
@@ -46,7 +46,7 @@ export class DragonTacticsActor extends Actor {
       // console.log(data.abilities[skill.ability].mod)
       skill.rank_bonus = this.training(this.rank);
       skill.mod = data.abilities[skill.ability].mod + skill.rank_bonus + skill.miscbonus + data.class.quest;
-      if (skill.mod < 0) skill.modifier = "-" + skill.mod;
+      if (skill.mod < 0) skill.modifier = "" + skill.mod;
       else skill.modifier = "+" + skill.mod;
     }
     console.log("Skills done")
