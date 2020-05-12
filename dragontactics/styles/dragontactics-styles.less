@@ -252,10 +252,22 @@
       li {
         width: 50px;
 
-        input.score {
+        input.score,
+        input.modifier {
           width: 100%;
           text-align: center;
           border: none;
+        }
+        input.modifier {
+          display: none;
+        }
+
+        &:hover + input.score { 
+          display: none;
+        }
+
+        &:hover + input.modifier {
+          display: inline;
         }
       }
     }
@@ -332,6 +344,9 @@
 
       &.health {
         width: 100px;
+        input[name="data.health.value"].bloody {
+          color: darkred;
+        }
       }
 
       h4.attribute-name {

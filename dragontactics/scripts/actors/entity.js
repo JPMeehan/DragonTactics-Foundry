@@ -1,36 +1,73 @@
+import { string } from "prop-types";
+
 /**
  * Extend the base Actor entity for the Dragon Tactics System
  * @extends {Actor}
  */
 export class DragonTacticsActor extends Actor {
 
-    /** @override */
-    // getRollData() {
-    //   const data = super.getRollData();
-    //   const shorthand = game.settings.get("dragontactics", "macroShorthand");
-  
-    //   // Re-map all attributes onto the base roll data
-    //   if ( !!shorthand ) {
-    //     for ( let [k, v] of Object.entries(data.attributes) ) {
-    //       if ( !(k in data) ) data[k] = v.value;
-    //     }
-    //     delete data.attributes;
-    //   }
-  
-    //   // Map all items data using their slugified names
-    //   data.items = this.data.items.reduce((obj, i) => {
-    //     let key = i.name.slugify({strict: true});
-    //     let itemData = duplicate(i.data);
-    //     if ( !!shorthand ) {
-    //       for ( let [k, v] of Object.entries(itemData.attributes) ) {
-    //         if ( !(k in itemData) ) itemData[k] = v.value;
-    //       }
-    //       delete itemData["attributes"];
-    //     }
-    //     obj[key] = itemData;
-    //     return obj;
-    //   }, {});
-    //   return data;
+
+   
+
+  prepareData() {
+    super.prepareData();
+
+    if ( actorData.type === "hero" ) this._prepareHeroData(actorData);
+    else if ( actorData.type === "npc" ) this._prepareNPCData(actorData);
+
+    for (let abl of Object.values(data.abilities)) {
+      abl.mod = Math.floor((abl.score - 10) / 2);
+      if (abl.mod < 0) abl.modifier = "-" + string(abl.mod);
+      else abl.modifier = "+" + string(abl.mod);
+    }
+
+    data.health.bloodied = Math.floor((data.health.max + data.health.tempmax) / 2)
+    data.surges.heal = Math.floor((data.health.max + data.health.tempmax) / 4)
+    // if (data.health.value <= data.health.bloodied) { // DOM manipulation!
+
     // }
   }
-  
+
+  _prepareHeroData(actorData) {
+    const data = actorData.data;
+    
+    data.ac.value = 10 + this.getValueOfNull(data.abilities[data.equipment.worn.armor.ability],"score")
+      + data.class.quest + data.ac.miscbonus + data.equipment.worn.armor.bonus + data.equipment.worn.arms.shield;
+    data.fortitude.value = 10 + max(data.abilities.strength.mod, data.abilities.constitution.mod) 
+      + data.class.quest + data.fortitude.miscbonus;
+    data.reflex.value = 10 + max(data.abilities.dexterity.mod, data.abilities.intelligence.mod) 
+      + data.class.quest + data.reflex.miscbonus + data.equipment.worn.arms.shield;
+    data.will.value = 10 + max(data.abilities.wisdom.mod, data.abilities.charisma.mod) 
+      + data.class.quest + data.will.miscbonus;
+    for (let skill of Object.values(data.skill)) {
+      skill.rank_bonus = this.training(this.rank);
+      skill.mod = data.abilities[skill.ability].mod + skill.rank_bonus + skill.miscbonus + data.class.quest;
+      if (skill.mod < 0) skill.modifier = "-" + string(skill.mod);
+      else skill.modifier = "+" + string(skill.mod);
+    }
+  }
+
+  _prepareNPCData(actorData) {
+    const data = actorData.data;
+  }
+
+  training(skill) {
+    if (skill == "Adept") {
+        return 2;
+    } else if (skill == "Trained") {
+        return 4;
+    } else if (skill == "Experienced") {
+        return 6;
+    } else if (skill == "Expert") {
+        return 8;
+    } else if (skill == "Master") {
+        return 10;
+    } else {
+        return 0;
+    }
+  }
+
+  getValueOfNull(obj, prop) {
+    return( obj == null ? undefined : obj[prop] );
+  }
+}

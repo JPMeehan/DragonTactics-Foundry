@@ -213,10 +213,20 @@
 .dragontactics div.abilities div.ability li {
   width: 50px;
 }
-.dragontactics div.abilities div.ability li input.score {
+.dragontactics div.abilities div.ability li input.score,
+.dragontactics div.abilities div.ability li input.modifier {
   width: 100%;
   text-align: center;
   border: none;
+}
+.dragontactics div.abilities div.ability li input.modifier {
+  display: none;
+}
+.dragontactics div.abilities div.ability li:hover + input.score {
+  display: none;
+}
+.dragontactics div.abilities div.ability li:hover + input.modifier {
+  display: inline;
 }
 .dragontactics div.abilities div.skill {
   width: calc(100% - 174px);
@@ -278,6 +288,9 @@
 }
 .dragontactics ul.attributes li.attribute.health {
   width: 100px;
+}
+.dragontactics ul.attributes li.attribute.health input[name="data.health.value"].bloody {
+  color: darkred;
 }
 .dragontactics ul.attributes li.attribute h4.attribute-name {
   line-height: 16px;
