@@ -5,15 +5,15 @@
 
 export class DragonTacticsActorSheet extends ActorSheet {
 
-  // prepareData() {
-  //   super.prepareData();
-  //   const actorData = this.data;
-  //   const data = actorData.data;
-  //   //everything below here is where you put your derived values code, if you want it to do it for ALL ACTORS. If you want to limit it to a particular actor type add:
+  prepareData() {
+    super.prepareData();
+    const actorData = this.data;
+    const data = actorData.data;
+    //everything below here is where you put your derived values code, if you want it to do it for ALL ACTORS. If you want to limit it to a particular actor type add:
 
-  //   //if (actorData.type === "character") {
-  //   //}
-  // }
+    //if (actorData.type === "character") {
+    //}
+  }
 
   /** @override */
   activateListeners(html) {
