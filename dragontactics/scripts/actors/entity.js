@@ -5,24 +5,26 @@ import { string } from "prop-types";
  * @extends {Actor}
  */
 export class DragonTacticsActor extends Actor {
-
-
    
-
   prepareData() {
     super.prepareData();
 
-    if ( actorData.type === "hero" ) this._prepareHeroData(actorData);
-    else if ( actorData.type === "npc" ) this._prepareNPCData(actorData);
 
+    // Ability scores
     for (let abl of Object.values(data.abilities)) {
       abl.mod = Math.floor((abl.score - 10) / 2);
       if (abl.mod < 0) abl.modifier = "-" + string(abl.mod);
       else abl.modifier = "+" + string(abl.mod);
     }
+    console.log("Ability scores done")
 
-    data.health.bloodied = Math.floor((data.health.max + data.health.tempmax) / 2)
-    data.surges.heal = Math.floor((data.health.max + data.health.tempmax) / 4)
+    if ( actorData.type === "hero" ) this._prepareHeroData(actorData);
+    else if ( actorData.type === "npc" ) this._prepareNPCData(actorData);
+
+    
+    // Health
+    data.health.bloodied = Math.floor((data.health.max + data.health.tempmax) / 2);
+    data.surges.heal = Math.floor((data.health.max + data.health.tempmax) / 4);
     // if (data.health.value <= data.health.bloodied) { // DOM manipulation!
 
     // }
@@ -31,20 +33,19 @@ export class DragonTacticsActor extends Actor {
   _prepareHeroData(actorData) {
     const data = actorData.data;
     
-    data.ac.value = 10 + this.getValueOfNull(data.abilities[data.equipment.worn.armor.ability],"score")
-      + data.class.quest + data.ac.miscbonus + data.equipment.worn.armor.bonus + data.equipment.worn.arms.shield;
-    data.fortitude.value = 10 + max(data.abilities.strength.mod, data.abilities.constitution.mod) 
-      + data.class.quest + data.fortitude.miscbonus;
-    data.reflex.value = 10 + max(data.abilities.dexterity.mod, data.abilities.intelligence.mod) 
-      + data.class.quest + data.reflex.miscbonus + data.equipment.worn.arms.shield;
-    data.will.value = 10 + max(data.abilities.wisdom.mod, data.abilities.charisma.mod) 
-      + data.class.quest + data.will.miscbonus;
+    data.ac.value = 10 + this.getValueOfNull(data.abilities[data.equipment.worn.armor.ability],"score")  + data.class.quest + data.ac.miscbonus + data.equipment.worn.armor.bonus + data.equipment.worn.arms.shield;
+    console.log(data.ac.value)
+    data.fortitude.value = 10 + max(data.abilities.strength.mod, data.abilities.constitution.mod) + data.class.quest + data.fortitude.miscbonus;
+    data.reflex.value = 10 + max(data.abilities.dexterity.mod, data.abilities.intelligence.mod) + data.class.quest + data.reflex.miscbonus + data.equipment.worn.arms.shield;
+    data.will.value = 10 + max(data.abilities.wisdom.mod, data.abilities.charisma.mod) + data.class.quest + data.will.miscbonus;
+    console.log("Defenses done")
     for (let skill of Object.values(data.skill)) {
       skill.rank_bonus = this.training(this.rank);
       skill.mod = data.abilities[skill.ability].mod + skill.rank_bonus + skill.miscbonus + data.class.quest;
       if (skill.mod < 0) skill.modifier = "-" + string(skill.mod);
       else skill.modifier = "+" + string(skill.mod);
     }
+    console.log("Skills done")
   }
 
   _prepareNPCData(actorData) {
@@ -70,4 +71,5 @@ export class DragonTacticsActor extends Actor {
   getValueOfNull(obj, prop) {
     return( obj == null ? undefined : obj[prop] );
   }
+  
 }

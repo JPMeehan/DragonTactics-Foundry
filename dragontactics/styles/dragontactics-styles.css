@@ -289,7 +289,7 @@
 .dragontactics ul.attributes li.attribute.health {
   width: 100px;
 }
-.dragontactics ul.attributes li.attribute.health input[name="data.health.value"].bloody {
+.dragontactics ul.attributes li.attribute.health input.healthvalue.bloody {
   color: darkred;
 }
 .dragontactics ul.attributes li.attribute h4.attribute-name {

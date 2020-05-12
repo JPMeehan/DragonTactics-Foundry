@@ -5,15 +5,7 @@
 
 export class DragonTacticsActorSheet extends ActorSheet {
 
-  prepareData() {
-    super.prepareData();
-    const actorData = this.data;
-    const data = actorData.data;
-    //everything below here is where you put your derived values code, if you want it to do it for ALL ACTORS. If you want to limit it to a particular actor type add:
-
-    //if (actorData.type === "character") {
-    //}
-  }
+  
 
   /** @override */
   activateListeners(html) {
@@ -26,5 +18,13 @@ export class DragonTacticsActorSheet extends ActorSheet {
       initial: initial,
       callback: clicked => this._sheetTab = clicked.data("tab")
     });
+
+    // Bloody
+    if (this.actor.data.data.hp.value < this.actor.data.data.hp.max / 2) {
+      html.find('.healthvalue').addClass('bloody');
+    }
+    else {
+      html.find('.healthvalue').removeClass('bloody');
+    }
   }
 }
