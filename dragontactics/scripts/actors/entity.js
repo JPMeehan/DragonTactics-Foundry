@@ -5,7 +5,7 @@ import { string } from "prop-types";
  * @extends {Actor}
  */
 export class DragonTacticsActor extends Actor {
-   
+  /*
   prepareData() {
     super.prepareData();
 
@@ -33,7 +33,7 @@ export class DragonTacticsActor extends Actor {
   _prepareHeroData(actorData) {
     const data = actorData.data;
     
-    data.ac.value = 10 + this.getValueOfNull(data.abilities[data.equipment.worn.armor.ability],"score")  + data.class.quest + data.ac.miscbonus + data.equipment.worn.armor.bonus + data.equipment.worn.arms.shield;
+    data.ac.value = 10 + this.armorabil(data.abilities[data.equipment.worn.armor.ability],"score")  + data.class.quest + data.ac.miscbonus + data.equipment.worn.armor.bonus + data.equipment.worn.arms.shield;
     console.log(data.ac.value)
     data.fortitude.value = 10 + max(data.abilities.strength.mod, data.abilities.constitution.mod) + data.class.quest + data.fortitude.miscbonus;
     data.reflex.value = 10 + max(data.abilities.dexterity.mod, data.abilities.intelligence.mod) + data.class.quest + data.reflex.miscbonus + data.equipment.worn.arms.shield;
@@ -68,8 +68,8 @@ export class DragonTacticsActor extends Actor {
     }
   }
 
-  getValueOfNull(obj, prop) {
-    return( obj == null ? undefined : obj[prop] );
+  armorabil(obj, prop) {
+    return( obj == null ? 0 : obj[prop] );
   }
-  
+  /* */
 }
