@@ -9,7 +9,7 @@ export class DragonTacticsActor extends Actor {
   prepareData() {
     super.prepareData();
 
-    actorData = this.data;
+    const actorData = this.data;
     const data = actorData.data;
 
     // Ability scores
