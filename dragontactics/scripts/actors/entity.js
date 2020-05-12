@@ -28,9 +28,6 @@ export class DragonTacticsActor extends Actor {
     // Health
     data.health.bloodied = Math.floor((data.health.max + data.health.tempmax) / 2);
     data.surges.heal = Math.floor((data.health.max + data.health.tempmax) / 4);
-    // if (data.health.value <= data.health.bloodied) { // DOM manipulation!
-
-    // }
   }
 
   _prepareHeroData(actorData) {
@@ -38,9 +35,9 @@ export class DragonTacticsActor extends Actor {
     
     data.ac.value = 10 + this.armorabil(data.abilities[data.equipment.worn.armor.ability],"score")  + data.class.quest + data.ac.miscbonus + data.equipment.worn.armor.bonus + data.equipment.worn.arms.shield;
     console.log(data.ac.value)
-    data.fortitude.value = 10 + max(data.abilities.strength.mod, data.abilities.constitution.mod) + data.class.quest + data.fortitude.miscbonus;
-    data.reflex.value = 10 + max(data.abilities.dexterity.mod, data.abilities.intelligence.mod) + data.class.quest + data.reflex.miscbonus + data.equipment.worn.arms.shield;
-    data.will.value = 10 + max(data.abilities.wisdom.mod, data.abilities.charisma.mod) + data.class.quest + data.will.miscbonus;
+    data.fortitude.value = 10 + Math.max(data.abilities.strength.mod, data.abilities.constitution.mod) + data.class.quest + data.fortitude.miscbonus;
+    data.reflex.value = 10 + Math.max(data.abilities.dexterity.mod, data.abilities.intelligence.mod) + data.class.quest + data.reflex.miscbonus + data.equipment.worn.arms.shield;
+    data.will.value = 10 + Math.max(data.abilities.wisdom.mod, data.abilities.charisma.mod) + data.class.quest + data.will.miscbonus;
     console.log("Defenses done")
     for (let skill of Object.values(data.skill)) {
       skill.rank_bonus = this.training(this.rank);
