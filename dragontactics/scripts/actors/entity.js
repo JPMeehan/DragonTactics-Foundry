@@ -40,6 +40,10 @@ export class DragonTacticsActor extends Actor {
     data.will.value = 10 + Math.max(data.abilities.wisdom.mod, data.abilities.charisma.mod) + data.class.quest + data.will.miscbonus;
     console.log("Defenses done")
     for (let skill of Object.values(data.skill)) {
+      console.log(skill.label)
+      console.log(skill.ability);
+      console.log(data.abilities[skill.ability])
+      console.log(data.abilities[skill.ability].mod)
       skill.rank_bonus = this.training(this.rank);
       skill.mod = data.abilities[skill.ability].mod + skill.rank_bonus + skill.miscbonus + data.class.quest;
       if (skill.mod < 0) skill.modifier = "-" + toString(skill.mod);
