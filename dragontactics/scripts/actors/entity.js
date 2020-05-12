@@ -9,6 +9,8 @@ export class DragonTacticsActor extends Actor {
   prepareData() {
     super.prepareData();
 
+    actorData = this.data;
+    const data = actorData.data;
 
     // Ability scores
     for (let abl of Object.values(data.abilities)) {
@@ -18,6 +20,7 @@ export class DragonTacticsActor extends Actor {
     }
     console.log("Ability scores done")
 
+    
     if ( actorData.type === "hero" ) this._prepareHeroData(actorData);
     else if ( actorData.type === "npc" ) this._prepareNPCData(actorData);
 
