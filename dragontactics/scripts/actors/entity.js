@@ -1,11 +1,11 @@
-import { string } from "prop-types";
+
 
 /**
  * Extend the base Actor entity for the Dragon Tactics System
  * @extends {Actor}
  */
 export class DragonTacticsActor extends Actor {
-  /*
+  // /*
   prepareData() {
     super.prepareData();
 
@@ -13,8 +13,8 @@ export class DragonTacticsActor extends Actor {
     // Ability scores
     for (let abl of Object.values(data.abilities)) {
       abl.mod = Math.floor((abl.score - 10) / 2);
-      if (abl.mod < 0) abl.modifier = "-" + string(abl.mod);
-      else abl.modifier = "+" + string(abl.mod);
+      if (abl.mod < 0) abl.modifier = "-" + toString(abl.mod);
+      else abl.modifier = "+" + toString(abl.mod);
     }
     console.log("Ability scores done")
 
@@ -42,8 +42,8 @@ export class DragonTacticsActor extends Actor {
     for (let skill of Object.values(data.skill)) {
       skill.rank_bonus = this.training(this.rank);
       skill.mod = data.abilities[skill.ability].mod + skill.rank_bonus + skill.miscbonus + data.class.quest;
-      if (skill.mod < 0) skill.modifier = "-" + string(skill.mod);
-      else skill.modifier = "+" + string(skill.mod);
+      if (skill.mod < 0) skill.modifier = "-" + toString(skill.mod);
+      else skill.modifier = "+" + toString(skill.mod);
     }
     console.log("Skills done")
   }

@@ -28,12 +28,12 @@ export class DragonTacticsActorSheet extends ActorSheet {
       callback: clicked => this._sheetTab = clicked.data("tab")
     });
 
-    // Bloody
-    if (this.actor.data.data.hp.value < this.actor.data.data.hp.max / 2) {
-      html.find('.healthvalue').addClass('bloody');
-    }
-    else {
-      html.find('.healthvalue').removeClass('bloody');
-    }
+    // // Bloody
+    // if (this.actor.data.data.hp.value < this.actor.data.data.hp.max / 2) {
+    //   html.find('.healthvalue').addClass('bloody');
+    // }
+    // else {
+    //   html.find('.healthvalue').removeClass('bloody');
+    // }
   }
 }
