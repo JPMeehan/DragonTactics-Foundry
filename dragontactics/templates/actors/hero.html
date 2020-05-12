@@ -88,7 +88,7 @@
                         <p class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</p>
                         <p class="label" name="data.skill.{{key}}.label">{{label}}</p>
                         <p class="ability">{{ability_short}}</p>
-                        <select class="rank" name="data.skill.{{key}}.rank" value="{{skill.rank}}" data-dtype="String">
+                        <select class="rank" name="data.skill.{{key}}.rank" data-dtype="String">
                             <option value="Untrained" selected>Untrained</option>
                             <option value="Adept">Adept</option>
                             <option value="Trained">Trained</option>
@@ -102,7 +102,6 @@
                     </li>
                     {{/each}}
                 </ol>
-
             </div>
         </div>
 
