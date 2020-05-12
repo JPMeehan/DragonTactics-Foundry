@@ -29,7 +29,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
     });
 
     // Bloody
-    if (this.actor.data.data.health.value < this.actor.data.data.health.max / 2) {
+    if (this.actor.data.data.health.value <= (this.actor.data.data.health.max + this.actor.data.data.health.tempmax) / 2) {
       html.find('.healthvalue').addClass('bloody');
     }
     else {
