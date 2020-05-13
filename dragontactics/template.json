@@ -3,7 +3,10 @@
     "types": ["hero", "npc"],
     "templates": {
       "description": {
-        "race": "",
+        "race": {
+          "name": "",
+          "_id": ""
+        },
         "height": "",
         "weight": "",
         "quick": "",
@@ -270,6 +273,7 @@
       "templates": ["description", "defenses", "abilities", "skill"],
       "playername": "",
       "class": {
+        "_id": "",
         "name": "",
         "paragon": "",
         "epic": "",

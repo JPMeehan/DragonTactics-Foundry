@@ -29,8 +29,7 @@
             <h2>Basic Info</h2>
             <div class="half">
                 <h3>Biography</h3>
-                <input class="race" type="text" name="data.race" value="{{data.race}}" data-dtype="String"
-                    placeholder="Race" title="Race, e.g. Human" />
+                <span class="race" name="data.race.name" >{{data.race.name}}</span>
                 <input class="height" type="text" name="data.height" value="{{data.height}}" data-dtype="String"
                     placeholder="Height" title="Height, e.g. 6'1 " />
                 <input class="weight" type="text" name="data.weight" value="{{data.weight}}" data-dtype="String"
@@ -41,8 +40,7 @@
             </div>
             <div class="half">
                 <h3>Mechanics</h3>
-                <input class="class" type="text" name="data.class.name" value="{{data.class.name}}" data-dtype="String"
-                    placeholder="Class" title="Class, e.g. Fighter" />
+                <span class="class" name="data.class.name" >{{class.name}}</span>
                 <input class="level" type="text" pattern="\d+" name="data.class.level" value="{{data.class.level}}"
                     data-dtype="Number" placeholder="Character Level" title="Character Level" />
                 <input class="paragon" type="text" name="data.class.paragon" value="{{data.class.paragon}}"
@@ -200,43 +198,19 @@
                 </ul>
             </div>
             <div class="defense-config">
-                <label class="numblock"><span>Base HP</span>
-                    <input class="defense hp" type="text" pattern="\d+" name="data.class.defense.hpBase" value="{{data.class.defense.hpBase}}"
-                        data-dtype="Number" title="Base HP, gets added to your constitution score for your level 1 hp" />
-                </label>
-                <label class="numblock"><span>HP per Level</span>
-                    <input class="defense hp" type="text" pattern="\d+" name="data.class.defense.hpLevel" value="{{data.class.defense.hpLevel}}"
-                        data-dtype="Number" title="HP per level" />
-                </label>
                 <label class="numblock"><span>Bonus Max HP</span>
                     <input class="defense hp" type="text" pattern="\d+" name="data.class.bonus.hp" value="{{data.class.bonus.hp}}"
                         data-dtype="Number" title="Bonus Max HP, such as from the Toughness feat" />
-                </label>
-                <label class="numblock"><span>Base Surges</span>
-                    <input class="defense hp" type="text" pattern="\d+" name="data.class.defense.surges" value="{{data.class.defense.surges}}"
-                        data-dtype="Number" title="Base surges from class" />
                 </label>
                 <label class="numblock"><span>Bonus Surges</span>
                     <input class="defense hp" type="text" pattern="\d+" name="data.class.bonus.surges" value="{{data.class.bonus.surges}}"
                         data-dtype="Number" title="Bonus surges" />
                 </label>
-                <label class="numblock"><span>Class Fortitude</span>
-                    <input class="defense nad" type="text" pattern="\d+" name="data.class.defense.fortitude" value="{{data.class.defense.fortitude}}"
-                        data-dtype="Number" title="Class Fortitude Bonus" />
-                </label>
-                <label class="numblock"><span>Class Reflex</span>
-                    <input class="defense nad" type="text" pattern="\d+" name="data.class.defense.reflex" value="{{data.class.defense.reflex}}"
-                        data-dtype="Number" title="Class Reflex Bonus" />
-                </label>
-                <label class="numblock"><span>Class Will</span>
-                    <input class="defense nad" type="text" pattern="\d+" name="data.class.defense.will" value="{{data.class.defense.will}}"
-                        data-dtype="Number" title="Class Will Bonus" />
-                </label>
             </div>
             <h3>Powers</h3>
             <ol class="powers repeating-list">
                 {{#each data.powers as |power key|}}
-                <li class="powers">
+                <li class="powers item" data-item-id="power._id">
                     <div class="powerheader">
                         <span class="powername" name="data.powers.{{key}}.name">{{name}}</span>
                         <div class="item-controls">
@@ -247,27 +221,27 @@
                     <div class="powerbody">
                         <div class="power-row">
                             <div class="rangetargets">
-                                <span class="range" name="data.powers.{{key}}.range">{{range}}</span> ♦ <span
-                                    class="targets" name="data.powers.{{key}}.target">{{target}}</span>
+                                <span class="range" name="data.powers.{{key}}.data.range">{{range}}</span> ♦ <span
+                                    class="targets" name="data.powers.{{key}}.data.target">{{target}}</span>
                             </div>
                             <label class="ready">
                                 Ready
-                                <input type="checkbox" name="data.powers.{{key}}.ready" />
+                                <input type="checkbox" name="data.powers.{{key}}.data.ready" />
                             </label>
                         </div>
                         <div class="power-row">
                             Attack:
-                            <span name="data.powers.{{key}}.hitbonus">{{hitbonus}}</span> vs. <span
-                                name="data.powers.{{key}}.defselect">{{defselect}}</span>
+                            <span name="data.powers.{{key}}.data.hitbonus">{{hitbonus}}</span> vs. <span
+                                name="data.powers.{{key}}.data.defselect">{{defselect}}</span>
                         </div>
                         <div class="power-row">
-                            <span name="data.powers.{{key}}.damagedice">{{damagedice}}</span><span value="0"
-                                name="data.powers.{{key}}.flatdamage">{{flatdamage}}</span>
-                            <span name="data.powers.{{key}}.damagetype">{{damaagetype}}</span> damage
+                            <span name="data.powers.{{key}}.data.damagedice">{{damagedice}}</span><span value="0"
+                                name="data.powers.{{key}}.data.flatdamage">{{flatdamage}}</span>
+                            <span name="data.powers.{{key}}.data.damagetype">{{damaagetype}}</span> damage
                         </div>
                         <div class="power-row">
                             Power Text
-                            <span class="powertext" name="data.powers.{{key}}.power-text">{{power-text}}</span>
+                            <span class="powertext" name="data.powers.{{key}}.data.power-text">{{power-text}}</span>
                         </div>
                     </div>
 

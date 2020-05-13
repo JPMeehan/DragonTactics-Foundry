@@ -199,7 +199,8 @@
   line-height: 28px;
   border: none;
 }
-.dragontactics div.biography input.class {
+.dragontactics div.biography span.class {
+  display: inline-block;
   width: calc(100% - 34px);
 }
 .dragontactics div.biography input[data-dtype="Number"] {

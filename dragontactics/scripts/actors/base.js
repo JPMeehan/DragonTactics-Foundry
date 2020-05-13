@@ -68,7 +68,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareHeroItems(sheetData) {
-    const actorData = sheetData.actor;
+    const actorData = sheetData.actor.data;
 
     // Initialize containers.
     const cls = [];
@@ -85,7 +85,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
       "flaw": [],
       "competency": []
     };
-    const powers = {}; // power
+    const powers = []; // power
     // const rituals = []; // ritual (need to add to sheet)
 
     // Iterate through items, allocating to containers
@@ -94,26 +94,28 @@ export class DragonTacticsActorSheet extends ActorSheet {
       i.img = i.img || DEFAULT_TOKEN;
 
       if (i.type === 'class') {
-        cls.push(i);
+        actorData.class.name = i.name;
+        actorData.class._id = i._id;
+        for (let [key, value] of Object.entries(item.defense)) {
+          actorData.class.defense[key] = value;
+        }
       }
       else if (i.type === 'race') {
-        actorData.race = item.name;
+        actorData.race.name = item.name;
+        actorData.race._id = item._id;
       }
       else if (i.type === 'feature') features[item.data.type].push(i);
       else if (i.type === 'powers') powers.push(i);
       // else if (i.type === 'ritual') rituals.push(i);
     }
 
-    while (cls.length > 1) {
-      console.log("Deleting " + cls[0].data.name);
-      delete cls[0];
-      cls.shift();
+    for (let c of cls) {
+      if (c != cls[cls.length-1]) this.actor.deleteOwnedItem(c._id)
     }
 
     // Assign and return
     try {
-      actorData.class.name = cls[0].data.name;
-      actorData.class.defense = cls[0].data.defense;
+      
     }
     catch (e) {
       console.log("No class assigned")

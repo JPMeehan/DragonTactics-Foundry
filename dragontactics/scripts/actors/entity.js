@@ -72,6 +72,15 @@ export class DragonTacticsActor extends Actor {
   armorabil(obj, prop) {
     return( obj == null ? 0 : obj[prop] );
   }
+
+  /** @override */
+  createOwnedItem(itemData, options) {
+    if (itemData.type = "class" || "race"){
+      oldID = this.data[itemData.type]._id;
+      if (oldID != "") {this.deleteOwnedItem(oldID)}
+    }
+    super.createOwnedItem(itemData, options);
+  }
   
   /* */
 }
