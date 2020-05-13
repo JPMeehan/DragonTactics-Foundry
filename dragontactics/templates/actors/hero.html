@@ -29,30 +29,33 @@
             <h2>Basic Info</h2>
             <div class="half">
                 <h3>Biography</h3>
-                <input class="race" type="text" name="data.race" value="{{data.race}}" data-dtype="String" placeholder="Race" 
-                    title="Race, e.g. Human" />
-                <input class="height" type="text" name="data.height" value="{{data.height}}" data-dtype="String" 
+                <input class="race" type="text" name="data.race" value="{{data.race}}" data-dtype="String"
+                    placeholder="Race" title="Race, e.g. Human" />
+                <input class="height" type="text" name="data.height" value="{{data.height}}" data-dtype="String"
                     placeholder="Height" title="Height, e.g. 6'1 " />
-                <input class="weight" type="text" name="data.weight" value="{{data.weight}}" data-dtype="String" 
+                <input class="weight" type="text" name="data.weight" value="{{data.weight}}" data-dtype="String"
                     placeholder="Weight" title="Weight, e.g. 200 lbs." />
-                <textarea class="description" name="data.quick" value="{{data.quick}}" data-dtype="String" 
-                    placeholder="Quick Description" title="Quick Description, e.g. A tall and muscular, dark-haired human (he/him)" >{{data.quick}}</textarea>
+                <textarea class="description" name="data.quick" value="{{data.quick}}" data-dtype="String"
+                    placeholder="Quick Description"
+                    title="Quick Description, e.g. A tall and muscular, dark-haired human (he/him)">{{data.quick}}</textarea>
             </div>
             <div class="half">
                 <h3>Mechanics</h3>
-                <input class="class" type="text" name="data.class.name" value="{{data.class.name}}" data-dtype="String" 
+                <input class="class" type="text" name="data.class.name" value="{{data.class.name}}" data-dtype="String"
                     placeholder="Class" title="Class, e.g. Fighter" />
-                <input class="paragon" type="text" name="data.class.paragon" value="{{data.class.paragon}}" data-dtype="String" 
-                    placeholder="Paragon Path" title="Paragon Path, e.g. Champion" />
-                <input class="epic" type="text" name="data.epic" value="{{data.epic}}" data-dtype="String" 
+                <input class="level" type="text" pattern="\d+" name="data.class.level" value="{{data.class.level}}"
+                    data-dtype="Number" placeholder="Character Level" title="Character Level" />
+                <input class="paragon" type="text" name="data.class.paragon" value="{{data.class.paragon}}"
+                    data-dtype="String" placeholder="Paragon Path" title="Paragon Path, e.g. Champion" />
+                <input class="epic" type="text" name="data.epic" value="{{data.epic}}" data-dtype="String"
                     placeholder="Epic Destiny" title="Epic Destiny, e.g. Demigod" />
-                <input class="level" type="text" pattern="\d+" name="data.class.level" value="{{data.class.level}}" data-dtype="Number" 
-                    placeholder="Character Level" title="Character Level" />
-                <input class="quest" type="text" pattern="\d+" name="data.class.quest" value="{{data.class.quest}}" data-dtype="Number" 
-                    placeholder="Quest Bonus" title="Quest Bonus" />
+                <label>Quest: 
+                    <input class="quest" type="text" pattern="\d+" name="data.class.quest" value="{{data.class.quest}}"
+                        data-dtype="Number" placeholder="[Q]" title="Quest Bonus, goes from 0 to 10" />
+                </label>
             </div>
-            <input type="text" name="data.kanka" value="{{data.kanka}}" data-dtype="String" 
-                placeholder="Kanka URL" title="Kanka URL, e.g. https://kanka.io/en-US/campaign/6529/characters/50478" />
+            <input type="text" name="data.kanka" value="{{data.kanka}}" data-dtype="String" placeholder="Kanka URL"
+                title="Kanka URL, e.g. https://kanka.io/en-US/campaign/6529/characters/50478" />
 
         </div>
 
@@ -110,91 +113,126 @@
         {{!-- Combat Tab --}}
         <div class="tab combat" data-group="primary" data-tab="combat">
             <h2>Combat</h2>
-            <h3>Defenses</h3>
-            <ul class="attributes flexrow">
-                <li class="attribute movement">
-                    <h4 class="attribute-name box-title">Speed</h4>
-                    <div class="attribute-value">
-                        <input name="data.attributes.speed.value" type="text" value="{{data.attributes.speed.value}}"
-                            placeholder="Land Speed" />
-                    </div>
-                    <footer class="attribute-footer">
-                        <input type="text" class="speed" name="data.attributes.speed.special"
-                            value="{{data.attributes.speed.special}}" placeholder="Special Movement" />
-                    </footer>
-                </li>
-                <li class="attribute health">
-                    <h4 class="attribute-name box-title">Health</h4>
-                    <div class="attribute-value multiple">
-                        <input class="healthvalue" name="data.health.value" type="text" pattern="\d+" value="{{data.health.value}}"
-                            data-dtype="Number" placeholder="10" />
-                        <span class="sep"> / </span>
-                        <input name="data.health.max" type="text" pattern="\d+" value="{{data.health.max}}"
-                            data-dtype="Number" placeholder="10" />
-                    </div>
-                    <footer class="attribute-footer">
-                        <input name="data.health.temp" type="text" pattern="\d+" class="half" placeholder="+Temp"
-                            value="{{data.health.temp}}" data-dtype="Number" />
-                        <input name="data.health.tempmax" type="text" pattern="(-)?\d+" class="half"
-                            placeholder="+Temp Max" value="{{data.health.tempmax}}" data-dtype="Number" />
-                    </footer>
-                </li>
-                <li class="attribute surges">
-                    <h4 class="attribute-name box-title">Surges</h4>
-                    <div class="attribute-value multiple">
-                        <input name="data.surges.value" type="text" pattern="\d+" value="{{data.surges.value}}"
-                            data-dtype="Number" placeholder="6" />
-                        <span class="sep"> / </span>
-                        <input name="data.surges.max" type="text" pattern="\d+" value="{{data.surges.max}}"
-                            data-dtype="Number" placeholder="6" />
-                    </div>
-                    <footer class="attribute-footer">
-                        <span>Value: </span><span name="data.surges.heal">{{data.surges.heal}}</span>
-                    </footer>
-                </li>
-            </ul>
-            <ul class="attributes flexrow">
-                <li class="attribute defense">
-                    <h4 class="attribute-name box-title">AC</h4>
-                    <div class="attribute-value">
-                        <span class="ac" name="data.ac.value">{{data.ac.value}}</span>
-                    </div>
-                    <footer class="attribute-footer">
-                        <input type="text" pattern="\d+" name="data.ac.miscbonus" value="{{data.ac.miscbonus}}"
-                            placeholder="Misc. Bonus" data-dtype="Number" />
-                    </footer>
-                </li>
-                <li class="attribute defense">
-                    <h4 class="attribute-name box-title">Fortitude</h4>
-                    <div class="attribute-value">
-                        <span class="ac" name="data.fortitude.value">{{data.fortitude.value}}</span>
-                    </div>
-                    <footer class="attribute-footer">
-                        <input type="text" pattern="\d+" name="data.fortitude.miscbonus"
-                            value="{{data.fortitude.miscbonus}}" placeholder="Misc. Bonus" data-dtype="Number" />
-                    </footer>
-                </li>
-                <li class="attribute defense">
-                    <h4 class="attribute-name box-title">Reflex</h4>
-                    <div class="attribute-value">
-                        <span class="ac" name="data.reflex.value">{{data.reflex.value}}</span>
-                    </div>
-                    <footer class="attribute-footer">
-                        <input type="text" pattern="\d+" name="data.reflex.miscbonus" value="{{data.reflex.miscbonus}}"
-                            placeholder="Misc. Bonus" data-dtype="Number" />
-                    </footer>
-                </li>
-                <li class="attribute defense">
-                    <h4 class="attribute-name box-title">Will</h4>
-                    <div class="attribute-value">
-                        <span class="ac" name="data.will.value">{{data.will.value}}</span>
-                    </div>
-                    <footer class="attribute-footer">
-                        <input type="text" pattern="\d+" name="data.will.miscbonus" value="{{data.will.miscbonus}}"
-                            placeholder="Misc. Bonus" data-dtype="Number" />
-                    </footer>
-                </li>
-            </ul>
+            <h3 class="defense">Defenses</h3>
+            <a class="defense-edit" title="Configure Defenses"><i class="fas fa-edit"></i></a>
+            <div class="display">
+                <ul class="attributes flexrow">
+                    <li class="attribute movement">
+                        <h4 class="attribute-name box-title">Speed</h4>
+                        <div class="attribute-value">
+                            <input name="data.attributes.speed.value" type="text" value="{{data.attributes.speed.value}}"
+                                placeholder="Land Speed" />
+                        </div>
+                        <footer class="attribute-footer">
+                            <input type="text" class="speed" name="data.attributes.speed.special"
+                                value="{{data.attributes.speed.special}}" placeholder="Special Movement" />
+                        </footer>
+                    </li>
+                    <li class="attribute health">
+                        <h4 class="attribute-name box-title">Health</h4>
+                        <div class="attribute-value multiple">
+                            <input class="healthvalue" name="data.health.value" type="text" pattern="\d+"
+                                value="{{data.health.value}}" data-dtype="Number" placeholder="10" />
+                            <span class="sep"> / </span>
+                            <span name="data.health.max">{{data.health.max}}</span>
+                        </div>
+                        <footer class="attribute-footer">
+                            <input name="data.health.temp" type="text" pattern="\d+" class="half" placeholder="+Temp"
+                                value="{{data.health.temp}}" data-dtype="Number" />
+                            <input name="data.health.tempmax" type="text" pattern="(-)?\d+" class="half"
+                                placeholder="+Temp Max" value="{{data.health.tempmax}}" data-dtype="Number" />
+                        </footer>
+                    </li>
+                    <li class="attribute surges">
+                        <h4 class="attribute-name box-title">Surges</h4>
+                        <div class="attribute-value multiple">
+                            <input name="data.surges.value" type="text" pattern="\d+" value="{{data.surges.value}}"
+                                data-dtype="Number" placeholder="6" />
+                            <span class="sep"> / </span>
+                            <span name="data.surges.max">{{data.surges.max}}</span>
+                        </div>
+                        <footer class="attribute-footer">
+                            <span>Value: </span><span name="data.surges.heal">{{data.surges.heal}}</span>
+                        </footer>
+                    </li>
+                </ul>
+                <ul class="attributes flexrow">
+                    <li class="attribute defense">
+                        <h4 class="attribute-name box-title">AC</h4>
+                        <div class="attribute-value">
+                            <span class="ac" name="data.ac.value">{{data.ac.value}}</span>
+                        </div>
+                        <footer class="attribute-footer">
+                            <input type="text" pattern="\d+" name="data.ac.miscbonus" value="{{data.ac.miscbonus}}"
+                                placeholder="Misc. Bonus" data-dtype="Number" />
+                        </footer>
+                    </li>
+                    <li class="attribute defense">
+                        <h4 class="attribute-name box-title">Fortitude</h4>
+                        <div class="attribute-value">
+                            <span class="ac" name="data.fortitude.value">{{data.fortitude.value}}</span>
+                        </div>
+                        <footer class="attribute-footer">
+                            <input type="text" pattern="\d+" name="data.fortitude.miscbonus"
+                                value="{{data.fortitude.miscbonus}}" placeholder="Misc. Bonus" data-dtype="Number" />
+                        </footer>
+                    </li>
+                    <li class="attribute defense">
+                        <h4 class="attribute-name box-title">Reflex</h4>
+                        <div class="attribute-value">
+                            <span class="ac" name="data.reflex.value">{{data.reflex.value}}</span>
+                        </div>
+                        <footer class="attribute-footer">
+                            <input type="text" pattern="\d+" name="data.reflex.miscbonus" value="{{data.reflex.miscbonus}}"
+                                placeholder="Misc. Bonus" data-dtype="Number" />
+                        </footer>
+                    </li>
+                    <li class="attribute defense">
+                        <h4 class="attribute-name box-title">Will</h4>
+                        <div class="attribute-value">
+                            <span class="ac" name="data.will.value">{{data.will.value}}</span>
+                        </div>
+                        <footer class="attribute-footer">
+                            <input type="text" pattern="\d+" name="data.will.miscbonus" value="{{data.will.miscbonus}}"
+                                placeholder="Misc. Bonus" data-dtype="Number" />
+                        </footer>
+                    </li>
+                </ul>
+            </div>
+            <div class="defense-config">
+                <label class="numblock"><span>Base HP</span>
+                    <input class="defense hp" type="text" pattern="\d+" name="data.class.defense.hpBase" value="{{data.class.defense.hpBase}}"
+                        data-dtype="Number" title="Base HP, gets added to your constitution score for your level 1 hp" />
+                </label>
+                <label class="numblock"><span>HP per Level</span>
+                    <input class="defense hp" type="text" pattern="\d+" name="data.class.defense.hpLevel" value="{{data.class.defense.hpLevel}}"
+                        data-dtype="Number" title="HP per level" />
+                </label>
+                <label class="numblock"><span>Bonus Max HP</span>
+                    <input class="defense hp" type="text" pattern="\d+" name="data.class.bonus.hp" value="{{data.class.bonus.hp}}"
+                        data-dtype="Number" title="Bonus Max HP, such as from the Toughness feat" />
+                </label>
+                <label class="numblock"><span>Base Surges</span>
+                    <input class="defense hp" type="text" pattern="\d+" name="data.class.defense.surges" value="{{data.class.defense.surges}}"
+                        data-dtype="Number" title="Base surges from class" />
+                </label>
+                <label class="numblock"><span>Bonus Surges</span>
+                    <input class="defense hp" type="text" pattern="\d+" name="data.class.bonus.surges" value="{{data.class.bonus.surges}}"
+                        data-dtype="Number" title="Bonus surges" />
+                </label>
+                <label class="numblock"><span>Class Fortitude</span>
+                    <input class="defense nad" type="text" pattern="\d+" name="data.class.defense.fortitude" value="{{data.class.defense.fortitude}}"
+                        data-dtype="Number" title="Class Fortitude Bonus" />
+                </label>
+                <label class="numblock"><span>Class Reflex</span>
+                    <input class="defense nad" type="text" pattern="\d+" name="data.class.defense.reflex" value="{{data.class.defense.reflex}}"
+                        data-dtype="Number" title="Class Reflex Bonus" />
+                </label>
+                <label class="numblock"><span>Class Will</span>
+                    <input class="defense nad" type="text" pattern="\d+" name="data.class.defense.will" value="{{data.class.defense.will}}"
+                        data-dtype="Number" title="Class Will Bonus" />
+                </label>
+            </div>
             <h3>Powers</h3>
             <ol class="powers repeating-list">
                 {{#each data.powers as |power key|}}
@@ -247,7 +285,11 @@
                     {{#each data.features.race as |feat key|}}
                     <li data-attribute="{{key}}">
                         <h4 class="name" name="data.features.race.{{key}}.label">{{label}}</h4>
-                        <p class="description" name="data.features.race.{{key}}.description">{{description}}</p>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                        <div class="description" name="data.features.race.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
@@ -258,7 +300,11 @@
                     {{#each data.features.class as |feat key|}}
                     <li data-attribute="{{key}}">
                         <h4 class="name" name="data.features.class.{{key}}.label">{{label}}</h4>
-                        <p class="description" name="data.features.class.{{key}}.description">{{description}}</p>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>    
+                        <div class="description" name="data.features.class.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
@@ -269,7 +315,11 @@
                     {{#each data.features.competencies as |feat key|}}
                     <li data-attribute="{{key}}">
                         <h4 class="name" name="data.features.competencies.{{key}}.label">{{label}}</h4>
-                        <p class="description" name="data.features.competencies.{{key}}.description">{{description}}</p>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                        <div class="description" name="data.features.competencies.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
@@ -280,7 +330,11 @@
                     {{#each data.features.feats as |feat key|}}
                     <li data-attribute="{{key}}">
                         <h4 class="name" name="data.features.feats.{{key}}.label">{{label}}</h4>
-                        <p class="description" name="data.features.feats.{{key}}.description">{{description}}</p>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                        <div class="description" name="data.features.feats.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
@@ -291,7 +345,7 @@
                     {{#each data.features.flaws as |feat key|}}
                     <li data-attribute="{{key}}">
                         <h4 class="name" name="data.features.flaws.{{key}}.label">{{label}}</h4>
-                        <p class="description" name="data.features.flaws.{{key}}.description">{{description}}</p>
+                        <div class="description" name="data.features.flaws.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
@@ -325,7 +379,7 @@
                     {{#each data.equipment.carried as |carried key|}}
                     <li data-attribute="{{key}}">
                         <h4 class="name" name="data.equipment.carried.{{key}}.label">{{label}}</h4>
-                        <p class="description" name="data.equipment.carried.{{key}}.description">{{description}}</p>
+                        <div class="description" name="data.equipment.carried.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
@@ -336,7 +390,7 @@
                     {{#each data.equipment.home as |home key|}}
                     <li data-attribute="{{key}}">
                         <h4 class="name" name="data.equipment.home.{{key}}.label">{{label}}</h4>
-                        <p class="description" name="data.equipment.home.{{key}}.description">{{description}}</p>
+                        <div class="description" name="data.equipment.home.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>

@@ -115,7 +115,7 @@
     }
   }
 
-  div.numblock {
+  label.numblock {
     border-radius: 5px;
     padding: 0;
     text-align: center;
@@ -176,9 +176,7 @@
       margin: 0;
     }
 
-    .item-controls {
-      flex: 0 0 36px;
-    }
+    
   }
 
   ol.repeating-list {
@@ -237,9 +235,11 @@
   /* Description Tab */
 
   div.biography {
-    input.level,
-    input.quest {
-      width: calc(50% - 2px)
+    input.class {
+      width: calc(100% - 32px);
+    }
+    input[data-dtype="Number"] {
+      width: 30px;
     }
   }
 
@@ -327,184 +327,219 @@
   }
 
   /* Combat Tab  */
-
-  ul.attributes {
-    list-style: none;
-    height: 82px;
-    margin: 2px 0;
-    padding: 0;
-
-    li.attribute {
-      height: 82px;
-      margin: 0 5px;
-      border: 2px groove #eeede0;
+  div.combat {
+    h3.defense {
+      width: calc(100% - 22px);
+      display: inline-block
+    }
+    a.defense-edit {
+      font-size: 1.25em;
+      width: 22px;
+      display: inline-block;
+      background: rgba(187, 187, 187, 0.75);
+      border: 1px solid #111;
       border-radius: 4px;
-      text-align: center;
-      .nodesto();
-
-      &.health {
-        width: 100px;
-        input.healthvalue.bloody {
-          color: darkred;
-        }
-      }
-
-      h4.attribute-name {
-        // flex: 0 0 18px;
-        // margin-top: 6px;
-        line-height: 16px;
-        margin: 4px 8px 2px;
-        font-size: 18px;
-        border-bottom: 1px solid #b5b3a4;
-      }
-
-      .attribute-value {
-        height: 28px;
-        line-height: 28px;
-        height: 32px;
-        line-height: 32px;
-
-        input {
-          display: inline;
-          max-width: 80%;
-          margin: 0;
-          font-size: 24px;
-          background-color: inherit;
-          border: none;
-        }
-
-        span.sep {
-          display: inline;
-          position: relative;
-          top: 2px;
-          font-size: 28px;
-          color: #7a7971;
-        }
-
-        &.multiple {
-          input {
-            max-width: 33%;
+      padding: 1px 2px;
+      box-shadow: 0 0 1px #000;
+    }
+    ul.attributes {
+      list-style: none;
+      height: 82px;
+      margin: 2px 0;
+      padding: 0;
+  
+      li.attribute {
+        height: 82px;
+        margin: 0 5px;
+        border: 2px groove #eeede0;
+        border-radius: 4px;
+        text-align: center;
+        .nodesto();
+  
+        &.health {
+          width: 100px;
+          input.healthvalue.bloody {
+            color: darkred;
           }
         }
-
-      }
-
-
-      .attribute-footer {
-        flex: 0 0 18px;
-        margin-top: -1px;
-        line-height: 18px;
-        font-family: "Signika", "Palatino Linotype", serif;
-        font-size: 12px;
-
-        span {
-          font-size: larger;
+  
+        h4.attribute-name {
+          // flex: 0 0 18px;
+          // margin-top: 6px;
+          line-height: 16px;
+          margin: 4px 8px 2px;
+          font-size: 18px;
+          border-bottom: 1px solid #b5b3a4;
         }
-
-        input.half {
-          width: 48%;
+  
+        .attribute-value {
+          height: 28px;
+          line-height: 28px;
+          height: 32px;
+          line-height: 32px;
+  
+          input {
+            display: inline;
+            max-width: 80%;
+            margin: 0;
+            font-size: 24px;
+            background-color: inherit;
+            border: none;
+          }
+  
+          span.sep {
+            display: inline;
+            position: relative;
+            top: 2px;
+            font-size: 28px;
+            color: #7a7971;
+          }
+  
+          &.multiple {
+            input, span {
+              max-width: 33%;
+            }
+            span {
+              margin: 0;
+              font-size: 24px;
+              background-color: inherit;
+              border: none;
+            }
+          }
+  
+        }
+  
+  
+        .attribute-footer {
+          flex: 0 0 18px;
+          margin-top: -1px;
+          line-height: 18px;
+          font-family: "Signika", "Palatino Linotype", serif;
+          font-size: 12px;
+  
+          span {
+            font-size: larger;
+          }
+  
+          input.half {
+            width: 48%;
+          }
         }
       }
+  
     }
-
-  }
-
-  li.powers {
-    margin-bottom: 3px;
-
-    /* Header */
-    div.powerheader {
-      border-radius: 5px 5px 0 0;
-      border: 1px solid black;
-
-      span.powername[type="text"] {
-        width: calc(100% - 75px);
-        background-color: transparent;
-        border: none;
-        color: white;
-
-        &::placeholder {
-          color: white;
-        }
-      }
-    }
-
-    &.atwill div.powerheader {
-      background-color: rgba(0, 128, 0, .5);
-
-      label.ready {
-        display: none;
-      }
-    }
-
-    &.encounter div.powerheader {
-      background-color: rgba(255, 0, 0, .5);
-    }
-
-    &.daily div.powerheader {
-      background-color: rgba(0, 0, 0, .5);
-    }
-
-    &.show div.powerheader {
-      border-style: solid solid none;
-    }
-
-    /* Body */
-    .powerbody {
+    div.defense-config {
       display: none;
-      background-color: rgba(255, 255, 255, 0.8);
-      border: 1px black;
-      border-style: none solid solid;
-      border-radius: 0 0 5px 5px;
-      overflow: hidden;
-
-      .powershow-row {
-        padding: 3px 5px;
-        font-size: 15px;
-        overflow-wrap: break-word;
-
-        &:nth-child(2n) {
-          background-color: rgba(211, 211, 211, 0.5);
+      &.show {
+        display: block;
+      }
+    }
+  
+    li.powers {
+      margin-bottom: 3px;
+  
+      /* Header */
+      div.powerheader {
+        border-radius: 5px 5px 0 0;
+        border: 1px solid black;
+  
+        span.powername[type="text"] {
+          width: calc(100% - 75px);
+          background-color: transparent;
+          border: none;
+          color: white;
+  
+          &::placeholder {
+            color: white;
+          }
         }
-
-        button[type="roll"] {
+      }
+  
+      &.atwill div.powerheader {
+        background-color: rgba(0, 128, 0, .5);
+  
+        label.ready {
+          display: none;
+        }
+      }
+  
+      &.encounter div.powerheader {
+        background-color: rgba(255, 0, 0, .5);
+      }
+  
+      &.daily div.powerheader {
+        background-color: rgba(0, 0, 0, .5);
+      }
+  
+      &.show div.powerheader {
+        border-style: solid solid none;
+      }
+  
+      /* Body */
+      .powerbody {
+        display: none;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px black;
+        border-style: none solid solid;
+        border-radius: 0 0 5px 5px;
+        overflow: hidden;
+  
+        .powershow-row {
+          padding: 3px 5px;
+          font-size: 15px;
+          overflow-wrap: break-word;
+  
+          &:nth-child(2n) {
+            background-color: rgba(211, 211, 211, 0.5);
+          }
+  
+          button[type="roll"] {
+            margin: 0;
+            padding: 0;
+            font-size: inherit;
+          }
+        }
+  
+        span.trigger {
+          font-style: italic;
+        }
+  
+        div.rangetargets {
+          display: inline-block;
+          max-width: calc(100% - 65px);
+        }
+  
+        label.ready {
+          float: right;
+          width: 62px;
           margin: 0;
           padding: 0;
           font-size: inherit;
+  
+          input {
+            vertical-align: initial;
+          }
         }
-      }
-
-      span.trigger {
-        font-style: italic;
-      }
-
-      div.rangetargets {
-        display: inline-block;
-        max-width: calc(100% - 65px);
-      }
-
-      label.ready {
-        float: right;
-        width: 62px;
-        margin: 0;
-        padding: 0;
-        font-size: inherit;
-
-        input {
-          vertical-align: initial;
+  
+        span.powertext {
+          font-size: 12px;
+          font-style: italic;
         }
-      }
-
-      span.powertext {
-        font-size: 12px;
-        font-style: italic;
       }
     }
   }
+  
 
   /* Features Tab */
 
-
+  div.features {
+    h4.name {
+      width: calc(100% - 40px);
+    }
+    div.description {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
 
   /* Equipment Tab */
 

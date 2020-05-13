@@ -100,7 +100,7 @@
 .dragontactics div.half.right {
   float: right;
 }
-.dragontactics div.numblock {
+.dragontactics label.numblock {
   border-radius: 5px;
   padding: 0;
   text-align: center;
@@ -110,7 +110,7 @@
   overflow: hidden;
   width: 90px;
 }
-.dragontactics div.numblock span {
+.dragontactics label.numblock span {
   display: block;
   font-size: large;
   background-color: black;
@@ -118,7 +118,7 @@
   height: 50%;
   padding: 5px;
 }
-.dragontactics div.numblock input {
+.dragontactics label.numblock input {
   width: 100%;
   text-align: center;
   border-radius: 0;
@@ -153,9 +153,6 @@
 }
 .dragontactics ol.block-list .label {
   margin: 0;
-}
-.dragontactics ol.block-list .item-controls {
-  flex: 0 0 36px;
 }
 .dragontactics ol.repeating-list {
   list-style: none;
@@ -202,9 +199,11 @@
   line-height: 28px;
   border: none;
 }
-.dragontactics div.biography input.level,
-.dragontactics div.biography input.quest {
-  width: calc(50% - 2px);
+.dragontactics div.biography input.class {
+  width: calc(100% - 32px);
+}
+.dragontactics div.biography input[data-dtype="Number"] {
+  width: 30px;
 }
 .dragontactics div.abilities div.ability {
   width: 170px;
@@ -271,13 +270,27 @@
 .dragontactics div.abilities div.skill p.misc {
   float: right;
 }
-.dragontactics ul.attributes {
+.dragontactics div.combat h3.defense {
+  width: calc(100% - 22px);
+  display: inline-block;
+}
+.dragontactics div.combat a.defense-edit {
+  font-size: 1.25em;
+  width: 22px;
+  display: inline-block;
+  background: rgba(187, 187, 187, 0.75);
+  border: 1px solid #111;
+  border-radius: 4px;
+  padding: 1px 2px;
+  box-shadow: 0 0 1px #000;
+}
+.dragontactics div.combat ul.attributes {
   list-style: none;
   height: 82px;
   margin: 2px 0;
   padding: 0;
 }
-.dragontactics ul.attributes li.attribute {
+.dragontactics div.combat ul.attributes li.attribute {
   height: 82px;
   margin: 0 5px;
   border: 2px groove #eeede0;
@@ -286,25 +299,25 @@
   font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
   font-size: 20px;
 }
-.dragontactics ul.attributes li.attribute.health {
+.dragontactics div.combat ul.attributes li.attribute.health {
   width: 100px;
 }
-.dragontactics ul.attributes li.attribute.health input.healthvalue.bloody {
+.dragontactics div.combat ul.attributes li.attribute.health input.healthvalue.bloody {
   color: darkred;
 }
-.dragontactics ul.attributes li.attribute h4.attribute-name {
+.dragontactics div.combat ul.attributes li.attribute h4.attribute-name {
   line-height: 16px;
   margin: 4px 8px 2px;
   font-size: 18px;
   border-bottom: 1px solid #b5b3a4;
 }
-.dragontactics ul.attributes li.attribute .attribute-value {
+.dragontactics div.combat ul.attributes li.attribute .attribute-value {
   height: 28px;
   line-height: 28px;
   height: 32px;
   line-height: 32px;
 }
-.dragontactics ul.attributes li.attribute .attribute-value input {
+.dragontactics div.combat ul.attributes li.attribute .attribute-value input {
   display: inline;
   max-width: 80%;
   margin: 0;
@@ -312,63 +325,76 @@
   background-color: inherit;
   border: none;
 }
-.dragontactics ul.attributes li.attribute .attribute-value span.sep {
+.dragontactics div.combat ul.attributes li.attribute .attribute-value span.sep {
   display: inline;
   position: relative;
   top: 2px;
   font-size: 28px;
   color: #7a7971;
 }
-.dragontactics ul.attributes li.attribute .attribute-value.multiple input {
+.dragontactics div.combat ul.attributes li.attribute .attribute-value.multiple input,
+.dragontactics div.combat ul.attributes li.attribute .attribute-value.multiple span {
   max-width: 33%;
 }
-.dragontactics ul.attributes li.attribute .attribute-footer {
+.dragontactics div.combat ul.attributes li.attribute .attribute-value.multiple span {
+  margin: 0;
+  font-size: 24px;
+  background-color: inherit;
+  border: none;
+}
+.dragontactics div.combat ul.attributes li.attribute .attribute-footer {
   flex: 0 0 18px;
   margin-top: -1px;
   line-height: 18px;
   font-family: "Signika", "Palatino Linotype", serif;
   font-size: 12px;
 }
-.dragontactics ul.attributes li.attribute .attribute-footer span {
+.dragontactics div.combat ul.attributes li.attribute .attribute-footer span {
   font-size: larger;
 }
-.dragontactics ul.attributes li.attribute .attribute-footer input.half {
+.dragontactics div.combat ul.attributes li.attribute .attribute-footer input.half {
   width: 48%;
 }
-.dragontactics li.powers {
+.dragontactics div.combat div.defense-config {
+  display: none;
+}
+.dragontactics div.combat div.defense-config.show {
+  display: block;
+}
+.dragontactics div.combat li.powers {
   margin-bottom: 3px;
   /* Header */
   /* Body */
 }
-.dragontactics li.powers div.powerheader {
+.dragontactics div.combat li.powers div.powerheader {
   border-radius: 5px 5px 0 0;
   border: 1px solid black;
 }
-.dragontactics li.powers div.powerheader span.powername[type="text"] {
+.dragontactics div.combat li.powers div.powerheader span.powername[type="text"] {
   width: calc(100% - 75px);
   background-color: transparent;
   border: none;
   color: white;
 }
-.dragontactics li.powers div.powerheader span.powername[type="text"]::placeholder {
+.dragontactics div.combat li.powers div.powerheader span.powername[type="text"]::placeholder {
   color: white;
 }
-.dragontactics li.powers.atwill div.powerheader {
+.dragontactics div.combat li.powers.atwill div.powerheader {
   background-color: rgba(0, 128, 0, 0.5);
 }
-.dragontactics li.powers.atwill div.powerheader label.ready {
+.dragontactics div.combat li.powers.atwill div.powerheader label.ready {
   display: none;
 }
-.dragontactics li.powers.encounter div.powerheader {
+.dragontactics div.combat li.powers.encounter div.powerheader {
   background-color: rgba(255, 0, 0, 0.5);
 }
-.dragontactics li.powers.daily div.powerheader {
+.dragontactics div.combat li.powers.daily div.powerheader {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.dragontactics li.powers.show div.powerheader {
+.dragontactics div.combat li.powers.show div.powerheader {
   border-style: solid solid none;
 }
-.dragontactics li.powers .powerbody {
+.dragontactics div.combat li.powers .powerbody {
   display: none;
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px black;
@@ -376,39 +402,45 @@
   border-radius: 0 0 5px 5px;
   overflow: hidden;
 }
-.dragontactics li.powers .powerbody .powershow-row {
+.dragontactics div.combat li.powers .powerbody .powershow-row {
   padding: 3px 5px;
   font-size: 15px;
   overflow-wrap: break-word;
 }
-.dragontactics li.powers .powerbody .powershow-row:nth-child(2n) {
+.dragontactics div.combat li.powers .powerbody .powershow-row:nth-child(2n) {
   background-color: rgba(211, 211, 211, 0.5);
 }
-.dragontactics li.powers .powerbody .powershow-row button[type="roll"] {
+.dragontactics div.combat li.powers .powerbody .powershow-row button[type="roll"] {
   margin: 0;
   padding: 0;
   font-size: inherit;
 }
-.dragontactics li.powers .powerbody span.trigger {
+.dragontactics div.combat li.powers .powerbody span.trigger {
   font-style: italic;
 }
-.dragontactics li.powers .powerbody div.rangetargets {
+.dragontactics div.combat li.powers .powerbody div.rangetargets {
   display: inline-block;
   max-width: calc(100% - 65px);
 }
-.dragontactics li.powers .powerbody label.ready {
+.dragontactics div.combat li.powers .powerbody label.ready {
   float: right;
   width: 62px;
   margin: 0;
   padding: 0;
   font-size: inherit;
 }
-.dragontactics li.powers .powerbody label.ready input {
+.dragontactics div.combat li.powers .powerbody label.ready input {
   vertical-align: initial;
 }
-.dragontactics li.powers .powerbody span.powertext {
+.dragontactics div.combat li.powers .powerbody span.powertext {
   font-size: 12px;
   font-style: italic;
+}
+.dragontactics div.features h4.name {
+  width: calc(100% - 40px);
+}
+.dragontactics div.features div.description {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .dragontactics label.class.source input,
 .dragontactics label.class.role input {

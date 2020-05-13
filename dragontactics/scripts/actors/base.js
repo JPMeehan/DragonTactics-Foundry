@@ -23,5 +23,28 @@ export class DragonTacticsActorSheet extends ActorSheet {
     else {
       html.find('.healthvalue').removeClass('bloody');
     }
+
+    // Everything below here is only needed if the sheet is editable
+    if (!this.options.editable) return;
+
+    html.find('.defense-edit').click(ev => {
+      try {html.find('.defense-config.show').removeClass('show')}
+      catch (e) {html.find('.defense-config').addClass('show')}
+    })
+
+    // Update Inventory Item
+    html.find('.item-edit').click(ev => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.getOwnedItem(li.data("itemId"));
+      item.sheet.render(true);
+    });
+
+    // Delete Inventory Item
+    html.find('.item-delete').click(ev => {
+      const li = $(ev.currentTarget).parents(".item");
+      this.actor.deleteOwnedItem(li.data("itemId"));
+      li.slideUp(200, () => this.render(false));
+    });
+
   }
 }

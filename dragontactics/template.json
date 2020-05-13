@@ -270,19 +270,31 @@
       "templates": ["description", "defenses", "abilities", "skill"],
       "playername": "",
       "class": {
-        "name": "Fighter",
+        "name": "",
         "paragon": "",
         "epic": "",
         "level": 1,
-        "quest": 0
+        "quest": "",
+        "defense": {
+          "hpBase": 12,
+          "hpLevel": 5,
+          "surges": 6,
+          "fortitude": 0,
+          "reflex": 0,
+          "will": 0
+        },
+        "bonus": {
+          "hp": 0,
+          "surges": 0
+        }
       },
-      "powers": {},
+      "powers": [],
       "features": {
         "race": [],
         "class": [],
-        "feats": [],
-        "flaws": [],
-        "competencies": []
+        "feat": [],
+        "flaw": [],
+        "competency": []
       },
       "equipment": {
         "worn": {
@@ -323,7 +335,8 @@
           "implements": []
         },
         "carried": [],
-        "home": []
+        "home": [],
+        "rituals": []
       },
       "currency": {
         "platinum": 0,
@@ -363,10 +376,10 @@
       "source": "",
       "role": "",
       "keyAbilities": "",
-      "hpBase": 12,
-      "hpLevel": 5,
-      "surges": 6,
       "defense": {
+        "hpBase": 12,
+        "hpLevel": 5,
+        "surges": 6,
         "fortitude": 0,
         "reflex": 0,
         "will": 0
