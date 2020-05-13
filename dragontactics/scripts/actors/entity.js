@@ -18,7 +18,7 @@ export class DragonTacticsActor extends Actor {
       if (abl.mod < 0) abl.modifier = "" + abl.mod;
       else abl.modifier = "+" + abl.mod;
     }
-    console.log("Ability scores done")
+    // console.log("Ability scores done")
 
     
     if ( actorData.type === "hero" ) this._prepareHeroData(actorData);

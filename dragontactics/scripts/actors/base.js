@@ -113,8 +113,13 @@ export class DragonTacticsActorSheet extends ActorSheet {
     }
 
     // Assign and return
-    actorData.class.name = cls[0].data.name;
-    actorData.class.defense = cls[0].data.defense;
+    try {
+      actorData.class.name = cls[0].data.name;
+      actorData.class.defense = cls[0].data.defense;
+    }
+    catch (e) {
+      console.log("No class assigned")
+    }
     actorData.powers = powers;
     actorData.features = features;
     actorData.equipment.rituals = rituals;
