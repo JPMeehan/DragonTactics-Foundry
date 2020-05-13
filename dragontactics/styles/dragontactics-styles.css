@@ -199,6 +199,9 @@
   line-height: 28px;
   border: none;
 }
+.dragontactics div.biography span.race {
+  display: inline-block;
+}
 .dragontactics div.biography span.class {
   display: inline-block;
   width: calc(100% - 34px);
