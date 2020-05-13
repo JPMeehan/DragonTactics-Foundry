@@ -86,7 +86,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
       "competency": []
     };
     const powers = {}; // power
-    const rituals = []; // ritual (need to add to sheet)
+    // const rituals = []; // ritual (need to add to sheet)
 
     // Iterate through items, allocating to containers
     for (let i of sheetData.items) {
@@ -103,7 +103,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
       }
       else if (i.type === 'feature') features[item.data.type].push(i);
       else if (i.type === 'powers') powers.push(i);
-      else if (i.type === 'ritual') rituals.push(i);
+      // else if (i.type === 'ritual') rituals.push(i);
     }
 
     while (cls.length > 1) {
@@ -122,7 +122,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
     }
     actorData.powers = powers;
     actorData.features = features;
-    actorData.equipment.rituals = rituals;
+    // actorData.equipment.rituals = rituals;
 
   }
 }
