@@ -95,8 +95,6 @@ export class DragonTacticsActorSheet extends ActorSheet {
 
       if (i.type === 'class') {
         cls.push(i);
-        cls.name = item.name;
-        cls.defense = item.data.defense;
       }
       else if (i.type === 'race') {
         actorData.race = item.name;
