@@ -39,22 +39,22 @@
                         placeholder="Key Abilities" title="Key Abilities, e.g. Strength, Dexterity, Constitution" />
                 </label>
                 <label class="class hp base">Base Hit Points: 
-                    <input type="number" name="data.hpBase" value="{{data.hpBase}}" data-dtype="Number" >
+                    <input type="text" pattern="\d+" name="data.hpBase" value="{{data.hpBase}}" data-dtype="Number" >
                 </label>
                 <label class="class hp level">Hit Points per Level:
-                    <input type="number" name="data.hpLevel" value="{{data.hpLevel}}" data-dtype="Number" />
+                    <input type="text" pattern="\d+" name="data.hpLevel" value="{{data.hpLevel}}" data-dtype="Number" />
                 </label>
                 <label class="class surges">Surges:
-                    <input type="number" name="data.surges" value="{{data.surges}}" data-dtype="Number" />
+                    <input type="text" pattern="\d+" name="data.surges" value="{{data.surges}}" data-dtype="Number" />
                 </label>
                 <label class="class defense fortitude">Fortitude:
-                    <input type="number" name="data.defense.fortitude" value="{{data.defense.fortitude}}" data-dtype="Number" />
+                    <input type="text" pattern="\d+" name="data.defense.fortitude" value="{{data.defense.fortitude}}" data-dtype="Number" />
                 </label>
                 <label class="class defense reflex">Reflex:
-                    <input type="number" name="data.defense.reflex" value="{{data.defense.reflex}}" data-dtype="Number" />
+                    <input type="text" pattern="\d+" name="data.defense.reflex" value="{{data.defense.reflex}}" data-dtype="Number" />
                 </label>
                 <label class="class defense will">Will:
-                    <input type="number" name="data.defense.will" value="{{data.defense.will}}" data-dtype="Number" />
+                    <input type="text" pattern="\d+" name="data.defense.will" value="{{data.defense.will}}" data-dtype="Number" />
                 </label>
                 <label class="class profs armor">Armor Proficiencies:
                     <input type="text" name="data.profs.armor" value="{{data.profs.armor}}" data-dtype="String"

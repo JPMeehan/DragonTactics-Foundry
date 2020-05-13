@@ -134,7 +134,7 @@
                             <input class="healthvalue" name="data.health.value" type="text" pattern="\d+"
                                 value="{{data.health.value}}" data-dtype="Number" placeholder="10" />
                             <span class="sep"> / </span>
-                            <span name="data.health.max">{{data.health.max}}</span>
+                            <span class="max" name="data.health.max" value="{{data.health.max}}">{{data.health.max}}</span>
                         </div>
                         <footer class="attribute-footer">
                             <input name="data.health.temp" type="text" pattern="\d+" class="half" placeholder="+Temp"
@@ -149,7 +149,7 @@
                             <input name="data.surges.value" type="text" pattern="\d+" value="{{data.surges.value}}"
                                 data-dtype="Number" placeholder="6" />
                             <span class="sep"> / </span>
-                            <span name="data.surges.max">{{data.surges.max}}</span>
+                            <span class="max" name="data.surges.max" value="{{data.surges.max}}">{{data.surges.max}}</span>
                         </div>
                         <footer class="attribute-footer">
                             <span>Value: </span><span name="data.surges.heal">{{data.surges.heal}}</span>
