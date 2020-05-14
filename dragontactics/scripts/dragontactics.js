@@ -3,7 +3,9 @@
  * Author: ChaosOS
  */
 
-import {myHooks} from "./hooks/items.js";
+// import {myHooks} from "./hooks/items.js";
+
+import "./hooks/items.js";
 
 import {
   DragonTacticsActor
