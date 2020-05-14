@@ -1,7 +1,12 @@
-Hooks.on('createdOwnedItem', (actor, item) => {
-  console.log(actor);
-  console.log(item);
-});
+
+export class myHooks {
+  static callHooks() {
+    Hooks.on('createdOwnedItem', (actor, item) => {
+      console.log(actor);
+      console.log(item);
+    });
+  }
+}
 /*
 _prepareHeroItems(sheetData) {
     const actorData = sheetData.actor.data;

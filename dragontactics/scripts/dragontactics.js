@@ -3,7 +3,7 @@
  * Author: ChaosOS
  */
 
-import "./hooks/items.js";
+import myHooks from "./hooks/items.js";
 
 import {
   DragonTacticsActor
@@ -46,18 +46,11 @@ import {
   DragonTacticsItemSheet_weapon
 } from "./items/sheets/weapon.js";
 
+myHooks.callHooks()
+
 
 Hooks.once("init", function () {
   console.log(`Initializing Dragon Tactics System`);
-
-  // Create a D&D5E namespace within the game global
-  // game.dnd5e = {
-  // Actor5e,
-  // Dice5e,
-  // Item5e,
-  // migrations,
-  // rollItemMacro
-  // };
 
   // Record Configuration Values
   CONFIG.Actor.entityClass = DragonTacticsActor;
