@@ -3,8 +3,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
   switch (item.type) {
     case "class":
       var cls = actor.data.data.class;
-      const oldID = cls._id;
-      if (oldID != "") {actor.deleteOwnedItem(oldID)}
+      if (cls._id != "") {actor.deleteOwnedItem(cls._id)}
       cls.name = item.name;
       cls._id = item._id;
       for (let [key, value] of Object.entries(item.data.defense)) {
@@ -13,9 +12,9 @@ Hooks.on('createOwnedItem', (actor, item) => {
       break;
     case "race":
       var race = actor.data.data.race;
-      const oldID = race._id;
-      if (oldID != "") {actor.deleteOwnedItem(oldID)}
+      if (race._id != "") {actor.deleteOwnedItem(race._id)}
       race.name = item.name;
+      race._id = item._id;
       break;
   }
 });
