@@ -2,14 +2,11 @@
   "name": "dragontactics",
   "title": "Dragon Tactics",
   "description": "A 4th Edition D&D Variant",
-  "version": "0.4.9",
+  "version": "0.4.8",
   "minimumCoreVersion": "0.5.5",
   "compatibleCoreVersion": "0.5.5",
   "templateVersion": 2,
   "author": "Joseph Meehan",
-  "scripts": [
-    "scripts/hooks/items.js"
-  ],
   "esmodules": ["scripts/dragontactics.js"],
   "styles": ["styles/dragontactics-styles.css"],
   "packs": [

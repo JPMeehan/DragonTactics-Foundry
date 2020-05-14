@@ -1,6 +1,6 @@
 Hooks.on('createdOwnedItem', (actor, item) => {
-    console.log(actor);
-    console.log(item);
+  console.log(actor);
+  console.log(item);
 });
 /*
 _prepareHeroItems(sheetData) {
