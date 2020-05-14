@@ -538,6 +538,13 @@
   min-width: 460px;
   min-height: 400px;
 }
+.dragontactics.sheet.item div.tab {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.dragontactics.sheet.item section.sheet-body {
+  height: calc(100% - 145px);
+}
 /* ----------------------------------------- */
 /*  Flexbox                                  */
 /* ----------------------------------------- */
