@@ -3,6 +3,8 @@
  * Author: ChaosOS
  */
 
+import "./hooks/items.js";
+
 import {
   DragonTacticsActor
 } from "./actors/entity.js";
