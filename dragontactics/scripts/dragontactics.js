@@ -48,7 +48,7 @@ import {
   DragonTacticsItemSheet_weapon
 } from "./items/sheets/weapon.js";
 
-myHooks.callHooks()
+// myHooks.callHooks()
 
 
 Hooks.once("init", function () {
