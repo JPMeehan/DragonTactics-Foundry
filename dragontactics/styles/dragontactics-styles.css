@@ -199,6 +199,10 @@
   line-height: 28px;
   border: none;
 }
+.dragontactics div.biography input,
+.dragontactics div.biography textarea {
+  margin: 2px 0;
+}
 .dragontactics div.biography span.race {
   display: inline-block;
 }
