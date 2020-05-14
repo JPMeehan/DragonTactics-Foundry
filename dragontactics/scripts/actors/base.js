@@ -45,6 +45,9 @@ export class DragonTacticsActorSheet extends ActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
+    html.find('.class.name').click(ev => { // render item
+      this.actor.getOwnedItem(this.actor.data.class._id).sheet.render(true);
+    })
   }
 
   
@@ -71,7 +74,6 @@ export class DragonTacticsActorSheet extends ActorSheet {
     const actorData = sheetData.actor.data;
 
     // Initialize containers.
-    const cls = [];
     // const equipment = { // armor, implement, supplies, weapon
     //   "armor": [],
     //   "worn": [],
@@ -109,17 +111,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
       // else if (i.type === 'ritual') rituals.push(i);
     }
 
-    for (let c of cls) {
-      if (c != cls[cls.length-1]) this.actor.deleteOwnedItem(c._id)
-    }
-
     // Assign and return
-    try {
-      
-    }
-    catch (e) {
-      console.log("No class assigned")
-    }
     actorData.powers = powers;
     actorData.features = features;
     // actorData.equipment.rituals = rituals;

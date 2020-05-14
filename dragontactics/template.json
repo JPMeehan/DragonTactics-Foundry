@@ -4,7 +4,7 @@
     "templates": {
       "description": {
         "race": {
-          "name": "",
+          "name": "Race",
           "_id": ""
         },
         "height": "",
@@ -274,7 +274,7 @@
       "playername": "",
       "class": {
         "_id": "",
-        "name": "",
+        "name": "Class",
         "paragon": "",
         "epic": "",
         "level": 1,
