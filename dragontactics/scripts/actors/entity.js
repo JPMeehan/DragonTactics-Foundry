@@ -76,7 +76,7 @@ export class DragonTacticsActor extends Actor {
   /** @override */
   async createOwnedItem(itemData, options) {
     if (itemData.type = "class" || "race"){
-      oldID = this.data[itemData.type]._id;
+      oldID = this.data.data[itemData.type]._id;
       if (oldID != "") {this.deleteOwnedItem(oldID)}
     }
     return super.createOwnedItem(itemData, options);
