@@ -19,6 +19,17 @@ export class DragonTacticsItemSheet extends ItemSheet {
     });
   }
 
+  /** @override */
+  activateListeners(html) {
+    super.activateListeners(html);
+
+    // Everything below here is only needed if the sheet is editable
+    if (!this.options.editable) return;
+
+    // Add or Remove Attribute
+    html.find(".attributes").on("click", ".feature-control", this._onClickAttributeControl.bind(this));
+  }
+
   // /* -------------------------------------------- */
 
   // /** @override */
@@ -44,16 +55,7 @@ export class DragonTacticsItemSheet extends ItemSheet {
 
   // /* -------------------------------------------- */
 
-  // /** @override */
-  // activateListeners(html) {
-  //   super.activateListeners(html);
-
-  //   // Everything below here is only needed if the sheet is editable
-  //   if (!this.options.editable) return;
-
-  //   // Add or Remove Attribute
-  //   html.find(".attributes").on("click", ".feature-control", this._onClickAttributeControl.bind(this));
-  // }
+  
 
   // /* -------------------------------------------- */
 

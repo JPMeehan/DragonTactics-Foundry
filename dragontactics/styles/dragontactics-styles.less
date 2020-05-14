@@ -190,6 +190,11 @@
     vertical-align: top;
   }
 
+  .clickable:hover {
+    text-shadow: 0 0 10px red;
+    cursor: pointer;
+  }
+
   /* Feature List */
   .features-header {
     padding: 5px;
@@ -238,11 +243,10 @@
     input, textarea {
       margin: 2px 0;
     }
-    span.race {
+    span.race, span.class {
       display: inline-block;
     }
     span.class {
-      display: inline-block;
       width: calc(100% - 34px);
     }
     input[data-dtype="Number"] {
@@ -309,10 +313,10 @@
         width: 100px;
       }
 
-      ol p.label:hover {
-        text-shadow: 0 0 10px red;
-        cursor: pointer;
-      }
+      // ol p.label:hover {
+      //   text-shadow: 0 0 10px red;
+      //   cursor: pointer;
+      // }
 
       p.ability {
         width: calc(100% - 260px);

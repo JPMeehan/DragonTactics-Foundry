@@ -164,6 +164,10 @@
   display: inline-block;
   vertical-align: top;
 }
+.dragontactics .clickable:hover {
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
 .dragontactics .features-header {
   padding: 5px;
   margin: 5px 0;
@@ -203,11 +207,11 @@
 .dragontactics div.biography textarea {
   margin: 2px 0;
 }
-.dragontactics div.biography span.race {
+.dragontactics div.biography span.race,
+.dragontactics div.biography span.class {
   display: inline-block;
 }
 .dragontactics div.biography span.class {
-  display: inline-block;
   width: calc(100% - 34px);
 }
 .dragontactics div.biography input[data-dtype="Number"] {
@@ -260,10 +264,6 @@
 }
 .dragontactics div.abilities div.skill p.label {
   width: 100px;
-}
-.dragontactics div.abilities div.skill ol p.label:hover {
-  text-shadow: 0 0 10px red;
-  cursor: pointer;
 }
 .dragontactics div.abilities div.skill p.ability {
   width: calc(100% - 260px);

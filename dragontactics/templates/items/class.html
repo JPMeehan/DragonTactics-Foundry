@@ -16,8 +16,7 @@
     <section class="sheet-body">
 
             {{!-- Description Tab --}}
-            <div class="tab" data-group="primary" data-tab="display">
-                <h1>Description</h1>
+            <div class="tab" data-group="primary" data-tab="description">
                 <div class="description tinymceeditorbox">
                     {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
@@ -25,7 +24,7 @@
 
             {{!-- Input Tab --}}
             <div class="tab input" data-group="primary" data-tab="input">
-                <h1>Input</h1>
+                <h2>Basic Info</h2>
                 <label class="class source">Source:
                     <input type="text" name="data.source" value="{{data.source}}" data-dtype="String"
 						placeholder="Source" title="Source, e.g. Martial" />
@@ -34,10 +33,13 @@
                     <input type="text" name="data.role" value="{{data.role}}" data-dtype="String"
 						placeholder="Role" title="Role, e.g. Defender" />
                 </label>
+                <br>
                 <label class="class keyabilities">Key Abilities: 
                     <input type="text" name="data.keyAbilities" value="{{data.keyAbilities}}" data-dtype="String" 
                         placeholder="Key Abilities" title="Key Abilities, e.g. Strength, Dexterity, Constitution" />
                 </label>
+                <h2>Defenses</h2>
+                <h3>Health</h3>
                 <label class="class hp base">Base Hit Points: 
                     <input type="text" pattern="\d+" name="data.defense.hpBase" value="{{data.defense.hpBase}}" data-dtype="Number" >
                 </label>
@@ -47,6 +49,7 @@
                 <label class="class surges">Surges:
                     <input type="text" pattern="\d+" name="data.defense.surges" value="{{data.defense.surges}}" data-dtype="Number" />
                 </label>
+                <h3>Class Defense Bonuses</h3>
                 <label class="class defense fortitude">Fortitude:
                     <input type="text" pattern="\d+" name="data.defense.fortitude" value="{{data.defense.fortitude}}" data-dtype="Number" />
                 </label>
@@ -56,15 +59,16 @@
                 <label class="class defense will">Will:
                     <input type="text" pattern="\d+" name="data.defense.will" value="{{data.defense.will}}" data-dtype="Number" />
                 </label>
-                <label class="class profs armor">Armor Proficiencies:
+                <h2>Proficiencies</h2>
+                <label class="class profs armor">Armor:
                     <input type="text" name="data.profs.armor" value="{{data.profs.armor}}" data-dtype="String"
 						placeholder="Armor Proficiencies" title="Armor Proficiencies, e.g. Cloth" />
                 </label>
-                <label class="class profs weapon">Weapon Proficiencies:
+                <label class="class profs weapon">Weapon:
                     <input type="text" name="data.profs.weapon" value="{{data.profs.weapon}}" data-dtype="String"
 						placeholder="Weapon Proficiencies" title="Weapon Proficiencies, e.g. Simple Melee Weapons" />
                 </label>
-                <label class="class profs implement">Implement Proficiencies:
+                <label class="class profs implement">Implement:
                     <input type="text" name="data.profs.implement" value="{{data.profs.implement}}" data-dtype="String"
 						placeholder="Implement Proficiencies" title="Implement Proficiencies, e.g. Rods" />
                 </label>
