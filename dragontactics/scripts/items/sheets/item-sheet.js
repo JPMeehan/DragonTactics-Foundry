@@ -65,7 +65,7 @@ export class DragonTacticsItemSheet extends ItemSheet {
   /** @override */
   _updateObject(event, formData) {
 
-    if (this.object.type === "class" || "race"){
+    if (this.object.data.type === ("class" || "race")){
       // Handle the free-form features list
       const formAttrs = expandObject(formData).data.features || {};
       const features = Object.values(formAttrs).reduce((obj, v) => {

@@ -277,14 +277,14 @@
             <div class="competencies">
                 <h2>Competencies</h2>
                 <ol class="features-list">
-                    {{#each data.features.competencies as |feat key|}}
+                    {{#each data.features.competency as |feat key|}}
                     <li class="item" data-attribute="{{key}}" data-item-id="{{key._id}}">
-                        <h3 class="name clickable" name="data.features.competencies.{{key}}.label">{{label}}</h3>
+                        <h3 class="name clickable" name="data.features.competency.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item" data-action="edit"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item" data-action="delete"><i class="fas fa-trash"></i></a>
                         </div>
-                        <div class="description" name="data.features.competencies.{{key}}.description">{{description}}</div>
+                        <div class="description" name="data.features.competency.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
@@ -292,14 +292,14 @@
             <div class="feats">
                 <h2>Feats</h2>
                 <ol class="features-list">
-                    {{#each data.features.feats as |feat key|}}
+                    {{#each data.features.feat as |feat key|}}
                     <li class="item" data-attribute="{{key}}" data-item-id="{{key._id}}">
-                        <h3 class="name" name="data.features.feats.{{key}}.label">{{label}}</h3>
+                        <h3 class="name" name="data.features.feat.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item" data-action="edit"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item" data-action="delete"><i class="fas fa-trash"></i></a>
                         </div>
-                        <div class="description" name="data.features.feats.{{key}}.description">{{description}}</div>
+                        <div class="description" name="data.features.feat.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
@@ -307,14 +307,14 @@
             <div class="flaws">
                 <h2>Flaws</h2>
                 <ol class="features-list">
-                    {{#each data.features.flaws as |feat key|}}
+                    {{#each data.features.flaw as |feat key|}}
                     <li class="item" data-attribute="{{key}}" data-item-id="{{key._id}}">
-                        <h3 class="name" name="data.features.flaws.{{key}}.label">{{label}}</h3>
+                        <h3 class="name" name="data.features.flaw.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item" data-action="edit"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item" data-action="delete"><i class="fas fa-trash"></i></a>
                         </div>
-                        <div class="description" name="data.features.flaws.{{key}}.description">{{description}}</div>
+                        <div class="description" name="data.features.flaw.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
