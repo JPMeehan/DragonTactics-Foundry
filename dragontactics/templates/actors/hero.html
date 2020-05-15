@@ -278,7 +278,7 @@
                 <h2>Competencies</h2>
                 <ol class="features-list">
                     {{#each data.features.competency as |feat key|}}
-                    <li class="item" data-attribute="{{key}}" data-item-id="{{feat._id}}">
+                    <li class="item" data-attribute="{{key}}" data-item-id="{{feat._id}}" data-feature-type="competency">
                         <h3 class="name" name="data.features.competency.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item" data-action="edit"><i class="fas fa-edit"></i></a>
@@ -293,7 +293,7 @@
                 <h2>Feats</h2>
                 <ol class="features-list">
                     {{#each data.features.feat as |feat key|}}
-                    <li class="item" data-attribute="{{key}}" data-item-id="{{feat._id}}">
+                    <li class="item" data-attribute="{{key}}" data-item-id="{{feat._id}}" data-feature-type="feat">
                         <h3 class="name" name="data.features.feat.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item" data-action="edit"><i class="fas fa-edit"></i></a>
@@ -308,7 +308,7 @@
                 <h2>Flaws</h2>
                 <ol class="features-list">
                     {{#each data.features.flaw as |feat key|}}
-                    <li class="item" data-attribute="{{key}}" data-item-id="{{feat._id}}">
+                    <li class="item" data-attribute="{{key}}" data-item-id="{{feat._id}}" data-feature-type="flaw">
                         <h3 class="name" name="data.features.flaw.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item" data-action="edit"><i class="fas fa-edit"></i></a>

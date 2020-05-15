@@ -65,9 +65,6 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
     return object["_id"] === item._id;
   }
   const data = actor.data.data;
-  // console.log("Updating an item")
-  // console.log(actor);
-  // console.log(item)
   switch (item.type) {
     case "class":
       data.class.name = item.name;
@@ -99,21 +96,56 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       actor.update({"data.features.race" : features});
       break;
     case "feature":
+      var target = Object.keys(delta)[0];
       var features = data.features[item.data.type] || [];
-      features[features.findIndex(matchID)][Object.keys(delta)[0]] = Object.values(delta)[0]
-      // for(let i of features){
-      //   if(i._id === delta._id){
-      //     i[Object.keys(delta)[0]] = delta[Object.keys(delta)[0]]
-      //     // try {i.name=delta.name;} catch (e) {console.log("Delta did not have a name")}
-      //     // try {i.description=delta.description} catch (e) {console.log("Delta did not have a description")}
-      //   }
-      // }
-      actor.update({[`data.features.${item.data.type}`] : features});
+      if(target === "type") {
+        var oldtype;
+        var oldfeatures;
+        const featuretypes = ["feat", "competency", "flaw"]
+
+        // find the old list
+        for(let type in featuretypes){
+          if(type === item.data.type) {
+            features.push({
+              "_id": item._id,
+              "label": item.name,
+              "description": item.data.description
+            })
+          }
+          else {
+            var index;
+            try {
+              index = data.features[type].findIndex(matchID);
+              if(index != -1) {
+                oldtype = type;
+                oldfeatures = data.features[oldtype] || [];
+                oldfeatures.splice(index, 1)
+              }
+            }
+            catch (e) {
+              console.log("Type is empty")
+            }
+          }
+        }
+        
+        actor.update({
+          [`data.features.${item.data.type}`] : features,
+          [`data.features.${oldtype}`]: oldfeatures
+      });
+      }
+      else {
+        features[features.findIndex(matchID)] = {
+          "_id": item._id,
+          "label": item.name,
+          "description": item.data.description
+        }
+        actor.update({[`data.features.${item.data.type}`] : features});
+      }
       break;
     // /*
     case "power":
       var powers = data.powers;
-      powers[powers.findIndex(matchID)][Object.keys(delta)[0]] = Object.values(delta)[0]
+      powers[powers.findIndex(matchID)][target] = Object.values(delta)[0]
       
     /* */
   }
