@@ -9,19 +9,30 @@ Hooks.on('createOwnedItem', (actor, item) => {
       for (let [key, value] of Object.entries(item.data.defense)) {
         cls.defense[key] = value;
       }
-      var features = actor.data.data.features.class
+      var features = [];
+      
       for(let [key, value] of Object.entries(item.data.features)) {
         features.push({
           "label": value.label,
           "description": value.value
         });
       }
+      actor.data.data.features.class = [...features];
       break;
     case "race":
       var race = actor.data.data.race;
       if (race._id != "") {actor.deleteOwnedItem(race._id)}
       race.name = item.name;
       race._id = item._id;
+      var features = [];
+      
+      for(let [key, value] of Object.entries(item.data.features)) {
+        features.push({
+          "label": value.label,
+          "description": value.value
+        });
+      }
+      actor.data.data.features.race = [...features];
       break;
   }
 });
@@ -50,6 +61,15 @@ Hooks.on('updateOwnedItem', (actor, item) => {
     case "race":
       var race = actor.data.data.race;
       race.name = item.name;
+      var features = [];
+      
+      for(let [key, value] of Object.entries(item.data.features)) {
+        features.push({
+          "label": value.label,
+          "description": value.value
+        });
+      }
+      actor.data.data.features.race = [...features];
       break;
   }
 });

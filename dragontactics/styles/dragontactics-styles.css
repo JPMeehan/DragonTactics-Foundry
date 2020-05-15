@@ -459,11 +459,8 @@
   font-size: 12px;
   font-style: italic;
 }
-.dragontactics div.features h4.name {
-  width: calc(100% - 40px);
-}
-.dragontactics div.features div.description {
-  background-color: rgba(0, 0, 0, 0.05);
+.dragontactics div.features {
+  overflow-y: auto;
 }
 .dragontactics label.class {
   display: inline-block;
