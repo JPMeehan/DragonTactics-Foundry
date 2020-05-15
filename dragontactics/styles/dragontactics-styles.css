@@ -213,7 +213,8 @@
 .dragontactics .features-list input.feature-label {
   width: calc(100% - 140px);
 }
-.dragontactics .features-list a.feature-control {
+.dragontactics .features-list a.feature-control,
+.dragontactics .features-list a.item-control {
   flex: 0 0 20px;
   text-align: center;
   line-height: 28px;
@@ -461,6 +462,11 @@
 }
 .dragontactics div.features {
   overflow-y: auto;
+}
+.dragontactics div.features div.competencies h3,
+.dragontactics div.features div.feats div.flaws h3 {
+  width: calc(100% - 40px);
+  display: inline-block;
 }
 .dragontactics label.class {
   display: inline-block;

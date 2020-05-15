@@ -20,7 +20,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
           "description": value.value
         });
       }
-      actor.update({"actor.data.data.features.class" : features});
+      actor.update({"data.features.class" : features});
       break;
     case "race":
       if (data.race._id != "") {actor.deleteOwnedItem(data.race._id)}
@@ -35,16 +35,16 @@ Hooks.on('createOwnedItem', (actor, item) => {
           "description": value.value
         });
       }
-      actor.update({"actor.data.data.features.race" : features});
+      actor.update({"data.features.race" : features});
       break;
     case "feature":
-      var features = data.features[item.data.type];
+      var features = data.features[item.data.type] || [];
       features.push({
         "_id": item._id,
         "label": item.name,
         "description": item.data.description
       })
-      actor.update({[`actor.data.data.features.${item.data.type}`] : features});
+      actor.update({[`data.features.${item.data.type}`] : features});
       break;
     // /*
     case "power":
@@ -53,7 +53,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
       }
       for(let [key, value] of Object.entries(item.data)) {newpower[key] = value;}
       data.powers.push(newpower);
-      actor.update({"actor.data.data.powers" : data.powers});
+      actor.update({"data.powers" : data.powers});
 
     /* */
   }
@@ -83,7 +83,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
           "description": value.value
         });
       }
-      actor.update({"actor.data.data.features.class" : features});
+      actor.update({"data.features.class" : features});
       break;
     case "race":
       data.race.name = item.name;
@@ -96,10 +96,10 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
           "description": value.value
         });
       }
-      actor.update({"actor.data.data.features.race" : features});
+      actor.update({"data.features.race" : features});
       break;
     case "feature":
-      var features = data.features[item.data.type];
+      var features = data.features[item.data.type] || [];
       features[features.findIndex(matchID)][Object.keys(delta)[0]] = Object.values(delta)[0]
       // for(let i of features){
       //   if(i._id === delta._id){
@@ -108,7 +108,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       //     // try {i.description=delta.description} catch (e) {console.log("Delta did not have a description")}
       //   }
       // }
-      actor.update({[`actor.data.data.features.${item.data.type}`] : features});
+      actor.update({[`data.features.${item.data.type}`] : features});
       break;
     // /*
     case "power":

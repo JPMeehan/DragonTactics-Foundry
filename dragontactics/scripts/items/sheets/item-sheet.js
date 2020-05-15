@@ -60,34 +60,36 @@ export class DragonTacticsItemSheet extends ItemSheet {
       await this._onSubmit(event);
     }
   }
-  
+
+
   /** @override */
   _updateObject(event, formData) {
 
-    // Handle the free-form features list
-    const formAttrs = expandObject(formData).data.features || {};
-    const features = Object.values(formAttrs).reduce((obj, v) => {
-      let k = v["key"].trim();
-      if (/[\s\.]/.test(k)) return ui.notifications.error("Attribute keys may not contain spaces or periods");
-      delete v["key"];
-      obj[k] = v;
-      return obj;
-    }, {});
+    if (this.object.type === "class" || "race"){
+      // Handle the free-form features list
+      const formAttrs = expandObject(formData).data.features || {};
+      const features = Object.values(formAttrs).reduce((obj, v) => {
+        let k = v["key"].trim();
+        if (/[\s\.]/.test(k)) return ui.notifications.error("Attribute keys may not contain spaces or periods");
+        delete v["key"];
+        obj[k] = v;
+        return obj;
+      }, {});
 
-    // Remove features which are no longer used
-    for (let k of Object.keys(this.object.data.data.features)) {
-      if (!features.hasOwnProperty(k)) features[`-=${k}`] = null;
+      // Remove features which are no longer used
+      for (let k of Object.keys(this.object.data.data.features)) {
+        if (!features.hasOwnProperty(k)) features[`-=${k}`] = null;
+      }
+
+      // Re-combine formData
+      formData = Object.entries(formData).filter(e => !e[0].startsWith("data.features")).reduce((obj, e) => {
+        obj[e[0]] = e[1];
+        return obj;
+      }, {
+        _id: this.object._id,
+        "data.features": features
+      });
     }
-
-    // Re-combine formData
-    formData = Object.entries(formData).filter(e => !e[0].startsWith("data.features")).reduce((obj, e) => {
-      obj[e[0]] = e[1];
-      return obj;
-    }, {
-      _id: this.object._id,
-      "data.features": features
-    });
-
     // Update the Item
     return this.object.update(formData);
   }

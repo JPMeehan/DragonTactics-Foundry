@@ -246,7 +246,8 @@
       width: calc(100% - 140px);
     }
 
-    a.feature-control {
+    a.feature-control,
+    a.item-control {
       flex: 0 0 20px;
       text-align: center;
       line-height: 28px;
@@ -563,6 +564,14 @@
 
   div.features {
     overflow-y: auto;
+    div.competencies,
+    div.feats
+    div.flaws {
+      h3 {
+        width: calc(100% - 40px);
+        display: inline-block;
+      }
+    }
   }
 
   /* Equipment Tab */
