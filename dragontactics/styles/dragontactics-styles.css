@@ -464,9 +464,15 @@
   overflow-y: auto;
 }
 .dragontactics div.features div.competencies h3,
-.dragontactics div.features div.feats div.flaws h3 {
+.dragontactics div.features div.feats h3,
+.dragontactics div.features div.flaws h3 {
   width: calc(100% - 40px);
   display: inline-block;
+}
+.dragontactics div.features div.competencies div.item-controls,
+.dragontactics div.features div.feats div.item-controls,
+.dragontactics div.features div.flaws div.item-controls {
+  display: inline;
 }
 .dragontactics label.class {
   display: inline-block;
