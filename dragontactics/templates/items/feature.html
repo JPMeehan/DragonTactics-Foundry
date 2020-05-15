@@ -7,19 +7,17 @@
     </header>
     {{!-- Sheet Body --}}
     <section class="sheet-body">
-        <label class="equipment type">Type: 
+        <input type="text" name="data.requirements" value="{{data.requirements}}" placeholder="Requirements" data-dtype="String"/>
+        <label class="type">Type: 
             <select name="data.type" data-dtype="String">
                 {{#select data.type}}
                     <option value="competency">Competency</option>
-                    <option value="class">Class Feature</option>
                     <option value="feat">Feat</option>
                     <option value="flaw">Flaw</option>
-                    <option value="race">Race Feature</option>
                 {{/select}}
             </select>
         </label>
-        <div class="description tinymceeditorbox">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-        </div>
+        <textarea class="feature-value" name="data.description" 
+            data-dtype="String" placeholder="Feature Text">{{data.description}}</textarea>
     </section>
 </form>

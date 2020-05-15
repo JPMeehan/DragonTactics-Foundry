@@ -418,7 +418,9 @@
     },
     "feature": {
       "templates": ["basic"],
-      "type": ""
+      "type": "",
+      "requirements": ""
+
     },
     "power": {
       "templates": ["basic"],
