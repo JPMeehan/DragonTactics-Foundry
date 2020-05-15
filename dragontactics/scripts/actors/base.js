@@ -46,7 +46,13 @@ export class DragonTacticsActorSheet extends ActorSheet {
     });
 
     html.find('.class.name').click(ev => { // render item
-      this.actor.getOwnedItem(this.actor.data.data.class._id).sheet.render(true);
+      try {
+        this.actor.getOwnedItem(this.actor.data.data.class._id).sheet.render(true);
+      }
+      catch (e) {
+        ui.notifications.error("This hero doesn't have a class")
+      }
+      
     })
   }
 }

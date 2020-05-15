@@ -77,16 +77,18 @@
                     <header class="features-header flexrow">
                         <span class="feature-key">Feature Key</span>
                         <span class="feature-label">Name</span>
-                        <span class="feature-value">Text</span>
                         <a class="feature-control" data-action="create"><i class="fas fa-plus"></i></a>
                     </header>
                     <ol class="features-list">
                     {{#each data.features as |attr key|}}
-                        <li class="feature flexrow" data-feature="{{key}}">
-                            <input class="feature-key" type="text" name="data.features.{{key}}.key" value="{{key}}"/>
-                            <input class="feature-label" type="text" name="data.features.{{key}}.label" value="{{attr.label}}"/>
-                            <textarea class="feature-value" name="data.features.{{key}}.value" data-dtype="String">{{attr.value}}</textarea>
+                        <li class="feature" data-feature="{{key}}">
+                            <input class="feature-key" type="text" name="data.features.{{key}}.key" 
+                                value="{{key}}" placeholder="Key"/>
+                            <input class="feature-label" type="text" name="data.features.{{key}}.label" 
+                                value="{{attr.label}}" placeholder="Feature Name"/>
                             <a class="feature-control" data-action="delete"><i class="fas fa-trash"></i></a>
+                            <textarea class="feature-value" name="data.features.{{key}}.value" 
+                                data-dtype="String" placeholder="Feature Text">{{attr.value}}</textarea>
                         </li>
                     {{/each}}
                     </ol>

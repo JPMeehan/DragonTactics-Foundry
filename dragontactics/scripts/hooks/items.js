@@ -9,6 +9,11 @@ Hooks.on('createOwnedItem', (actor, item) => {
       for (let [key, value] of Object.entries(item.data.defense)) {
         cls.defense[key] = value;
       }
+      var features = actor.data.data.features.class
+      for(let [key, value] of Object.entries(item.data.features)) {
+        features[key].label = value.label;
+        features[key].value = value.value;
+      }
       break;
     case "race":
       var race = actor.data.data.race;
@@ -29,6 +34,11 @@ Hooks.on('updateOwnedItem', (actor, item) => {
       cls.name = item.name;
       for (let [key, value] of Object.entries(item.data.defense)) {
         cls.defense[key] = value;
+      }
+      var features = actor.data.data.features.class
+      for(let [key, value] of Object.entries(item.data.features)) {
+        features[key].label = value.label;
+        features[key].value = value.value;
       }
       break;
     case "race":
