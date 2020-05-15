@@ -252,39 +252,34 @@
 
         {{!-- Features Tab --}}
         <div class="tab features" data-group="primary" data-tab="features">
-            <h2>Features</h2>
             <div class="race">
-                <h3>Race Features</h3>
+                <h2>Race Features</h2>
                 <ol class="features-list">
                     {{#each data.features.race as |feat key|}}
                     <li data-attribute="{{key}}">
-                        <h4 class="name" name="data.features.race.{{key}}.label">{{label}}</h4>
-                        <div class="item-controls">
-                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-                        </div>
+                        <h3 class="name" name="data.features.race.{{key}}.label">{{label}}</h3>
                         <div class="description" name="data.features.race.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
             </div>
             <div class="class">
-                <h3>Class Features</h3>
+                <h2>Class Features</h2>
                 <ol class="features-list">
                     {{#each data.features.class as |feat key|}}
                     <li data-attribute="{{key}}">
-                        <h4 class="name" name="data.features.class.{{key}}.label">{{label}}</h4>
+                        <h3 class="name" name="data.features.class.{{key}}.label">{{label}}</h3>
                         <p class="description" name="data.features.class.{{key}}.description">{{description}}</p>
                     </li>
                     {{/each}}
                 </ol>
             </div>
             <div class="competencies">
-                <h3>Competencies</h3>
+                <h2>Competencies</h2>
                 <ol class="features-list">
                     {{#each data.features.competencies as |feat key|}}
                     <li data-attribute="{{key}}">
-                        <h4 class="name" name="data.features.competencies.{{key}}.label">{{label}}</h4>
+                        <h3 class="name" name="data.features.competencies.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
@@ -295,11 +290,11 @@
                 </ol>
             </div>
             <div class="feats">
-                <h3>Feats</h3>
+                <h2>Feats</h2>
                 <ol class="features-list">
                     {{#each data.features.feats as |feat key|}}
                     <li data-attribute="{{key}}">
-                        <h4 class="name" name="data.features.feats.{{key}}.label">{{label}}</h4>
+                        <h3 class="name" name="data.features.feats.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
@@ -310,11 +305,11 @@
                 </ol>
             </div>
             <div class="flaws">
-                <h3>Flaws</h3>
+                <h2>Flaws</h2>
                 <ol class="features-list">
                     {{#each data.features.flaws as |feat key|}}
                     <li data-attribute="{{key}}">
-                        <h4 class="name" name="data.features.flaws.{{key}}.label">{{label}}</h4>
+                        <h3 class="name" name="data.features.flaws.{{key}}.label">{{label}}</h3>
                         <div class="description" name="data.features.flaws.{{key}}.description">{{description}}</div>
                     </li>
                     {{/each}}

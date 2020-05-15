@@ -11,8 +11,10 @@ Hooks.on('createOwnedItem', (actor, item) => {
       }
       var features = actor.data.data.features.class
       for(let [key, value] of Object.entries(item.data.features)) {
-        features[key].label = value.label;
-        features[key].value = value.value;
+        features.push({
+          "label": value.label,
+          "description": value.value
+        });
       }
       break;
     case "race":
@@ -25,9 +27,9 @@ Hooks.on('createOwnedItem', (actor, item) => {
 });
 
 Hooks.on('updateOwnedItem', (actor, item) => {
-  console.log("Updating an item")
-  console.log(actor);
-  console.log(item)
+  // console.log("Updating an item")
+  // console.log(actor);
+  // console.log(item)
   switch (item.type) {
     case "class":
       var cls = actor.data.data.class;
@@ -35,11 +37,15 @@ Hooks.on('updateOwnedItem', (actor, item) => {
       for (let [key, value] of Object.entries(item.data.defense)) {
         cls.defense[key] = value;
       }
-      var features = actor.data.data.features.class
+      var features = [];
+      
       for(let [key, value] of Object.entries(item.data.features)) {
-        features[key].label = value.label;
-        features[key].value = value.value;
+        features.push({
+          "label": value.label,
+          "description": value.value
+        });
       }
+      actor.data.data.features.class = [...features];
       break;
     case "race":
       var race = actor.data.data.race;
