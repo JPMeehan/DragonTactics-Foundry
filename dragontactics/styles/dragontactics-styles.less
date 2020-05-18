@@ -473,32 +473,24 @@
         border-radius: 5px 5px 0 0;
         border: 1px solid black;
   
-        span.powername[type="text"] {
-          width: calc(100% - 75px);
-          background-color: transparent;
-          border: none;
-          color: white;
-  
-          &::placeholder {
-            color: white;
-          }
+        span.powername {
+          width: calc(100% - 50px);
+          display: inline-block;
+          font-size: large;
+          margin: 5px
         }
       }
   
       &.atwill div.powerheader {
         background-color: rgba(0, 128, 0, .5);
-  
-        label.ready {
-          display: none;
-        }
       }
   
       &.encounter div.powerheader {
-        background-color: rgba(255, 0, 0, .5);
+        background-color: rgba(255, 0, 0, .8);
       }
   
       &.daily div.powerheader {
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .4);
       }
   
       &.show div.powerheader {
@@ -534,11 +526,6 @@
           font-style: italic;
         }
   
-        div.rangetargets {
-          display: inline-block;
-          max-width: calc(100% - 65px);
-        }
-  
         label.ready {
           float: right;
           width: 62px;
@@ -547,7 +534,9 @@
           font-size: inherit;
   
           input {
-            vertical-align: initial;
+            vertical-align: middle;
+            display: inline-block;
+            margin: 0;
           }
         }
   
@@ -734,6 +723,16 @@
     }
     input[data-dtype="Number"] {
       width: 30px;
+    }
+    h2.attack {
+      display: inline-block;
+      width: calc(100% - 50px);
+    }
+    div.attack {
+      display: none;
+    }
+    input.enable ~ div.attack {
+      display: block;
     }
     input.dice {
       width: 90px;

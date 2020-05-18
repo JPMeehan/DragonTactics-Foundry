@@ -46,16 +46,24 @@ Hooks.on('createOwnedItem', (actor, item) => {
       })
       actor.update({[`data.features.${item.data.type}`] : features});
       break;
-    // /*
     case "power":
       const newpower = {
         "name": item.name
       }
       for(let [key, value] of Object.entries(item.data)) {newpower[key] = value;}
+      switch(newpower.recharge) {
+        case "":
+          newpower["usage"] = "atwill";
+          break;
+        case "Short Rest":
+          newpower["usage"] = "encounter";
+          break;
+        case "Long Rest":
+        case "Special":
+          newpower["usage"] = "daily";
+      }
       data.powers[item._id] = newpower;
       actor.update({"data.powers" : data.powers});
-
-    /* */
   }
   actor.update({"data" : data})
 });
@@ -142,12 +150,24 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
         actor.update({[`data.features.${item.data.type}`] : features});
       }
       break;
-    // /*
     case "power":
-      var powers = data.powers;
-      powers[powers.findIndex(matchID)][target] = Object.values(delta)[0]
-      
-    /* */
+      const newpower = {
+        "name": item.name
+      }
+      for(let [key, value] of Object.entries(item.data)) {newpower[key] = value;}
+      switch(newpower.recharge) {
+        case "":
+          newpower["usage"] = "atwill";
+          break;
+        case "Short Rest":
+          newpower["usage"] = "encounter";
+          break;
+        case "Long Rest":
+        case "Special":
+          newpower["usage"] = "daily";
+      }
+      data.powers[item._id] = newpower;
+      actor.update({"data.powers" : data.powers});
   }
   actor.update({"data" : data})
 });

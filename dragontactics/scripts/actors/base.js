@@ -42,7 +42,8 @@ export class DragonTacticsActorSheet extends ActorSheet {
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
       this.actor.deleteOwnedItem(li.data("itemId"));
-      this._deleteFeature(li.data("itemId"), li.data("featureType"));
+      if (li.data("featureType")){this._deleteFeature(li.data("itemId"), li.data("featureType"))}
+      if (li.data("power")) {this._deletePower(li.data("itemId"))}
       li.slideUp(200, () => this.render(false));
     });
 
@@ -64,5 +65,11 @@ export class DragonTacticsActorSheet extends ActorSheet {
     const index = features.findIndex(matchID);
     features.splice(index, 1);
     this.actor.update({[`data.features.${itemType}`] : features})
+  }
+
+  _deletePower(itemId) {
+    const powers = this.actor.data.data.powers;
+    delete powers[itemId];
+    this.actor.update({"data.powers" : powers});
   }
 }

@@ -394,26 +394,20 @@
   border-radius: 5px 5px 0 0;
   border: 1px solid black;
 }
-.dragontactics div.combat li.powers div.powerheader span.powername[type="text"] {
-  width: calc(100% - 75px);
-  background-color: transparent;
-  border: none;
-  color: white;
-}
-.dragontactics div.combat li.powers div.powerheader span.powername[type="text"]::placeholder {
-  color: white;
+.dragontactics div.combat li.powers div.powerheader span.powername {
+  width: calc(100% - 50px);
+  display: inline-block;
+  font-size: large;
+  margin: 5px;
 }
 .dragontactics div.combat li.powers.atwill div.powerheader {
   background-color: rgba(0, 128, 0, 0.5);
 }
-.dragontactics div.combat li.powers.atwill div.powerheader label.ready {
-  display: none;
-}
 .dragontactics div.combat li.powers.encounter div.powerheader {
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.8);
 }
 .dragontactics div.combat li.powers.daily div.powerheader {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .dragontactics div.combat li.powers.show div.powerheader {
   border-style: solid solid none;
@@ -442,10 +436,6 @@
 .dragontactics div.combat li.powers .powerbody span.trigger {
   font-style: italic;
 }
-.dragontactics div.combat li.powers .powerbody div.rangetargets {
-  display: inline-block;
-  max-width: calc(100% - 65px);
-}
 .dragontactics div.combat li.powers .powerbody label.ready {
   float: right;
   width: 62px;
@@ -454,7 +444,9 @@
   font-size: inherit;
 }
 .dragontactics div.combat li.powers .powerbody label.ready input {
-  vertical-align: initial;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0;
 }
 .dragontactics div.combat li.powers .powerbody span.powertext {
   font-size: 12px;
@@ -558,6 +550,16 @@
 }
 .dragontactics section.power input[data-dtype="Number"] {
   width: 30px;
+}
+.dragontactics section.power h2.attack {
+  display: inline-block;
+  width: calc(100% - 50px);
+}
+.dragontactics section.power div.attack {
+  display: none;
+}
+.dragontactics section.power input.enable ~ div.attack {
+  display: block;
 }
 .dragontactics section.power input.dice {
   width: 90px;
