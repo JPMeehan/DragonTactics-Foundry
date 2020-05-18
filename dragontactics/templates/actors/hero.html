@@ -224,10 +224,12 @@
                             <div class="power-row usage">
                                 <span name="data.powers.{{key}}.recharge">{{recharge}}</span>
                                 <span name="data.powers.{{key}}.action">{{action}}</span>
+                                {{#if recharge}}
                                 <label class="ready">
                                     Ready
                                     <input type="checkbox" name="data.powers.{{key}}.ready" />
                                 </label>
+                                {{/if}}
                             </div>
                             {{#if requirement}}
                                 <div class="power-row requirement">Requirement: 

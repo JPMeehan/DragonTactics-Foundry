@@ -552,6 +552,28 @@
 .dragontactics label.race.skills input {
   width: 250px;
 }
+.dragontactics section.power input.source {
+  width: calc(100% - 34px);
+  margin-top: 5px;
+}
+.dragontactics section.power input[data-dtype="Number"] {
+  width: 30px;
+}
+.dragontactics section.power input.dice {
+  width: 90px;
+}
+.dragontactics section.power span.plus {
+  font-size: larger;
+}
+.dragontactics section.power input.damagetype {
+  width: 150px;
+}
+.dragontactics section.power label.sustain {
+  text-align: right;
+}
+.dragontactics section.power label.sustain input {
+  width: calc(100% - 60px);
+}
 .dragontactics.sheet.actor {
   min-width: 560px;
   min-height: 420px;

@@ -13,7 +13,7 @@
     </nav>
 
     {{!-- Sheet Body --}}
-    <section class="sheet-body">
+    <section class="sheet-body power">
 
         {{!-- Description Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
@@ -25,16 +25,14 @@
 
         {{!-- Input Tab --}}
         <div class="tab input" data-group="primary" data-tab="input">
-            <input type="text" name="data.source" value="{{data.source}}" data-dtype="String" placeholder="Source"
-                title="Source" />
+            <input class="source" type="text" name="data.source" value="{{data.source}}" data-dtype="String" 
+                placeholder="Source" title="Source" />
             <input type="text" pattern="\d+" name="data.level" value="{{data.level}}" data-dtype="Number"
                 placeholder="Lvl" title="Power Level" />
-            <label class="power trigger">Keywords:
-                <input type="text" name="data.keywords" value="{{data.keywords}}" data-dtype="String"
-                    placeholder="Keywords" title="Keywords, e.g. Arcane, Fear" />
-            </label>
+            <input type="text" name="data.keywords" value="{{data.keywords}}" data-dtype="String"
+                placeholder="Keywords" title="Keywords, e.g. Arcane, Fear" />
             <h2>Usage</h2>
-            <label class="power action">Action:
+            <label class="action">Action:
                 <select name="data.action">
                     {{#select data.action}}
                     <option selected value="Standard">Standard</option>
@@ -47,10 +45,11 @@
                     {{/select}}
                 </select>
             </label>
-            <label class="power recharge">Recharge:
+            <br>
+            <label class="recharge">Recharge:
                 <select name="data.recharge">
                     {{#select data.recharge}}
-                    <option selected value="None">None</option>
+                    <option selected value="">None</option>
                     <option value="Short Rest">Short Rest</option>
                     <option value="Long Rest">Long Rest</option>
                     <option value="Special">Special</option>
@@ -58,11 +57,11 @@
                 </select>
             </label>
             <h2>Needs</h2>
-            <label class="power trigger">Trigger:
+            <label class="trigger">Trigger:
                 <input type="text" name="data.trigger" value="{{data.trigger}}" data-dtype="String"
                     placeholder="Trigger" title="Triggers, e.g. When you become bloodied" />
             </label>
-            <label class="power type">Requirement:
+            <label class="type">Requirement:
                 <input type="text" name="data.requirement" value="{{data.requirement}}" data-dtype="String"
                     placeholder="Requirement" title="Requirement, e.g. you must be wielding two weapons" />
             </label>
@@ -72,7 +71,7 @@
             <input type="text" name="data.target" value="{{data.target}}" data-dtype="String" placeholder="Target"
                 title="Target, e.g. One Creature or All Allies within Area" />
             <h2>Primary Attack</h2>
-            <input type="check" value=true name="data.attack.exist" data-dtype="Boolean" /> 
+            <input type="checkbox" value=true name="data.attack.exist" data-dtype="Boolean" /> 
             <select name="data.attack.stat">
                 {{#select data.attack.stat}}
                 <option selected value="Strength">Strength</option>
@@ -93,8 +92,9 @@
                 {{/select}}
             </select>
             <h3>Hit</h3>
-            <input type="text" name="data.attack.hit.dice" value="{{data.attack.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
+            <input type="text" class="dice" name="data.attack.hit.dice" value="{{data.attack.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
                 placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
+            <span class="plus">+</span>
             <select name="data.attack.hit.flat">
                 {{#select data.attack.hit.flat}}
                 <option selected value="None">None</option>
@@ -106,7 +106,7 @@
                 <option value="Charisma">Charisma</option>
                 {{/select}}
             </select>
-            <input type="text" name="data.attack.hit.damageType" value="{{data.attack.hit.damageType}}" data-dtype="String"
+            <input type="text" class="damagetype" name="data.attack.hit.damageType" value="{{data.attack.hit.damageType}}" data-dtype="String"
                 placeholder="Damage Type" title="e.g. Fire or Weapon" />
             <span>damage</span>
             <input type="text" name="data.attack.hit.effect" value="{{data.attack.hit.effect}}" data-dtype="String"
@@ -116,7 +116,7 @@
             <input type="text" name="data.attack.miss" value="{{data.attack.miss}}" data-dtype="String" placeholder="Miss"
                 title="Miss, e.g. Half Damage" />
             <h2>Secondary Attack</h2>
-            <input type="check" value=true name="data.attackSecondary.exist" data-dtype="Boolean" /> 
+            <input type="checkbox" value=true name="data.attackSecondary.exist" data-dtype="Boolean" /> 
             <select name="data.attackSecondary.stat">
                 {{#select data.attackSecondary.stat}}
                 <option selected value="Strength">Strength</option>
@@ -137,8 +137,9 @@
                 {{/select}}
             </select>
             <h3>Hit</h3>
-            <input type="text" name="data.attackSecondary.hit.dice" value="{{data.attackSecondary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
+            <input type="text" class="dice" name="data.attackSecondary.hit.dice" value="{{data.attackSecondary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
                 placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
+            <span class="plus">+</span>
             <select name="data.attackSecondary.hit.flat">
                 {{#select data.attackSecondary.hit.flat}}
                 <option selected value="None">None</option>
@@ -150,7 +151,7 @@
                 <option value="Charisma">Charisma</option>
                 {{/select}}
             </select>
-            <input type="text" name="data.attackSecondary.hit.damageType" value="{{data.attackSecondary.hit.damageType}}" data-dtype="String"
+            <input type="text" class="damagetype" name="data.attackSecondary.hit.damageType" value="{{data.attackSecondary.hit.damageType}}" data-dtype="String"
                 placeholder="Damage Type" title="e.g. Fire or Weapon" />
             <span>damage</span>
             <input type="text" name="data.attackSecondary.hit.effect" value="{{data.attackSecondary.hit.effect}}" data-dtype="String"
@@ -160,7 +161,7 @@
             <input type="text" name="data.attackSecondary.miss" value="{{data.attackSecondary.miss}}" data-dtype="String" placeholder="Miss"
                 title="Miss, e.g. Half Damage" />
             <h2>Tertiary Attack</h2>
-            <input type="check" value=true name="data.attackTertiary.exist" data-dtype="Boolean" /> 
+            <input type="checkbox" value=true name="data.attackTertiary.exist" data-dtype="Boolean" /> 
             <select name="data.attackTertiary.stat">
                 {{#select data.attackTertiary.stat}}
                 <option selected value="Strength">Strength</option>
@@ -181,8 +182,9 @@
                 {{/select}}
             </select>
             <h3>Hit</h3>
-            <input type="text" name="data.attackTertiary.hit.dice" value="{{data.attackTertiary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
+            <input type="text" class="dice" name="data.attackTertiary.hit.dice" value="{{data.attackTertiary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
                 placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
+            <span class="plus">+</span>
             <select name="data.attackTertiary.hit.flat">
                 {{#select data.attackTertiary.hit.flat}}
                 <option selected value="None">None</option>
@@ -194,7 +196,7 @@
                 <option value="Charisma">Charisma</option>
                 {{/select}}
             </select>
-            <input type="text" name="data.attackTertiary.hit.damageType" value="{{data.attackTertiary.hit.damageType}}" data-dtype="String"
+            <input type="text" class="damagetype" name="data.attackTertiary.hit.damageType" value="{{data.attackTertiary.hit.damageType}}" data-dtype="String"
                 placeholder="Damage Type" title="e.g. Fire or Weapon" />
             <span>damage</span>
             <input type="text" name="data.attackTertiary.hit.effect" value="{{data.attackTertiary.hit.effect}}" data-dtype="String"
@@ -206,7 +208,7 @@
             <h2>Effect</h2>
             <textarea name="data.effect" data-dtype="String" placeholder="Effect" rows="5"
                 title="Effect, e.g. each ally within 25' gains a +2 bonus to AC">{{data.effect}}</textarea>
-            <label class="power sustain">Sustain:
+            <label class="sustain">Sustain:
                 <input type="text" name="data.sustain" value="{{data.sustain}}" data-dtype="String"
                     placeholder="Sustain"
                     title="Sustain, e.g. Sustain Minor: The zone persists until the end of the next round" />
