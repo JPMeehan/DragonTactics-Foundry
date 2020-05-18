@@ -292,7 +292,7 @@
           "surges": 0
         }
       },
-      "powers": [],
+      "powers": {},
       "features": {
         "race": [],
         "class": [],
@@ -425,6 +425,8 @@
     "power": {
       "templates": ["basic"],
       "keywords": "",
+      "source": "",
+      "level": "",
       "action": "",
       "recharge": "",
       "trigger": "",
@@ -432,26 +434,41 @@
       "range": "",
       "target": "",
       "attack": {
+        "exist": false,
         "stat": "",
-        "def": ""
+        "def": "",
+        "hit": {
+          "dice": "",
+          "flat": "",
+          "damageType": "",
+          "effect": ""
+        },
+        "miss": ""
       },
-      "hit": {
-        "dice": "",
-        "flat": "",
-        "damageType": "",
-        "effect": ""
-      },
-      "miss": "",
       "attackSecondary": {
+        "exist": false,
         "stat": "",
-        "def": ""
+        "def": "",
+        "hit": {
+          "dice": "",
+          "flat": "",
+          "damageType": "",
+          "effect": ""
+        },
+        "miss": ""
       },
-      "hitSecondary": {
-        "dice": "",
-        "flat": "",
-        "effect": ""
+      "attackTertiary": {
+        "exist": false,
+        "stat": "",
+        "def": "",
+        "hit": {
+          "dice": "",
+          "flat": "",
+          "damageType": "",
+          "effect": ""
+        },
+        "miss": ""
       },
-      "missSecondary": "",
       "effect": "",
       "sustain": ""
     },

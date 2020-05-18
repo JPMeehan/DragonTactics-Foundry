@@ -210,42 +210,118 @@
             <h3>Powers</h3>
             <ol class="powers repeating-list">
                 {{#each data.powers as |power key|}}
-                <li class="powers item" data-item-id="power._id">
-                    <div class="powerheader">
-                        <span class="powername" name="data.powers.{{key}}.name">{{name}}</span>
-                        <div class="item-controls">
-                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div class="powerbody">
-                        <div class="power-row">
-                            <div class="rangetargets">
-                                <span class="range" name="data.powers.{{key}}.data.range">{{range}}</span> ♦ <span
-                                    class="targets" name="data.powers.{{key}}.data.target">{{target}}</span>
+                    <li class="powers item" data-item-id="{{key}}">
+                        <div class="powerheader">
+                            <span class="powername" name="data.powers.{{key}}.name">{{name}}</span>
+                            <div class="item-controls">
+                                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                             </div>
-                            <label class="ready">
-                                Ready
-                                <input type="checkbox" name="data.powers.{{key}}.data.ready" />
-                            </label>
                         </div>
-                        <div class="power-row">
-                            Attack:
-                            <span name="data.powers.{{key}}.data.hitbonus">{{hitbonus}}</span> vs. <span
-                                name="data.powers.{{key}}.data.defselect">{{defselect}}</span>
+                        <div class="powerbody">
+                            <div class="power-row usage">
+                                <span name="data.powers.{{key}}.recharge">{{recharge}}</span>
+                                <span name="data.powers.{{key}}.action">{{action}}</span>
+                                <label class="ready">
+                                    Ready
+                                    <input type="checkbox" name="data.powers.{{key}}.ready" />
+                                </label>
+                            </div>
+                            {{#if requirement}}
+                                <div class="power-row requirement">Requirement: 
+                                    <span name="data.powers.{{key}}.requirement">{{requirement}}</span>
+                                </div>
+                            {{/if}}
+                            {{#if trigger}}
+                                <div class="power-row trigger">Trigger: 
+                                    <span name="data.powers.{{key}}.trigger">{{trigger}}</span>
+                                </div>
+                            {{/if}}
+                            <div class="power-row rangetargets">
+                                <span class="range" name="data.powers.{{key}}.range">{{range}}</span>
+                                {{#if target}} ♦ 
+                                <span class="targets" name="data.powers.{{key}}.target">{{target}}</span>
+                                {{/if}}
+                            </div>
+                            {{#if attack.exist}}
+                                <div class="power-row attack">
+                                    Attack:
+                                    <span name="data.powers.{{key}}.attack.hitbonus">{{attack.hitbonus}}</span> vs. 
+                                    <span name="data.powers.{{key}}.attack.def">{{attack.def}}</span>
+                                </div>
+                                <div class="power-row hit-damage">
+                                    <span name="data.powers.{{key}}.attack.hit.dice">{{attack.hit.dice}}</span><span value="0"
+                                        name="data.powers.{{key}}.attack.hit.flat">{{attack.hit.flat}}</span>
+                                    <span name="data.powers.{{key}}.attack.hit.damageType">{{attack.hit.damageType}}</span> damage
+                                </div>
+                                {{#if attack.hit.effect}}
+                                <div class="power-row hit-effect">
+                                    <p name="data.powers.{{key}}.attack.hit.effect">{{attack.hit.effect}}</p>
+                                </div>
+                                {{/if}}
+                                {{#if attack.miss}}
+                                <div class="power-row hit-miss">
+                                    <p name="data.powers.{{key}}.attack.miss">{{attack.miss}}</p>
+                                </div>
+                                {{/if}}
+                            {{/if}}
+                            {{if attackSecondary.exist}}   
+                                <div class="power-row attackSecondary">
+                                    Attack:
+                                    <span name="data.powers.{{key}}.attackSecondary.hitbonus">{{attackSecondary.hitbonus}}</span> vs. 
+                                    <span name="data.powers.{{key}}.attackSecondary.def">{{attackSecondary.def}}</span>
+                                </div>
+                                <div class="power-row hit-damage">
+                                    <span name="data.powers.{{key}}.attackSecondary.hit.dice">{{attackSecondary.hit.dice}}</span><span value="0"
+                                        name="data.powers.{{key}}.attackSecondary.hit.flat">{{attackSecondary.hit.flat}}</span>
+                                    <span name="data.powers.{{key}}.attackSecondary.hit.damageType">{{attackSecondary.hit.damageType}}</span> damage
+                                </div>
+                                {{#if attackSecondary.hit.effect}}
+                                <div class="power-row hit-effect">
+                                    <p name="data.powers.{{key}}.attackSecondary.hit.effect">{{attackSecondary.hit.effect}}</p>
+                                </div>
+                                {{/if}}
+                                {{#if attackSecondary.miss}}
+                                <div class="power-row hit-miss">
+                                    <p name="data.powers.{{key}}.attackSecondary.miss">{{attackSecondary.miss}}</p>
+                                </div>
+                                {{/if}}
+                            {{/if}}
+                            {{#if attackTertiary.exist}}
+                                <div class="power-row attackTertiary">
+                                    Attack:
+                                    <span name="data.powers.{{key}}.attackTertiary.hitbonus">{{attackTertiary.hitbonus}}</span> vs. 
+                                    <span name="data.powers.{{key}}.attackTertiary.def">{{attackTertiary.def}}</span>
+                                </div>
+                                <div class="power-row hit-damage">
+                                    <span name="data.powers.{{key}}.attackTertiary.hit.dice">{{attackTertiary.hit.dice}}</span><span value="0"
+                                        name="data.powers.{{key}}.attackTertiary.hit.flat">{{attackTertiary.hit.flat}}</span>
+                                    <span name="data.powers.{{key}}.attackTertiary.hit.damageType">{{attackTertiary.hit.damageType}}</span> damage
+                                </div>
+                                {{#if attackTertiary.hit.effect}}
+                                <div class="power-row hit-effect">
+                                    <p name="data.powers.{{key}}.attackTertiary.hit.effect">{{attackTertiary.hit.effect}}</p>
+                                </div>
+                                {{/if}}
+                                {{#if attackTertiary.miss}}
+                                <div class="power-row hit-miss"> Miss:
+                                    <span name="data.powers.{{key}}.attackTertiary.miss">{{attackTertiary.miss}}</span>
+                                </div>
+                                {{/if}}
+                            {{/if}}
+                            {{#if effect}}
+                                <div class="power-row effect"> Effect:
+                                    <span class="powertext" name="data.powers.{{key}}.effect">{{effect}}</span>
+                                </div>
+                            {{/if}}
+                            {{#if sustain}}
+                                <div class="power-row sustain"> Sustain:
+                                    <span name="data.powers.{{key}}.sustain">{{sustain}}</span>
+                                </div>
+                            {{/if}}
                         </div>
-                        <div class="power-row">
-                            <span name="data.powers.{{key}}.data.damagedice">{{damagedice}}</span><span value="0"
-                                name="data.powers.{{key}}.data.flatdamage">{{flatdamage}}</span>
-                            <span name="data.powers.{{key}}.data.damagetype">{{damaagetype}}</span> damage
-                        </div>
-                        <div class="power-row">
-                            Power Text
-                            <span class="powertext" name="data.powers.{{key}}.data.power-text">{{power-text}}</span>
-                        </div>
-                    </div>
-
-                </li>
+                    
+                    </li>
                 {{/each}}
             </ol>
         </div>

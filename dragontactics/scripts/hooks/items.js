@@ -49,10 +49,10 @@ Hooks.on('createOwnedItem', (actor, item) => {
     // /*
     case "power":
       const newpower = {
-        "_id": item._id
+        "name": item.name
       }
       for(let [key, value] of Object.entries(item.data)) {newpower[key] = value;}
-      data.powers.push(newpower);
+      data.powers[item._id] = newpower;
       actor.update({"data.powers" : data.powers});
 
     /* */
@@ -96,16 +96,16 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       actor.update({"data.features.race" : features});
       break;
     case "feature":
-      var target = Object.keys(delta)[0];
+      var target = Object.keys(delta.data)[0];
       var features = data.features[item.data.type] || [];
       if(target === "type") {
         var oldtype;
         var oldfeatures;
         const featuretypes = ["feat", "competency", "flaw"]
 
-        // find the old list
+        // go through eleigible lists
         for(let type in featuretypes){
-          if(type === item.data.type) {
+          if(featuretypes[type] === item.data.type) {
             features.push({
               "_id": item._id,
               "label": item.name,
@@ -115,9 +115,9 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
           else {
             var index;
             try {
-              index = data.features[type].findIndex(matchID);
+              index = data.features[featuretypes[type]].findIndex(matchID);
               if(index != -1) {
-                oldtype = type;
+                oldtype = featuretypes[type];
                 oldfeatures = data.features[oldtype] || [];
                 oldfeatures.splice(index, 1)
               }
@@ -127,7 +127,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
             }
           }
         }
-        
+
         actor.update({
           [`data.features.${item.data.type}`] : features,
           [`data.features.${oldtype}`]: oldfeatures
@@ -151,3 +151,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
   }
   actor.update({"data" : data})
 });
+
+function _calculatePower(power) {
+  return power;
+};
