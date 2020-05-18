@@ -210,6 +210,8 @@
             <h3>Powers</h3>
             <ol class="powers repeating-list">
                 {{#each data.powers as |power key|}}
+                    {{key}}
+                    <!-- 
                     <li class="powers item" data-item-id="{{key}}">
                         <div class="powerheader">
                             <span class="powername" name="data.powers.{{key}}.name">{{name}}</span>
@@ -320,8 +322,8 @@
                                 </div>
                             {{/if}}
                         </div>
-                    
-                    </li>
+                    </li> 
+                    -->
                 {{/each}}
             </ol>
         </div>
