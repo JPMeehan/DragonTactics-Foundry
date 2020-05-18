@@ -210,9 +210,8 @@
             <h3>Powers</h3>
             <ol class="powers repeating-list">
                 {{#each data.powers as |power key|}}
-                    <h4>Why Hello There</h4>
-                    <!-- {{key}} -->
-                    <!-- 
+                    <!-- <h4>Why Hello There</h4> -->
+                    {{key}}
                     <li class="powers item" data-item-id="{{key}}">
                         <div class="powerheader">
                             <span class="powername" name="data.powers.{{key}}.name">{{name}}</span>
@@ -268,7 +267,7 @@
                                 </div>
                                 {{/if}}
                             {{/if}}
-                            {{if attackSecondary.exist}}   
+                            {{#if attackSecondary.exist}}   
                                 <div class="power-row attackSecondary">
                                     Attack:
                                     <span name="data.powers.{{key}}.attackSecondary.hitbonus">{{attackSecondary.hitbonus}}</span> vs. 
@@ -324,7 +323,6 @@
                             {{/if}}
                         </div>
                     </li> 
-                    -->
                 {{/each}}
             </ol>
         </div>
