@@ -69,9 +69,6 @@ Hooks.on('createOwnedItem', (actor, item) => {
 });
 
 Hooks.on('updateOwnedItem', (actor, item, delta) => {
-  function matchID(object) {
-    return object["_id"] === item._id;
-  }
   const data = actor.data.data;
   switch (item.type) {
     case "class":
