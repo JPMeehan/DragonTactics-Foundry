@@ -465,93 +465,96 @@
       }
     }
   
-    li.powers {
-      margin-bottom: 3px;
-  
-      /* Header */
-      div.powerheader {
-        border-radius: 5px 5px 0 0;
-        border: 1px solid black;
-  
-        span.powername {
-          width: calc(100% - 80px);
-          display: inline-block;
-          font-size: large;
-          margin: 5px
-        }
-
-        div.item-controls {
-          display: inline-block;
-          text-align: right;
-          width: 60px;
-        }
-      }
-  
-      &.atwill div.powerheader {
-        background-color: rgba(0, 128, 0, .5);
-      }
-  
-      &.encounter div.powerheader {
-        background-color: rgba(255, 0, 0, .8);
-      }
-  
-      &.daily div.powerheader {
-        background-color: rgba(0, 0, 0, .4);
-      }
-  
-      div.powerheader.show {
-        border-style: solid solid none;
-        ~ div.powerbody {
-          display: block;
-        }
-      }
-  
-      /* Body */
-      .powerbody {
-        display: none;
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px black;
-        border-style: none solid solid;
-        border-radius: 0 0 5px 5px;
-        overflow: hidden;
-  
-        .power-row {
-          padding: 3px 5px;
-          font-size: 15px;
-          overflow-wrap: break-word;
-  
-          &:nth-child(2n) {
-            background-color: rgba(211, 211, 211, 0.5);
+    div.powers {
+      overflow-y: auto;
+      li.powers {
+        margin-bottom: 3px;
+    
+        /* Header */
+        div.powerheader {
+          border-radius: 5px 5px 0 0;
+          border: 1px solid black;
+    
+          span.powername {
+            width: calc(100% - 80px);
+            display: inline-block;
+            font-size: large;
+            margin: 5px
           }
-  
-          button[type="roll"] {
+
+          div.item-controls {
+            display: inline-block;
+            text-align: right;
+            width: 60px;
+          }
+        }
+    
+        &.atwill div.powerheader {
+          background-color: rgba(0, 128, 0, .5);
+        }
+    
+        &.encounter div.powerheader {
+          background-color: rgba(255, 0, 0, .8);
+        }
+    
+        &.daily div.powerheader {
+          background-color: rgba(0, 0, 0, .4);
+        }
+    
+        div.powerheader.show {
+          border-style: solid solid none;
+          ~ div.powerbody {
+            display: block;
+          }
+        }
+    
+        /* Body */
+        .powerbody {
+          display: none;
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px black;
+          border-style: none solid solid;
+          border-radius: 0 0 5px 5px;
+          overflow: hidden;
+    
+          .power-row {
+            padding: 3px 5px;
+            font-size: 15px;
+            overflow-wrap: break-word;
+    
+            &:nth-child(2n) {
+              background-color: rgba(211, 211, 211, 0.5);
+            }
+    
+            button[type="roll"] {
+              margin: 0;
+              padding: 0;
+              font-size: inherit;
+            }
+          }
+    
+          span.trigger {
+            font-style: italic;
+          }
+    
+          label.ready {
+            float: right;
+            width: 62px;
             margin: 0;
             padding: 0;
             font-size: inherit;
+    
+            input {
+              vertical-align: middle;
+              display: inline-block;
+              margin: 0;
+            }
           }
-        }
-  
-        span.trigger {
-          font-style: italic;
-        }
-  
-        label.ready {
-          float: right;
-          width: 62px;
-          margin: 0;
-          padding: 0;
-          font-size: inherit;
-  
-          input {
-            vertical-align: middle;
-            display: inline-block;
-            margin: 0;
+    
+          span.powertext {
+            font-size: 12px;
+            font-style: italic;
           }
-        }
-  
-        span.powertext {
-          font-size: 12px;
-          font-style: italic;
         }
       }
     }

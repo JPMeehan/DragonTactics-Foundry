@@ -39,7 +39,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
       break;
     case "feature":
       var features = data.features[item.data.type] || {};
-      newfeature = {
+      const newfeature = {
         "label": item.name,
         "description": item.data.description
       };
@@ -112,7 +112,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
         const featuretypes = ["feat", "competency", "flaw"]
 
         // go through eleigible lists
-        for(let type in featuretypes){
+        for(let type = 0; type<3; type++){
           if(featuretypes[type] === item.data.type) {
             features[item._id] = {
               "label": item.name,
