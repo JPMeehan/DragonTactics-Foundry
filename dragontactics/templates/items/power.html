@@ -70,146 +70,152 @@
                 title="Range, e.g. Melee Weapon or Ranged 30' sphere within 50'" />
             <input type="text" name="data.target" value="{{data.target}}" data-dtype="String" placeholder="Target"
                 title="Target, e.g. One Creature or All Allies within Area" />
-            <h2 class="attack">Primary Attack</h2>
-            <input class="enable" type="checkbox" name="data.attack.exist" /> 
-            <div class="attack">
-                <select name="data.attack.stat">
-                    {{#select data.attack.stat}}
-                    <option selected value="Strength">Strength</option>
-                    <option value="Constitution">Constitution</option>
-                    <option value="Dexterity">Dexterity</option>
-                    <option value="Intelligence">Intelligence</option>
-                    <option value="Wisdom">Wisdom</option>
-                    <option value="Charisma">Charisma</option>
-                    {{/select}}
-                </select>
-                <span class="attackvs">vs.</span>
-                <select name="data.attack.def">
-                    {{#select data.attack.def}}
-                    <option selected value="AC">AC</option>
-                    <option value="Fortitude">Fortitude</option>
-                    <option value="Reflex">Reflex</option>
-                    <option value="Will">Will</option>
-                    {{/select}}
-                </select>
-                <h3>Hit</h3>
-                <input type="text" class="dice" name="data.attack.hit.dice" value="{{data.attack.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
-                    placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
-                <span class="plus">+</span>
-                <select name="data.attack.hit.abi">
-                    {{#select data.attack.hit.abi}}
-                    <option selected value="None">None</option>
-                    <option value="Strength">Strength</option>
-                    <option value="Constitution">Constitution</option>
-                    <option value="Dexterity">Dexterity</option>
-                    <option value="Intelligence">Intelligence</option>
-                    <option value="Wisdom">Wisdom</option>
-                    <option value="Charisma">Charisma</option>
-                    {{/select}}
-                </select>
-                <input type="text" class="damagetype" name="data.attack.hit.damageType" value="{{data.attack.hit.damageType}}" data-dtype="String"
-                    placeholder="Damage Type" title="e.g. Fire or Weapon" />
-                <span>damage</span>
-                <input type="text" name="data.attack.hit.effect" value="{{data.attack.hit.effect}}" data-dtype="String"
-                    placeholder="Hit Effect"
-                    title="Hit effect, e.g. The target is slowed until the end of the next round" />
-                <h3>Miss</h3>
-                <input type="text" name="data.attack.miss" value="{{data.attack.miss}}" data-dtype="String" placeholder="Miss"
-                    title="Miss, e.g. Half Damage" />
+            <div>
+                <h2 class="attack">Primary Attack</h2>
+                <input class="enable" type="checkbox" {{checked data.attack.exist}} name="data.attack.exist" /> 
+                <div class="attack">
+                    <select name="data.attack.stat">
+                        {{#select data.attack.stat}}
+                        <option selected value="Strength">Strength</option>
+                        <option value="Constitution">Constitution</option>
+                        <option value="Dexterity">Dexterity</option>
+                        <option value="Intelligence">Intelligence</option>
+                        <option value="Wisdom">Wisdom</option>
+                        <option value="Charisma">Charisma</option>
+                        {{/select}}
+                    </select>
+                    <span class="attackvs">vs.</span>
+                    <select name="data.attack.def">
+                        {{#select data.attack.def}}
+                        <option selected value="AC">AC</option>
+                        <option value="Fortitude">Fortitude</option>
+                        <option value="Reflex">Reflex</option>
+                        <option value="Will">Will</option>
+                        {{/select}}
+                    </select>
+                    <h3>Hit</h3>
+                    <input type="text" class="dice" name="data.attack.hit.dice" value="{{data.attack.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
+                        placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
+                    <span class="plus">+</span>
+                    <select name="data.attack.hit.abi">
+                        {{#select data.attack.hit.abi}}
+                        <option selected value="None">None</option>
+                        <option value="Strength">Strength</option>
+                        <option value="Constitution">Constitution</option>
+                        <option value="Dexterity">Dexterity</option>
+                        <option value="Intelligence">Intelligence</option>
+                        <option value="Wisdom">Wisdom</option>
+                        <option value="Charisma">Charisma</option>
+                        {{/select}}
+                    </select>
+                    <input type="text" class="damagetype" name="data.attack.hit.damageType" value="{{data.attack.hit.damageType}}" data-dtype="String"
+                        placeholder="Damage Type" title="e.g. Fire or Weapon" />
+                    <span>damage</span>
+                    <input type="text" name="data.attack.hit.effect" value="{{data.attack.hit.effect}}" data-dtype="String"
+                        placeholder="Hit Effect"
+                        title="Hit effect, e.g. The target is slowed until the end of the next round" />
+                    <h3>Miss</h3>
+                    <input type="text" name="data.attack.miss" value="{{data.attack.miss}}" data-dtype="String" placeholder="Miss"
+                        title="Miss, e.g. Half Damage" />
+                </div>
             </div>
-            <h2 class="attack">Secondary Attack</h2>
-            <input class="enable" type="checkbox" name="data.attackSecondary.exist" /> 
-            <div class="attack">
-                <select name="data.attackSecondary.stat">
-                    {{#select data.attackSecondary.stat}}
-                    <option selected value="Strength">Strength</option>
-                    <option value="Constitution">Constitution</option>
-                    <option value="Dexterity">Dexterity</option>
-                    <option value="Intelligence">Intelligence</option>
-                    <option value="Wisdom">Wisdom</option>
-                    <option value="Charisma">Charisma</option>
-                    {{/select}}
-                </select>
-                <span class="attackvs">vs.</span>
-                <select name="data.attackSecondary.def">
-                    {{#select data.attackSecondary.def}}
-                    <option selected value="AC">AC</option>
-                    <option value="Fortitude">Fortitude</option>
-                    <option value="Reflex">Reflex</option>
-                    <option value="Will">Will</option>
-                    {{/select}}
-                </select>
-                <h3>Hit</h3>
-                <input type="text" class="dice" name="data.attackSecondary.hit.dice" value="{{data.attackSecondary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
-                    placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
-                <span class="plus">+</span>
-                <select name="data.attackSecondary.hit.abi">
-                    {{#select data.attackSecondary.hit.abi}}
-                    <option selected value="None">None</option>
-                    <option value="Strength">Strength</option>
-                    <option value="Constitution">Constitution</option>
-                    <option value="Dexterity">Dexterity</option>
-                    <option value="Intelligence">Intelligence</option>
-                    <option value="Wisdom">Wisdom</option>
-                    <option value="Charisma">Charisma</option>
-                    {{/select}}
-                </select>
-                <input type="text" class="damagetype" name="data.attackSecondary.hit.damageType" value="{{data.attackSecondary.hit.damageType}}" data-dtype="String"
-                    placeholder="Damage Type" title="e.g. Fire or Weapon" />
-                <span>damage</span>
-                <input type="text" name="data.attackSecondary.hit.effect" value="{{data.attackSecondary.hit.effect}}" data-dtype="String"
-                    placeholder="Hit Effect"
-                    title="Hit effect, e.g. The target is slowed until the end of the next round" />
-                <h3>Miss</h3>
-                <input type="text" name="data.attackSecondary.miss" value="{{data.attackSecondary.miss}}" data-dtype="String" placeholder="Miss"
-                    title="Miss, e.g. Half Damage" />
+            <div>
+                <h2 class="attack">Secondary Attack</h2>
+                <input class="enable" type="checkbox" {{checked data.attackSecondary.exist}} name="data.attackSecondary.exist" /> 
+                <div class="attack">
+                    <select name="data.attackSecondary.stat">
+                        {{#select data.attackSecondary.stat}}
+                        <option selected value="Strength">Strength</option>
+                        <option value="Constitution">Constitution</option>
+                        <option value="Dexterity">Dexterity</option>
+                        <option value="Intelligence">Intelligence</option>
+                        <option value="Wisdom">Wisdom</option>
+                        <option value="Charisma">Charisma</option>
+                        {{/select}}
+                    </select>
+                    <span class="attackvs">vs.</span>
+                    <select name="data.attackSecondary.def">
+                        {{#select data.attackSecondary.def}}
+                        <option selected value="AC">AC</option>
+                        <option value="Fortitude">Fortitude</option>
+                        <option value="Reflex">Reflex</option>
+                        <option value="Will">Will</option>
+                        {{/select}}
+                    </select>
+                    <h3>Hit</h3>
+                    <input type="text" class="dice" name="data.attackSecondary.hit.dice" value="{{data.attackSecondary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
+                        placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
+                    <span class="plus">+</span>
+                    <select name="data.attackSecondary.hit.abi">
+                        {{#select data.attackSecondary.hit.abi}}
+                        <option selected value="None">None</option>
+                        <option value="Strength">Strength</option>
+                        <option value="Constitution">Constitution</option>
+                        <option value="Dexterity">Dexterity</option>
+                        <option value="Intelligence">Intelligence</option>
+                        <option value="Wisdom">Wisdom</option>
+                        <option value="Charisma">Charisma</option>
+                        {{/select}}
+                    </select>
+                    <input type="text" class="damagetype" name="data.attackSecondary.hit.damageType" value="{{data.attackSecondary.hit.damageType}}" data-dtype="String"
+                        placeholder="Damage Type" title="e.g. Fire or Weapon" />
+                    <span>damage</span>
+                    <input type="text" name="data.attackSecondary.hit.effect" value="{{data.attackSecondary.hit.effect}}" data-dtype="String"
+                        placeholder="Hit Effect"
+                        title="Hit effect, e.g. The target is slowed until the end of the next round" />
+                    <h3>Miss</h3>
+                    <input type="text" name="data.attackSecondary.miss" value="{{data.attackSecondary.miss}}" data-dtype="String" placeholder="Miss"
+                        title="Miss, e.g. Half Damage" />
+                </div>
             </div>
-            <h2 class="attack">Tertiary Attack</h2>
-            <input class="enable" type="checkbox" name="data.attackTertiary.exist" /> 
-            <div class="attack">
-                <select name="data.attackTertiary.stat">
-                    {{#select data.attackTertiary.stat}}
-                    <option selected value="Strength">Strength</option>
-                    <option value="Constitution">Constitution</option>
-                    <option value="Dexterity">Dexterity</option>
-                    <option value="Intelligence">Intelligence</option>
-                    <option value="Wisdom">Wisdom</option>
-                    <option value="Charisma">Charisma</option>
-                    {{/select}}
-                </select>
-                <span class="attackvs">vs.</span>
-                <select name="data.attackTertiary.def">
-                    {{#select data.attackTertiary.def}}
-                    <option selected value="AC">AC</option>
-                    <option value="Fortitude">Fortitude</option>
-                    <option value="Reflex">Reflex</option>
-                    <option value="Will">Will</option>
-                    {{/select}}
-                </select>
-                <h3>Hit</h3>
-                <input type="text" class="dice" name="data.attackTertiary.hit.dice" value="{{data.attackTertiary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
-                    placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
-                <span class="plus">+</span>
-                <select name="data.attackTertiary.hit.abi">
-                    {{#select data.attackTertiary.hit.abi}}
-                    <option selected value="None">None</option>
-                    <option value="Strength">Strength</option>
-                    <option value="Constitution">Constitution</option>
-                    <option value="Dexterity">Dexterity</option>
-                    <option value="Intelligence">Intelligence</option>
-                    <option value="Wisdom">Wisdom</option>
-                    <option value="Charisma">Charisma</option>
-                    {{/select}}
-                </select>
-                <input type="text" class="damagetype" name="data.attackTertiary.hit.damageType" value="{{data.attackTertiary.hit.damageType}}" data-dtype="String"
-                    placeholder="Damage Type" title="e.g. Fire or Weapon" />
-                <span>damage</span>
-                <input type="text" name="data.attackTertiary.hit.effect" value="{{data.attackTertiary.hit.effect}}" data-dtype="String"
-                    placeholder="Hit Effect"
-                    title="Hit effect, e.g. The target is slowed until the end of the next round" />
-                <h3>Miss</h3>
-                <input type="text" name="data.attackTertiary.miss" value="{{data.attackTertiary.miss}}" data-dtype="String" placeholder="Miss"
-                    title="Miss, e.g. Half Damage" />
+            <div>
+                <h2 class="attack">Tertiary Attack</h2>
+                <input class="enable" type="checkbox" {{checked data.attackTertiary.exist}} name="data.attackTertiary.exist" /> 
+                <div class="attack">
+                    <select name="data.attackTertiary.stat">
+                        {{#select data.attackTertiary.stat}}
+                        <option selected value="Strength">Strength</option>
+                        <option value="Constitution">Constitution</option>
+                        <option value="Dexterity">Dexterity</option>
+                        <option value="Intelligence">Intelligence</option>
+                        <option value="Wisdom">Wisdom</option>
+                        <option value="Charisma">Charisma</option>
+                        {{/select}}
+                    </select>
+                    <span class="attackvs">vs.</span>
+                    <select name="data.attackTertiary.def">
+                        {{#select data.attackTertiary.def}}
+                        <option selected value="AC">AC</option>
+                        <option value="Fortitude">Fortitude</option>
+                        <option value="Reflex">Reflex</option>
+                        <option value="Will">Will</option>
+                        {{/select}}
+                    </select>
+                    <h3>Hit</h3>
+                    <input type="text" class="dice" name="data.attackTertiary.hit.dice" value="{{data.attackTertiary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
+                        placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
+                    <span class="plus">+</span>
+                    <select name="data.attackTertiary.hit.abi">
+                        {{#select data.attackTertiary.hit.abi}}
+                        <option selected value="None">None</option>
+                        <option value="Strength">Strength</option>
+                        <option value="Constitution">Constitution</option>
+                        <option value="Dexterity">Dexterity</option>
+                        <option value="Intelligence">Intelligence</option>
+                        <option value="Wisdom">Wisdom</option>
+                        <option value="Charisma">Charisma</option>
+                        {{/select}}
+                    </select>
+                    <input type="text" class="damagetype" name="data.attackTertiary.hit.damageType" value="{{data.attackTertiary.hit.damageType}}" data-dtype="String"
+                        placeholder="Damage Type" title="e.g. Fire or Weapon" />
+                    <span>damage</span>
+                    <input type="text" name="data.attackTertiary.hit.effect" value="{{data.attackTertiary.hit.effect}}" data-dtype="String"
+                        placeholder="Hit Effect"
+                        title="Hit effect, e.g. The target is slowed until the end of the next round" />
+                    <h3>Miss</h3>
+                    <input type="text" name="data.attackTertiary.miss" value="{{data.attackTertiary.miss}}" data-dtype="String" placeholder="Miss"
+                        title="Miss, e.g. Half Damage" />
+                </div>
             </div>
             <h2>Effect</h2>
             <textarea name="data.effect" data-dtype="String" placeholder="Effect" rows="5"
