@@ -24,12 +24,19 @@ export class DragonTacticsActorSheet extends ActorSheet {
       html.find('.healthvalue').removeClass('bloody');
     }
 
+    // Showing and hiding powers
+    html.find('.powers .item-details-toggle').click(this._showPowerDetails.bind(this));
+    // html.find('.powerheader').click(ev => {
+    //   $(ev.currentTarget).toggleClass('show');
+    // })
+
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
     html.find('.defense-edit').click(ev => {
       html.find('.defense-config').toggleClass('show')
     });
+
 
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
@@ -71,5 +78,21 @@ export class DragonTacticsActorSheet extends ActorSheet {
     const powers = this.actor.data.data.powers;
     delete powers[itemId];
     this.actor.update({"data.powers" : powers});
+  }
+
+  _showPowerDetails(event) {
+    event.preventDefault();
+    const toggler = $(event.currentTarget);
+    const toggleIcon = toggler.find('i');
+    const power = toggler.parents('.item');
+    const body = power.find('.powerbody');
+
+    if (toggleIcon.hasClass('fa-caret-right')) {
+      toggleIcon.removeClass('fa-caret-right').addClass('fa-caret-down');
+      body.slideDown();
+    } else {
+      toggleIcon.removeClass('fa-caret-down').addClass('fa-caret-right');
+      body.slideUp();
+    }
   }
 }

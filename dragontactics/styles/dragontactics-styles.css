@@ -395,10 +395,13 @@
   border: 1px solid black;
 }
 .dragontactics div.combat li.powers div.powerheader span.powername {
-  width: calc(100% - 50px);
+  width: calc(100% - 80px);
   display: inline-block;
   font-size: large;
   margin: 5px;
+}
+.dragontactics div.combat li.powers div.powerheader div.item-controls {
+  display: inline-block;
 }
 .dragontactics div.combat li.powers.atwill div.powerheader {
   background-color: rgba(0, 128, 0, 0.5);
@@ -409,8 +412,11 @@
 .dragontactics div.combat li.powers.daily div.powerheader {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.dragontactics div.combat li.powers.show div.powerheader {
+.dragontactics div.combat li.powers div.powerheader.show {
   border-style: solid solid none;
+}
+.dragontactics div.combat li.powers div.powerheader.show ~ div.powerbody {
+  display: block;
 }
 .dragontactics div.combat li.powers .powerbody {
   display: none;
@@ -420,15 +426,15 @@
   border-radius: 0 0 5px 5px;
   overflow: hidden;
 }
-.dragontactics div.combat li.powers .powerbody .powershow-row {
+.dragontactics div.combat li.powers .powerbody .power-row {
   padding: 3px 5px;
   font-size: 15px;
   overflow-wrap: break-word;
 }
-.dragontactics div.combat li.powers .powerbody .powershow-row:nth-child(2n) {
+.dragontactics div.combat li.powers .powerbody .power-row:nth-child(2n) {
   background-color: rgba(211, 211, 211, 0.5);
 }
-.dragontactics div.combat li.powers .powerbody .powershow-row button[type="roll"] {
+.dragontactics div.combat li.powers .powerbody .power-row button[type="roll"] {
   margin: 0;
   padding: 0;
   font-size: inherit;
@@ -557,6 +563,9 @@
 }
 .dragontactics section.power div.attack {
   display: none;
+}
+.dragontactics section.power div.attack h3 {
+  margin: 3px;
 }
 .dragontactics section.power input.enable ~ div.attack {
   display: block;

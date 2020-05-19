@@ -474,10 +474,14 @@
         border: 1px solid black;
   
         span.powername {
-          width: calc(100% - 50px);
+          width: calc(100% - 80px);
           display: inline-block;
           font-size: large;
           margin: 5px
+        }
+
+        div.item-controls {
+          display: inline-block;
         }
       }
   
@@ -493,8 +497,11 @@
         background-color: rgba(0, 0, 0, .4);
       }
   
-      &.show div.powerheader {
+      div.powerheader.show {
         border-style: solid solid none;
+        ~ div.powerbody {
+          display: block;
+        }
       }
   
       /* Body */
@@ -506,7 +513,7 @@
         border-radius: 0 0 5px 5px;
         overflow: hidden;
   
-        .powershow-row {
+        .power-row {
           padding: 3px 5px;
           font-size: 15px;
           overflow-wrap: break-word;
@@ -730,6 +737,9 @@
     }
     div.attack {
       display: none;
+      h3 {
+        margin: 3px;
+      }
     }
     input.enable ~ div.attack {
       display: block;
