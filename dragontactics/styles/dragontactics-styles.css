@@ -450,6 +450,9 @@
 .dragontactics div.combat div.powers li.powers .powerbody span.trigger {
   font-style: italic;
 }
+.dragontactics div.combat div.powers li.powers .powerbody span.diamond {
+  font-size: small;
+}
 .dragontactics div.combat div.powers li.powers .powerbody label.ready {
   float: right;
   width: 62px;
@@ -463,7 +466,6 @@
   margin: 0;
 }
 .dragontactics div.combat div.powers li.powers .powerbody span.powertext {
-  font-size: 12px;
   font-style: italic;
 }
 .dragontactics div.features {

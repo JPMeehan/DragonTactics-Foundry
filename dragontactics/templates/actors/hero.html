@@ -242,8 +242,9 @@
                                 {{/if}}
                                 <div class="power-row rangetargets">
                                     <span class="range" name="data.powers.{{key}}.range">{{range}}</span>
-                                    {{#if target}} ♦ 
-                                    <span class="targets" name="data.powers.{{key}}.target">{{target}}</span>
+                                    {{#if target}} 
+                                        <span class="diamond"> ♦ </span>
+                                        <span class="targets" name="data.powers.{{key}}.target">{{target}}</span>
                                     {{/if}}
                                 </div>
                                 {{#if attack.exist}}
