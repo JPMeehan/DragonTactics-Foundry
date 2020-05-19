@@ -296,9 +296,9 @@
       "features": {
         "race": [],
         "class": [],
-        "feat": [],
-        "flaw": [],
-        "competency": []
+        "feat": {},
+        "flaw": {},
+        "competency": {}
       },
       "equipment": {
         "worn": {

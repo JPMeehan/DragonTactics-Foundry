@@ -38,12 +38,12 @@ Hooks.on('createOwnedItem', (actor, item) => {
       actor.update({"data.features.race" : features});
       break;
     case "feature":
-      var features = data.features[item.data.type] || [];
-      features.push({
-        "_id": item._id,
+      var features = data.features[item.data.type] || {};
+      newfeature = {
         "label": item.name,
         "description": item.data.description
-      })
+      };
+      features[item._id] = newfeature;
       actor.update({[`data.features.${item.data.type}`] : features});
       break;
     case "power":
@@ -105,7 +105,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       break;
     case "feature":
       var target = Object.keys(delta.data)[0];
-      var features = data.features[item.data.type] || [];
+      var features = data.features[item.data.type] || {};
       if(target === "type") {
         var oldtype;
         var oldfeatures;
@@ -114,24 +114,16 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
         // go through eleigible lists
         for(let type in featuretypes){
           if(featuretypes[type] === item.data.type) {
-            features.push({
-              "_id": item._id,
+            features[item._id] = {
               "label": item.name,
               "description": item.data.description
-            })
+            }
           }
           else {
-            var index;
-            try {
-              index = data.features[featuretypes[type]].findIndex(matchID);
-              if(index != -1) {
-                oldtype = featuretypes[type];
-                oldfeatures = data.features[oldtype] || [];
-                oldfeatures.splice(index, 1)
-              }
-            }
-            catch (e) {
-              console.log("Type is empty")
+            if (data.features[featuretypes[type]][item._id]) {
+              oldtype = featuretypes[type];
+              oldfeatures = data.features[oldtype] || {};
+              delete oldfeatures[item._id];
             }
           }
         }
@@ -142,8 +134,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       });
       }
       else {
-        features[features.findIndex(matchID)] = {
-          "_id": item._id,
+        features[item._id] = {
           "label": item.name,
           "description": item.data.description
         }
