@@ -295,7 +295,10 @@
 .dragontactics div.abilities div.skill p.misc {
   float: right;
 }
-.dragontactics div.combat h3.defense {
+.dragontactics div.combat {
+  overflow-y: auto;
+}
+.dragontactics div.combat h2.defense {
   width: calc(100% - 26px);
   display: inline-block;
 }
