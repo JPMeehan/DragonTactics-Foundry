@@ -63,7 +63,7 @@
                 <h2>Abilities</h2>
                 <ol class="block-list">
                     {{#each data.abilities as |attr key|}}
-                    <li data-attribute="{{key}}">
+                    <li>
                         <h4 class="label" name="data.abilities.{{key}}.label">{{label}}</h4>
                         <input class="score" type="text" pattern="\d+" name="data.abilities.{{key}}.score"
                             value="{{attr.score}}" data-dtype="Number" title="Ability Score" />
@@ -85,7 +85,7 @@
                 </div>
                 <ol class="repeating-list">
                     {{#each data.skill as |skill key|}}
-                    <li data-attribute="{{key}}" class="{{skill.ability}}">
+                    <li class="{{skill.ability}}">
                         <p class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</p>
                         <p class="label clickable" name="data.skill.{{key}}.label">{{label}}</p>
                         <p class="ability">{{ability_short}}</p>
@@ -339,7 +339,7 @@
                 <h2>Race Features</h2>
                 <ol class="features-list">
                     {{#each data.features.race as |feat key|}}
-                    <li data-attribute="{{key}}">
+                    <li>
                         <h3 class="name" name="data.features.race.{{key}}.label">{{label}}</h3>
                         <div class="description" name="data.features.race.{{key}}.description">{{description}}</div>
                     </li>
@@ -350,7 +350,7 @@
                 <h2>Class Features</h2>
                 <ol class="features-list">
                     {{#each data.features.class as |feat key|}}
-                    <li data-attribute="{{key}}">
+                    <li>
                         <h3 class="name" name="data.features.class.{{key}}.label">{{label}}</h3>
                         <p class="description" name="data.features.class.{{key}}.description">{{description}}</p>
                     </li>
@@ -361,7 +361,7 @@
                 <h2>Competencies</h2>
                 <ol class="features-list">
                     {{#each data.features.competency as |feat key|}}
-                    <li class="item" data-attribute="{{key}}" data-item-id="{{feat._id}}" data-feature-type="competency">
+                    <li class="item" data-item-id="{{key}}" data-feature-type="competency">
                         <h3 class="name" name="data.features.competency.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item" data-action="edit"><i class="fas fa-edit"></i></a>
@@ -376,7 +376,7 @@
                 <h2>Feats</h2>
                 <ol class="features-list">
                     {{#each data.features.feat as |feat key|}}
-                    <li class="item" data-attribute="{{key}}" data-item-id="{{feat._id}}" data-feature-type="feat">
+                    <li class="item" data-item-id="{{key}}" data-feature-type="feat">
                         <h3 class="name" name="data.features.feat.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item" data-action="edit"><i class="fas fa-edit"></i></a>
@@ -391,7 +391,7 @@
                 <h2>Flaws</h2>
                 <ol class="features-list">
                     {{#each data.features.flaw as |feat key|}}
-                    <li class="item" data-attribute="{{key}}" data-item-id="{{feat._id}}" data-feature-type="flaw">
+                    <li class="item" data-item-id="{{key}}" data-feature-type="flaw">
                         <h3 class="name" name="data.features.flaw.{{key}}.label">{{label}}</h3>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item" data-action="edit"><i class="fas fa-edit"></i></a>
@@ -429,7 +429,7 @@
                 <h3>Carried</h3>
                 <ol class="features-list">
                     {{#each data.equipment.carried as |carried key|}}
-                    <li data-attribute="{{key}}">
+                    <li>
                         <h4 class="name" name="data.equipment.carried.{{key}}.label">{{label}}</h4>
                         <div class="description" name="data.equipment.carried.{{key}}.description">{{description}}</div>
                     </li>
@@ -440,7 +440,7 @@
                 <h3>Kept at Home</h3>
                 <ol class="features-list">
                     {{#each data.equipment.home as |home key|}}
-                    <li data-attribute="{{key}}">
+                    <li>
                         <h4 class="name" name="data.equipment.home.{{key}}.label">{{label}}</h4>
                         <div class="description" name="data.equipment.home.{{key}}.description">{{description}}</div>
                     </li>
