@@ -17,8 +17,8 @@ export class DragonTacticsActorSheet extends ActorSheet {
     // });
 
     // Tabs v2
-    const tabs = new TabsV2({navSelector: ".tabs", contentSelector: ".sheet-body", initial: "description"});
-    tabs.bind(html);
+    // const tabs = new TabsV2({navSelector: ".tabs", contentSelector: ".sheet-body", initial: "description"});
+    // tabs.bind(html);
 
     // Bloody
     if (this.actor.data.data.health.value <= (this.actor.data.data.health.max + this.actor.data.data.health.tempmax) / 2) {
