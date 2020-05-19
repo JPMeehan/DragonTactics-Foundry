@@ -482,6 +482,8 @@
 
         div.item-controls {
           display: inline-block;
+          text-align: right;
+          width: 60px;
         }
       }
   
@@ -741,7 +743,7 @@
         margin: 3px;
       }
     }
-    input.enable ~ div.attack {
+    input.enable:checked ~ div.attack {
       display: block;
     }
     input.dice {

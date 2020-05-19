@@ -402,6 +402,8 @@
 }
 .dragontactics div.combat li.powers div.powerheader div.item-controls {
   display: inline-block;
+  text-align: right;
+  width: 60px;
 }
 .dragontactics div.combat li.powers.atwill div.powerheader {
   background-color: rgba(0, 128, 0, 0.5);
@@ -567,7 +569,7 @@
 .dragontactics section.power div.attack h3 {
   margin: 3px;
 }
-.dragontactics section.power input.enable ~ div.attack {
+.dragontactics section.power input.enable:checked ~ div.attack {
   display: block;
 }
 .dragontactics section.power input.dice {
