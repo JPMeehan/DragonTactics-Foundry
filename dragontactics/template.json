@@ -301,6 +301,17 @@
         "competency": {}
       },
       "equipment": {
+        "equipped": {
+          "head": "",
+          "neck": "",
+          "arms": "",
+          "hands": "",
+          "waist": "",
+          "feet": "",
+          "armor": "",
+          "weapons": "",
+          "implements": ""
+        },
         "worn": {
           "head": {},
           "neck": {},

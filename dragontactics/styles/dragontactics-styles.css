@@ -503,7 +503,7 @@
   display: block;
 }
 .dragontactics div.equipment div.currency input {
-  width: 100px;
+  width: 50px;
 }
 .dragontactics div.equipment div.worn h3 {
   font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
@@ -513,6 +513,15 @@
   list-style-type: none;
   margin: 7px 0;
   padding: 0;
+}
+.dragontactics div.equipment div.worn h4 {
+  width: calc(100% - 70px);
+  display: inline-block;
+}
+.dragontactics div.equipment div.worn div.item-controls {
+  display: inline-block;
+  text-align: right;
+  width: 60px;
 }
 .dragontactics div.equipment ol.rituals {
   list-style-type: none;

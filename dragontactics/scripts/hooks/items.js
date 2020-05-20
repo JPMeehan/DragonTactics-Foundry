@@ -94,6 +94,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
       break;
     case "ritual":
       const newritual = {
+        "label": item.name,
         "category": item.data.category,
         "componentCost": item.data.componentCost,
         "castingTime": item.data.castingTime,
