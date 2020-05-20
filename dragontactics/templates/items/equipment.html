@@ -4,7 +4,7 @@
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
         </div>
-        <select name="data.type">
+        <select name="data.type" data-dtype="String">
             {{#select data.type}}
             <option value="supplies">Supplies</option>
             <option value="armor">Armor</option>
@@ -41,7 +41,7 @@
             <div class="tab input" data-group="primary" data-tab="input">
                 <h1>Basics</h1>
                 <label class="equipment quantity">Quantity:
-                    <input type="number" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" 
+                    <input type="text" pattern="\d+" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" 
                         title="Quantity"/>
                 </label>
                 <label class="equipment price">Price: 
@@ -49,19 +49,15 @@
                         placeholder="Price" title="Price, e.g. 5 gp" />
                 </label>
                 <label class="equipment size">Size (Slots): 
-                    <input type="number" name="data.size" value="{{data.size}}" data-dtype="Number" title="Size, in slots e.g. 2" />
-                </label>
-                <label class="equipment type">Type: 
-                    <input type="text" name="data.type" value="{{data.type}}" data-dtype="String" 
-                        placeholder="Type" title="Type, e.g. Tool" />
+                    <input type="text" pattern="\d+" name="data.size" value="{{data.size}}" data-dtype="Number" title="Size, in slots e.g. 2" />
                 </label>
                 {{#if data.is.armor}}
                     <h2>Armor</h2>
                     <label class="equipment acbon">Armor Bonus:
-                        <input type="number" name="data.ac" value="{{data.ac}}" data-dtype="Number" title="Armor Bonus, which is added to your AC" />
+                        <input type="text" pattern="\d+" name="data.ac" value="{{data.ac}}" data-dtype="Number" title="Armor Bonus, which is added to your AC" />
                     </label>
                     <label class="equipment acpen">Armor Check Penalty:
-                        <input type="number" name="data.penalty" value="{{data.penalty}}" data-dtype="Number" 
+                        <input type="text" pattern="\d+" name="data.penalty" value="{{data.penalty}}" data-dtype="Number" 
                             title="Armor Check Penalty, which is subtracted from Strength, Dexterity, and Constitution-based checks" />
                     </label>
                     <label class="equipment speedpen">Speed Penalty:
@@ -72,7 +68,7 @@
                 {{#if data.is.weapon}}
                     <h2>Weapon</h2>
                     <label class="equipment prof">Proficiency:
-                        <input type="number" name="data.proficiency" value="{{data.proficiency}}" data-dtype="Number" 
+                        <input type="text" pattern="\d+" name="data.proficiency" value="{{data.proficiency}}" data-dtype="Number" 
                             title="Proficiency Bonus, which is added to your weapon attack rolls" />
                     </label>
                     <label class="equipment damage">Damage:
