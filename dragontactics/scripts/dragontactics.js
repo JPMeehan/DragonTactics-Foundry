@@ -21,17 +21,14 @@ import {
   DragonTacticsItem
 } from "./items/entity.js";
 import {
-  DragonTacticsItemSheet_armor
-} from "./items/sheets/armor.js";
-import {
   DragonTacticsItemSheet_class
 } from "./items/sheets/class.js";
 import {
+  DragonTacticsItemSheet_equipment
+} from "./items/sheets/equipment.js";
+import {
   DragonTacticsItemSheet_feature
 } from "./items/sheets/feature.js";
-import {
-  DragonTacticsItemSheet_implement
-} from "./items/sheets/implement.js";
 import {
   DragonTacticsItemSheet_power
 } from "./items/sheets/power.js";
@@ -41,12 +38,6 @@ import {
 import {
   DragonTacticsItemSheet_ritual
 } from "./items/sheets/ritual.js";
-import {
-  DragonTacticsItemSheet_supplies
-} from "./items/sheets/supplies.js";
-import {
-  DragonTacticsItemSheet_weapon
-} from "./items/sheets/weapon.js";
 
 
 
@@ -74,20 +65,16 @@ Hooks.once("init", function () {
     makeDefault: true
   });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("dragontactics", DragonTacticsItemSheet_armor, {
-    types: ["armor"],
-    makeDefault: true
-  })
   Items.registerSheet("dragontactics", DragonTacticsItemSheet_class, {
     types: ["class"],
     makeDefault: true
   })
-  Items.registerSheet("dragontactics", DragonTacticsItemSheet_feature, {
-    types: ["feature"],
+  Items.registerSheet("dragontactics", DragonTacticsItemSheet_equipment, {
+    types: ["equipment"],
     makeDefault: true
   })
-  Items.registerSheet("dragontactics", DragonTacticsItemSheet_implement, {
-    types: ["implement"],
+  Items.registerSheet("dragontactics", DragonTacticsItemSheet_feature, {
+    types: ["feature"],
     makeDefault: true
   })
   Items.registerSheet("dragontactics", DragonTacticsItemSheet_power, {
@@ -100,14 +87,6 @@ Hooks.once("init", function () {
   })
   Items.registerSheet("dragontactics", DragonTacticsItemSheet_ritual, {
     types: ["ritual"],
-    makeDefault: true
-  })
-  Items.registerSheet("dragontactics", DragonTacticsItemSheet_supplies, {
-    types: ["supplies"],
-    makeDefault: true
-  })
-  Items.registerSheet("dragontactics", DragonTacticsItemSheet_weapon, {
-    types: ["weapon"],
     makeDefault: true
   })
 

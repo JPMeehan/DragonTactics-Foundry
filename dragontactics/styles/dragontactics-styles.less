@@ -279,7 +279,7 @@
       display: inline-block;
 
       li {
-        width: 50px;
+        width: 79px;
 
         input.score,
         input.modifier {
@@ -287,16 +287,18 @@
           text-align: center;
           border: none;
         }
-        input.modifier {
+        span.modifier {
           display: none;
         }
-
-        &:hover + input.score { 
-          display: none;
-        }
-
-        &:hover + input.modifier {
-          display: inline;
+        h4 {
+          font-size: large;
+          .nodesto();
+          &:hover + input.score { 
+            display: none;
+          }
+          &:hover + span.modifier {
+            display: inline;
+          }
         }
       }
     }
@@ -584,7 +586,37 @@
 
   /* Equipment Tab */
 
+  div.equipment {
+    overflow-y: auto;
+    div.currency {
+      label {
+        display: block;
+      }
+      input {
+        width: 100px;
+      }
+    }
+    ol.rituals {
+      li {
+        list-style: none;
+        div.ritual-head {
+          h4 {
+            width: calc(100% - 80px);
+            display: inline-block;
+          }
 
+          div.item-controls {
+            display: inline-block;
+            text-align: right;
+            width: 60px;
+          }
+        }
+        div.ritual-body {
+          display: none;
+        }
+      }
+    }
+  }
 
   /* Items */
 

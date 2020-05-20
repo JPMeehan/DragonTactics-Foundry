@@ -239,7 +239,7 @@
   display: inline-block;
 }
 .dragontactics div.abilities div.ability li {
-  width: 50px;
+  width: 79px;
 }
 .dragontactics div.abilities div.ability li input.score,
 .dragontactics div.abilities div.ability li input.modifier {
@@ -247,13 +247,18 @@
   text-align: center;
   border: none;
 }
-.dragontactics div.abilities div.ability li input.modifier {
+.dragontactics div.abilities div.ability li span.modifier {
   display: none;
 }
-.dragontactics div.abilities div.ability li:hover + input.score {
+.dragontactics div.abilities div.ability li h4 {
+  font-size: large;
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
+}
+.dragontactics div.abilities div.ability li h4:hover + input.score {
   display: none;
 }
-.dragontactics div.abilities div.ability li:hover + input.modifier {
+.dragontactics div.abilities div.ability li h4:hover + span.modifier {
   display: inline;
 }
 .dragontactics div.abilities div.skill {
@@ -481,6 +486,30 @@
 .dragontactics div.features div.feats div.item-controls,
 .dragontactics div.features div.flaws div.item-controls {
   display: inline;
+}
+.dragontactics div.equipment {
+  overflow-y: auto;
+}
+.dragontactics div.equipment div.currency label {
+  display: block;
+}
+.dragontactics div.equipment div.currency input {
+  width: 100px;
+}
+.dragontactics div.equipment ol.rituals li {
+  list-style: none;
+}
+.dragontactics div.equipment ol.rituals li div.ritual-head h4 {
+  width: calc(100% - 80px);
+  display: inline-block;
+}
+.dragontactics div.equipment ol.rituals li div.ritual-head div.item-controls {
+  display: inline-block;
+  text-align: right;
+  width: 60px;
+}
+.dragontactics div.equipment ol.rituals li div.ritual-body {
+  display: none;
 }
 .dragontactics label.class {
   display: inline-block;

@@ -7,26 +7,18 @@
         </div>
     </header>
 
-    {{!-- Sheet Tab Navigation --}}
+    <!-- {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
         <a class="item" data-tab="input">Input</a>
-    </nav>
+    </nav> -->
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
             {{!-- Description Tab --}}
             <div class="tab description" data-group="primary" data-tab="description">
-                <h1>Description</h1>
-                <div class="description tinymceeditorbox">
-                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-                </div>
-            </div>
-
-            {{!-- Input Tab --}}
-            <div class="tab input" data-group="primary" data-tab="input">
-                <h1>Input</h1>
+                <h1>Details</h1>
                 <label class="ritual marketprice">Market Price:
                     <input type="text" name="data.marketPrice" value="{{data.marketPrice}}" data-dtype="String"
 						placeholder="Market Price" title="Market Price, e.g. 25 gp" />
@@ -47,9 +39,15 @@
                     <input type="text" name="data.duration" value="{{data.duration}}" data-dtype="String"
 						placeholder="Duration" title="Duration, e.g. Instantaneous" />
                 </label>
-                <div class="tinymceeditorbox">
-                    {{editor content=data.properties target="data.properties" button=true owner=owner editable=editable}}
+                <h1>Description</h1>
+                <div class="description tinymceeditorbox">
+                    {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
             </div>
+
+            <!-- {{!-- Input Tab --}}
+            <div class="tab input" data-group="primary" data-tab="input">
+                <h1>Input</h1>
+            </div> -->
     </section>
 </form>

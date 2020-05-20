@@ -302,46 +302,30 @@
       },
       "equipment": {
         "worn": {
-          "head": {
-            "name": "",
-            "description": ""
-          },
-          "neck": {
-            "name": "",
-            "description": ""
-          },
-          "arms": {
-            "name": "",
-            "description": "",
-            "shield": 0,
-            "armorcheck_shield": 0
-          },
-          "hands": {
-            "name": "",
-            "description": ""
-          },
-          "waist": {
-            "name": "",
-            "description": ""
-          },
-          "feet": {
-            "name": "",
-            "description": ""
-          },
-          "armor": {
-            "name": "",
-            "description": "",
-            "bonus": 0,
-            "armorcheck": 0,
-            "ability": null
-          },
-          "weapons": [],
-          "implements": []
+          "head": {},
+          "neck": {},
+          "arms": {},
+          "hands": {},
+          "waist": {},
+          "feet": {},
+          "armor": {},
+          "weapons": {},
+          "implements": {},
+          "supplies": {}
         },
-        "carried": [],
-        "home": [],
-        "rituals": []
+        "armor": {
+          "torso": {
+            "bonus": 0,
+            "check": 0
+          },
+          "shield": {
+            "bonus": 0,
+            "check": 0
+          },
+          "ability": null
+        }
       },
+      "rituals": {},
       "currency": {
         "platinum": 0,
         "gold": 0,
@@ -362,17 +346,10 @@
     }
   },
   "Item": {
-    "types": ["armor", "class", "feature", "implement", "power", "race", "ritual", "supplies", "weapon"],
+    "types": ["class", "equipment", "feature", "power", "race", "ritual"],
     "templates": {
       "basic": {
         "description": "Edit me!"
-      },
-      "equipment": {
-        "quantity": 1,
-        "price": "",
-        "size": 2,
-        "type": "",
-        "location": ""
       }
     },
     "class": {
@@ -395,26 +372,31 @@
         "implement": ""
       }
     },
-    "weapon": {
-      "templates": ["basic", "equipment"],
-      "proficiency": 3,
-      "damage": "",
-      "range": "",
-      "properties": ""
-    },
-    "armor": {
-      "templates": ["basic", "equipment"],
-      "ac": 0,
-      "penalty": 0,
-      "speed": "",
-      "properties": ""
-    },
-    "implement": {
-      "templates": ["basic", "equipment"],
-      "properties": ""
-    },
-    "supplies": {
-      "templates": ["basic", "equipment"]
+    "equipment": {
+      "templates": ["basic"],
+      "quantity": 1,
+      "price": "",
+      "size": 2,
+      "type": "supplies",
+      "weapon": {
+        "proficiency": 3,
+        "damage": "",
+        "range": ""
+      },
+      "armor": {
+        "ac": 0,
+        "penalty": 0,
+        "speed": ""
+      },
+      "shield": {
+        "bonus": 0,
+        "penalty": 0
+      },
+      "is": {
+        "weapon": false,
+        "armor": false,
+        "shield": false
+      }
     },
     "feature": {
       "templates": ["basic"],
