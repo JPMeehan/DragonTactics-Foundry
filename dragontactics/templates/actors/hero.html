@@ -422,8 +422,8 @@
                     {{#each data.equipment.worn.weapons as |item key|}}
                     <li class="item" data-item-id="{{key}}">
                         <label>
+                            <input type="radio" name="data.equipment.equipped.weapons" value="{{key}}" {{checked equipped}} />
                             <h4 class="clickable">{{label}}</h4>
-                            <input type="radio" name="data.equipment.equipped.weapons" value="{{key}}" />
                         </label>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -439,8 +439,8 @@
                     {{#each data.equipment.worn.implements as |item key|}}
                     <li class="item" data-item-id="{{key}}">
                         <label>
+                            <input type="radio" name="data.equipment.equipped.implements" value="{{key}}" {{checked equipped}} />
                             <h4 class="clickable">{{label}}</h4>
-                            <input type="radio" name="data.equipment.equipped.implements" value="{{key}}" />
                         </label>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -456,8 +456,8 @@
                     {{#each data.equipment.worn.armor as |item key|}}
                     <li class="item" data-item-id="{{key}}">
                         <label>
+                            <input type="radio" name="data.equipment.equipped.armor" value="{{key}}" {{checked equipped}} />
                             <h4 class="clickable">{{label}}</h4>
-                            <input type="radio" name="data.equipment.equipped.armor" value="{{key}}" />
                         </label>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -473,8 +473,8 @@
                     {{#each data.equipment.worn.arms as |item key|}}
                     <li class="item" data-item-id="{{key}}">
                         <label>
+                            <input type="radio" name="data.equipment.equipped.arms" value="{{key}}" {{checked equipped}} />
                             <h4 class="clickable">{{label}}</h4>
-                            <input type="radio" name="data.equipment.equipped.arms" value="{{key}}" />
                         </label>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -490,8 +490,8 @@
                     {{#each data.equipment.worn.head as |item key|}}
                     <li class="item" data-item-id="{{key}}">
                         <label>
+                            <input type="radio" name="data.equipment.equipped.head" value="{{key}}" {{checked equipped}} />
                             <h4 class="clickable">{{label}}</h4>
-                            <input type="radio" name="data.equipment.equipped.head" value="{{key}}" />
                         </label>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -507,8 +507,8 @@
                     {{#each data.equipment.worn.neck as |item key|}}
                     <li class="item" data-item-id="{{key}}">
                         <label>
+                            <input type="radio" name="data.equipment.equipped.neck" value="{{key}}" {{checked equipped}} />
                             <h4 class="clickable">{{label}}</h4>
-                            <input type="radio" name="data.equipment.equipped.neck" value="{{key}}" />
                         </label>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -524,8 +524,8 @@
                     {{#each data.equipment.worn.hands as |item key|}}
                     <li class="item" data-item-id="{{key}}">
                         <label>
+                            <input type="radio" name="data.equipment.equipped.hands" value="{{key}}" {{checked equipped}} />
                             <h4 class="clickable">{{label}}</h4>
-                            <input type="radio" name="data.equipment.equipped.hands" value="{{key}}" />
                         </label>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -541,8 +541,8 @@
                     {{#each data.equipment.worn.waist as |item key|}}
                     <li class="item" data-item-id="{{key}}">
                         <label>
+                            <input type="radio" name="data.equipment.equipped.waist" value="{{key}}" {{checked equipped}} />
                             <h4 class="clickable">{{label}}</h4>
-                            <input type="radio" name="data.equipment.equipped.waist" value="{{key}}" />
                         </label>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -558,8 +558,8 @@
                     {{#each data.equipment.worn.feet as |item key|}}
                     <li class="item" data-item-id="{{key}}">
                         <label>
+                            <input type="radio" name="data.equipment.equipped.feet" value="{{key}}" {{checked equipped}} />
                             <h4 class="clickable">{{label}}</h4>
-                            <input type="radio" name="data.equipment.equipped.feet" value="{{key}}" />
                         </label>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -574,8 +574,8 @@
                 <ol class="carried">
                     {{#each data.equipment.worn.supplies as |item key|}}
                     <li class="item" data-item-id="{{key}}">
-                        <h4 class="clickable">{{label}}</h4>
                         <div class="item-controls">
+                        <h4 class="clickable">{{label}}</h4>
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>

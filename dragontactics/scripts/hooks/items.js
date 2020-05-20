@@ -75,6 +75,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
         "label": item.name,
         "quantity": item.data.quantity,
         "size": item.data.price,
+        "equipped": false
       }
       if (item.data.is.weapon) {
         newequipment["proficiency"] = item.data.weapon.proficiency;
@@ -197,8 +198,6 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
     case "equipment":
       var target = Object.keys(delta.data)[0];
       if (target === "type") {
-        var oldtype;
-        var oldequipment;
 
         // go through eligible lists
         for (let [key, value] of Object.entries(data.equipment.worn)) {
@@ -207,6 +206,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
               "label": item.name,
               "quantity": item.data.quantity,
               "size": item.data.price,
+              "equipped": false
             }
             if (item.data.is.weapon) {
               newequipment["proficiency"] = item.data.weapon.proficiency;

@@ -48,6 +48,13 @@ export class DragonTacticsActor extends Actor {
       else skill.modifier = "+" + skill.mod;
     }
 
+    for (let [type, id] in  Object.entries(data.equipment.equipped)) {
+      for (let [key, value] in Object.entries(data.equipment.worn[key])){
+        if (key === id) {value.equipped = true}
+        else {value.equipped = false}
+      }
+    }
+
     // for (let power of Object.entries(data.powers)) {
     //   var abidmg = data.abilities[power.attack.hit.abi] || 0;
     //   power.attack.hitbonus = data.class.quest + data.abilities[power.attack.stat]; // prof bonus, misc +hit
