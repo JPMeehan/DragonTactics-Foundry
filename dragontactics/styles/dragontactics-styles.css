@@ -16,7 +16,16 @@
   /* Combat Tab  */
   /* Features Tab */
   /* Equipment Tab */
-  /* Items */
+  /*********
+
+  ITEMS
+  
+  *********/
+  /* Class */
+  /* Equipment */
+  /* Rituals */
+  /* Race */
+  /* Powers */
 }
 .dragontactics .window-content {
   height: 100%;
@@ -496,12 +505,26 @@
 .dragontactics div.equipment div.currency input {
   width: 100px;
 }
-.dragontactics div.equipment ol.rituals li {
-  list-style: none;
+.dragontactics div.equipment div.worn h3 {
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
+}
+.dragontactics div.equipment div.worn ol {
+  list-style-type: none;
+  margin: 7px 0;
+  padding: 0;
+}
+.dragontactics div.equipment ol.rituals {
+  list-style-type: none;
+  margin: 7px 0;
+  padding: 0;
 }
 .dragontactics div.equipment ol.rituals li div.ritual-head h4 {
   width: calc(100% - 80px);
   display: inline-block;
+  font-size: larger;
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
 }
 .dragontactics div.equipment ol.rituals li div.ritual-head div.item-controls {
   display: inline-block;
@@ -535,6 +558,10 @@
   text-align: left;
   width: calc(100% - 80px);
   margin-right: 5px;
+}
+.dragontactics select.equipment-type {
+  font-size: large;
+  height: 35px;
 }
 .dragontactics label.equipment.price input {
   width: 80px;

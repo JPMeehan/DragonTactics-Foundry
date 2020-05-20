@@ -416,65 +416,135 @@
                 <label><input type="text" pattern="\d+" name="data.currency.platinum" value="{{data.currency.platinum}}" /> Platinum Dragons</label>
             </div>
             <h2>Equipment</h2>
-            <div>
+            <div class="worn">
                 <h3>Weapons</h3>
                 <ol class="weapons">
-                    {{#each data.equipment.worn.weapons}}
+                    {{#each data.equipment.worn.weapons as |item key|}}
+                    <li class="item" data-item-id="{{key}}">
                         <h4>{{label}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
                     {{/each}}
                 </ol>
                 <h3>Implements</h3>
                 <ol class="implements">
-                    {{#each data.equipment.worn.implements}}
+                    {{#each data.equipment.worn.implements as |item key|}}
+                    <li class="item" data-item-id="{{key}}">
                         <h4>{{label}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
                     {{/each}}
                 </ol>
                 <h3>Armor</h3>
                 <ol class="armor">
-                    {{#each data.equipment.worn.armor}}
+                    {{#each data.equipment.worn.armor as |item key|}}
+                    <li class="item" data-item-id="{{key}}">
                         <h4>{{label}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
                     {{/each}}
                 </ol>
                 <h3>Arms</h3>
                 <ol class="arms">
-                    {{#each data.equipment.worn.arms}}
+                    {{#each data.equipment.worn.arms as |item key|}}
+                    <li class="item" data-item-id="{{key}}">
                         <h4>{{label}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
                     {{/each}}
                 </ol>
                 <h3>Head</h3>
                 <ol class="head">
-                    {{#each data.equipment.worn.head}}
+                    {{#each data.equipment.worn.head as |item key|}}
+                    <li class="item" data-item-id="{{key}}">
                         <h4>{{label}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
                     {{/each}}
                 </ol>
                 <h3>Neck</h3>
                 <ol class="neck">
-                    {{#each data.equipment.worn.neck}}
+                    {{#each data.equipment.worn.neck as |item key|}}
+                    <li class="item" data-item-id="{{key}}">
                         <h4>{{label}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
                     {{/each}}
                 </ol>
                 <h3>Hands</h3>
                 <ol class="hands">
-                    {{#each data.equipment.worn.hands}}
+                    {{#each data.equipment.worn.hands as |item key|}}
+                    <li class="item" data-item-id="{{key}}">
                         <h4>{{label}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
                     {{/each}}
                 </ol>
                 <h3>Waist</h3>
                 <ol class="waist">
-                    {{#each data.equipment.worn.waist}}
+                    {{#each data.equipment.worn.waist as |item key|}}
+                    <li class="item" data-item-id="{{key}}">
                         <h4>{{label}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
                     {{/each}}
                 </ol>
                 <h3>Feet</h3>
                 <ol class="feet">
-                    {{#each data.equipment.worn.feet}}
+                    {{#each data.equipment.worn.feet as |item key|}}
+                    <li class="item" data-item-id="{{key}}">
                         <h4>{{label}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
                     {{/each}}
                 </ol>
                 <h3>Carried</h3>
                 <ol class="carried">
-                    {{#each data.equipment.supplies}}
+                    {{#each data.equipment.worn.supplies as |item key|}}
+                    <li class="item" data-item-id="{{key}}">
                         <h4>{{label}}</h4>
+                        <div class="item-controls">
+                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
                     {{/each}}
                 </ol>
             </div>
@@ -483,7 +553,7 @@
                 {{#each data.rituals as |ritual key|}}
                 <li class="ritual item" data-item-id="{{key}}">
                     <div class="ritual-head">
-                        <h4>{{name}}</h4>
+                        <h4>{{label}}</h4>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>

@@ -596,13 +596,27 @@
         width: 100px;
       }
     }
+    div.worn {
+      h3 {
+        .nodesto();
+      }
+      ol {
+        list-style-type: none;
+        margin: 7px 0;
+        padding: 0;
+      }
+    }
     ol.rituals {
+      list-style-type: none;
+      margin: 7px 0;
+      padding: 0;
       li {
-        list-style: none;
         div.ritual-head {
           h4 {
             width: calc(100% - 80px);
             display: inline-block;
+            font-size: larger;
+            .nodesto();
           }
 
           div.item-controls {
@@ -618,7 +632,13 @@
     }
   }
 
-  /* Items */
+  /*********
+
+  ITEMS
+  
+  *********/
+
+  /* Class */
 
   label.class {
     display: inline-block;
@@ -654,6 +674,14 @@
         margin-right: 5px;
       }
     }
+  }
+
+
+  /* Equipment */
+
+  select.equipment-type {
+    font-size: large;
+    height: 35px;
   }
 
   label.equipment {
@@ -698,6 +726,8 @@
     }
   }
 
+  /* Rituals */
+
   label.ritual {
 
     &.marketprice,
@@ -725,6 +755,8 @@
       }
     }
   }
+
+  /* Race */
 
   label.race {
     &.asi {
@@ -763,6 +795,10 @@
       }
     }
   }
+
+
+
+  /* Powers */
 
   section.power {
     input.source {

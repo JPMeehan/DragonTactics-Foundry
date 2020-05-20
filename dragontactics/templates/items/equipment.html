@@ -3,21 +3,21 @@
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+            <select class="equipment-type" name="data.type" data-dtype="String">
+                {{#select data.type}}
+                <option value="supplies">Supplies</option>
+                <option value="armor">Armor</option>
+                <option value="weapons">Weapon</option>
+                <option value="implements">Implement</option>
+                <option value="head">Head</option>
+                <option value="neck">Neck</option>
+                <option value="arms">Arms</option>
+                <option value="hands">Hands</option>
+                <option value="waist">Waist</option>
+                <option value="feet">Feet</option>
+                {{/select}}
+            </select>
         </div>
-        <select name="data.type" data-dtype="String">
-            {{#select data.type}}
-            <option value="supplies">Supplies</option>
-            <option value="armor">Armor</option>
-            <option value="weapon">Weapon</option>
-            <option value="implement">Implement</option>
-            <option value="head">Head</option>
-            <option value="neck">Neck</option>
-            <option value="arms">Arms</option>
-            <option value="hands">Hands</option>
-            <option value="waist">Waist</option>
-            <option value="feet">Feet</option>
-            {{/select}}
-        </select>
     </header>
 
     {{!-- Sheet Tab Navigation --}}
