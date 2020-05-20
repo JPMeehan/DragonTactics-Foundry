@@ -515,7 +515,7 @@
   padding: 0;
 }
 .dragontactics div.equipment div.worn h4 {
-  width: calc(100% - 70px);
+  width: calc(100% - 90px);
   display: inline-block;
 }
 .dragontactics div.equipment div.worn div.item-controls {
