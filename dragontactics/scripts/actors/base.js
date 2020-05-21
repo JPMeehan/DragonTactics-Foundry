@@ -55,6 +55,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
       this.actor.deleteOwnedItem(li.data("itemId"));
       if (li.data("featureType")){this._deleteFeature(li.data("itemId"), li.data("featureType"))}
       if (li.data("power")) {this._deletePower(li.data("itemId"))}
+      if (li.data("equipment")) {this._deleteEquipment(li.data("itemId"), li.data("equipment"))}
       li.slideUp(200, () => this.render(false));
     });
 
@@ -71,15 +72,21 @@ export class DragonTacticsActorSheet extends ActorSheet {
 
 
   _deleteFeature(itemId, itemType) {
-    const features = this.actor.data.data.features[itemType];
+    const features = duplicate(this.actor.data.data.features[itemType]);
     delete features[itemId];
     this.actor.update({[`data.features.${itemType}`] : features})
   }
 
   _deletePower(itemId) {
-    const powers = this.actor.data.data.powers;
+    const powers = duplicate(this.actor.data.data.powers);
     delete powers[itemId];
     this.actor.update({"data.powers" : powers});
+  }
+
+  _deleteEquipment(itemId, itemType) {
+    const equipment = duplicate(this.actor.data.data.equipment.worn[itemType]);
+    delete equipment[itemId];
+    this.actor.update({[`data.equipment.worn.${itemType}`] : equipment});
   }
 
   _showPowerDetails(event) {

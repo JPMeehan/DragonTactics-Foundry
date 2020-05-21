@@ -48,12 +48,19 @@ export class DragonTacticsActor extends Actor {
       else skill.modifier = "+" + skill.mod;
     }
 
-    for (let [type, id] in  Object.entries(data.equipment.equipped)) {
-      for (let [key, value] in Object.entries(data.equipment.worn[key])){
-        if (key === id) {value.equipped = true}
-        else {value.equipped = false}
+    for (let type in  data.equipment.equipped) {
+      for (let key in data.equipment.worn[type]){
+        if (key === data.equipment.equipped[type]) {data.equipment.worn[type][key].equipped = true}
+        else {data.equipment.worn[type][key].equipped = false}
       }
     }
+
+    // for (let [type, id] in  Object.entries(data.equipment.equipped)) {
+    //   for (let [key, value] in Object.entries(data.equipment.worn[type])){
+    //     if (key === id) {value.equipped = true}
+    //     else {value.equipped = false}
+    //   }
+    // }
 
     // for (let power of Object.entries(data.powers)) {
     //   var abidmg = data.abilities[power.attack.hit.abi] || 0;

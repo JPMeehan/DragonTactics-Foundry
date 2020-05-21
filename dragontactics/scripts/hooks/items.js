@@ -146,7 +146,13 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       }
       break;
     case "feature":
-      var target = Object.keys(delta.data)[0];
+      var target;
+      try {
+        target = Object.keys(delta.data)[0];
+      }
+      catch (e) {
+        target = Object.keys(delta)[0]
+      }
       var features = data.features[item.data.type] || {};
       if (target === "type") {
         var oldtype;
@@ -196,7 +202,13 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       data.powers[item._id] = newpower;
       break;
     case "equipment":
-      var target = Object.keys(delta.data)[0];
+      var target;
+      try {
+        target = Object.keys(delta.data)[0];
+      }
+      catch (e) {
+        target = Object.keys(delta)[0]
+      }
       if (target === "type") {
 
         // go through eligible lists
