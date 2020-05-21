@@ -72,19 +72,19 @@ export class DragonTacticsActorSheet extends ActorSheet {
 
 
   _deleteFeature(itemId, itemType) {
-    const features = duplicate(this.actor.data.data.features[itemType]);
+    const features = this.actor.data.data.features[itemType];
     delete features[itemId];
     this.actor.update({[`data.features.${itemType}`] : features})
   }
 
   _deletePower(itemId) {
-    const powers = duplicate(this.actor.data.data.powers);
+    const powers = this.actor.data.data.powers;
     delete powers[itemId];
     this.actor.update({"data.powers" : powers});
   }
 
   _deleteEquipment(itemId, itemType) {
-    const equipment = duplicate(this.actor.data.data.equipment.worn[itemType]);
+    const equipment = this.actor.data.data.equipment.worn[itemType];
     delete equipment[itemId];
     this.actor.update({[`data.equipment.worn.${itemType}`] : equipment});
   }

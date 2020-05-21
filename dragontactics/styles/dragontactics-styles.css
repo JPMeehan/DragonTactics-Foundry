@@ -514,6 +514,9 @@
   margin: 7px 0;
   padding: 0;
 }
+.dragontactics div.equipment div.worn input[type=radio]:checked ~ h4 {
+  font-weight: bold;
+}
 .dragontactics div.equipment div.worn h4 {
   width: calc(100% - 90px);
   display: inline-block;
