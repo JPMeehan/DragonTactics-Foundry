@@ -8,18 +8,6 @@ export class DragonTacticsActorSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    // Activate tabs
-    // let tabs = html.find('.tabs');
-    // let initial = this._sheetTab;
-    // new Tabs(tabs, {
-    //   initial: initial,
-    //   callback: clicked => this._sheetTab = clicked.data("tab")
-    // });
-
-    // Tabs v2
-    // const tabs = new TabsV2({navSelector: ".tabs", contentSelector: ".sheet-body", initial: "description"});
-    // tabs.bind(html);
-
     // Bloody
     if (this.actor.data.data.health.value <= (this.actor.data.data.health.max + this.actor.data.data.health.tempmax) / 2) {
       html.find('.healthvalue').addClass('bloody');
@@ -28,11 +16,17 @@ export class DragonTacticsActorSheet extends ActorSheet {
       html.find('.healthvalue').removeClass('bloody');
     }
 
+
+
     // Showing and hiding powers
     html.find('.powers .item-details-toggle').click(this._showPowerDetails.bind(this));
     // html.find('.powerheader').click(ev => {
     //   $(ev.currentTarget).toggleClass('show');
     // })
+    console.log(html.find('input[type="radio"]'))
+    try {
+      html.find('input[type="radio"]').change(this._radioFix.bind(this));
+      } catch (e) {console.log("No radio inputs available")}
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
@@ -104,4 +98,24 @@ export class DragonTacticsActorSheet extends ActorSheet {
       body.slideUp();
     }
   }
+
+  _radioFix(event) {
+    event.preventDefault();    
+    let name = event.target.name;
+    if ( form[name] instanceof RadioNodeList ) {
+      const inputs = Array.from(form[name]);
+      let values = "";
+      values = inputs.map(i => i.checked ? i.value : false).filter(i => i);
+      this.actor.update({[`${name}`] : values[0]})
+    }
+  }
+
+  /* _onChangeRange(event) {
+	  event.preventDefault();
+	  const field = event.target.parentElement.querySelector(".range-value");
+	  if ( field ) {
+	    if ( field.tagName === "INPUT" ) field.value = event.target.value;
+	    else field.innerHTML = event.target.value;
+    }
+    */
 }
