@@ -55,24 +55,18 @@ export class DragonTacticsActor extends Actor {
       }
     }
 
-    // for (let [type, id] in  Object.entries(data.equipment.equipped)) {
-    //   for (let [key, value] in Object.entries(data.equipment.worn[type])){
-    //     if (key === id) {value.equipped = true}
-    //     else {value.equipped = false}
-    //   }
-    // }
 
-    // for (let power of Object.entries(data.powers)) {
-    //   var abidmg = data.abilities[power.attack.hit.abi] || 0;
-    //   power.attack.hitbonus = data.class.quest + data.abilities[power.attack.stat]; // prof bonus, misc +hit
-    //   power.attack.flat = data.class.quest + abidmg; // misc +dmg
-    //   abidmg = data.abilities[power.attackSecondary.hit.abi] || 0;
-    //   power.attackSecondary.hitbonus = data.class.quest + data.abilities[power.attackSecondary.stat]; // prof bonus, misc +hit
-    //   power.attackSecondary.flat = data.class.quest + abidmg; // misc +dmg
-    //   abidmg = data.abilities[power.attackTertiary.hit.abi] || 0;
-    //   power.attackTertiary.hitbonus = data.class.quest + data.abilities[power.attackTertiary.stat]; // prof bonus, misc +hit
-    //   power.attackTertiary.flat = data.class.quest + abidmg; // misc +dmg
-    // }
+    for (let power of Object.entries(data.powers)) {
+      var abidmg = data.abilities[power.attack.hit.abi] || 0;
+      power.attack.hitbonus = data.class.quest + data.abilities[power.attack.stat]; // prof bonus, misc +hit
+      power.attack.flat = data.class.quest + abidmg; // misc +dmg
+      abidmg = data.abilities[power.attackSecondary.hit.abi] || 0;
+      power.attackSecondary.hitbonus = data.class.quest + data.abilities[power.attackSecondary.stat]; // prof bonus, misc +hit
+      power.attackSecondary.flat = data.class.quest + abidmg; // misc +dmg
+      abidmg = data.abilities[power.attackTertiary.hit.abi] || 0;
+      power.attackTertiary.hitbonus = data.class.quest + data.abilities[power.attackTertiary.stat]; // prof bonus, misc +hit
+      power.attackTertiary.flat = data.class.quest + abidmg; // misc +dmg
+    }
   }
 
   _prepareNPCData(actorData) {

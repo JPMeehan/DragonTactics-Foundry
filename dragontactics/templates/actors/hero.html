@@ -219,7 +219,7 @@
                                     <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                                 </div>
                             </div>
-                            <div class="powerbody">
+                            <div class="powerbody save-toggle">
                                 <div class="power-row usage">
                                     <span name="data.powers.{{key}}.recharge">{{recharge}}</span>
                                     <span name="data.powers.{{key}}.action">{{action}}</span>
@@ -248,8 +248,25 @@
                                     {{/if}}
                                 </div>
                                 {{#if attack.exist}}
+                                    <div class="power-row">
+                                        <strong>
+                                            {{#if attackSecondary.exist}}
+                                            Primary
+                                            {{/if}} 
+                                            Attack
+                                        </strong>
+                                        <select class="power-weapon-select" name="data.powers.{{key}}.attack.weapon" data-dtype="String">
+                                            {{#select power.attack.weapon}}
+                                            {{#each data.equipment.worn.weapons as |weapon weaponkey|}}
+                                            <option value="{{weaponkey}}">{{weapon.label}}</option>
+                                            {{/each}}
+                                            {{#each data.equipment.worn.implements as |implement implementkey|}}
+                                            <option value="{{implementkey}}">{{implement.label}}</option>
+                                            {{/each}}
+                                            {{/select}}
+                                        </select>
+                                    </div>
                                     <div class="power-row attack clickable">
-                                        Attack:
                                         <span name="data.powers.{{key}}.attack.hitbonus">{{attack.hitbonus}}</span> vs. 
                                         <span name="data.powers.{{key}}.attack.def">{{attack.def}}</span>
                                     </div>
@@ -271,8 +288,17 @@
                                     {{/if}}
                                 {{/if}}
                                 {{#if attackSecondary.exist}}   
+                                    <div class="power-row">
+                                        <strong>Secondary Attack</strong>
+                                    </div>
+                                    <div class="power-row rangetargets">
+                                        <span class="range" name="data.powers.{{key}}.attackSecondary.range">{{attackSecondary.range}}</span>
+                                        {{#if attackSecondary.target}} 
+                                            <span class="diamond"> ♦ </span>
+                                            <span class="targets" name="data.powers.{{key}}.attackSecondary.target">{{attackSecondary.target}}</span>
+                                        {{/if}}
+                                    </div>
                                     <div class="power-row attackSecondary">
-                                        Attack:
                                         <span name="data.powers.{{key}}.attackSecondary.hitbonus">{{attackSecondary.hitbonus}}</span> vs. 
                                         <span name="data.powers.{{key}}.attackSecondary.def">{{attackSecondary.def}}</span>
                                     </div>
@@ -293,9 +319,18 @@
                                     </div>
                                     {{/if}}
                                 {{/if}}
-                                {{#if attackTertiary.exist}}
+                                {{#if attackTertiary.exist}}   
+                                    <div class="power-row">
+                                        <strong>Tertiary Attack</strong>
+                                    </div>
+                                    <div class="power-row rangetargets">
+                                        <span class="range" name="data.powers.{{key}}.attackTertiary.range">{{attackTertiary.range}}</span>
+                                        {{#if attackTertiary.target}} 
+                                            <span class="diamond"> ♦ </span>
+                                            <span class="targets" name="data.powers.{{key}}.attackTertiary.target">{{attackTertiary.target}}</span>
+                                        {{/if}}
+                                    </div>
                                     <div class="power-row attackTertiary">
-                                        Attack:
                                         <span name="data.powers.{{key}}.attackTertiary.hitbonus">{{attackTertiary.hitbonus}}</span> vs. 
                                         <span name="data.powers.{{key}}.attackTertiary.def">{{attackTertiary.def}}</span>
                                     </div>
@@ -426,7 +461,6 @@
                             <h4 class="clickable">{{label}}</h4>
                         </label>
                         <div class="item-controls">
-                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
@@ -446,7 +480,6 @@
                             <h4 class="clickable">{{label}}</h4>
                         </label>
                         <div class="item-controls">
-                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
@@ -466,7 +499,6 @@
                             <h4 class="clickable">{{label}}</h4>
                         </label>
                         <div class="item-controls">
-                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
@@ -486,7 +518,6 @@
                             <h4 class="clickable">{{label}}</h4>
                         </label>
                         <div class="item-controls">
-                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
@@ -506,7 +537,6 @@
                             <h4 class="clickable">{{label}}</h4>
                         </label>
                         <div class="item-controls">
-                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
@@ -526,7 +556,6 @@
                             <h4 class="clickable">{{label}}</h4>
                         </label>
                         <div class="item-controls">
-                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
@@ -546,7 +575,6 @@
                             <h4 class="clickable">{{label}}</h4>
                         </label>
                         <div class="item-controls">
-                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
@@ -566,7 +594,6 @@
                             <h4 class="clickable">{{label}}</h4>
                         </label>
                         <div class="item-controls">
-                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
@@ -586,7 +613,6 @@
                             <h4 class="clickable">{{label}}</h4>
                         </label>
                         <div class="item-controls">
-                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
@@ -603,7 +629,6 @@
                     <li class="item" data-item-id="{{key}}" data-equipment="supplies">
                         <h4 class="clickable">{{label}}</h4>
                         <div class="item-controls">
-                            <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>

@@ -57,6 +57,15 @@ Hooks.on('createOwnedItem', (actor, item) => {
       for (let [key, value] of Object.entries(item.data)) {
         newpower[key] = value;
       }
+      newpower.attack["weapon"] = "";
+      newpower.attack["hitbonus"] = "";
+      newpower.attack["flat"] = "";
+      newpower.attackSecondary["weapon"] = "";
+      newpower.attackSecondary["hitbonus"] = "";
+      newpower.attackSecondary["flat"] = "";
+      newpower.attackTertiary["weapon"] = "";
+      newpower.attackTertiary["hitbonus"] = "";
+      newpower.attackTertiary["flat"] = "";
       switch (newpower.recharge) {
         case "":
           newpower["usage"] = "atwill";

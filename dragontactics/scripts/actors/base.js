@@ -23,10 +23,12 @@ export class DragonTacticsActorSheet extends ActorSheet {
     // html.find('.powerheader').click(ev => {
     //   $(ev.currentTarget).toggleClass('show');
     // })
-    console.log(html.find('input[type="radio"]'))
-    try {
-      html.find('input[type="radio"]').change(this._radioFix.bind(this));
-      } catch (e) {console.log("No radio inputs available")}
+
+
+    // console.log(html.find('input[type="radio"]'))
+    // try {
+    //   html.find('input[type="radio"]').change(this._radioFix.bind(this));
+    //   } catch (e) {console.log("No radio inputs available")}
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
@@ -83,21 +85,21 @@ export class DragonTacticsActorSheet extends ActorSheet {
     this.actor.update({[`data.equipment.worn.${itemType}`] : equipment});
   }
 
-  _showPowerDetails(event) {
-    event.preventDefault();
-    const toggler = $(event.currentTarget);
-    const toggleIcon = toggler.find('i');
-    const power = toggler.parents('.item');
-    const body = power.find('.powerbody');
+  // _showPowerDetails(event) {
+  //   event.preventDefault();
+  //   const toggler = $(event.currentTarget);
+  //   const toggleIcon = toggler.find('i');
+  //   const power = toggler.parents('.item');
+  //   const body = power.find('.powerbody');
 
-    if (toggleIcon.hasClass('fa-caret-right')) {
-      toggleIcon.removeClass('fa-caret-right').addClass('fa-caret-down');
-      body.slideDown();
-    } else {
-      toggleIcon.removeClass('fa-caret-down').addClass('fa-caret-right');
-      body.slideUp();
-    }
-  }
+  //   if (toggleIcon.hasClass('fa-caret-right')) {
+  //     toggleIcon.removeClass('fa-caret-right').addClass('fa-caret-down');
+  //     body.slideDown();
+  //   } else {
+  //     toggleIcon.removeClass('fa-caret-down').addClass('fa-caret-right');
+  //     body.slideUp();
+  //   }
+  // }
 
   _radioFix(event) {
     event.preventDefault();    
@@ -110,12 +112,51 @@ export class DragonTacticsActorSheet extends ActorSheet {
     }
   }
 
-  /* _onChangeRange(event) {
-	  event.preventDefault();
-	  const field = event.target.parentElement.querySelector(".range-value");
-	  if ( field ) {
-	    if ( field.tagName === "INPUT" ) field.value = event.target.value;
-	    else field.innerHTML = event.target.value;
+  _showItemDescription(event) {
+    event.preventDefault();
+    
+    
+    const description = item.find(".individual-description");
+  
+    $(description).slideToggle(function() {
+      $(this).toggleClass("open");
+    });
+  }
+  
+  async _render(force = false, options = {}) {
+    this._saveToggleState();
+  
+    await super._render(force, options);
+  
+    this._setToggleState();
+  }
+  
+  _saveToggleState() {
+    if (this.form === null)
+      return;
+    
+    const html = $(this.form).parent();
+  
+    this.toggleState = [];
+  
+    let items = $(html.find(".save-toggle"));
+  
+    for (let item of items)
+      this.toggleState.push($(item).hasClass("open"));
+  }
+  
+  _setToggleState() {
+    if (this.toggleState) {
+      const html = $(this.form).parent();
+  
+      let items = $(html.find(".save-toggle"));
+  
+      for (let i = 0; i < items.length; i++) {
+        if (this.toggleState[i])
+          $(items[i]).show().addClass("open");
+        else
+          $(items[i]).hide().removeClass("open");
+      }
     }
-    */
+  }
 }

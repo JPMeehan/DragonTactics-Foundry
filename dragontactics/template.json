@@ -440,6 +440,8 @@
       },
       "attackSecondary": {
         "exist": false,
+        "range": "",
+        "target": "",
         "stat": "",
         "def": "",
         "hit": {
@@ -452,6 +454,8 @@
       },
       "attackTertiary": {
         "exist": false,
+        "range": "",
+        "target": "",
         "stat": "",
         "def": "",
         "hit": {

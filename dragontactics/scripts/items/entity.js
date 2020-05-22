@@ -18,7 +18,7 @@ export class DragonTacticsItem extends Item {
         data.is.armor = false;
         data.is.shield = false;
 
-        if (data.type === "weapon") {data.is.weapon = true}
+        if (data.type === "weapons") {data.is.weapon = true}
         else if (data.type === "armor") {data.is.armor = true}
         else if (data.type === "arms") {data.is.shield = true}
     }

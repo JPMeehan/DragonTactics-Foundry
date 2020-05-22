@@ -456,16 +456,11 @@
 .dragontactics div.combat div.powers li.powers .powerbody .power-row:nth-child(2n) {
   background-color: rgba(211, 211, 211, 0.5);
 }
-.dragontactics div.combat div.powers li.powers .powerbody .power-row button[type="roll"] {
-  margin: 0;
-  padding: 0;
-  font-size: inherit;
-}
 .dragontactics div.combat div.powers li.powers .powerbody span.trigger {
   font-style: italic;
 }
 .dragontactics div.combat div.powers li.powers .powerbody span.diamond {
-  font-size: small;
+  font-size: smaller;
 }
 .dragontactics div.combat div.powers li.powers .powerbody label.ready {
   float: right;
@@ -481,6 +476,10 @@
 }
 .dragontactics div.combat div.powers li.powers .powerbody span.powertext {
   font-style: italic;
+}
+.dragontactics div.combat div.powers li.powers .powerbody select.power-weapon-select {
+  background-color: inherit;
+  border: none;
 }
 .dragontactics div.features {
   overflow-y: auto;
