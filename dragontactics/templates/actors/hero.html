@@ -266,14 +266,20 @@
                                             Attack
                                         </strong>
                                         <select class="power-weapon-select" name="data.powers.{{key}}.attack.weapon" data-dtype="String">
-                                            {{#select power.attack.weapon}}
+                                            {{#each data.equipment.worn.weapons as |weapon weaponkey|}}
+                                            <span>{{weaponkey}} {{weapon.label}}</span>
+                                            {{/each}}
+                                            {{#each data.equipment.worn.implements as |implement implementkey|}}
+                                            <span>{{implementkey}}  {{implement.label}}</span>
+                                            {{/each}}
+                                            <!-- {{#select power.attack.weapon}}
                                             {{#each data.equipment.worn.weapons as |weapon weaponkey|}}
                                             <option value="{{weaponkey}}">{{weapon.label}}</option>
                                             {{/each}}
                                             {{#each data.equipment.worn.implements as |implement implementkey|}}
                                             <option value="{{implementkey}}">{{implement.label}}</option>
                                             {{/each}}
-                                            {{/select}}
+                                            {{/select}} -->
                                         </select>
                                     </div>
                                     <div class="power-row attack clickable">
@@ -308,11 +314,11 @@
                                             <span class="targets" name="data.powers.{{key}}.attackSecondary.target">{{attackSecondary.target}}</span>
                                         {{/if}}
                                     </div>
-                                    <div class="power-row attackSecondary">
+                                    <div class="power-row attackSecondary clickable">
                                         <span name="data.powers.{{key}}.attackSecondary.hitbonus">{{attackSecondary.hitbonus}}</span> vs. 
                                         <span name="data.powers.{{key}}.attackSecondary.def">{{attackSecondary.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage">
+                                    <div class="power-row hit-damage clickable">
                                         <span name="data.powers.{{key}}.attackSecondary.hit.dice">{{attackSecondary.hit.dice}}</span>
                                         <span class="plus">+</span>
                                         <span name="data.powers.{{key}}.attackSecondary.hit.flat">{{attackSecondary.hit.flat}}</span>
@@ -340,11 +346,11 @@
                                             <span class="targets" name="data.powers.{{key}}.attackTertiary.target">{{attackTertiary.target}}</span>
                                         {{/if}}
                                     </div>
-                                    <div class="power-row attackTertiary">
+                                    <div class="power-row attackTertiary clickable">
                                         <span name="data.powers.{{key}}.attackTertiary.hitbonus">{{attackTertiary.hitbonus}}</span> vs. 
                                         <span name="data.powers.{{key}}.attackTertiary.def">{{attackTertiary.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage">
+                                    <div class="power-row hit-damage clickable">
                                         <span name="data.powers.{{key}}.attackTertiary.hit.dice">{{attackTertiary.hit.dice}}</span>
                                         <span class="plus">+</span>
                                         <span name="data.powers.{{key}}.attackTertiary.hit.flat">{{attackTertiary.hit.flat}}</span>
