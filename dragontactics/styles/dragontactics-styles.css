@@ -264,11 +264,12 @@
   font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
   font-size: 20px;
 }
-.dragontactics div.abilities div.ability li h4:hover + input.score {
+.dragontactics div.abilities div.ability li h4:hover ~ input.score {
   display: none;
 }
-.dragontactics div.abilities div.ability li h4:hover + span.modifier {
-  display: inline;
+.dragontactics div.abilities div.ability li h4:hover ~ span.modifier {
+  display: inline-block;
+  height: 24px;
 }
 .dragontactics div.abilities div.skill {
   width: calc(100% - 174px);

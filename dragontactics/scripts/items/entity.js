@@ -15,10 +15,12 @@ export class DragonTacticsItem extends Item {
         const data = actorData.data;
        
         data.is.weapon = false;
+        data.is.implement = false;
         data.is.armor = false;
         data.is.shield = false;
 
         if (data.type === "weapons") {data.is.weapon = true}
+        else if (data.type === "implements") {data.is.implement = true}
         else if (data.type === "armor") {data.is.armor = true}
         else if (data.type === "arms") {data.is.shield = true}
     }

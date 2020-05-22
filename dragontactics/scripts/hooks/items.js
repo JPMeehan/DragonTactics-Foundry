@@ -91,6 +91,9 @@ Hooks.on('createOwnedItem', (actor, item) => {
         newequipment["damage"] = item.data.weapon.damage;
         newequipment["range"] = item.data.weapon.range;
       }
+      if (item.data.is.implement) {
+        newequipment["proficiency"] = item.data.implement.proficiency;
+      }
       if (item.data.is.armor) {
         newequipment["ac"] = item.data.armor.ac;
         newequipment["penalty"] = item.data.armor.penalty;
@@ -234,6 +237,9 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
               newequipment["damage"] = item.data.weapon.damage;
               newequipment["range"] = item.data.weapon.range;
             }
+            if (item.data.is.implement) {
+              equipment["proficiency"] = item.data.implement.proficiency;
+            }
             if (item.data.is.armor) {
               newequipment["ac"] = item.data.armor.ac;
               newequipment["penalty"] = item.data.armor.penalty;
@@ -259,6 +265,9 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
           equipment["proficiency"] = item.data.weapon.proficiency;
           equipment["damage"] = item.data.weapon.damage;
           equipment["range"] = item.data.weapon.range;
+        }
+        if (item.data.is.implement) {
+          equipment["proficiency"] = item.data.implement.proficiency;
         }
         if (item.data.is.armor) {
           equipment["ac"] = item.data.weapon.ac;

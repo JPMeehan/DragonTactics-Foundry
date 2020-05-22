@@ -293,11 +293,12 @@
         h4 {
           font-size: large;
           .nodesto();
-          &:hover + input.score { 
+          &:hover ~ input.score { 
             display: none;
           }
-          &:hover + span.modifier {
-            display: inline;
+          &:hover ~ span.modifier {
+            display: inline-block;
+            height: 24px;
           }
         }
       }

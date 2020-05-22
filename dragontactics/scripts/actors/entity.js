@@ -32,7 +32,10 @@ export class DragonTacticsActor extends Actor {
 
   _prepareHeroData(actorData) {
     const data = actorData.data;
+    const worn = data.equipment.worn;
 
+    data.equipment.armor.torso.bonus = worn.armor[data.equipment.equipped.armor].ac || 0;
+    data.equipment.armor.shield.bonus = worn.arms[data.equipment.equipped.arms].shield || 0;
     
     data.ac.value = 10 + data.equipment.armor.ability + data.class.quest + data.ac.miscbonus + data.equipment.armor.torso.bonus + data.equipment.armor.shield.bonus;
     data.fortitude.value = 10 + Math.max(data.abilities.strength.mod, data.abilities.constitution.mod) + data.class.quest + data.fortitude.miscbonus;
@@ -50,23 +53,23 @@ export class DragonTacticsActor extends Actor {
     }
 
     for (let type in  data.equipment.equipped) {
-      for (let key in data.equipment.worn[type]){
-        if (key === data.equipment.equipped[type]) {data.equipment.worn[type][key].equipped = true}
-        else {data.equipment.worn[type][key].equipped = false}
+      for (let key in worn[type]){
+        if (key === data.equipment.equipped[type]) {worn[type][key].equipped = true}
+        else {worn[type][key].equipped = false}
       }
     }
 
 
     for (let [key, power] of Object.entries(data.powers)) {
       var abidmg = data.abilities[power.attack.hit.abi] || 0;
-      power.attack.hitbonus = data.class.quest + data.abilities[power.attack.stat]; // prof bonus, misc +hit
-      power.attack.flat = data.class.quest + abidmg; // misc +dmg
+      power.attack.hitbonus = data.class.quest + data.abilities[power.attack.stat] + power.attack.hit.miscAttack; // prof bonus
+      power.attack.flat = data.class.quest + abidmg + power.attack.hit.miscDamage;
       abidmg = data.abilities[power.attackSecondary.hit.abi] || 0;
-      power.attackSecondary.hitbonus = data.class.quest + data.abilities[power.attackSecondary.stat]; // prof bonus, misc +hit
-      power.attackSecondary.flat = data.class.quest + abidmg; // misc +dmg
+      power.attackSecondary.hitbonus = data.class.quest + data.abilities[power.attackSecondary.stat] + power.attackSecondary.hit.miscAttack; // prof bonus
+      power.attackSecondary.flat = data.class.quest + abidmg + power.attackSecondary.hit.miscDamage;
       abidmg = data.abilities[power.attackTertiary.hit.abi] || 0;
-      power.attackTertiary.hitbonus = data.class.quest + data.abilities[power.attackTertiary.stat]; // prof bonus, misc +hit
-      power.attackTertiary.flat = data.class.quest + abidmg; // misc +dmg
+      power.attackTertiary.hitbonus = data.class.quest + data.abilities[power.attackTertiary.stat] + power.attackTertiary.hit.miscAttack;
+      power.attackTertiary.flat = data.class.quest + abidmg + power.attackTertiary.hit.miscDamage;
     }
   }
 

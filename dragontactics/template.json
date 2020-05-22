@@ -395,6 +395,9 @@
         "damage": "",
         "range": ""
       },
+      "implement": {
+        "proficiency": 0
+      },
       "armor": {
         "ac": 0,
         "penalty": 0,
@@ -405,6 +408,7 @@
         "penalty": 0
       },
       "is": {
+        "implement": false,
         "weapon": false,
         "armor": false,
         "shield": false
@@ -435,7 +439,9 @@
           "dice": "",
           "abi": "",
           "damageType": "",
-          "effect": ""
+          "effect": "",
+          "miscAttack": 0,
+          "miscDamage": 0
         },
         "miss": ""
       },
@@ -447,9 +453,11 @@
         "def": "",
         "hit": {
           "dice": "",
-          "flat": "",
+          "abi": "",
           "damageType": "",
-          "effect": ""
+          "effect": "",
+          "miscAttack": 0,
+          "miscDamage": 0
         },
         "miss": ""
       },
@@ -461,9 +469,11 @@
         "def": "",
         "hit": {
           "dice": "",
-          "flat": "",
+          "abi": "",
           "damageType": "",
-          "effect": ""
+          "effect": "",
+          "miscAttack": 0,
+          "miscDamage": 0
         },
         "miss": ""
       },

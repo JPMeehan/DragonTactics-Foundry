@@ -35,9 +35,9 @@
             <label class="action">Action:
                 <select name="data.action">
                     {{#select data.action}}
-                    <option selected value="Standard">Standard</option>
-                    <option value="Move">Move</option>
-                    <option value="Minor">Minor</option>
+                    <option selected value="standard">Standard</option>
+                    <option value="move">Move</option>
+                    <option value="minor">Minor</option>
                     <option value="Immediate Interrupt">Immediate Interupt</option>
                     <option value="Immediate Reaction">Immediate Reaction</option>
                     <option value="Free Interrupt">Free Interrupt</option>
@@ -52,7 +52,7 @@
                     <option selected value="">None</option>
                     <option value="Short Rest">Short Rest</option>
                     <option value="Long Rest">Long Rest</option>
-                    <option value="Special">Special</option>
+                    <option value="special">Special</option>
                     {{/select}}
                 </select>
             </label>
@@ -76,12 +76,12 @@
                 <div class="attack">
                     <select name="data.attack.stat">
                         {{#select data.attack.stat}}
-                        <option selected value="Strength">Strength</option>
-                        <option value="Constitution">Constitution</option>
-                        <option value="Dexterity">Dexterity</option>
-                        <option value="Intelligence">Intelligence</option>
-                        <option value="Wisdom">Wisdom</option>
-                        <option value="Charisma">Charisma</option>
+                        <option selected value="strength">Strength</option>
+                        <option value="constitution">Constitution</option>
+                        <option value="dexterity">Dexterity</option>
+                        <option value="intelligence">Intelligence</option>
+                        <option value="wisdom">Wisdom</option>
+                        <option value="charisma">Charisma</option>
                         {{/select}}
                     </select>
                     <span class="attackvs">vs.</span>
@@ -99,13 +99,13 @@
                     <span class="plus">+</span>
                     <select name="data.attack.hit.abi">
                         {{#select data.attack.hit.abi}}
-                        <option selected value="None">None</option>
-                        <option value="Strength">Strength</option>
-                        <option value="Constitution">Constitution</option>
-                        <option value="Dexterity">Dexterity</option>
-                        <option value="Intelligence">Intelligence</option>
-                        <option value="Wisdom">Wisdom</option>
-                        <option value="Charisma">Charisma</option>
+                        <option selected value="none">None</option>
+                        <option value="strength">Strength</option>
+                        <option value="constitution">Constitution</option>
+                        <option value="dexterity">Dexterity</option>
+                        <option value="intelligence">Intelligence</option>
+                        <option value="wisdom">Wisdom</option>
+                        <option value="charisma">Charisma</option>
                         {{/select}}
                     </select>
                     <input type="text" class="damagetype" name="data.attack.hit.damageType" value="{{data.attack.hit.damageType}}" data-dtype="String"
@@ -131,12 +131,12 @@
                     <h3>Attack</h3>
                         <select name="data.attackSecondary.stat">
                             {{#select data.attackSecondary.stat}}
-                            <option selected value="Strength">Strength</option>
-                            <option value="Constitution">Constitution</option>
-                            <option value="Dexterity">Dexterity</option>
-                            <option value="Intelligence">Intelligence</option>
-                            <option value="Wisdom">Wisdom</option>
-                            <option value="Charisma">Charisma</option>
+                            <option selected value="strength">Strength</option>
+                            <option value="constitution">Constitution</option>
+                            <option value="dexterity">Dexterity</option>
+                            <option value="intelligence">Intelligence</option>
+                            <option value="wisdom">Wisdom</option>
+                            <option value="charisma">Charisma</option>
                             {{/select}}
                         </select>
                         <span class="attackvs">vs.</span>
@@ -154,13 +154,13 @@
                         <span class="plus">+</span>
                         <select name="data.attackSecondary.hit.abi">
                             {{#select data.attackSecondary.hit.abi}}
-                            <option selected value="None">None</option>
-                            <option value="Strength">Strength</option>
-                            <option value="Constitution">Constitution</option>
-                            <option value="Dexterity">Dexterity</option>
-                            <option value="Intelligence">Intelligence</option>
-                            <option value="Wisdom">Wisdom</option>
-                            <option value="Charisma">Charisma</option>
+                            <option selected value="none">None</option>
+                            <option value="strength">Strength</option>
+                            <option value="constitution">Constitution</option>
+                            <option value="dexterity">Dexterity</option>
+                            <option value="intelligence">Intelligence</option>
+                            <option value="wisdom">Wisdom</option>
+                            <option value="charisma">Charisma</option>
                             {{/select}}
                         </select>
                         <input type="text" class="damagetype" name="data.attackSecondary.hit.damageType" value="{{data.attackSecondary.hit.damageType}}" data-dtype="String"
@@ -186,12 +186,12 @@
                 <h3>Attack</h3>
                     <select name="data.attackTertiary.stat">
                         {{#select data.attackTertiary.stat}}
-                        <option selected value="Strength">Strength</option>
-                        <option value="Constitution">Constitution</option>
-                        <option value="Dexterity">Dexterity</option>
-                        <option value="Intelligence">Intelligence</option>
-                        <option value="Wisdom">Wisdom</option>
-                        <option value="Charisma">Charisma</option>
+                        <option selected value="strength">Strength</option>
+                        <option value="constitution">Constitution</option>
+                        <option value="dexterity">Dexterity</option>
+                        <option value="intelligence">Intelligence</option>
+                        <option value="wisdom">Wisdom</option>
+                        <option value="charisma">Charisma</option>
                         {{/select}}
                     </select>
                     <span class="attackvs">vs.</span>
@@ -209,13 +209,13 @@
                     <span class="plus">+</span>
                     <select name="data.attackTertiary.hit.abi">
                         {{#select data.attackTertiary.hit.abi}}
-                        <option selected value="None">None</option>
-                        <option value="Strength">Strength</option>
-                        <option value="Constitution">Constitution</option>
-                        <option value="Dexterity">Dexterity</option>
-                        <option value="Intelligence">Intelligence</option>
-                        <option value="Wisdom">Wisdom</option>
-                        <option value="Charisma">Charisma</option>
+                        <option selected value="none">None</option>
+                        <option value="strength">Strength</option>
+                        <option value="constitution">Constitution</option>
+                        <option value="dexterity">Dexterity</option>
+                        <option value="intelligence">Intelligence</option>
+                        <option value="wisdom">Wisdom</option>
+                        <option value="charisma">Charisma</option>
                         {{/select}}
                     </select>
                     <input type="text" class="damagetype" name="data.attackTertiary.hit.damageType" value="{{data.attackTertiary.hit.damageType}}" data-dtype="String"
