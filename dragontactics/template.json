@@ -3,6 +3,7 @@
     "types": ["hero", "npc"],
     "templates": {
       "description": {
+        "foo": "",
         "race": {
           "name": "Race",
           "_id": ""
