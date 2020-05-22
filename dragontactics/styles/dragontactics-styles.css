@@ -297,7 +297,7 @@
   width: 100px;
 }
 .dragontactics div.abilities div.skill p.ability {
-  width: calc(100% - 260px);
+  width: calc(100% - 280px);
   text-align: center;
 }
 .dragontactics div.abilities div.skill select.rank {
