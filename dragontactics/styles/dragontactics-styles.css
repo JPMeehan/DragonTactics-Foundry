@@ -513,6 +513,9 @@
   margin: 7px 0;
   padding: 0;
 }
+.dragontactics div.equipment div.worn input[type=radio] {
+  display: none;
+}
 .dragontactics div.equipment div.worn input[type=radio]:checked ~ h4 {
   font-weight: bold;
 }

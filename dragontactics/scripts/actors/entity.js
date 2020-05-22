@@ -56,7 +56,7 @@ export class DragonTacticsActor extends Actor {
     }
 
 
-    for (let power of Object.entries(data.powers)) {
+    for (let [key, power] of Object.entries(data.powers)) {
       var abidmg = data.abilities[power.attack.hit.abi] || 0;
       power.attack.hitbonus = data.class.quest + data.abilities[power.attack.stat]; // prof bonus, misc +hit
       power.attack.flat = data.class.quest + abidmg; // misc +dmg

@@ -85,22 +85,6 @@ export class DragonTacticsActorSheet extends ActorSheet {
     this.actor.update({[`data.equipment.worn.${itemType}`] : equipment});
   }
 
-  // _showPowerDetails(event) {
-  //   event.preventDefault();
-  //   const toggler = $(event.currentTarget);
-  //   const toggleIcon = toggler.find('i');
-  //   const power = toggler.parents('.item');
-  //   const body = power.find('.powerbody');
-
-  //   if (toggleIcon.hasClass('fa-caret-right')) {
-  //     toggleIcon.removeClass('fa-caret-right').addClass('fa-caret-down');
-  //     body.slideDown();
-  //   } else {
-  //     toggleIcon.removeClass('fa-caret-down').addClass('fa-caret-right');
-  //     body.slideUp();
-  //   }
-  // }
-
   _radioFix(event) {
     event.preventDefault();    
     let name = event.target.name;
@@ -119,7 +103,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
   _showItemDescription(event) {
     event.preventDefault();
 
-    item = $(event.currentTarget).closest("li.item")
+    var item = $(event.currentTarget).closest("li.item")
     
     
     const description = item.find(".individual-description");
