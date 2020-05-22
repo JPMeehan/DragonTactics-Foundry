@@ -279,7 +279,7 @@
         "paragon": "",
         "epic": "",
         "level": 1,
-        "quest": "",
+        "quest": 0,
         "defense": {
           "hpBase": 12,
           "hpLevel": 5,

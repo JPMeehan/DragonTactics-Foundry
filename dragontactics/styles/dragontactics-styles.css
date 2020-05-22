@@ -535,6 +535,7 @@
 .dragontactics div.equipment div.worn div.armor-abil-select {
   display: inline-block;
   width: calc(100% - 84px);
+  text-align: right;
 }
 .dragontactics div.equipment ol.rituals {
   list-style-type: none;

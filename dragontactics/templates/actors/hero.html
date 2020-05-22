@@ -255,9 +255,6 @@
                                             {{/if}} 
                                             Attack
                                         </strong>
-                                        {{#each data.equipment.worn.weapons as |weapon weaponkey|}}
-                                        <span>{{weaponkey}} {{weapon.label}}</span>
-                                        {{/each}}
                                         <select class="power-weapon-select" name="data.powers.{{key}}.attack.weapon" data-dtype="String">
                                             {{#select attack.weapon}}
                                             {{#each @root.data.equipment.worn.weapons as |weapon weaponkey|}}
@@ -293,6 +290,16 @@
                                 {{#if attackSecondary.exist}}   
                                     <div class="power-row">
                                         <strong>Secondary Attack</strong>
+                                        <select class="power-weapon-select" name="data.powers.{{key}}.attackSecondary.weapon" data-dtype="String">
+                                            {{#select attackSecondary.weapon}}
+                                            {{#each @root.data.equipment.worn.weapons as |weapon weaponkey|}}
+                                            <option value="{{weaponkey}}">{{weapon.label}}</option>
+                                            {{/each}}
+                                            {{#each @root.data.equipment.worn.implements as |implement implementkey|}}
+                                            <option value="{{implementkey}}">{{implement.label}}</option>
+                                            {{/each}}
+                                            {{/select}}
+                                        </select>
                                     </div>
                                     <div class="power-row rangetargets">
                                         <span class="range" name="data.powers.{{key}}.attackSecondary.range">{{attackSecondary.range}}</span>
@@ -325,6 +332,16 @@
                                 {{#if attackTertiary.exist}}   
                                     <div class="power-row">
                                         <strong>Tertiary Attack</strong>
+                                        <select class="power-weapon-select" name="data.powers.{{key}}.attackTertiary.weapon" data-dtype="String">
+                                            {{#select attackTertiaryweapon}}
+                                            {{#each @root.data.equipment.worn.weapons as |weapon weaponkey|}}
+                                            <option value="{{weaponkey}}">{{weapon.label}}</option>
+                                            {{/each}}
+                                            {{#each @root.data.equipment.worn.implements as |implement implementkey|}}
+                                            <option value="{{implementkey}}">{{implement.label}}</option>
+                                            {{/each}}
+                                            {{/select}}
+                                        </select>
                                     </div>
                                     <div class="power-row rangetargets">
                                         <span class="range" name="data.powers.{{key}}.attackTertiary.range">{{attackTertiary.range}}</span>
@@ -496,7 +513,7 @@
                 <h3 class="armor-head">Armor</h3>
                 <div class="armor-abil-select">
                     Ability to AC:
-                    <select name="data.equipment.armor.ability">
+                    <select name="data.equipment.armor.ability" data-dtype="Number">
                         {{#select data.equipment.armor.ability}}
                         <option value=0>None (Heavy Armor)</option>
                         {{#each data.abilities as |attr key|}}
