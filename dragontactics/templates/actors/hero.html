@@ -211,7 +211,7 @@
                 <ol class="repeating-list">
                     {{#each data.powers as |power key|}}
                         <li class="powers item {{usage}}" data-item-id="{{key}}" data-power="true">
-                            <div class="powerheader">
+                            <div class="powerheader item-head">
                                 <span class="powername" name="data.powers.{{key}}.name">{{name}}</span>
                                 <div class="item-controls">
                                     <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -219,7 +219,7 @@
                                     <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                                 </div>
                             </div>
-                            <div class="powerbody save-toggle">
+                            <div class="powerbody save-toggle individual-description">
                                 <div class="power-row usage">
                                     <span name="data.powers.{{key}}.recharge">{{recharge}}</span>
                                     <span name="data.powers.{{key}}.action">{{action}}</span>
@@ -644,7 +644,7 @@
             <ol class="rituals">
                 {{#each data.rituals as |ritual key|}}
                 <li class="ritual item" data-item-id="{{key}}">
-                    <div class="ritual-head">
+                    <div class="ritualheader item-head">
                         <h4>{{label}}</h4>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Power"><i class="fas fa-caret-right"></i></a>
@@ -652,7 +652,7 @@
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div>
                     </div>
-                    <div class="ritual-body">
+                    <div class="ritual-body individual-description save-toggle">
                         <span>Component Cost: <span name="data.rituals.{{key}}.componentCost">{{componentCost}}</span></span>
                         <span>Casting Time: <span name="data.rituals.{{key}}.castingTime">{{castingTime}}</span></span>
                         <span>Duration: <span name="data.rituals.{{key}}.duration">{{duration}}</span></span>

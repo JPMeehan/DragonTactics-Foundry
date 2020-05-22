@@ -19,7 +19,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
 
 
     // Showing and hiding powers
-    html.find('.powers .item-details-toggle').click(this._showPowerDetails.bind(this));
+    html.find('.item-details-toggle').click(this._showItemDescription.bind(this));
     // html.find('.powerheader').click(ev => {
     //   $(ev.currentTarget).toggleClass('show');
     // })
@@ -112,8 +112,14 @@ export class DragonTacticsActorSheet extends ActorSheet {
     }
   }
 
+//   <div class="individual-description save-toggle">
+//    <span>Hello!</span>
+//   </div>
+
   _showItemDescription(event) {
     event.preventDefault();
+
+    item = $(event.currentTarget).closest("li.item")
     
     
     const description = item.find(".individual-description");
