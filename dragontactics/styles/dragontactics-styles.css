@@ -528,6 +528,14 @@
   text-align: right;
   width: 60px;
 }
+.dragontactics div.equipment div.worn h3.armor-head {
+  display: inline-block;
+  width: 80px;
+}
+.dragontactics div.equipment div.worn div.armor-abil-select {
+  display: inline-block;
+  width: calc(100% - 84px);
+}
 .dragontactics div.equipment ol.rituals {
   list-style-type: none;
   margin: 7px 0;

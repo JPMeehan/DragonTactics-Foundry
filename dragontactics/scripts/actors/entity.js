@@ -34,7 +34,7 @@ export class DragonTacticsActor extends Actor {
     const data = actorData.data;
 
     
-    data.ac.value = 10 + this.armorabil(data.abilities[data.equipment.armor.ability],"score")  + data.class.quest + data.ac.miscbonus + data.equipment.armor.torso.bonus + data.equipment.armor.shield.bonus;
+    data.ac.value = 10 + data.equipment.armor.ability + data.class.quest + data.ac.miscbonus + data.equipment.armor.torso.bonus + data.equipment.armor.shield.bonus;
     data.fortitude.value = 10 + Math.max(data.abilities.strength.mod, data.abilities.constitution.mod) + data.class.quest + data.fortitude.miscbonus;
     data.reflex.value = 10 + Math.max(data.abilities.dexterity.mod, data.abilities.intelligence.mod) + data.class.quest + data.reflex.miscbonus + data.equipment.armor.shield.bonus;
     data.will.value = 10 + Math.max(data.abilities.wisdom.mod, data.abilities.charisma.mod) + data.class.quest + data.will.miscbonus;

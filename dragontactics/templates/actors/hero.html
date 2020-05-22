@@ -208,16 +208,6 @@
             </div>
             <h2>Powers</h2>
             <div class="powers">
-                <select class="power-weapon-select" name="data.foo" data-dtype="String">
-                    {{#select data.foo}}
-                    {{#each data.equipment.worn.weapons as |weapon weaponkey|}}
-                    <option value="{{weaponkey}}">{{weapon.label}}</option>
-                    {{/each}}
-                    {{#each data.equipment.worn.implements as |implement implementkey|}}
-                    <option value="{{implementkey}}">{{implement.label}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
                 <ol class="repeating-list">
                     {{#each data.powers as |power key|}}
                         <li class="powers item {{usage}}" data-item-id="{{key}}" data-power="true">
@@ -503,7 +493,18 @@
                     {{/if}}
                     {{/each}}
                 </ol>
-                <h3>Armor</h3>
+                <h3 class="armor-head">Armor</h3>
+                <div class="armor-abil-select">
+                    Ability to AC:
+                    <select name="data.equipment.armor.ability">
+                        {{#select data.equipment.armor.ability}}
+                        <option value=0>None (Heavy Armor)</option>
+                        {{#each data.abilities as |attr key|}}
+                        <option value="{{mod}}">{{full}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
                 <ol class="armor">
                     {{#each data.equipment.worn.armor as |item key|}}
                     <li class="item" data-item-id="{{key}}" data-equipment="armor">
