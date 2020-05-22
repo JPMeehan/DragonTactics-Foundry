@@ -265,21 +265,21 @@
                                             {{/if}} 
                                             Attack
                                         </strong>
+                                        {{#each data.equipment.worn.weapons as |weapon weaponkey|}}
+                                        <span>{{weaponkey}} {{weapon.label}}</span>
+                                        {{/each}}
+                                        {{#each data.equipment.worn.implements as |implement implementkey|}}
+                                        <span>{{implementkey}}  {{implement.label}}</span>
+                                        {{/each}}
                                         <select class="power-weapon-select" name="data.powers.{{key}}.attack.weapon" data-dtype="String">
-                                            {{#each data.equipment.worn.weapons as |weapon weaponkey|}}
-                                            <span>{{weaponkey}} {{weapon.label}}</span>
-                                            {{/each}}
-                                            {{#each data.equipment.worn.implements as |implement implementkey|}}
-                                            <span>{{implementkey}}  {{implement.label}}</span>
-                                            {{/each}}
-                                            <!-- {{#select power.attack.weapon}}
+                                            {{#select power.attack.weapon}}
                                             {{#each data.equipment.worn.weapons as |weapon weaponkey|}}
                                             <option value="{{weaponkey}}">{{weapon.label}}</option>
                                             {{/each}}
                                             {{#each data.equipment.worn.implements as |implement implementkey|}}
                                             <option value="{{implementkey}}">{{implement.label}}</option>
                                             {{/each}}
-                                            {{/select}} -->
+                                            {{/select}}
                                         </select>
                                     </div>
                                     <div class="power-row attack clickable">
