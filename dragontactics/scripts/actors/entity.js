@@ -34,8 +34,8 @@ export class DragonTacticsActor extends Actor {
     const data = actorData.data;
     const worn = data.equipment.worn;
 
-    data.equipment.armor.torso.bonus = worn.armor[data.equipment.equipped.armor].ac || 0;
-    data.equipment.armor.shield.bonus = worn.arms[data.equipment.equipped.arms].shield || 0;
+    data.equipment.armor.torso.bonus = this.nullprop(worn.armor[data.equipment.equipped.armor], "ac");
+    data.equipment.armor.shield.bonus = this.nullprop(worn.arms[data.equipment.equipped.arms], "shield");
     
     data.ac.value = 10 + data.equipment.armor.ability + data.class.quest + data.ac.miscbonus + data.equipment.armor.torso.bonus + data.equipment.armor.shield.bonus;
     data.fortitude.value = 10 + Math.max(data.abilities.strength.mod, data.abilities.constitution.mod) + data.class.quest + data.fortitude.miscbonus;
@@ -59,17 +59,19 @@ export class DragonTacticsActor extends Actor {
       }
     }
 
-
+    const attacks = ["attack", "attackSecondary", "attackTertiary"]
     for (let [key, power] of Object.entries(data.powers)) {
-      var abidmg = data.abilities[power.attack.hit.abi] || 0;
-      power.attack.hitbonus = data.class.quest + data.abilities[power.attack.stat] + power.attack.hit.miscAttack; // prof bonus
-      power.attack.flat = data.class.quest + abidmg + power.attack.hit.miscDamage;
-      abidmg = data.abilities[power.attackSecondary.hit.abi] || 0;
-      power.attackSecondary.hitbonus = data.class.quest + data.abilities[power.attackSecondary.stat] + power.attackSecondary.hit.miscAttack; // prof bonus
-      power.attackSecondary.flat = data.class.quest + abidmg + power.attackSecondary.hit.miscDamage;
-      abidmg = data.abilities[power.attackTertiary.hit.abi] || 0;
-      power.attackTertiary.hitbonus = data.class.quest + data.abilities[power.attackTertiary.stat] + power.attackTertiary.hit.miscAttack;
-      power.attackTertiary.flat = data.class.quest + abidmg + power.attackTertiary.hit.miscDamage;
+      for (let i = 0; i<3; i++ ) {
+        if (power[attacks[i]].exist) {
+          let prof = 0;
+          if (power[attacks[i]].weapon) {
+            prof = Math.max(this.nullprop(data.equipment.worn.weapons[power[attacks[i]].weapon], "proficiency"), this.nullprop(data.equipment.worn.implements[power[attacks[i]].weapon], "proficiency"))
+          }
+          let abidmg = data.abilities[power[attacks[i]].hit.abi] || 0;
+          power[attacks[i]].hitbonus = data.class.quest + data.abilities[power[attacks[i]].stat] + power[attacks[i]].hit.miscAttack + prof;
+          power[attacks[i]].flat = data.class.quest + abidmg + power[attacks[i]].hit.miscDamage;
+        }
+      }
     }
   }
 
@@ -93,7 +95,7 @@ export class DragonTacticsActor extends Actor {
     }
   }
 
-  armorabil(obj, prop) {
+  nullprop(obj, prop) {
     return( obj == null ? 0 : obj[prop] );
   }
 }
