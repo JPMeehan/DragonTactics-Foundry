@@ -64,7 +64,7 @@
                 <ol class="block-list">
                     {{#each data.abilities as |attr key|}}
                     <li>
-                        <h4 class="label" name="data.abilities.{{key}}.label">{{label}}</h4>
+                        <h4 class="label rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{label}}">{{label}}</h4>
                         <input class="score" type="text" pattern="\d+" name="data.abilities.{{key}}.score"
                             value="{{attr.score}}" data-dtype="Number" title="Ability Score" />
                         <span class="modifier" title="Ability Modifier" >{{numberFormat mod decimals=0 sign=true}}</span>
@@ -86,7 +86,7 @@
                     {{#each data.skill as |skill key|}}
                     <li class="{{skill.ability}}">
                         <p class="mod">{{numberFormat mod decimals=0 sign=true}}</p>
-                        <p class="label rollable" name="data.skill.{{key}}.label">{{label}}</p>
+                        <p class="label clickable rollable" data-roll="d20+@skill.{{key}}.mod" data-label="{{label}}">{{label}}</p>
                         <p class="ability">{{ability_short}}</p>
                         <select class="rank" name="data.skill.{{key}}.rank" data-dtype="String">
                             {{#select skill.rank}}
@@ -265,14 +265,14 @@
                                             {{/select}}
                                         </select>
                                     </div>
-                                    <div class="power-row attack rollable">
+                                    <div class="power-row attack clickable rollable" data-roll="d20+@powers.{{key}}.attack.hitbonus" data-label="{{name}}">
                                         <span>{{numberFormat attack.hitbonus decimals=0 sign=true}}</span> vs. 
                                         <span>{{attack.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage rollable">
+                                    <div class="power-row hit-damage clickable rollable" data-roll="@powers.{{key}}.attack.hit.dice+@powers.{{key}}.attack.flat" data-label="{{name}}">
                                         <span>{{attack.hit.dice}}</span>
                                         <span>{{numberFormat attack.flat decimals=0 sign=true}}</span>
-                                        <span>{{attack.hit.damageType}}</span> damage
+                                        <span>{{attack.hit.damageType}} damage</span>
                                     </div>
                                     {{#if attack.hit.effect}}
                                     <div class="power-row hit-effect">
@@ -306,14 +306,14 @@
                                             <span class="targets">{{attackSecondary.target}}</span>
                                         {{/if}}
                                     </div>
-                                    <div class="power-row attackSecondary rollable">
+                                    <div class="power-row attackSecondary clickable rollable" data-roll="d20+@powers.{{key}}.attackSecondary.hitbonus" data-label="{{name}}">
                                         <span>{{numberFormat attackSecondary.hitbonus decimals=0 sign=true}}</span> vs. 
                                         <span>{{attackSecondary.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage rollable">
+                                    <div class="power-row hit-damage clickable rollable" data-roll="@powers.{{key}}.attackSecondary.hit.dice+@powers.{{key}}.attackSecondary.flat" data-label="{{name}}">
                                         <span>{{attackSecondary.hit.dice}}</span>
                                         <span>{{numberFormat attackSecondary.flat decimals=0 sign=true}}</span>
-                                        <span>{{attackSecondary.hit.damageType}}</span> damage
+                                        <span>{{attackSecondary.hit.damageType}} damage</span>
                                     </div>
                                     {{#if attackSecondary.hit.effect}}
                                     <div class="power-row hit-effect">
@@ -347,14 +347,14 @@
                                             <span class="targets">{{attackTertiary.target}}</span>
                                         {{/if}}
                                     </div>
-                                    <div class="power-row attackTertiary rollable">
+                                    <div class="power-row attackTertiary clickable rollable" data-roll="d20+@powers.{{key}}.attackTertiary.hitbonus" data-label="{{name}}">
                                         <span>{{numberFormat attackTertiary.hitbonus decimals=0 sign=true}}</span> vs. 
                                         <span>{{attackTertiary.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage rollable">
+                                    <div class="power-row hit-damage clickable rollable" data-roll="@powers.{{key}}.attackTertiary.hit.dice+@powers.{{key}}.attackTertiary.flat" data-label="{{name}}">
                                         <span>{{attackTertiary.hit.dice}}</span>
                                         <span>{{numberFormat attackTertiary.flat decimals=0 sign=true}}</span>
-                                        <span>{{attackTertiary.hit.damageType}}</span> damage
+                                        <span>{{attackTertiary.hit.damageType}} damage</span>
                                     </div>
                                     {{#if attackTertiary.hit.effect}}
                                     <div class="power-row hit-effect">
@@ -403,7 +403,7 @@
                     {{#each data.features.class as |feat key|}}
                     <li>
                         <h3 class="name" name="data.features.class.{{key}}.label">{{label}}</h3>
-                        <p class="description" name="data.features.class.{{key}}.description">{{description}}</p>
+                        <p class="description">{{description}}</p>
                     </li>
                     {{/each}}
                 </ol>

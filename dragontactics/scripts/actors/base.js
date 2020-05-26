@@ -20,15 +20,11 @@ export class DragonTacticsActorSheet extends ActorSheet {
 
     // Showing and hiding powers
     html.find('.item-details-toggle').click(this._showItemDescription.bind(this));
-    // html.find('.powerheader').click(ev => {
-    //   $(ev.currentTarget).toggleClass('show');
-    // })
+    
+    
+    // Rollable abilities.
+    html.find('.rollable').click(this._onRoll.bind(this));
 
-
-    // console.log(html.find('input[type="radio"]'))
-    // try {
-    //   html.find('input[type="radio"]').change(this._radioFix.bind(this));
-    //   } catch (e) {console.log("No radio inputs available")}
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
@@ -96,10 +92,6 @@ export class DragonTacticsActorSheet extends ActorSheet {
     }
   }
 
-//   <div class="individual-description save-toggle">
-//    <span>Hello!</span>
-//   </div>
-
   _showItemDescription(event) {
     event.preventDefault();
 
@@ -149,4 +141,25 @@ export class DragonTacticsActorSheet extends ActorSheet {
       }
     }
   }
+
+  /**
+   * Handle clickable rolls.
+   * @param {Event} event   The originating click event
+   * @private
+   */
+  _onRoll(event) {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+
+    if (dataset.roll) {
+      let roll = new Roll(dataset.roll, this.actor.data.data);
+      let label = dataset.label ? `Rolling ${dataset.label}` : '';
+      roll.roll().toMessage({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        flavor: label
+      });
+    }
+  }
+
 }
