@@ -96,12 +96,9 @@ Hooks.on('createOwnedItem', (actor, item) => {
       }
       if (item.data.is.armor) {
         newequipment["ac"] = item.data.armor.ac;
-        newequipment["penalty"] = item.data.armor.penalty;
-        newequipment["speed"] = item.data.armor.speed;
       }
       if (item.data.is.shield) {
         newequipment["shield"] = item.data.shield.bonus;
-        newequipment["penalty"] = item.data.shield.penalty;
       }
       data.equipment.worn[item.data.type][item._id] = newequipment;
       break;
@@ -242,12 +239,9 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
             }
             if (item.data.is.armor) {
               newequipment["ac"] = item.data.armor.ac;
-              newequipment["penalty"] = item.data.armor.penalty;
-              newequipment["speed"] = item.data.armor.speed;
             }
             if (item.data.is.shield) {
               newequipment["shield"] = item.data.shield.bonus;
-              newequipment["penalty"] = item.data.shield.penalty;
             }
             data.equipment.worn[key][item._id] = newequipment;
           } else {

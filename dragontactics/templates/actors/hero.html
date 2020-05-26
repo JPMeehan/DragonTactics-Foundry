@@ -67,8 +67,7 @@
                         <h4 class="label" name="data.abilities.{{key}}.label">{{label}}</h4>
                         <input class="score" type="text" pattern="\d+" name="data.abilities.{{key}}.score"
                             value="{{attr.score}}" data-dtype="Number" title="Ability Score" />
-                        <span class="modifier" name="data.abilities.{{key}}.modifier"
-                            value="{{attr.modifier}}" itle="Ability Modifier" >{{modifier}}</span>
+                        <span class="modifier" title="Ability Modifier" >{{numberFormat mod decimals=0 sign=true}}</span>
                     </li>
                     {{/each}}
                 </ol>
@@ -86,8 +85,8 @@
                 <ol class="repeating-list">
                     {{#each data.skill as |skill key|}}
                     <li class="{{skill.ability}}">
-                        <p class="mod" name="data.skill.{{key}}.modifier">{{modifier}}</p>
-                        <p class="label clickable" name="data.skill.{{key}}.label">{{label}}</p>
+                        <p class="mod">{{numberFormat mod decimals=0 sign=true}}</p>
+                        <p class="label rollable" name="data.skill.{{key}}.label">{{label}}</p>
                         <p class="ability">{{ability_short}}</p>
                         <select class="rank" name="data.skill.{{key}}.rank" data-dtype="String">
                             {{#select skill.rank}}
@@ -266,12 +265,12 @@
                                             {{/select}}
                                         </select>
                                     </div>
-                                    <div class="power-row attack clickable">
+                                    <div class="power-row attack rollable">
                                         <span class="plus">+</span>
                                         <span name="data.powers.{{key}}.attack.hitbonus">{{attack.hitbonus}}</span> vs. 
                                         <span name="data.powers.{{key}}.attack.def">{{attack.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage clickable">
+                                    <div class="power-row hit-damage rollable">
                                         <span name="data.powers.{{key}}.attack.hit.dice">{{attack.hit.dice}}</span>
                                         <span class="plus">+</span>
                                         <span name="data.powers.{{key}}.attack.flat">{{attack.flat}}</span>
@@ -309,12 +308,12 @@
                                             <span class="targets" name="data.powers.{{key}}.attackSecondary.target">{{attackSecondary.target}}</span>
                                         {{/if}}
                                     </div>
-                                    <div class="power-row attackSecondary clickable">
+                                    <div class="power-row attackSecondary rollable">
                                         <span class="plus">+</span>
                                         <span name="data.powers.{{key}}.attackSecondary.hitbonus">{{attackSecondary.hitbonus}}</span> vs. 
                                         <span name="data.powers.{{key}}.attackSecondary.def">{{attackSecondary.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage clickable">
+                                    <div class="power-row hit-damage rollable">
                                         <span name="data.powers.{{key}}.attackSecondary.hit.dice">{{attackSecondary.hit.dice}}</span>
                                         <span class="plus">+</span>
                                         <span name="data.powers.{{key}}.attackSecondary.flat">{{attackSecondary.flat}}</span>
@@ -352,11 +351,11 @@
                                             <span class="targets" name="data.powers.{{key}}.attackTertiary.target">{{attackTertiary.target}}</span>
                                         {{/if}}
                                     </div>
-                                    <div class="power-row attackTertiary clickable">
+                                    <div class="power-row attackTertiary rollable">
                                         <span name="data.powers.{{key}}.attackTertiary.hitbonus">{{attackTertiary.hitbonus}}</span> vs. 
                                         <span name="data.powers.{{key}}.attackTertiary.def">{{attackTertiary.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage clickable">
+                                    <div class="power-row hit-damage rollable">
                                         <span name="data.powers.{{key}}.attackTertiary.hit.dice">{{attackTertiary.hit.dice}}</span>
                                         <span class="plus">+</span>
                                         <span name="data.powers.{{key}}.attackTertiary.flat">{{attackTertiary.flat}}</span>

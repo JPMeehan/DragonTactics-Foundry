@@ -56,13 +56,9 @@
                     <label class="equipment acbon">Armor Bonus:
                         <input type="text" pattern="\d+" name="data.armor.ac" value="{{data.armor.ac}}" data-dtype="Number" title="Armor Bonus, which is added to your AC" />
                     </label>
-                    <label class="equipment acpen">Armor Check Penalty:
-                        <input type="text" pattern="\d+" name="data.armor.penalty" value="{{data.armor.penalty}}" data-dtype="Number" 
-                            title="Armor Check Penalty, which is subtracted from Strength, Dexterity, and Constitution-based checks" />
-                    </label>
-                    <label class="equipment speedpen">Speed Penalty:
-                        <input type="text" name="data.armor.speed" value="{{data.armor.speed}}" data-dtype="String" 
-                            placeholder="Speed Penalty" title="Speed Penalty, e.g. -5 ft."/>
+                    <label class="equipment acpen">Strength Requirement:
+                        <input type="text" pattern="\d+" name="data.armor.strength" value="{{data.armor.strength}}" data-dtype="Number" 
+                            title="Strength Requirement" />
                     </label>
                 {{/if}}
                 {{#if data.is.weapon}}
@@ -92,8 +88,8 @@
                     <label class="equipment acbon">Shield Bonus:
                         <input type="text" pattern="\d+" name="data.shield.bonus" value="{{data.shield.bonus}}" data-dtype="Number" title="Shield Bonus, which is added to your AC and Reflex" />
                     </label>
-                    <label class="equipment acpen">Shield Armor Check Penalty:
-                        <input type="text" pattern="\d+" name="data.shield.penalty" value="{{data.shield.penalty}}" data-dtype="Number" title="Shield Armor Check Penalty" />
+                    <label class="equipment acpen">Strength Requirement:
+                        <input type="text" pattern="\d+" name="data.shield.strength" value="{{data.shield.strength}}" data-dtype="Number" title="Strength Requirement" />
                     </label>
                 {{/if}}
             </div>
