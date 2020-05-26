@@ -270,9 +270,9 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
           equipment["proficiency"] = item.data.implement.proficiency;
         }
         if (item.data.is.armor) {
-          equipment["ac"] = item.data.weapon.ac;
-          equipment["penalty"] = item.data.weapon.penalty;
-          equipment["speed"] = item.data.weapon.speed;
+          equipment["ac"] = item.data.armor.ac;
+          equipment["penalty"] = item.data.armor.penalty;
+          equipment["speed"] = item.data.armor.speed;
         }
         if (item.data.is.shield) {
           equipment["shield"] = item.data.shield.bonus;

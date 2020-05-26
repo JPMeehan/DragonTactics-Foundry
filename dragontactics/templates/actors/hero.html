@@ -267,13 +267,14 @@
                                         </select>
                                     </div>
                                     <div class="power-row attack clickable">
+                                        <span class="plus">+</span>
                                         <span name="data.powers.{{key}}.attack.hitbonus">{{attack.hitbonus}}</span> vs. 
                                         <span name="data.powers.{{key}}.attack.def">{{attack.def}}</span>
                                     </div>
                                     <div class="power-row hit-damage clickable">
                                         <span name="data.powers.{{key}}.attack.hit.dice">{{attack.hit.dice}}</span>
                                         <span class="plus">+</span>
-                                        <span name="data.powers.{{key}}.attack.hit.flat">{{attack.hit.flat}}</span>
+                                        <span name="data.powers.{{key}}.attack.flat">{{attack.flat}}</span>
                                         <span name="data.powers.{{key}}.attack.hit.damageType">{{attack.hit.damageType}}</span> damage
                                     </div>
                                     {{#if attack.hit.effect}}
@@ -309,13 +310,14 @@
                                         {{/if}}
                                     </div>
                                     <div class="power-row attackSecondary clickable">
+                                        <span class="plus">+</span>
                                         <span name="data.powers.{{key}}.attackSecondary.hitbonus">{{attackSecondary.hitbonus}}</span> vs. 
                                         <span name="data.powers.{{key}}.attackSecondary.def">{{attackSecondary.def}}</span>
                                     </div>
                                     <div class="power-row hit-damage clickable">
                                         <span name="data.powers.{{key}}.attackSecondary.hit.dice">{{attackSecondary.hit.dice}}</span>
                                         <span class="plus">+</span>
-                                        <span name="data.powers.{{key}}.attackSecondary.hit.flat">{{attackSecondary.hit.flat}}</span>
+                                        <span name="data.powers.{{key}}.attackSecondary.flat">{{attackSecondary.flat}}</span>
                                         <span name="data.powers.{{key}}.attackSecondary.hit.damageType">{{attackSecondary.hit.damageType}}</span> damage
                                     </div>
                                     {{#if attackSecondary.hit.effect}}
@@ -357,7 +359,7 @@
                                     <div class="power-row hit-damage clickable">
                                         <span name="data.powers.{{key}}.attackTertiary.hit.dice">{{attackTertiary.hit.dice}}</span>
                                         <span class="plus">+</span>
-                                        <span name="data.powers.{{key}}.attackTertiary.hit.flat">{{attackTertiary.hit.flat}}</span>
+                                        <span name="data.powers.{{key}}.attackTertiary.flat">{{attackTertiary.flat}}</span>
                                         <span name="data.powers.{{key}}.attackTertiary.hit.damageType">{{attackTertiary.hit.damageType}}</span> damage
                                     </div>
                                     {{#if attackTertiary.hit.effect}}
