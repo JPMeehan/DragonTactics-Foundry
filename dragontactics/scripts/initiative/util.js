@@ -5,7 +5,7 @@ export async function createActionCardTable(rebuild, cardpack) {
         packName = cardpack;
     }
     const cardPack = game.packs.get(packName);
-    const cardPackIndex = await cardPack.getIndex();
+    const cardPackIndex = await cardPack.getIndex(); // issue with getIndex of null?
     let cardTable = game.tables.getName(CONFIG.DRAGONTACTICS.init.cardTable);
     //If the table doesn't exist, create it
     if (!cardTable) {
