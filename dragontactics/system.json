@@ -77,7 +77,7 @@
     {
 			"name": "action-cards",
 			"label": "Action Cards",
-			"system": "swade",
+			"system": "dragontactics",
 			"path": "./packs/action-cards.db",
 			"entity": "JournalEntry"
 		}
