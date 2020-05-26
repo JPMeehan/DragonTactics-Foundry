@@ -15,7 +15,7 @@
       "label": "Monsters",
       "system": "dragontactics",
       "module": "dragontactics",
-      "path": "packs/monsters.db",
+      "path": "./packs/monsters.db",
       "entity": "Actor"
     },
     {
@@ -31,7 +31,7 @@
       "label": "Classes",
       "system": "dragontactics",
       "module": "dragontactics",
-      "path": "packs/classes.db",
+      "path": "./packs/classes.db",
       "entity": "Item"
     },
     {
@@ -39,7 +39,7 @@
       "label": "Powers",
       "system": "dragontactics",
       "module": "dragontactics",
-      "path": "packs/powers.db",
+      "path": "./packs/powers.db",
       "entity": "Item"
     },
     {
@@ -47,7 +47,7 @@
       "label": "Races",
       "system": "dragontactics",
       "module": "dragontactics",
-      "path": "packs/races.db",
+      "path": "./packs/races.db",
       "entity": "Item"
     },
     {
@@ -55,7 +55,7 @@
       "label": "Rituals",
       "system": "dragontactics",
       "module": "dragontactics",
-      "path": "packs/rituals.db",
+      "path": "./packs/rituals.db",
       "entity": "Item"
     },
     {
@@ -63,7 +63,7 @@
       "label": "Feats",
       "system": "dragontactics",
       "module": "dragontactics",
-      "path": "packs/feats.db",
+      "path": "./packs/feats.db",
       "entity": "Item"
     },
     {
@@ -71,17 +71,16 @@
       "label": "Competencies",
       "system": "dragontactics",
       "module": "dragontactics",
-      "path": "packs/competencies.db",
+      "path": "./packs/competencies.db",
       "entity": "Item"
     },
     {
 			"name": "action-cards",
 			"label": "Action Cards",
 			"system": "swade",
-			"path": "packs/action-cards.db",
+			"path": "./packs/action-cards.db",
 			"entity": "JournalEntry"
 		}
-
   ],
   "languages": [],
   "socket": false,
