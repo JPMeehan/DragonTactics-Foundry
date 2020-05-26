@@ -8,7 +8,7 @@
 import "./hooks/items.js";
 
 import {DRAGONTACTICS} from "./config.js"
-import { rollInitiative, setupTurns } from "./initiative/cardInit"
+import { rollInitiative, setupTurns } from "./initiative/cardInit.js"
 import { DragonTacticsSetup } from "./setupHandler.js"
 import { createActionCardTable } from "./initiative/util.js"
 
