@@ -12,7 +12,7 @@ export const rollInitiative = async function (ids, formula, messageOptions) {
     const combatantUpdates = [];
     const initMessages = [];
     let isRedraw = false;
-    if (ids.length > actionCardDeck.results.filter(r => !r.drawn).length) {
+    if (ids.length > actionCardDeck.results.filter(r => !r.drawn).length) { //deck isn't being initialized
         ui.notifications.warn("No Cards Left");
         return;
     }
