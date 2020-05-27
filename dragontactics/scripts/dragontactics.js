@@ -11,6 +11,7 @@ import {DRAGONTACTICS} from "./config.js"
 import { rollInitiative, setupTurns } from "./initiative/cardInit.js"
 import { DragonTacticsSetup } from "./setupHandler.js"
 import { createActionCardTable } from "./initiative/util.js"
+import { registerSettings } from "./settings.js";
 
 import {
   DragonTacticsActor
@@ -57,10 +58,7 @@ Hooks.once("init", function () {
   CONFIG.Item.entityClass = DragonTacticsItem;
 
   // Register System Settings
-  // registerSystemSettings();
-
-  // Patch Core Functions
-  // Combat.prototype._getInitiativeFormula = _getInitiativeFormula;
+  registerSettings();
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);

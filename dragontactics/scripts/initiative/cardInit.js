@@ -30,11 +30,12 @@ export const rollInitiative = async function (ids, formula, messageOptions) {
             continue;
         // Set up edges
         let cardsToDraw = 1;
-        if (c.actor.data.data.initiative.hasLevelHeaded)
-            cardsToDraw = 2;
-        if (c.actor.data.data.initiative.hasImpLevelHeaded)
-            cardsToDraw = 3;
-        const hasHesitant = c.actor.data.data.initiative.hasHesitant;
+        // if (c.actor.data.data.initiative.hasLevelHeaded)
+        //     cardsToDraw = 2;
+        // if (c.actor.data.data.initiative.hasImpLevelHeaded)
+        //     cardsToDraw = 3;
+        // const hasHesitant = c.actor.data.data.initiative.hasHesitant;
+        const hasHesitant = false;
         // Draw initiative
         let card;
         if (isRedraw) {
