@@ -34,8 +34,7 @@ export class DragonTacticsSetup {
                     }
                     Item.create(items, {temporary: true}).then(temp => {
                         for ( let j of temp ) {
-                            await pack.importEntity(j);
-                            console.log(`Imported Item ${j.name} into Compendium pack ${pack.collection}`);
+                            pack.importEntity(j).then(d => console.log(`Imported Item ${j.name} into Compendium pack ${pack.collection}`))
                         }
                     })
                 });
