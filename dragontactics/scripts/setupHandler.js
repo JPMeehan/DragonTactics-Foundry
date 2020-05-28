@@ -25,11 +25,11 @@ export class DragonTacticsSetup {
                     let items = []
                     let type = value;
                     let dict = data;
-                    if (type === "feats" || "flaws" || "competencies") {
+                    if (type === ("feats" || "flaws" || "competencies")) {
                         type = "feature";
                         dict = data.data;
                     }
-                    if (type === "power") {dict = data.data}
+                    else if (type === "power") {dict = data.data}
                     for (let i of Object.values(dict)) {
                         let item = {
                             "name": i.name,
