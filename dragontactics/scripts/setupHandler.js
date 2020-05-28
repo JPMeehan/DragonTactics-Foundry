@@ -8,22 +8,29 @@ export class DragonTacticsSetup {
 
         var filenames = {
             "equipment": "systems/dragontactics/assets/packjson/mundaneEquipment.json", 
-            "classes": "systems/dragontactics/assets/packjson/classes.json", 
-            "powers": "systems/dragontactics/assets/packjson/basicpowers.json", 
-            "races": "systems/dragontactics/assets/packjson/races.json", 
-            "rituals": "systems/dragontactics/assets/packjson/foundryrituals.json" , 
+            "class": "systems/dragontactics/assets/packjson/classes.json", 
+            "power": "systems/dragontactics/assets/packjson/basicpowers.json", 
+            "race": "systems/dragontactics/assets/packjson/races.json", 
+            "ritual": "systems/dragontactics/assets/packjson/foundryrituals.json" , 
             "feats": "systems/dragontactics/assets/packjson/feats-level1.json", 
             "competencies": "systems/dragontactics/assets/packjson/competencies.json", 
             "flaws": "systems/dragontactics/assets/packjson/flaws.json"
         }
 
-        for (let [type, filename] of Object.entries(filenames)) {
+        for (let [value, filename] of Object.entries(filenames)) {
             var pack = game.packs.find(p => p.collection === `dragontactics.${type}`);
             fetch(filename)
                 .then(response => response.json())
                 .then(data => {
                     let items = []
-                    for (let i of Object.values(data)) {
+                    type = value;
+                    dict = data;
+                    if (type === "feats" || "flaws" || "competencies") {
+                        type = "feature";
+                        dict = data.data;
+                    }
+                    if (type === "power") {dict = data.data}
+                    for (let i of Object.values(dict)) {
                         let item = {
                             "name": i.name,
                             "type": type,
