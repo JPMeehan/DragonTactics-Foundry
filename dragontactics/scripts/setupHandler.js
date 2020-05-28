@@ -23,7 +23,7 @@ export class DragonTacticsSetup {
                 .then(response => response.json())
                 .then(data => {
                     let items = []
-                    type = value;
+                    let type = value;
                     dict = data;
                     if (type === "feats" || "flaws" || "competencies") {
                         type = "feature";
