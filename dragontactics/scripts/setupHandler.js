@@ -23,7 +23,7 @@ export class DragonTacticsSetup {
                 .then(response => response.json())
                 .then(data => {
                     let items = []
-                    for (let i of data) {
+                    for (let i of Object.values(data)) {
                         let item = {
                             "name": i.name,
                             "type": type,
