@@ -18,7 +18,7 @@ export class DragonTacticsSetup {
         }
 
         for (let [value, filename] of Object.entries(filenames)) {
-            var pack = game.packs.find(p => p.collection === `dragontactics.${type}`);
+            var pack = game.packs.find(p => p.collection === `dragontactics.${value}`);
             fetch(filename)
                 .then(response => response.json())
                 .then(data => {
