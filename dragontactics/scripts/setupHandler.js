@@ -39,10 +39,11 @@ export class DragonTacticsSetup {
                         delete item.data.name;
                         items.push(item)
                     }
-                    Item.create(items, {temporary: true}).then(temp => { console.log(temp)
-                        // for ( let j of temp ) {
-                        //     pack.importEntity(j).then(d => console.log(`Imported Item ${j.name} into Compendium pack ${pack.collection}`))
-                        // }
+                    Item.create(items, {temporary: true}).then(temp => {
+                        // console.log(temp)
+                        for ( let j of temp ) {
+                            pack.importEntity(j).then(d => console.log(`Imported Item ${j.name} into Compendium pack ${pack.collection}`))
+                        }
                     })
                 });
         };
