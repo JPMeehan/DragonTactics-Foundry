@@ -2,7 +2,7 @@
   "name": "dragontactics",
   "title": "Dragon Tactics",
   "description": "A 4th Edition D&D Variant",
-  "version": "0.8.4",
+  "version": "0.9.0",
   "minimumCoreVersion": "0.5.7",
   "compatibleCoreVersion": "0.6.0",
   "templateVersion": 2,
@@ -64,6 +64,14 @@
       "system": "dragontactics",
       "module": "dragontactics",
       "path": "./packs/feats.db",
+      "entity": "Item"
+    },
+    {
+      "name": "flaws",
+      "label": "Flaws",
+      "system": "dragontactics",
+      "module": "dragontactics",
+      "path": "./packs/flaws.db",
       "entity": "Item"
     },
     {

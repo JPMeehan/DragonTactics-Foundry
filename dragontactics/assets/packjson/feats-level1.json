@@ -1,0 +1,231 @@
+{
+    "data": [
+        {
+            "name": "Actor",
+            "type": "feat",
+            "requirements": "Training in Impress",
+            "description": "<p><strong>Benefits:</strong> You can mimic the speech of another person or the sounds made by other creatures. You must have heard the person speaking, or heard the creature make the sound, for at least 1 minute. <em>(A successful insight check contested by your impress check allows the listener to detect the fakery)</em></p>"
+        },
+        {
+            "name": "Alertness",
+            "type": "feat",
+            "requirements": "Training in Perception",
+            "description": "<p><strong>Benefits:</strong> During the first round of combat you are dealt an additional initiative card, then choose one card to discard</p>"
+        },
+        {
+            "name": "Avoidance",
+            "type": "feat",
+            "requirements": "Training in Endurance",
+            "description": "<p><strong>Benefits:</strong> You have a +5 bonus to all defenses against traps and diseases</p>"
+        },
+        {
+            "name": "Chainmail Proficiency",
+            "type": "feat",
+            "requirements": "Proficiency in Hide Armor, 11 Strength",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency in Chainmail.</p>"
+        },
+        {
+            "name": "Covert",
+            "type": "feat",
+            "requirements": "Training in Stealth",
+            "description": "<p><strong>Benefits:</strong> You can move up to 20' in a single move action while hidden without having to reroll stealth <em>(Up from 10')</em></p>"
+        },
+        {
+            "name": "Diplomat",
+            "type": "feat",
+            "requirements": "Training in Appeal",
+            "description": "<p><strong>Benefits:</strong> As a standard action you can persuade up to six hostile creatures and change their attitude to Unfriendly. <em>(Attacking a creature or its allies immediately drops its attitude by three steps)</em></p>"
+        },
+        {
+            "name": "Eldritch Senses",
+            "type": "feat",
+            "requirements": "Training in Arcana",
+            "description": "<p><strong>Benefits:</strong> You can detect magic as a minor action and you have advantage on checks to detect magic</p>"
+        },
+        {
+            "name": "Empathic",
+            "type": "feat",
+            "requirements": "Training in Insight",
+            "description": "<p><strong>Benefits:</strong> As a minor action choose one enemy creature. That creature cannot flank you until you use this again.</p>"
+        },
+        {
+            "name": "Hide Armor Proficiency",
+            "type": "feat",
+            "requirements": "Proficiency with Leather Armor, 11 Strength, 11 Dexterity",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency in Hide Armor.</p>"
+        },
+        {
+            "name": "Implement Proficiency",
+            "type": "feat",
+            "requirements": "11 Intelligence, Wisdom, <strong>or</strong> Charisma",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency with an implement of your choice <em>(eg a Wand or Staff)</em>.</p>"
+        },
+        {
+            "name": "Leather Armor Proficiency",
+            "type": "feat",
+            "requirements": "11 Dexterity",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency with Leather Armor</p>"
+        },
+        {
+            "name": "Jack of All Trades",
+            "type": "feat",
+            "requirements": "11 Wisdom",
+            "description": "<p><strong>Benefits:</strong> Improve six untrained skills to adept.</p>"
+        },
+        {
+            "name": "Martial Weapon Proficiency",
+            "type": "feat",
+            "requirements": "11 Strength <strong>or</strong> Dexterity",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency in three martial weapons of your choice</p>"
+        },
+        {
+            "name": "Medic",
+            "type": "feat",
+            "requirements": "Training in Medicine",
+            "description": "<p><strong>Benefits:</strong> During a short rest you can tend to the wounds of up to six creatures. Any creature you're tending to regains additional HP equal to 2 plus your quest bonus</p>"
+        },
+        {
+            "name": "Minor Magics",
+            "type": "feat",
+            "requirements": "11 Charisma",
+            "description": "<p><strong>Benefits:</strong> Choose three level 0 powers from any power source. You can use them at-will.</p>"
+        },
+        {
+            "name": "Mounted Combatant",
+            "type": "feat",
+            "requirements": "Training in Animal Handling",
+            "description": "<p><strong>Benefits:</strong> Whenever your mount would take damage, you can redirect it to yourself as a free reaction. You are hardened against that damage.</p>"
+        },
+        {
+            "name": "Multiclass",
+            "type": "feat",
+            "requirements": "You use the same power source as the class you'd like to multiclass into",
+            "description": "<p><strong>Benefits:</strong> You may exchange a power for one of the same level and usage (At-Will or Recharge) in another class. Whenever you gain a level you may change the powers exchanged.</p>"
+        },
+        {
+            "name": "Plate Armor Proficiency",
+            "type": "feat",
+            "requirements": "15 Strength",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency in Plate Armor</p>"
+        },
+        {
+            "name": "Pop Up",
+            "type": "feat",
+            "requirements": "11 Dexterity",
+            "description": "<p><strong>Benefits:</strong> You can stand as a minor action</p>"
+        },
+        {
+            "name": "Rhetoritician",
+            "type": "feat",
+            "requirements": "Training in Debate",
+            "description": "<p><strong>Benefits:</strong> On a social skill check, if you beat the strong success DC by 5 or more, you score a critical success and improve the target's attitude by up to 3 steps</p>"
+        },
+        {
+            "name": "Scale Armor Proficiency",
+            "type": "feat",
+            "requirements": "13 Strength",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency in Scale Armor</p>"
+        },
+        {
+            "name": "Scholar",
+            "type": "feat",
+            "requirements": "Training in Research",
+            "description": "<p><strong>Benefits:</strong> You unearth a bonus fact that is guaranteed to be true when you research on a topic you are competent in.</p>"
+        },
+        {
+            "name": "Shield Proficiency",
+            "type": "feat",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency with light and heavy shields</p>"
+        },
+        {
+            "name": "Simple Weapon Proficiency",
+            "requirements": "None",
+            "type": "feat",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency in all simple weapons</p>"
+        },
+        {
+            "name": "Skill Proficiency",
+            "type": "feat",
+            "requirements": "An 11 in the ability for each skill you choose",
+            "description": "<p><strong>Benefits:</strong> Improve two untrained skills to trained.</p>"
+        },
+        {
+            "name": "Streetwise",
+            "type": "feat",
+            "requirements": "Training in Socialize",
+            "description": "<p><strong>Benefits:</strong> Whenever you spend a downtime socializing you make a bonus contact</p>"
+        },
+        {
+            "name": "Superior Armor Proficiency",
+            "requirements": "None",
+            "type": "feat",
+            "description": "<p><strong>Prerequisities:</strong> 13 Strength <strong>or</strong> Dexterity</p><p><strong>Benefits:</strong> You gain proficiency in one superior armor whose base type you are proficient with</p>"
+        },
+        {
+            "name": "Superior Implement Proficiency",
+            "type": "feat",
+            "requirements": "13 Intelligence, Wisdom, <strong>or</strong> Charisma",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency with one superior implement whose base type you are proficient in</p>"
+        },
+        {
+            "name": "Superior Weapon Proficiency",
+            "type": "feat",
+            "requirements": "13 Strength <strong>or</strong> Dexterity",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency in one superior weapon of your choice.</p>"
+        },
+        {
+            "name": "Tavern Brawler",
+            "type": "feat",
+            "requirements": "11 Strength",
+            "description": "<p><strong>Benefits:</strong> You gain proficiency with unarmed and improvised weapon attacks, and your damage die with them is increased by one size <em>(d4 -&gt; d6, d6 -&gt; d8, d8 -&gt; d10)</em></p>"
+        },
+        {
+            "name": "Thief",
+            "type": "feat",
+            "requirements": "Training in Sleight of Hand",
+            "description": "<p><strong>Benefits:</strong> You gain the following attack</p><blockquote><h3>Thieve</h3><p><em>You snatch an enemy's weapon or implement</em></p><p>Level 1 Attack</p><p>Feat</p><p><strong>Action:</strong> Standard &diams; <strong>Special:</strong> You must have a free hand &diams; <strong>Recharge:</strong> Short Rest<br /><strong>Range:</strong> Melee 5' &diams; <strong>Target:</strong> One creature <br /><strong>Attack:</strong> Dexterity vs. Reflex</p><p><strong>Hit:</strong> You steal a one-handed item the target is wielding</p></blockquote>"
+        },
+        {
+            "name": "Tinker",
+            "type": "feat",
+            "requirements": "Training in Repair",
+            "description": "<p><strong>Benefits:</strong> During a short rest you can make a Repair check to build an improvised device. The result of the check determines the complexity and power of the device. The device can have any purpose and lasts for one hour.</p>"
+        },
+        {
+            "name": "Toughness",
+            "type": "feat",
+            "requirements": "11 Constitution",
+            "description": "<p><strong>Benefits:</strong> Your hit points at 1st level is increased by 5, and you gain an additional hit point each level.</p>"
+        },
+        {
+            "name": "Tracker",
+            "type": "feat",
+            "requirements": "Training in Survival",
+            "description": "<p><strong>Benefits:</strong> Whenever you track a target you learn extra information about them. The quantity and quality of this information is based on your survival check.</p>"
+        },
+        {
+            "name": "Tumble",
+            "type": "feat",
+            "requirements": "Training in Acrobatics",
+            "description": "<p><strong>Benefits:</strong> You are hardened against falling damage. In addition, after passing through 5' of difficult terrain during a move, you can ignore the next 5' of difficult terrain</p>"
+        },
+        {
+            "name": "War Magic",
+            "type": "feat",
+            "requirements": "None",
+            "description": "<p><strong>Benefits:</strong> Choose one weapon with which you are proficient. You may use that weapon as an implement for your implement powers. <em>(You don't get it's weapon proficiency bonus for implement attacks)</em></p>"
+        },
+        {
+            "name": "Well Read",
+            "type": "feat",
+            "requirements": "11 Intelligence",
+            "description": "<p><strong>Benefits:</strong> Choose six additional competencies.</p>"
+        },
+        {
+            "name": "Wrestler",
+            "type": "feat",
+            "requirements": "Training in Athletics",
+            "description": "<p><strong>Benefits:</strong> You have a +2 bonus to hit with bull rush, grab, and shove attacks</p>"
+        }
+    ]
+}

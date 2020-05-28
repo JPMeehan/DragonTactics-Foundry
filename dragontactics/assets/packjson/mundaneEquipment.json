@@ -1,0 +1,5432 @@
+{
+    "equipment1": {
+        "name": "Cloth",
+        "description": "<h2>Mundane Armor (Light)</h2>\n<p>Jackets, mantles, woven robes, and padded vests don\u2019t, by themselves, provide any significant protection. However, you can imbue them with protective magic. Cloth armor doesn\u2019t slow you down or hinder your movement at all. All characters are proficient with cloth armor.</p>\n",
+        "quantity": 1,
+        "price": "0 gp",
+        "size": "3",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": null
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment2": {
+        "name": "Spiked Plate",
+        "description": "<h2>Base Type: Plate</h2><h2>Mundane Armor (Heavy) (Superior)</h2>\n<p>A dwarven innovation, spiked plate is a suit of plate mail studded with sharp, metal spikes. The dwarves developed this armor to deal with subterranean beasts such as hook horrors and umber hulks that grasp and crush their prey.</p>\n<p><strong>Barbed:</strong>\u00a0A suit of barbed armor or is covered with spikes and hooks designed to injure creatures foolish enough to grab at it. While you wear barbed armor a creature takes damage equal to 5 + your level when you escape that creature's grab on your turn or when that creature escapes your grab.</p>\n",
+        "quantity": 1,
+        "price": "55 gp",
+        "size": "8",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 8,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 15
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment3": {
+        "name": "Light Shield",
+        "description": "<h2>Mundane Armor (Shield)</h2>\n<p>You need to use your shield hand to wield a light shield properly. You can still use that hand to hold another item, to climb, or the like. However, you can\u2019t use your shield hand to make attacks</p>\n<p><strong>Shield Bonus:</strong>\u00a0Shields give a bonus to both AC and Reflex. Furthermore, you can carry small objects while wielding a light shield, but cannot carry anything in a heavy-shield wielding hand.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "2",
+        "type": "arms",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 1,
+            "strength": 11
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": true
+        }
+    },
+    "equipment4": {
+        "name": "Dagger",
+        "description": "<h2>Mundane Weapon Simple Melee 1H</h2>\n<p><strong>Light thrown:</strong>\u00a0A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d4",
+            "range": "25'/50'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment5": {
+        "name": "Greatclub",
+        "description": "<h2>Mundane Weapon Simple Melee 2H</h2>",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "2d4",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment6": {
+        "name": "Alhulak",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment7": {
+        "name": "Falchion",
+        "description": "<h2>Mundane Weapon Military Melee 2H</h2>\n<p>A falchion features a long, wide blade that bends in a curve, similar to that of a [item:307603].</p>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "2d4",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment8": {
+        "name": "Fullblade",
+        "description": "<h2>Mundane Weapon Superior Melee 2H</h2>\n<p>This enormous, two-handed sword requires special training to use effectively</p>\n<p><strong>Defensive</strong>: You gain a +1 bonus to AC while wielding a defensive weapon</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d12",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment9": {
+        "name": "Rapier",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p>A weapon of choice for the sophisticated duelist, the rapier is a long, light blade ideal for parrying blows and delivering quick counterattacks.</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment10": {
+        "name": "Shortsword",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d6",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment11": {
+        "name": "Crossbow",
+        "description": "<h2>Mundane Weapon Simple Ranged 2H</h2>\n<p><strong>Load Minor:</strong>\u00a0Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. The crossbow is \u201cload minor,\u201d which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "100'/200'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment12": {
+        "name": "Khopesh",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p>This sturdy weapon is identified by the crescent-shaped curve at the end of its blade.</p>\n<p><strong>Brutal 1</strong>: Whenever you roll 1 or lower on a damage die using this power, reroll that die.</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment13": {
+        "name": "Broadsword",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p>This stout, wide-bladed weapon lacks the accuracy of a [item:239950], but what it lacks in accuracy, it redeems with deadliness.</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment14": {
+        "name": "Rod",
+        "description": "<h2>Mundane Implement</h2>\n<p>Rods are short sticks of intricately adorned wood, metal, and hide, useful for channeling raw magical energy.</p>\n",
+        "quantity": 1,
+        "price": "12 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment15": {
+        "name": "Leather",
+        "description": "<h2>Mundane Armor (Light)</h2>\n<p>Leather armor is sturdier than cloth armor. It protects vital areas with multiple layers of boiled-leather plates, while covering the limbs with supple leather that provides a small amount of protection.</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "6",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 2,
+            "strength": 9
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment16": {
+        "name": "Hide",
+        "description": "<h2>Mundane Armor (Light)</h2>\n<p>Thicker and heavier than leather, hide armor is composed of skin from any creature that has a tough hide, such as a bear, a griffon, or a dragon. Hide armor can bind and slightly hinder your precision, but it\u2019s light enough that it doesn\u2019t affect your speed.\u00a0</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 3,
+            "strength": 11
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment17": {
+        "name": "Ring Mail",
+        "description": "<h2>Base Type: Scale</h2><h2>Mundane Armor (Heavy) (Superior)</h2>\n<p>This flexible but sturdy armor consists of a typical suit ofleather armor with a series of metal rings sewn onto its surface. The rings enhance the armor's sturdiness, improving its protective qualities while still offering the maneuverability of lightweight armor.</p>\n<p><strong>Manueverable:</strong> This armor does not impose disadvantage on stealth checks</p>\n",
+        "quantity": 1,
+        "price": "50 gp",
+        "size": "8",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 7,
+            "strength": 13
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment18": {
+        "name": "Plate",
+        "description": "<h2>Mundane Armor (Heavy)</h2>\n<p>The heaviest type of armor, made up of shaped plates of metal or similarly resilient material, plate provides the most armor protection. The cost for its superior fortification is mobility and agility.</p>\n",
+        "quantity": 1,
+        "price": "50 gp",
+        "size": "8",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 8,
+            "strength": 15
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment19": {
+        "name": "Longsword",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment20": {
+        "name": "Ball Bearings",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Ball bearings</strong>\u00a0can be scattered across a 5' square as a standard action to turn it into difficult terrain. Characters may choose to ignore the terrain by making a saving throw - if they succeed they ignore the speed penalty, if they fail they fall prone.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment21": {
+        "name": "Block, Tackle, and Winch",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Block, Tackle, and Winch</strong>\u00a0After you attach this set of simple machines to a solid surface, you can pass a rope through it to triple the weight you can lift, pull, or drag on the other end of the rope</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment22": {
+        "name": "Caltrops",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Ball bearings</strong>\u00a0can be scattered across a 5' square to turn it into difficult terrain. Characters may choose to ignore the terrain by making a saving throw - if they succeed they ignore the speed penalty, if they fail they are slowed (save ends).</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment23": {
+        "name": "Candle Clock",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Candle Clock</strong>\u00a0provide minimal light, but can keep accurate time for up to 8 hours</p>\n",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment24": {
+        "name": "Chain (10')",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Chain (10')</strong>\u00a0is a flexible way of securing doors, prisoners, or attaching two objects.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment25": {
+        "name": "Chalk",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Chalk</strong>\u00a0can be used to draw marks or communicate</p>\n",
+        "quantity": 1,
+        "price": "5 cp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment26": {
+        "name": "Slate",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Slate</strong>\u00a0is a platform to draw [item:244391]\u00a0on</p>\n",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment27": {
+        "name": "Chirurgeon's Kit",
+        "description": "<h2>Mundane Equipment (Kit)</h2>\n<p><strong>Chirurgeon's Kit</strong>\u00a0give a +2 bonus to medicine checks to treat diseases and poisons</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment28": {
+        "name": "Climber's Kit",
+        "description": "<h2>Mundane Equipment (Kit)</h2>\n<p><strong>Climber's Kit</strong>\u00a0give a +2 bonus to athletics checks to climb a surface with at least 1 minute of setup</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment29": {
+        "name": "Crookeye",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Crookeyes</strong>\u00a0allow characters to see from adjacent squares when wielded</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment30": {
+        "name": "Crowbar",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Crowbar</strong>\u00a0give a +2 bonus to Strength checks to pry a chest, door, or other object open</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment31": {
+        "name": "Disguise Kit",
+        "description": "<h2>Mundane Equipment (Kit)</h2>\n<p><strong>Disguise Kit</strong>\u00a0give a +2 bonus to Impress checks to act as another person. A disguise kit can only confer a benefit to a single target at a time and takes at least one hour to set up</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment32": {
+        "name": "Flask (Empty)",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Flask (Empty)</strong>\u00a0can be used to hold up to 16 oz of liquid</p>\n",
+        "quantity": 1,
+        "price": "1 sp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment33": {
+        "name": "Flint and Steel",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Flint and Steel</strong>\u00a0can be used to start fires as a standard action, assuming there is sufficient material</p>\n",
+        "quantity": 1,
+        "price": "5 cp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment34": {
+        "name": "Gambling Gear",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Gambling Gear</strong>\u00a0covers playing cards, dice, or even game boards for common games of skill and luck</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment35": {
+        "name": "Glass Cutter",
+        "description": "<h2>Mundane Equipment</h2>\n<p>A <strong>Glass Cutter</strong>\u00a0lets you silently cut precise pieces of glass out without shattering the whole pane</p>\n",
+        "quantity": 1,
+        "price": "3 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment36": {
+        "name": "Hunter's Kit",
+        "description": "<h2>Mundane Equipment (Kit)</h2>\n<p><strong>Hunter's Kit</strong>\u00a0give a +2 bonus to survival checks to forage and acquire rations</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment37": {
+        "name": "Inquisitive's Kit",
+        "description": "<h2>Mundane Equipment (Kit)</h2>\n<p><strong>Inquisitive's Kit</strong>\u00a0give a +2 bonus to perception checks to examine a crime scene or otherwise discern past events</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment38": {
+        "name": "Listening Cone",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Listening Cone</strong>\u00a0grant advantage to perception checks to listen through doors or walls</p>\n",
+        "quantity": 1,
+        "price": "3 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment39": {
+        "name": "Manacles",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Manacles</strong>\u00a0can be used to restrain hands or feet</p>\n",
+        "quantity": 1,
+        "price": "3 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment40": {
+        "name": "Pole (10')",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Pole (10')</strong>\u00a0have all sorts of uses, but can also be used for a +2 bonus on Acrobatics to balance across a narrow surface</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment41": {
+        "name": "Pole (Collapsible)",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Pole (Collapsible)</strong>\u00a0are like <a title=\"Pole (10') have all sorts of uses, but can also be used for a +2 bonus on Acrobatics to balance across a narrow surface&lt;br &gt;&lt;/li&gt;&lt;p&gt;Price: 1 gp&lt;br /&gt;Size: 3 lbs.&lt;/p&gt;\" href=\"https://kanka.io/en-US/campaign/6529/items/18681\" data-toggle=\"tooltip\" data-html=\"true\">10' poles</a>\u00a0but are made of retracting 2' increments, out to a maximum of 12', and can be combined with other collapsible poles</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment42": {
+        "name": "Rope - Hempen (50')",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Rope - Hempen (50')</strong>\u00a0can be used to tie or otherwise secure objects or people</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment43": {
+        "name": "Rope - Silk (50')",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Rope - Silk (50')</strong>\u00a0is lighter and confers a +2 bonus to Sleight of Hand checks to use the rope</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment44": {
+        "name": "Rubbing Kit",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Rubbing Kit</strong>\u00a0can be used to copy an intricate inscription found on a wall or other surface for later review</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment45": {
+        "name": "Iron Spike",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Iron Spikes</strong>\u00a0can be driven into doors to seal them shut</p>\n",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment46": {
+        "name": "Surveyor's Kit",
+        "description": "<h2>Mundane Equipment (Kit)</h2>\n<p><strong>Surveyor's Kit</strong>\u00a0give a +2 bonus to perception checks to find secret doors or traps after taking 10 minutes to set up</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment47": {
+        "name": "Writing Utensils",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Writing Utensils</strong>\u00a0include quill, paper, and writing ink</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment48": {
+        "name": "Bedroll",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Bedroll</strong>\u00a0Sleeping outdoors without a bed roll imposes a -1 penalty to all d20 rolls until the next long rest.</p>\n",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment49": {
+        "name": "Rations (1 day)",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Rations</strong>\u00a0usually consist of Ghallanda bread plus some mix of local fruits and vegetables. See survival rules for usage.</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment50": {
+        "name": "Tent",
+        "description": "<h2>Mundane Equipment</h2>\n<p><strong>Tent</strong>\u00a0Sleeping outdoors without a tent is risky in hazardous weather and imposes disadvantage on checks</p>\n",
+        "quantity": 1,
+        "price": "2 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment51": {
+        "name": "Backpack",
+        "description": "<h2>Mundane Equipment (Container)</h2>\n<p>Every proper adventurer owns a backpack, which usually consists of a large cloth bag with leather straps to go around the arms.</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": 2,
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment52": {
+        "name": "Barrel",
+        "description": "<h2>Mundane Equipment (Container)</h2>\n<p>While not convenient for regular adventurers, barrels are an efficient means of holding things in combination with a mobile platform</p>\n",
+        "quantity": 1,
+        "price": "3 gp",
+        "size": 2,
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment53": {
+        "name": "Belt with Pouches",
+        "description": "<h2>Mundane Equipment (Container)</h2>\n<p>Adventuring belts come with 4 pouches</p>\n",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": 2,
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment54": {
+        "name": "Sack",
+        "description": "<h2>Mundane Equipment (Container)</h2>\n<p>Sacks\u00a0can be made out of a wide variety of materials. Unlike a [item:244567] a sack occupies two hands to carry, but can give additional carrying capacity beyond the backpack.</p>\n",
+        "quantity": 1,
+        "price": "1 sp",
+        "size": 2,
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment55": {
+        "name": "Arcane Signet Ring",
+        "description": "<h2>Mundane Equipment (Identification)</h2>\n<p><strong>Arcane Signet Ring</strong>\u00a0are used to guarantee signatures and are manufactured jointly by House Sivis and House Cannith</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment56": {
+        "name": "ID Papers (Standard)",
+        "description": "<h2>Mundane Equipment (Identification)</h2>\n<p><strong>ID papers (Standard)</strong>\u00a0are typically carried by middle and upper class members of the five nations, Zilargo, or the Mror Holds. They include a physical description, name, residence, and any affiliation to a major organization such as a Dragonmarked House.</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment57": {
+        "name": "ID Papers (Picture)",
+        "description": "<h2>Mundane Equipment (Identification)</h2>\n<p><strong>ID papers (Picture)</strong>\u00a0are higher quality than regular ID papers, and can be enchanted by the Sivis Notaries guild to show if the bearer is the person pictured for 100 gp.</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment58": {
+        "name": "Letters of Credit",
+        "description": "<h2>Mundane Equipment (Identification)</h2>\n<p><strong>Letters of Credit</strong>\u00a0represent how much value you have stored with House Kundarak and are notarized by House Sivis. The cost represents the fee for opening an account with the house.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment59": {
+        "name": "Traveling Papers",
+        "description": "<h2>Mundane Equipment (Identification)</h2>\n<p><strong>Traveling Papers</strong>\u00a0are necessary for legal border crossing, and offer the same information as ID papers plus where and why a person is traveling.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment60": {
+        "name": "Candle",
+        "description": "<h2>Mundane Equipment (Light)</h2>\n<p><strong>Candles</strong>\u00a0emits dim light in a 5' radius. Candles last 4 hours</p>\n",
+        "quantity": 1,
+        "price": "1 sp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment61": {
+        "name": "Everburning Torch",
+        "description": "<h2>Mundane Equipment (Light)</h2>\n<p><strong>Everburning Torch</strong>\u00a0emits perpetual light as a torch without producing heat or smoke.</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment62": {
+        "name": "Jar of glowworms",
+        "description": "<h2>Mundane Equipment (Light)</h2>\n<p><strong>Jar of glowworms</strong>\u00a0emits dim light in the square the glowworms inhabit. The jar can easily and quickly be covered, and the worms count as living creatures for the purpose of triggering traps</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment63": {
+        "name": "Lantern",
+        "description": "<h2>Mundane Equipment (Light)</h2>\n<p><strong>Lanterns</strong>\u00a0emits bright light in a 60' radius, and dim light out to double that. Oil costs 1 sp per hour and take up 1 capacity per 8 hours of oil</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment64": {
+        "name": "Sunrod",
+        "description": "<h2>Mundane Equipment (Light)</h2>\n<p><strong>Sunrods</strong>\u00a0emit bright light in a 90' radius, and dim light out to double that, for up to two hours.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment65": {
+        "name": "Torch",
+        "description": "<h2>Mundane Equipment (Light)</h2>\n<p><strong>Torches</strong>\u00a0emits bright light in a 30' radius, and dim light out to double that, for up to two hours.</p>\n",
+        "quantity": 1,
+        "price": "5 sp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment66": {
+        "name": "Musical Instrument",
+        "description": "<h2>Mundane Equipment</h2>\n<p>Ex: Bagpipes, Drum, Flute, Harp, Horn, Lute, Lyre, Woodwind</p>\n<p>Any musical instrument that would seem to be smaller/lighter is also accounting for whatever extra equipment is necessary with the instrument</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment67": {
+        "name": "Alchemist's Tools",
+        "description": "<h2>Mundane Equipment (Tool)</h2>\n<p><strong>Alchemist's Tools</strong>\u00a0are used to craft potions and throwable magic flasks.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment68": {
+        "name": "Artisan's Tools",
+        "description": "<h2>Mundane Equipment (Tool)</h2>\n<p><strong>Artisan's Tools</strong>\u00a0include everything from brewer's tools to woodcaver's tools. They are usually used to craft other mundane items or make repairs.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment69": {
+        "name": "Forgery Tools",
+        "description": "<h2>Mundane Equipment (Tool)</h2>\n<p><strong>Forgery Tools</strong>\u00a0are used to create fake documents</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment70": {
+        "name": "Poisoner's Tools",
+        "description": "<h2>Mundane Equipment (Tool)</h2>\n<p><strong>Poisoner's Tools</strong>\u00a0are used to craft poisons. These tools come with the recipe for [item:306957], [item:306958], [item:306962], and [item:306963].</p>\n<h3 id=\"long-term-conditions-poisons-rules\">Rules</h3>\n<p>In addition to the normal rules for a [note:226302], poisons have some special characteristics. First, poisons do not require endurance checks once per day - instead, poisons act on a faster timescale, as defined by the \"Period\" entry in the listing.</p>\n<p>Second, poisons have specific vectors through which they can affect a subject, as defined by the vector entry. Vectors include 'Contact', which means the poison can be absorbed through the skin of the subject. 'Ingested' poisons require the subject to eat or drink the poison. 'Inhalation' poisons can be used as a dust and must simply be breathed in. 'Injection' poisons require the poison to directly enter the blood stream of the subject, such as by being coated on an edged weapon and dealing damage.</p>\n<h3 id=\"long-term-conditions-poisons-crafting\">Crafting</h3>\n<p>During downtime periods player characters who both own poisoner's tools and have appropriate materials can craft poisons for which they have the appropriate formula. The cost of a poison depends on the level of Endurance DC's the character wishes. Severe poisons cost double an equivalent level of Mild poison. Crafting a batch of poison creates three doses, while just buying poisons only purchases one dose for the same cost.</p>\n<p>Alternatively, a character with competency in poisoner's tools can forage for materials during downtime, even if they do not have actual poisoner's tools. The amount of materials they forage is equal to the amount of progress they could make on crafting.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment71": {
+        "name": "Thieves Tools",
+        "description": "<h2>Mundane Equipment (Tool)</h2>\n<p><strong>Thieves Tools</strong>\u00a0are used to pick locks and disable traps</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment72": {
+        "name": "Ritual Book",
+        "description": "<h2>Mundane Equipment (Tool)</h2>\n<p><strong>Ritual Books</strong>\u00a0contain magical formulas for casting [note:226315]\u00a0and can be used as a [item:307890]\u00a0implement.</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "2",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment73": {
+        "name": "Chainmail",
+        "description": "<h2>Mundane Armor (Heavy)</h2>\n<p>Metal rings woven together into a shirt, leggings, and a hood make up a suit of chainmail. Chainmail grants good protection, but it\u2019s cumbersome, so it reduces your mobility and agility</p>\n",
+        "quantity": 1,
+        "price": "40 gp",
+        "size": "8",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 6,
+            "strength": 11
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment74": {
+        "name": "Scale",
+        "description": "<h2>Mundane Armor (Heavy)</h2>\n<p>Overlapping pieces of highly durable material, such as steel or even dragon scales, make up scale armor. Despite its heaviness, scale is surprisingly easy to wear; its straps and buckles make it adjustable and able to fit snugly on the body, allowing flexibility and agility. Mundane scale armor uses metal plates.</p>\n",
+        "quantity": 1,
+        "price": "45 gp",
+        "size": "8",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 7,
+            "strength": 13
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment75": {
+        "name": "Brigandine",
+        "description": "<h2>Base Type: Leather</h2><h2>Mundane Armor (Light) (Superior)</h2>\n<p><strong>Tough:</strong>\u00a0Tough armor is reinforced with additional plates designed to protect vulnerable areas. The first time in each encounter a critical hit is scored against your AC while you're wearing tough armor, the critical hit becomes a normal hit.</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 2,
+            "strength": 9
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment76": {
+        "name": "Lamellar",
+        "description": "<h2>Base Type: Hide</h2><h2>Mundane Armor (Light) (Superior)</h2>\n<p><strong>Tough:</strong>\u00a0Tough armor is reinforced with additional plates designed to protect vulnerable areas. The first time in each encounter a critical hit is scored against your AC while you're wearing tough armor, the critical hit becomes a normal hit.</p>\n",
+        "quantity": 1,
+        "price": "35 gp",
+        "size": "6",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 3,
+            "strength": 11
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment77": {
+        "name": "Breastplate",
+        "description": "<h2>Base Type: Chainmail</h2><h2>Mundane Armor (Heavy) (Superior)</h2>\n<p>\u00a0</p>\n<p><strong>Manueverable:</strong> This armor does not impose disadvantage on stealth checks</p>\n",
+        "quantity": 1,
+        "price": "45 gp",
+        "size": "8",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 6,
+            "strength": 11
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment78": {
+        "name": "Banded Mail",
+        "description": "<h2>Base Type: Chainmail</h2><h2>Mundane Armor (Heavy) (Superior)</h2>\n<p>Banded mail consists of a suit of chainmail reinforced with layers of metal plates arranged in strips along the suit's midsection.</p>\n<p><strong>Tough:</strong>\u00a0Tough armor is reinforced with additional plates designed to protect vulnerable areas. The first time in each encounter a critical hit is scored against your AC while you're wearing tough armor, the critical hit becomes a normal hit.</p>\n",
+        "quantity": 1,
+        "price": "45 gp",
+        "size": "8",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 6,
+            "strength": 11
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment79": {
+        "name": "Splint Mail",
+        "description": "<h2>Base Type: Scale</h2><h2>Mundane Armor (Heavy) (Superior)</h2>\n<p>First developed by the dwarves, splint mail consists of vertical strips of metal bound to a thick layer ofleather and chainmail. Because it is so heavy and ponderous, few other than dwarves wear it in battle. While it lacks the protective elements of plate, it is scale armor's equal. More important, its rigid construction allows it to absorb some portion of an enemy's blows.</p>\n<p><strong>Tough:</strong>\u00a0Tough armor is reinforced with additional plates designed to protect vulnerable areas. The first time in each encounter a critical hit is scored against your AC while you're wearing tough armor, the critical hit becomes a normal hit.</p>\n",
+        "quantity": 1,
+        "price": "50 gp",
+        "size": "8",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 7,
+            "strength": 13
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment80": {
+        "name": "Full Plate",
+        "description": "<h2>Base Type: Plate</h2><h2>Mundane Armor (Heavy) (Superior)</h2>\n<p>Though the dwarves are loath to admit it, human smiths crafted the first suits of full plate for the use of mounted knights. Of course, the dwarves are quick to add, they did perfect those initial, flawed designs. Among all the kinds of heavy armor, full plate offers unmatched protection and flexibility.</p>\n<p><strong>Tough:</strong>\u00a0Tough armor is reinforced with additional plates designed to protect vulnerable areas. The first time in each encounter a critical hit is scored against your AC while you're wearing tough armor, the critical hit becomes a normal hit.</p>\n",
+        "quantity": 1,
+        "price": "55 gp",
+        "size": "8",
+        "type": "armor",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 8,
+            "strength": 15
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": true,
+            "shield": false
+        }
+    },
+    "equipment81": {
+        "name": "Resilient Document",
+        "description": "<h2>Mundane Equipment</h2>\n<p>The gnomes of Zilargo are obsessed with the preservation of information. Using alchemical techniques and the exotic woods of Aerenal, the Library of Korranberg developed a material far stronger than paper or parchment. A resilient document has hardness 3 and 3 hit points; a resilient book has hardness 3 and 7 hit points per inch of thickness. A resilient document is not adversely affected by exposure to water, and has fire resistance 3, which allows it to survive temporary exposure to fire without serious damage. To create a specific sort of resilient document, add 1 gp to the base cost of that document. A resilient book (such as a wizard\u2019s spellbook) costs an additional 100 gp.</p>\n",
+        "quantity": 1,
+        "price": "1 gp per page",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment82": {
+        "name": "Heavy Shield",
+        "description": "<h2>Mundane Armor (Shield)</h2>\n<p>When you use a heavy shield, you gain a greater bonus to your AC and Reflex defense, but you can\u2019t use your shield hand for any other task.</p>\n<p><strong>Shield Bonus:</strong>\u00a0Shields give a bonus to both AC and Reflex. Furthermore, you can carry small objects while wielding a light shield, but cannot carry anything in a heavy-shield wielding hand.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "4",
+        "type": "arms",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 13
+        },
+        "shield": {
+            "bonus": 2,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": true
+        }
+    },
+    "equipment83": {
+        "name": "Club",
+        "description": "<h2>Mundane Weapon Simple Melee 1H</h2>\n<p><strong>Rogue:</strong>\u00a0Rogue weapons are special weapons that can be used with the Rogue's Sneak Attack class feature</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment84": {
+        "name": "Javelin",
+        "description": "<h2>Mundane Weapon Simple Melee 1H</h2>\n<p><strong>Heavy thrown</strong>: You hurl a thrown weapon from your hand, rather than using it to loose a projectile. A ranged basic attack with a heavy thrown weapon uses your Strength instead of your Dexterity for the attack and damage rolls.</p>\n",
+        "quantity": 1,
+        "price": "2 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "35'/70'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment85": {
+        "name": "Light Mace",
+        "description": "<h2>Mundane Weapon Simple Melee 1H</h2>\n<p>The smaller races often prefer this version of the mace because of its lighter weight. It can deliver a solid, if not crushing, blow to an enemy.</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n<p><strong>Rogue:</strong>\u00a0Rogue weapons are special weapons that can be used with the Rogue's Sneak Attack class feature</p>\n",
+        "quantity": 1,
+        "price": "3 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment86": {
+        "name": "Mace",
+        "description": "<h2>Mundane Weapon Simple Melee 1H</h2>\n<p><strong>Rogue:</strong>\u00a0Rogue weapons are special weapons that can be used with the Rogue's Sneak Attack class feature</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n<p>\u00a0</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment87": {
+        "name": "Short spear",
+        "description": "<h2>Mundane Weapon Simple Melee 1H</h2>\n<p>Although this weapon often serves the same role as a spear, it is more handy for the smaller races. It can also be used as a thrown weapon, unlike a full-sized [item:307048].</p>\n<p><strong>Light thrown</strong>\u00a0A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "2 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "25'/50'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment88": {
+        "name": "Sickle",
+        "description": "<h2>Mundane Weapon Simple Melee 1H</h2>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "2 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment89": {
+        "name": "Spear",
+        "description": "<h2>Mundane Weapon Simple Melee 1H</h2>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment90": {
+        "name": "Longspear",
+        "description": "<h2>Mundane Weapon Simple Melee 2H</h2>\n<p><strong>Reach:</strong>\u00a0With a reach weapon, you can make melee attacks against enemies that are 2 squares away from you as well as against adjacent enemies. Even so, you can make opportunity attacks only against enemies adjacent to you and can flank only enemies adjacent to you.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "Reach (10')"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment91": {
+        "name": "Morningstar",
+        "description": "<h2>Mundane Weapon Simple Melee 2H</h2>\n<p>This fancier take on a two-handed club consists of a wooden haft topped with a spiked metal ball. The morningstar is common among mercenaries, ogres, trolls, and others that want a heavy weapon that requires little training or maintenance.</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment92": {
+        "name": "Quarterstaff",
+        "description": "<h2>Mundane Weapon Simple Melee 2H</h2>\n<p><strong>Defensive</strong>: You gain a +1 bonus to AC while wielding a defensive weapon</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment93": {
+        "name": "Scythe",
+        "description": "<h2>Mundane Weapon Simple Melee 2H</h2>",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "2d4",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment94": {
+        "name": "Battleaxe",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment95": {
+        "name": "Carrikal",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p><strong>Brutal 2</strong>: Whenever you roll N or lower on a damage die using this power, reroll that die</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment96": {
+        "name": "Flail",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p>Based on a simple agricultural tool, a flail is a wooden handle attached by a short chain to a spiked metal ball. The chain allows a skilled warrior to generate impressive force with each stroke or entangle a foe's legs or arms</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment97": {
+        "name": "Handaxe",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p><strong>Heavy thrown</strong>: You hurl a thrown weapon from your hand, rather than using it to loose a projectile. A ranged basic attack with a heavy thrown weapon uses your Strength instead of your Dexterity for the attack and damage rolls.</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n<p>\u00a0</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "25'/50'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment98": {
+        "name": "Lance",
+        "description": "<h2>Mundane Military Weapon Melee 1H</h2>\n<p>This long, heavy spear relies on the weight and speed of a charging mount to skewer a hapless enemy. Most mounted warriors set aside their lances once they engage in close quarters fighting.</p>\n<p><strong>Mounted:</strong>\u00a0Mounted weapons are unwieldy when not mounted, imposing a -2 penalty to attack rolls. While mounted, you deal an extra 1d[W] damage on charge attacks (Increases to +2d[W]/+3d[W] at levels 11 and 21)</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "12 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment99": {
+        "name": "Light War Pick",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p>This smaller version of the [item:307617] is suitable as an off-hand weapon.</p>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment100": {
+        "name": "Scimitar",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment101": {
+        "name": "Scourge",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p>This lightweight flail has leather thongs inlaid with sharpened bits of metal or bone.</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "3 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment102": {
+        "name": "Throwing Hammer",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p><strong>Heavy thrown</strong>: You hurl a thrown weapon from your hand, rather than using it to loose a projectile. A ranged basic attack with a heavy thrown weapon uses your Strength instead of your Dexterity for the attack and damage rolls.</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n<p>\u00a0</p>\n",
+        "quantity": 1,
+        "price": "3 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "25'/50'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment103": {
+        "name": "Trident",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p>This three-tined spear is weighted for throwing over short distances</p>\n<p><strong>Heavy thrown</strong>: You hurl a thrown weapon from your hand, rather than using it to loose a projectile. A ranged basic attack with a heavy thrown weapon uses your Strength instead of your Dexterity for the attack and damage rolls.</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "15'/30'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment104": {
+        "name": "Warhammer",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment105": {
+        "name": "War Pick",
+        "description": "<h2>Mundane Weapon Military Melee 1H</h2>\n<p>Adapted from the common mining tool, a war pick features a compact design combined with a single, sharp point to punch through armor.</p>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment106": {
+        "name": "Glaive",
+        "description": "<h2>Mundane Weapon Military Melee 2H</h2>\n<p>With its long, wooden haft that ends in a swordlike cutting blade, the glaive excels at keeping enemies at a distance</p>\n<p><strong>Reach:</strong>\u00a0With a reach weapon, you can make melee attacks against enemies that are 2 squares away from you as well as against adjacent enemies. Even so, you can make opportunity attacks only against enemies adjacent to you and can flank only enemies adjacent to you.</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "2d4",
+            "range": "Reach (10')"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment107": {
+        "name": "Greataxe",
+        "description": "<h2>Mundane Weapon Military Melee 2H</h2>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d12",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment108": {
+        "name": "Greatsword",
+        "description": "<h2>Mundane Weapon Military Melee 2H</h2>\n<p><strong>Defensive</strong>: You gain a +1 bonus to AC while wielding a defensive weapon</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d12",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment109": {
+        "name": "Halberd",
+        "description": "<h2>Mundane Weapon Military Melee 2H</h2>\n<p>A halberd's heavy head makes it a devastating weapon, while its long, wooden haft grants it the reach needed to deter would-be attackers.</p>\n<p><strong>Reach:</strong>\u00a0With a reach weapon, you can make melee attacks against enemies that are 2 squares away from you as well as against adjacent enemies. Even so, you can make opportunity attacks only against enemies adjacent to you and can flank only enemies adjacent to you.</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "Reach (10')"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment110": {
+        "name": "Heavy Flail",
+        "description": "<h2>Mundane Weapon Military Melee 2H</h2>\n<p>This two-handed variation of a standard flail can bash through armor with ease.</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "2d6",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment111": {
+        "name": "Heavy War Pick",
+        "description": "<h2>Mundane Weapon Military Melee 2H</h2>\n<p>This larger version of the [item:307602] delivers devastating strikes</p>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d12",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment112": {
+        "name": "Maul",
+        "description": "<h2>Mundane Weapon Military Melee 2H</h2>",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "2d6",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment113": {
+        "name": "Pike",
+        "description": "<h2>Mundane Weapon Military Melee 2H</h2>\n<p>The pike is similar to a longspear, except that its superior construction and balance make it usable by gnomes, halflings, and other Small folk.</p>\n<p><strong>Reach:</strong>\u00a0With a reach weapon, you can make melee attacks against enemies that are 2 squares away from you as well as against adjacent enemies. Even so, you can make opportunity attacks only against enemies adjacent to you and can flank only enemies adjacent to you.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "Reach (10')"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment114": {
+        "name": "Bastard Sword",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>This heavier variation on the [item:239950] requires special training to cope with its weight and peculiar balance. Warriors who master the bastard sword gain the typical sword's accuracy and balance combined with the striking power of a [item:307614] or [item:307529].</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d10",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment115": {
+        "name": "Craghammer",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>This dwarven hammer has a heavily weighted head, making it resemble a one-handed maul backed by a deadly spike.</p>\n<p><strong>Brutal N</strong>: Whenever you roll N or lower on a damage die using this power, reroll that die</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment116": {
+        "name": "Drow Long Knife",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>The drow long knife is a slender blade resembling a short sword in length and weight, but balanced for throwing like a dagger or smaller blade. Featuring a haft and guard often constructed of a dream serpent\u2019s fangs, the long knife\u2019s design makes the weapon more difficult to wield than a normal dagger, but makes it far more deadly in the hands of a skilled user. The drow favor this weapon for its versatility in the running battles they fight through the jungles of Xen\u2019drik. Because it causes more grievous wounds than a dagger but can still be thrown, many drow also favor it as an off-hand weapon (often wielding matched long knives).</p>\n<p><strong>Heavy thrown</strong>: You hurl a thrown weapon from your hand, rather than using it to loose a projectile. A ranged basic attack with a heavy thrown weapon uses your Strength instead of your Dexterity for the attack and damage rolls.</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n<p>\u00a0</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d6",
+            "range": "25'/50'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment117": {
+        "name": "Katar",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>Also known as a punching dagger, this blade has an H -shaped handle that its wielder grasps in his or her fist_ By driving this weapon at a foe with a punching motion, the katar's wielder strikes with deep and deadly attacks.</p>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "3 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d6",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment118": {
+        "name": "Kukri",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>The blade of this heavy knife curves forward for greater potency.</p>\n<p><strong>Brutal 2</strong>: Whenever you roll N or lower on a damage die using this power, reroll that die</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment119": {
+        "name": "Parrying Dagger",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>This narrow dagger features a specially designed guard that can deflect attacks</p>\n<p><strong>Defensive</strong>: You gain a +1 bonus to AC while wielding a defensive weapon</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d4",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment120": {
+        "name": "Serrated Pick",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>This weapon is similar to a standard pick, except for its longer, sharper, and sawlike pick head. With proper training, a warrior can inflict terrible wounds not only with the serrated pick's initial impact but also as the weapon is pulled free from a target.</p>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment121": {
+        "name": "Talenta Tangat",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n<p>\u00a0</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d8",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment122": {
+        "name": "Tratnyr",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>Also known as the wingspear, this weapon was first crafted by the dragonborn for maximum efficiency in melee and ranged combat.</p>\n<p><strong>Heavy thrown</strong>: You hurl a thrown weapon from your hand, rather than using it to loose a projectile. A ranged basic attack with a heavy thrown weapon uses your Strength instead of your Dexterity for the attack and damage rolls.</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d8",
+            "range": "50'/100'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment123": {
+        "name": "Triple-headed flail",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>This oversized flail has three heads for more potent attacks</p>\n<p><strong>Versatile:</strong>\u00a0Versatile weapons are one-handed weapons that can be used two-handed. If you do, use the damage dice in parentheses instead of the weapon's usual damage dice.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d10",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment124": {
+        "name": "Waraxe",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>This weapon\u2019s superior balance allows it to be wielded in one hand.</p>\n<p><strong>Brutal 1</strong>: Whenever you roll N or lower on a damage die using this power, reroll that die</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d12",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment125": {
+        "name": "Whip",
+        "description": "<h2>Mundane Weapon Superior Melee 1H</h2>\n<p>Stories of novices injuring themselves with this weapon underscore the difficulty of mastering the whip, but in the hands of an expert, a whip can drag a foe down, drive away a vicious animal, or even wrap around a loose object at a distance.</p>\n<p><strong>Extra Reach:</strong>\u00a0With a reach weapon, you can make melee attacks against enemies that are 15' away from you as well as against adjacent enemies. Even so, you can make opportunity attacks only against enemies adjacent to you and can flank only enemies adjacent to you.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d4",
+            "range": "Reach (15')"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment126": {
+        "name": "Execution Axe",
+        "description": "<h2>Mundane Weapon Superior Melee 2H</h2>\n<p><strong>Brutal 2</strong>: Whenever you roll N or lower on a damage die using this power, reroll that die</p>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n<p>\u00a0</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d12",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment127": {
+        "name": "Gouge",
+        "description": "<h2>Mundane Weapon Superior Melee 2H</h2>\n<p><strong>Brutal 1</strong>: Whenever you roll N or lower on a damage die using this power, reroll that die</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "2d6",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment128": {
+        "name": "Greatspear",
+        "description": "<h2>Mundane Weapon Superior Melee 2H</h2>\n<p>This reach weapon resembles a [item:307050], but its broad head and strong haft allow it to strike with increased force</p>\n<p><strong>Reach:</strong>\u00a0With a reach weapon, you can make melee attacks against enemies that are 2 squares away from you as well as against adjacent enemies. Even so, you can make opportunity attacks only against enemies adjacent to you and can flank only enemies adjacent to you.</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d12",
+            "range": "Reach (10')"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment129": {
+        "name": "Mordenkrad",
+        "description": "<h2>Mundane Weapon Superior Melee 2H</h2>\n<p>First used by dwarf shock troops in battle against aberrations, this oversized two-handed hammer has a massive head studded with spikes</p>\n<p><strong>Brutal 1</strong>: Whenever you roll N or lower on a damage die using this power, reroll that die</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "2d6",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment130": {
+        "name": "Spiked Chain",
+        "description": "<h2>Mundane Weapon Superior Melee 2H</h2>\n<p>Dhakaani duelists are thought to be the first to employ this weapon, and its combination of speed and elegance supports that theory. The spiked chain delivers raking blows from a distance. Like a whip or a flail, it can also wrap around a foe's legs to send that enemy tumbling to the ground.</p>\n<p><strong>Extra Reach:</strong>\u00a0With a reach weapon, you can make melee attacks against enemies that are 15' away from you as well as against adjacent enemies. Even so, you can make opportunity attacks only against enemies adjacent to you and can flank only enemies adjacent to you.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "2d4",
+            "range": "Reach (15')"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment131": {
+        "name": "Talenta Sarrash",
+        "description": "<h2>Mundane Weapon Superior Melee 2H</h2>\n<p><strong>Reach:</strong>\u00a0With a reach weapon, you can make melee attacks against enemies that are 10' away from you as well as against adjacent enemies. Even so, you can make opportunity attacks only against enemies adjacent to you and can flank only enemies adjacent to you.</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d10",
+            "range": "Reach (10')"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment132": {
+        "name": "Double Axe",
+        "description": "<h2>Mundane Weapon Superior Melee Double</h2>\n<p>Fitted with an axe head at each end, a double axe offers increased offensive and defensive capabilities.</p>\n<p>First end (Axe) properties</p>\n<p><strong>Stout:</strong>\u00a0This weapon can be treated as a two-handed weapon</p>\n<p>Second end (Axe) properties</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "40 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment133": {
+        "name": "Double Flail",
+        "description": "<h2>Mundane Weapon Superior Melee Double</h2>\n<p>First end (Flail) properties</p>\n<p><strong>Defensive</strong>: You gain a +1 bonus to AC while wielding a defensive weapon</p>\n<p><strong>Stout:</strong>\u00a0This weapon can be treated as a two-handed weapon</p>\n<p>Second end (Flail) properties</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment134": {
+        "name": "Double Scimitar",
+        "description": "<h2>Mundane Weapon Superior Melee Double</h2>\n<p>First end (Heavy Blade) properties</p>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n<p><strong>Defensive</strong>: You gain a +1 bonus to AC while wielding a defensive weapon</p>\n<p><strong>Stout:</strong>\u00a0This weapon can be treated as a two-handed weapon</p>\n<p>Second end (Heavy Blade)</p>\n<p><strong>High Crit</strong>: Whenever you score a critical strike with this weapon add 1[W] damage. This improves by 1[W] every 5 levels, up to 6[W] at level 26.</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n<p>\u00a0</p>\n",
+        "quantity": 1,
+        "price": "40 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment135": {
+        "name": "Gythka",
+        "description": "<h2>Mundane Weapon Superior Melee Double</h2>\n<p>First end (Spear) properties</p>\n<p><strong>Defensive</strong>: You gain a +1 bonus to AC while wielding a defensive weapon</p>\n<p><strong>Heavy thrown</strong>: You hurl a thrown weapon from your hand, rather than using it to loose a projectile. A ranged basic attack with a heavy thrown weapon uses your Strength instead of your Dexterity for the attack and damage rolls.</p>\n<p><strong>Stout:</strong>\u00a0This weapon can be treated as a two-handed weapon</p>\n<p>Second end (Spear) properties</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "",
+            "range": "25'/50'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment136": {
+        "name": "Urgrosh",
+        "description": "<h2>Mundane Weapon Superior Melee Double</h2>\n<p>Originally of dwarven make, this weapon has a heavy axe head at one end (dealing d12 damage) and a sharp spear point at the base of the haft (dealing d8 damage).</p>\n<p>First end (Axe) properties</p>\n<p><strong>Defensive</strong>: You gain a +1 bonus to AC while wielding a defensive weapon</p>\n<p><strong>Stout:</strong>\u00a0This weapon can be treated as a two-handed weapon</p>\n<p>Second end (Spear) properties</p>\n<p><strong>Off-hand:</strong>\u00a0An off-hand weapon is light enough that you can hold it and attack effectively with it while also holding a weapon in your main hand. You can't attack with both weapons in the same turn, unless you have a power that allows such an attack, but you can attack with either weapon.</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "",
+            "range": "-"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment137": {
+        "name": "Sling",
+        "description": "<h2>Mundane Weapon Simple Ranged 1H</h2>\n<p><strong>Load Free:</strong>\u00a0Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows \u201cload free\u201d on the Ranged Weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.)\u00a0</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "50'/100'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment138": {
+        "name": "Shortbow",
+        "description": "<h2>Mundane Weapon Simple Ranged 2H</h2>\n<p><strong>Load:</strong>\u00a0Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows \u201cload free\u201d on the Ranged Weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.) The crossbow is \u201cload minor,\u201d which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power</p>\n<p><strong>Rogue:</strong>\u00a0Rogue weapons are special weapons that can be used with the Rogue's Sneak Attack class feature</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "50'/100'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment139": {
+        "name": "Hand Crossbow",
+        "description": "<h2>Mundane Weapon Military Ranged 1H</h2>\n<p><strong>Load Minor:</strong>\u00a0Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. The crossbow is \u201cload minor,\u201d which means it requires a minor action to load a bolt into the weapon. If a power allows you to hit multiple targets, the additional load time is accounted for in the power</p>\n",
+        "quantity": 1,
+        "price": "25 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d8",
+            "range": "75'/150'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment140": {
+        "name": "Chatka",
+        "description": "<h2>Mundane Weapon Military Ranged 1H</h2>\n<p><strong>Light thrown</strong>\u00a0A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n",
+        "quantity": 1,
+        "price": "1 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d6",
+            "range": "30'/60'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment141": {
+        "name": "Longbow",
+        "description": "<h2>Mundane Weapon Military Ranged 2H</h2>\n<p><strong>Load Free:</strong>\u00a0Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows \u201cload free\u201d on the Ranged Weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.)\u00a0</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "75'/150'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment142": {
+        "name": "Shuriken",
+        "description": "<h2>Mundane Weapon Superior Ranged 1H</h2>\n<p><strong>Light thrown</strong>\u00a0A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n",
+        "quantity": 1,
+        "price": "2 sp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d8",
+            "range": "40'/80'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment143": {
+        "name": "Talentan Boomerang",
+        "description": "<h2>Mundane Weapon Military Ranged 1H</h2>\n<p><strong>Light thrown</strong>\u00a0A ranged basic attack with a light thrown weapon uses your Dexterity modifier for the attack and damage rolls, unless otherwise noted in the description of the power used.</p>\n<p><strong>Returning:</strong>\u00a0This weapon returns to the user after it is thrown.</p>\n",
+        "quantity": 1,
+        "price": "3 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d10",
+            "range": "50'/100'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment144": {
+        "name": "War Sling",
+        "description": "<h2>Mundane Weapon Superior Ranged 1H</h2>\n<p><strong>Load Free:</strong>\u00a0Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows \u201cload free\u201d on the Ranged Weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.)\u00a0</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d8",
+            "range": "75'/150'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment145": {
+        "name": "Greatbow",
+        "description": "<h2>Mundane Weapon Military Ranged 2H</h2>\n<p>This massive, recurved bow stands as tall as a human when strung, and it fires arrows with greater power than a traditional [item:307858].</p>\n<p><strong>Load Free:</strong>\u00a0Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows \u201cload free\u201d on the Ranged Weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.)\u00a0</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 2,
+            "damage": "1d12",
+            "range": "125'/250'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment146": {
+        "name": "Superior Crossbow",
+        "description": "<h2>Mundane Weapon Superior Ranged 2H</h2>\n<p>This crossbow appears similar to a traditional crossbow, but it has knobs and dials that allow the weapon to be fine-tuned for greater accuracy.</p>\n<p><strong>Load Minor:</strong>\u00a0Ranged weapons that loose projectiles, including bows, crossbows, and slings, take some time to load. When a weapon shows \u201cload free\u201d on the Ranged Weapons table, that means you draw and load ammunition as a free action, effectively part of the action used to attack with the weapon. Any weapon that has the load property requires two hands to load, even if you can use only one hand to attack with it. (The sling, for example, is a one-handed weapon, but you need a free hand to load it.)\u00a0</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "6",
+        "type": "weapons",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "1d10",
+            "range": "200'/400'"
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": true,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment147": {
+        "name": "Holy Symbol",
+        "description": "<h2>Mundane Implement</h2>\n<p>Fashioned after the emblem or mark of a deity, Holy Symbols are used as a conduit for divine power.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment148": {
+        "name": "Ki Focus",
+        "description": "<h2>Mundane Implement</h2>\n<p>Ki focuses come in all shapes and sizes, but most are small rocks that can fit in the palm of a hand.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment149": {
+        "name": "Orb",
+        "description": "<h2>Mundane Implement</h2>\n<p>Orbs are perfectly smooth spheres most useful for conducting control magic</p>\n",
+        "quantity": 1,
+        "price": "15 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment150": {
+        "name": "Staff",
+        "description": "<h2>Mundane Implement</h2>\n<p>Staves\u00a0are typically associated with defensive magic.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment151": {
+        "name": "Tome",
+        "description": "<h2>Mundane Implement</h2>\n<p>Tomes are enchanted books capable of holding large quantities of spells. They double as a\u00a0[item:244589].</p>\n",
+        "quantity": 1,
+        "price": "50 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment152": {
+        "name": "Totem",
+        "description": "<h2>Mundane Implement</h2>\n<p>Totems are made of natural materials and carved in detail to represent the natural world.</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment153": {
+        "name": "Wand",
+        "description": "<h2>Mundane Implement</h2>\n<p>Wands are made of particular mixes of enchanted wood and ingredients from a magical creature.</p>\n",
+        "quantity": 1,
+        "price": "7 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment154": {
+        "name": "Accurate Dagger",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have a +1 item bonus to implement attack rolls made with this dagger</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment155": {
+        "name": "Bloodthirsty Dagger",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have edge with implement attack rolls against bloodied enemies made with this dagger</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment156": {
+        "name": "Nimble Dagger",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You don't provoke opportunity attacks with ranged attacks made with this dagger</p>\n",
+        "quantity": 1,
+        "price": "5 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment157": {
+        "name": "Accurate Holy Symbol",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have a +1 item bonus to implement attack rolls made with this holy symbol</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment158": {
+        "name": "Channeling Holy Symbol",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You gain 3 plus one half your level temporary hit points whenever you use your Channel Divinity class feature made with this holy symbol</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment159": {
+        "name": "Guiding Holy Symbol",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have edge on attack rolls with area attack powers if an ally is in the area.</p>\n",
+        "quantity": 1,
+        "price": "20 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment160": {
+        "name": "Accurate Ki Focus",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have a +1 item bonus to implement attack rolls made with this ki focus</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment161": {
+        "name": "Battle Ki Focus",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have edge on all attack rolls with this ki focus while you are bloodied</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment162": {
+        "name": "Power Surge Ki Focus",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have advantage on attack rolls for the first attack power you use in an encounter.</p>\n<div>\u00a0</div>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment163": {
+        "name": "Accurate Orb",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have a +1 item bonus to implement attack rolls made with this orb</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment164": {
+        "name": "Forceful Orb",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>Your forced movement powers cast with this orb effects push, pull, or slide the target an additional 5'</p>\n",
+        "quantity": 1,
+        "price": "30 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment165": {
+        "name": "Imposing Orb",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>Enemies have a -2 penalty to saving throws against effects applied with this orb</p>\n",
+        "quantity": 1,
+        "price": "2 lbs.",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment166": {
+        "name": "Accurate Rod",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>\u00a0You have a +1 item bonus to implement attack rolls made with this rod</p>\n",
+        "quantity": 1,
+        "price": "24 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment167": {
+        "name": "Initiating Rod",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have edge on implement attack rolls against enemies at full hit points made with this rod</p>\n",
+        "quantity": 1,
+        "price": "24 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment168": {
+        "name": "Warding Rod",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have a +1 item bonus to fortitude, reflex, and will defenses while you wield this rod.</p>\n",
+        "quantity": 1,
+        "price": "24 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment169": {
+        "name": "Accurate Staff",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have a +1 item bonus to implement attack rolls made with this staff</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment170": {
+        "name": "Defensive Staff",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have a +1 bonus to AC while you wield this staff</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment171": {
+        "name": "Summoning Staff",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>While you wield this staff you don't lose a healing surge when one of your summons is reduced to 0 or fewer hit points.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment172": {
+        "name": "Accurate Tome",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have a +1 item bonus to implement attack rolls made with this tome</p>\n",
+        "quantity": 1,
+        "price": "50 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment173": {
+        "name": "Ready Tome",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>Choose one encounter power that you don't know that is your level or lower. During a short rest you can swap it with another encounter power you know of equal level.</p>\n",
+        "quantity": 1,
+        "price": "50 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment174": {
+        "name": "Binding Tome",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>Your summons have a +10' item bonus to speed. This bonus also applies to alternate movement options like swim speed.</p>\n",
+        "quantity": 1,
+        "price": "50 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment175": {
+        "name": "Accurate Totem",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have a +1 item bonus to implement attack rolls made with this totem</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment176": {
+        "name": "Bronzewood Totem",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>While you wield this totem, your summons and spirit companion gain resistance to all damage equal to 3 plus half your level. While you are affected by a primal polymorph effect, you also gain this resistance.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment177": {
+        "name": "Soarwood Totem",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>While you wield this totem, the range of your ranged powers is doubled.</p>\n",
+        "quantity": 1,
+        "price": "10 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment178": {
+        "name": "Accurate Wand",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You have a +1 item bonus to implement attack rolls made with this wand</p>\n",
+        "quantity": 1,
+        "price": "14 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment179": {
+        "name": "Dueling Wand",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You gain edge on non-area ranged implement attack rolls made with this wand while neither you nor your target are adjacent to another creature</p>\n",
+        "quantity": 1,
+        "price": "14 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment180": {
+        "name": "Tactical Wand",
+        "description": "<h2>Mundane Implement (Superior)</h2>\n<p>You gain edge on non-area ranged implement attack rolls made with this wand while the target is flanked by two or more of your allies.</p>\n",
+        "quantity": 1,
+        "price": "14 gp",
+        "size": "3",
+        "type": "implements",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": true,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    },
+    "equipment181": {
+        "name": "Eternal Rations (1 day)",
+        "description": "<h2>Mundane Equipment</h2>\n<p>Made from long corn grain and the meat and milk of the gurk\u2019ash, these supplies never spoil, providing a far more palatable dining experience than jerky and hardtack. Eternal rations are often used by traveling nobles or for ocean journeys so long that even trail rations would rot.</p>\n",
+        "quantity": 1,
+        "price": "2 gp",
+        "size": "1",
+        "type": "supplies",
+        "weapon": {
+            "proficiency": 3,
+            "damage": "",
+            "range": ""
+        },
+        "implement": {
+            "proficiency": 0
+        },
+        "armor": {
+            "ac": 0,
+            "strength": 10
+        },
+        "shield": {
+            "bonus": 0,
+            "strength": 10
+        },
+        "is": {
+            "implement": false,
+            "weapon": false,
+            "armor": false,
+            "shield": false
+        }
+    }
+}
