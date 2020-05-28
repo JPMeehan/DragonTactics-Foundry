@@ -9,30 +9,29 @@ export class DragonTacticsSetup {
 
         characterCreation.forEach((value, index, array) => {
             var pack = game.packs.find(p => p.collection === `dragontactics.${value}`);
-            var filedata;
             if (value === "equipment") {
-                filedata = await fetch("systems/dragontactics/assets/packjson/mundaneEquipment.json")
+                var filedata = await fetch("systems/dragontactics/assets/packjson/mundaneEquipment.json")
             }
-            if (value === "classes") {
-                filedata = await fetch("systems/dragontactics/assets/packjson/classes.json")
+            else if (value === "classes") {
+                var filedata = await fetch("systems/dragontactics/assets/packjson/classes.json")
             }
-            if (value === "powers") {
-                filedata = await fetch("systems/dragontactics/assets/packjson/basicpowers.json")
+            else if (value === "powers") {
+                var filedata = await fetch("systems/dragontactics/assets/packjson/basicpowers.json")
             }
-            if (value === "races") {
-                filedata = await fetch("systems/dragontactics/assets/packjson/races.json")
+            else if (value === "races") {
+                var filedata = await fetch("systems/dragontactics/assets/packjson/races.json")
             }
-            if (value === "rituals") {
-                filedata = await fetch("systems/dragontactics/assets/packjson/foundryrituals.json") //
+            else if (value === "rituals") {
+                var filedata = await fetch("systems/dragontactics/assets/packjson/foundryrituals.json") //
             }
-            if (value === "feats") {
-                filedata = await fetch("systems/dragontactics/assets/packjson/feats-level1.json")
+            else if (value === "feats") {
+                var filedata = await fetch("systems/dragontactics/assets/packjson/feats-level1.json")
             }
-            if (value === "competencies") {
-                filedata = await fetch("systems/dragontactics/assets/packjson/competencies.json") //
+            else if (value === "competencies") {
+                var filedata = await fetch("systems/dragontactics/assets/packjson/competencies.json") //
             }
-            if (value === "flaws") {
-                filedata = await fetch("systems/dragontactics/assets/packjson/flaws.json");
+            else if (value === "flaws") {
+                var filedata = await fetch("systems/dragontactics/assets/packjson/flaws.json");
             }
             const content = await filedata.json();
             let items = []
