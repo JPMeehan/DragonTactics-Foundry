@@ -17,13 +17,14 @@ export class DragonTacticsSetup {
             "flaws": "systems/dragontactics/assets/packjson/flaws.json"
         }
 
-        for (let [value, filename] of Object.entries(filenames)) {
-            var pack = game.packs.find(p => p.collection === `dragontactics.${value}`);
+        var pack = {}
+        for (let [key, filename] of Object.entries(filenames)) {
+            pack[key] = game.packs.find(p => p.collection === `dragontactics.${key}`);
             fetch(filename)
                 .then(response => response.json())
                 .then(data => {
                     let items = []
-                    let type = value;
+                    let type = key;
                     let dict = data;
                     if (type === "feats" || type === "flaws" || type === "competencies") {
                         type = "feature";
@@ -42,7 +43,7 @@ export class DragonTacticsSetup {
                     Item.create(items, {temporary: true}).then(temp => {
                         // console.log(temp)
                         for ( let j of temp ) {
-                            pack.importEntity(j).then(d => console.log(`Imported Item ${j.name} into Compendium pack ${pack.collection}`))
+                            pack[key].importEntity(j).then(d => console.log(`Imported Item ${j.name} into Compendium pack ${pack.collection}`))
                         }
                     })
                 });
