@@ -10,7 +10,7 @@ export class DragonTacticsSetup {
             "equipment": "systems/dragontactics/assets/packjson/mundaneEquipment.json", 
             "class": "systems/dragontactics/assets/packjson/classes.json", 
             "power": "systems/dragontactics/assets/packjson/basicpowers.json", 
-            "race": "systems/dragontactics/assets/packjson/races.json", 
+            "race": "systems/dragontactics/assets/packjson/foundryraces.json", 
             "ritual": "systems/dragontactics/assets/packjson/foundryrituals.json" , 
             "feats": "systems/dragontactics/assets/packjson/feats-level1.json", 
             "competencies": "systems/dragontactics/assets/packjson/competencies.json", 
@@ -48,9 +48,10 @@ export class DragonTacticsSetup {
                     Item.create(items, {temporary: true}).then(temp => {
                         // console.log(temp)
                         for ( let j of temp ) {
-                            try{pack[key].importEntity(j).then(d => console.log(`Imported Item ${j.name} into Compendium pack ${pack[key].collection}`))}
+                            console.log(`Attempting to import ${j.name}`)
+                            try{pack[key].importEntity(j).then(d => console.log(`Imported into Compendium pack ${pack[key].collection} successful`))}
                             catch (e) {
-                                console.log(`Failed to import ${j.name}`)
+                                console.log(`Failed to import`)
                             }
                         }
                     })
