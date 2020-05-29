@@ -19,7 +19,12 @@ export class DragonTacticsSetup {
 
         var pack = {}
         for (let [key, filename] of Object.entries(filenames)) {
-            pack[key] = game.packs.find(p => p.collection === `dragontactics.${key}`);
+            let packname = key
+            if (packname === "power") {packname = "powers"}
+            else if (packname === "race") {packname = "races"}
+            else if (packname === "class") {packname = "classes"}
+            else if (packname === "ritual") {packname = "rituals"}
+            pack[key] = game.packs.find(p => p.collection === `dragontactics.${packname}`);
             fetch(filename)
                 .then(response => response.json())
                 .then(data => {
@@ -43,7 +48,10 @@ export class DragonTacticsSetup {
                     Item.create(items, {temporary: true}).then(temp => {
                         // console.log(temp)
                         for ( let j of temp ) {
-                            pack[key].importEntity(j).then(d => console.log(`Imported Item ${j.name} into Compendium pack ${pack.collection}`))
+                            try{pack[key].importEntity(j).then(d => console.log(`Imported Item ${j.name} into Compendium pack ${pack[key].collection}`))}
+                            catch (e) {
+                                console.log(`Failed to import ${j.name}`)
+                            }
                         }
                     })
                 });
