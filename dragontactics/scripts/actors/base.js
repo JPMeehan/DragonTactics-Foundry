@@ -48,6 +48,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
       if (li.data("featureType")){this._deleteFeature(li.data("itemId"), li.data("featureType"))}
       if (li.data("power")) {this._deletePower(li.data("itemId"))}
       if (li.data("equipment")) {this._deleteEquipment(li.data("itemId"), li.data("equipment"))}
+      if (li.data("ritual")) {this._deleteRitual(li.data("itemId"))}
       li.slideUp(200, () => this.render(false));
     });
 
@@ -57,6 +58,16 @@ export class DragonTacticsActorSheet extends ActorSheet {
       }
       catch (e) {
         ui.notifications.error("This hero doesn't have a class")
+      }
+      
+    })
+
+    html.find('.race.name').click(ev => { // render item
+      try {
+        this.actor.getOwnedItem(this.actor.data.data.race._id).sheet.render(true);
+      }
+      catch (e) {
+        ui.notifications.error("This hero doesn't have a race")
       }
       
     })
@@ -75,10 +86,18 @@ export class DragonTacticsActorSheet extends ActorSheet {
     this.actor.update({"data.powers" : powers});
   }
 
+  
+
   _deleteEquipment(itemId, itemType) {
     const equipment = this.actor.data.data.equipment.worn[itemType];
     delete equipment[itemId];
     this.actor.update({[`data.equipment.worn.${itemType}`] : equipment});
+  }
+
+  _deleteRitual(itemId) {
+    const rituals = this.actor.data.data.rituals;
+    delete rituals[itemId];
+    this.actor.update({"data.rituals" : rituals});
   }
 
   _radioFix(event) {

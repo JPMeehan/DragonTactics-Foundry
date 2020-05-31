@@ -18,7 +18,6 @@
 
             {{!-- Description Tab --}}
             <div class="tab description" data-group="primary" data-tab="description">
-                <h1>Description</h1>
                 <div class="description tinymceeditorbox">
                     {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
@@ -67,9 +66,9 @@
                     {{#each data.features as |attr key|}}
                         <li class="feature" data-feature="{{key}}">
                             <input class="feature-key" type="text" name="data.features.{{key}}.key" 
-                                value="{{key}}" placeholder="Key"/>
+                                value="{{key}}" placeholder="Key" data-dtype="String"/>
                             <input class="feature-label" type="text" name="data.features.{{key}}.label" 
-                                value="{{attr.label}}" placeholder="Feature Name"/>
+                                value="{{attr.label}}" placeholder="Feature Name" data-dtype="String"/>
                             <a class="feature-control" data-action="delete"><i class="fas fa-trash"></i></a>
                             <textarea class="feature-value" name="data.features.{{key}}.value" 
                                 data-dtype="String" placeholder="Feature Text">{{attr.value}}</textarea>

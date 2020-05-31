@@ -38,9 +38,9 @@ export class DragonTacticsActor extends Actor {
     data.equipment.armor.shield.bonus = this.nullprop(data.equipment.worn.arms[data.equipment.equipped.arms], "shield");
     
     data.ac.value = 10 + data.equipment.armor.ability + data.class.quest + data.equipment.armor.torso.bonus + data.equipment.armor.shield.bonus + data.ac.miscbonus;
-    data.fortitude.value = 10 + Math.max(data.abilities.strength.mod, data.abilities.constitution.mod) + data.class.quest + data.fortitude.miscbonus;
-    data.reflex.value = 10 + Math.max(data.abilities.dexterity.mod, data.abilities.intelligence.mod) + data.class.quest + data.equipment.armor.shield.bonus + data.reflex.miscbonus;
-    data.will.value = 10 + Math.max(data.abilities.wisdom.mod, data.abilities.charisma.mod) + data.class.quest + data.will.miscbonus;
+    data.fortitude.value = 10 + Math.max(data.abilities.strength.mod, data.abilities.constitution.mod) + data.class.quest + data.class.defense.fortitude + data.fortitude.miscbonus;
+    data.reflex.value = 10 + Math.max(data.abilities.dexterity.mod, data.abilities.intelligence.mod) + data.class.quest + data.class.defense.reflex + data.equipment.armor.shield.bonus + data.reflex.miscbonus;
+    data.will.value = 10 + Math.max(data.abilities.wisdom.mod, data.abilities.charisma.mod) + data.class.quest + data.class.defense.will + data.will.miscbonus;
     
     data.health.max = data.class.defense.hpBase + data.abilities.constitution.score + (data.class.level - 1) * data.class.defense.hpLevel + data.class.bonus.hp;
     data.surges.max = data.class.defense.surges + data.abilities.constitution.mod + data.class.bonus.surges;

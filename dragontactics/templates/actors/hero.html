@@ -29,7 +29,7 @@
             <h2>Basic Info</h2>
             <div class="half">
                 <h3>Biography</h3>
-                <span class="race clickable" value="{{data.race.name}}">{{data.race.name}}</span>
+                <span class="race name clickable" value="{{data.race.name}}">{{data.race.name}}</span>
                 <input class="height" type="text" name="data.height" value="{{data.height}}" data-dtype="String"
                     placeholder="Height" title="Height, e.g. 6'1 " />
                 <input class="weight" type="text" name="data.weight" value="{{data.weight}}" data-dtype="String"
@@ -671,7 +671,7 @@
             <ol class="rituals">
                 {{#each data.rituals as |ritual key|}}
                 <li class="ritual item" data-item-id="{{key}}">
-                    <div class="ritualheader item-head">
+                    <div class="ritual-head item-head">
                         <h4>{{label}}</h4>
                         <div class="item-controls">
                             <a class="item-control item-details-toggle" title="Show Ritual"><i class="fas fa-eye"></i></a>

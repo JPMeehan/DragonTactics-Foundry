@@ -623,7 +623,7 @@
   width: 400px;
 }
 .dragontactics label.race {
-  display: inline-block;
+  display: block;
   margin: 3px;
 }
 .dragontactics label.race.asi input {

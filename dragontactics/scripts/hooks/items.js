@@ -17,7 +17,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
         data.class.defense[key] = value;
       }
 
-      var features = [];
+      var features = data.features.class;
 
       for (let [key, value] of Object.entries(item.data.features)) {
         features.push({
@@ -33,7 +33,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
       data.race.name = item.name;
       data.race._id = item._id;
 
-      var features = [];
+      var features = data.features.race;
 
       for (let [key, value] of Object.entries(item.data.features)) {
         features.push({
@@ -133,7 +133,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
         data.class.defense[key] = value;
       }
 
-      var features = [];
+      var features = data.features.class;
 
       for (let [key, value] of Object.entries(item.data.features)) {
         features.push({
@@ -145,7 +145,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
     case "race":
       data.race.name = item.name;
 
-      var features = [];
+      var features = data.features.race;
 
       for (let [key, value] of Object.entries(item.data.features)) {
         features.push({
