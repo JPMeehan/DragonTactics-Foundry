@@ -622,23 +622,46 @@
 .dragontactics label.ritual.duration input {
   width: 400px;
 }
+.dragontactics label.race {
+  display: inline-block;
+  margin: 3px;
+}
 .dragontactics label.race.asi input {
-  width: 260px;
+  width: calc(100% - 140px);
 }
 .dragontactics label.race.size input {
-  width: 300px;
+  width: calc(100% - 35px);
+}
+.dragontactics label.race.speed {
+  display: inline-block;
+  width: calc(50% - 8px);
 }
 .dragontactics label.race.speed input {
-  width: 80px;
+  width: calc(100% - 70px);
+}
+.dragontactics label.race.vision {
+  display: inline-block;
+  width: calc(50% - 8px);
 }
 .dragontactics label.race.vision input {
-  width: 100px;
+  width: calc(100% - 47px);
+}
+.dragontactics label.race.languages {
+  display: inline-block;
+  width: calc(60% - 8px);
 }
 .dragontactics label.race.languages input {
-  width: 200px;
+  width: calc(100% - 71px);
+}
+.dragontactics label.race.skills {
+  display: inline-block;
+  width: calc(40% - 8px);
 }
 .dragontactics label.race.skills input {
-  width: 250px;
+  width: calc(100% - 43px);
+}
+.dragontactics label.race.competencies input {
+  width: calc(100% - 95px);
 }
 .dragontactics section.power input.source {
   width: calc(100% - 34px);
