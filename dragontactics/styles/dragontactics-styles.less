@@ -785,39 +785,55 @@
   /* Race */
 
   label.race {
+    display: inline-block;
+    margin: 3px;
     &.asi {
       input {
-        width: 260px;
+        width: calc(100% - 140px);
       }
     }
 
     &.size {
       input {
-        width: 300px;
+        width: calc(100% - 35px);
       }
     }
 
     &.speed {
+      display: inline-block;
+      width: calc(50% - 8px);
       input {
-        width: 80px;
+        width: calc(100% - 70px);
       }
     }
 
     &.vision {
+      display: inline-block;
+      width: calc(50% - 8px);
       input {
-        width: 100px;
+        width: calc(100% - 47px);
       }
     }
 
     &.languages {
+      display: inline-block;
+      width: calc(60% - 8px);
       input {
-        width: 200px;
+        width: calc(100% - 71px);
       }
     }
 
     &.skills {
+      display: inline-block;
+      width: calc(40% - 8px);
       input {
-        width: 250px;
+        width: calc(100% - 43px);
+      }
+    }
+
+    &.competencies {
+      input {
+        width: calc(100% - 95px)
       }
     }
   }
