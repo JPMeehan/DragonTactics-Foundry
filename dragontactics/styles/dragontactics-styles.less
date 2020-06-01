@@ -100,7 +100,6 @@
 
   div.tinymceeditorbox {
     min-height: 150px;
-    border: solid 1px black;
   }
 
   div.half {
@@ -261,7 +260,7 @@
     input, textarea {
       margin: 2px 0;
     }
-    span.race, span.class {
+    span.race, span.class, span.paragon, span.epic {
       display: inline-block;
     }
     span.class {
@@ -397,8 +396,6 @@
         }
   
         h4.attribute-name {
-          // flex: 0 0 18px;
-          // margin-top: 6px;
           line-height: 16px;
           margin: 4px 8px 2px;
           font-size: 18px;
@@ -468,7 +465,54 @@
         display: block;
       }
     }
-  
+    h2.powers {
+      display: inline-block;
+      width: calc(100% - 40px)
+    }
+    div.sourcepoints {
+      height: 82px;
+      margin: 0 5px;
+      border: 2px groove #eeede0;
+      border-radius: 4px;
+      text-align: center;
+      .attribute-value {
+        height: 28px;
+        line-height: 28px;
+        height: 32px;
+        line-height: 32px;
+
+        input {
+          display: inline;
+          max-width: 80%;
+          margin: 0;
+          font-size: 24px;
+          background-color: inherit;
+          border: none;
+        }
+
+        span.sep {
+          display: inline;
+          position: relative;
+          top: 2px;
+          font-size: 28px;
+          color: #7a7971;
+        }
+
+        span.max {
+          font-size: 24px;
+          display: inline-block;
+          width: 33%;
+        }
+
+        &.multiple {
+          input, span {
+            max-width: 33%;
+          }
+          
+        }
+
+      }
+    }
     div.powers {
       overflow-y: auto;
       li.powers {
@@ -632,7 +676,11 @@
         text-align: right;
       }
     }
+  }
+
+  div.rituals {
     ol.rituals {
+      overflow-y: auto;
       list-style-type: none;
       margin: 7px 0;
       padding: 0;

@@ -17,6 +17,10 @@ Hooks.on('createOwnedItem', (actor, item) => {
         data.class.defense[key] = value;
       }
 
+      for (let [key, value] of Object.entries(data.class.source)) {
+        value = item.data.source === key
+      }
+
       var features = data.features.class;
 
       for (let [key, value] of Object.entries(item.data.features)) {

@@ -253,8 +253,22 @@
       "class": {
         "_id": "",
         "name": "Class",
-        "paragon": "",
-        "epic": "",
+        "paragon": {
+          "_id": "",
+          "name": "Paragon Path"
+        },
+        "epic": {
+          "_id": "",
+          "name": "Epic Destiny"
+        },
+        "source": {
+          "arcane": false,
+          "divine": false,
+          "martial": false,
+          "primal": false,
+          "psionic": false,
+          "shadow": false
+        },
         "level": 1,
         "quest": 0,
         "defense": {
@@ -269,6 +283,11 @@
           "hp": 0,
           "surges": 0
         }
+      },
+      "sourcepoints": {
+        "value": 0,
+        "max": 12,
+        "exist": false
       },
       "powers": {},
       "features": {

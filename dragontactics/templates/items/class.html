@@ -26,10 +26,26 @@
             <div class="tab input" data-group="primary" data-tab="input">
                 <h2>Basic Info</h2>
                 <label class="class source">Source:
-                    <input type="text" name="data.source" value="{{data.source}}" data-dtype="String"
-						placeholder="Source" title="Source, e.g. Martial" />
+                    <select type="text" name="data.source" value="{{data.source}}" data-dtype="String">
+                        {{#select data.source}}
+                        <option value="arcane">Arcane</option>
+                        <option value="divine">Divine</option>
+                        <option value="martial">Martial</option>
+                        <option value="primal">Primal</option>
+                        <option value="psionic">Psionic</option>
+                        <option value="shadow">Shadow</option>
+                        {{/select}}
+                    </select>
                 </label>
                 <label class="class role">Role: 
+                    <select>
+                        {{#select data.role}}
+                        <option value="controller">Controller</option>
+                        <option value="defender">Defender</option>
+                        <option value="leader">Leader</option>
+                        <option value="striker">Striker</option>
+                        {{/select}}
+                    </select>
                     <input type="text" name="data.role" value="{{data.role}}" data-dtype="String"
 						placeholder="Role" title="Role, e.g. Defender" />
                 </label>

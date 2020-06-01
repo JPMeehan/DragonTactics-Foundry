@@ -19,6 +19,7 @@
         <a class="item" data-tab="combat">Combat</a>
         <a class="item" data-tab="features">Features</a>
         <a class="item" data-tab="equipment">Equipment</a>
+        <a class="item" data-tab="rituals">Rituals</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -43,10 +44,8 @@
                 <span class="class name clickable" value="{{data.class.name}}">{{data.class.name}}</span>
                 <input class="level" type="text" pattern="\d+" name="data.class.level" value="{{data.class.level}}"
                     data-dtype="Number" placeholder="Character Level" title="Character Level" />
-                <input class="paragon" type="text" name="data.class.paragon" value="{{data.class.paragon}}"
-                    data-dtype="String" placeholder="Paragon Path" title="Paragon Path, e.g. Champion" />
-                <input class="epic" type="text" name="data.epic" value="{{data.epic}}" data-dtype="String"
-                    placeholder="Epic Destiny" title="Epic Destiny, e.g. Demigod" />
+                <span class="paragon name clickable">{{data.class.paragon.name}}</span>
+                <span class="epic name clickable">{{data.class.epic.name}}</span>
                 <label>Quest: 
                     <input class="quest" type="text" pattern="\d+" name="data.class.quest" value="{{data.class.quest}}"
                         data-dtype="Number" placeholder="[Q]" title="Quest Bonus, goes from 0 to 10" />
@@ -205,7 +204,32 @@
                         data-dtype="Number" title="Bonus surges" />
                 </label>
             </div>
-            <h2>Powers</h2>
+            <h2 class="powers">Powers</h2>
+            {{#if sourcepoints.exist}}
+            <div class="sourcepoints">
+                <h4 class="attribute-name box-title">
+                {{#if class.source.arcane}}
+                Mana
+                {{/if}}
+                {{#if class.source.primal}}
+                Primal Surge
+                {{/if}}
+                {{#if class.source.psionic}}
+                Power Points
+                {{/if}}
+                {{#if class.source.shadow}}
+                Umbra
+                {{/if}}
+                </h4>
+                <div class="attribute-value multiple">
+                    <input class="powersource value" name="data.sourcepoints.value" type="text" pattern="\d+"
+                        value="{{data.sourcepoints.value}}" data-dtype="Number" placeholder="Val" />
+                    <span class="sep"> / </span>
+                    <input class="powersource max" name="data.sourcepoints.max" type="text" pattern="\d+"
+                        value="{{data.sourcepoints.max}}" data-dtype="Number" placeholder="Max" />
+                </div>
+            </div>
+            {{/if}}
             <div class="powers">
                 <ol class="repeating-list">
                     {{#each data.powers as |power key|}}
@@ -667,10 +691,15 @@
                     {{/each}}
                 </ol>
             </div>
+        </div>
+
+
+        {{!-- Rituals Tab --}}
+        <div class="tab rituals" data-group="primary" data-tab="rituals">
             <h2>Rituals</h2>
             <ol class="rituals">
                 {{#each data.rituals as |ritual key|}}
-                <li class="ritual item" data-item-id="{{key}}">
+                <li class="ritual item" data-item-id="{{key}}" data-ritual="{{category}}">
                     <div class="ritual-head item-head">
                         <h4>{{label}}</h4>
                         <div class="item-controls">
@@ -694,6 +723,7 @@
                 {{/if}}
                 {{/each}}
             </ol>
+
         </div>
     </section>
 </form>
