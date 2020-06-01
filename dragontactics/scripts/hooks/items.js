@@ -180,6 +180,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
               oldtype = featuretypes[type];
               oldfeatures = data.features[oldtype] || {};
               delete oldfeatures[item._id];
+              oldfeatures[key]["-=" + item._id] = null;
             }
           }
         }
@@ -222,7 +223,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
 
         // go through eligible lists
         for (let [key, value] of Object.entries(data.equipment.worn)) {
-          if (key === item.type) {
+          if (key === item.data.type) {
             const newequipment = {
               "label": item.name,
               "quantity": item.data.quantity,
@@ -230,23 +231,28 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
               "equipped": false
             }
             if (item.data.is.weapon) {
-              newequipment["proficiency"] = item.data.weapon.proficiency;
-              newequipment["damage"] = item.data.weapon.damage;
-              newequipment["range"] = item.data.weapon.range;
+              newequipment.weapon = {}
+              newequipment.weapon.proficiency = item.data.weapon.proficiency;
+              newequipment.weapon.damage = item.data.weapon.damage;
+              newequipment.weapon.range = item.data.weapon.range;
             }
             if (item.data.is.implement) {
-              equipment["proficiency"] = item.data.implement.proficiency;
+              newequipment.implement = {}
+              newequipment.implement.proficiency = item.data.implement.proficiency;
             }
             if (item.data.is.armor) {
-              newequipment["ac"] = item.data.armor.ac;
+              newequipment.armor = {}
+              newequipment.armor.ac = item.data.armor.ac;
             }
             if (item.data.is.shield) {
-              newequipment["shield"] = item.data.shield.bonus;
+              newequipment.shield = {}
+              newequipment.shield.bonus = item.data.shield.bonus;
             }
             data.equipment.worn[key][item._id] = newequipment;
           } else {
             if (value[item._id]) {
               delete data.equipment.worn[key][item._id];
+              data.equipment.worn[key]["-=" + item._id] = null;
             }
           }
         }
