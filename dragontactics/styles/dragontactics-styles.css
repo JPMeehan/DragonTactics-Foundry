@@ -361,8 +361,6 @@
   border-bottom: 1px solid #b5b3a4;
 }
 .dragontactics div.combat ul.attributes li.attribute .attribute-value {
-  height: 28px;
-  line-height: 28px;
   height: 32px;
   line-height: 32px;
 }
@@ -411,18 +409,26 @@
 }
 .dragontactics div.combat h2.powers {
   display: inline-block;
-  width: calc(100% - 40px);
+  width: calc(100% - 124px);
 }
 .dragontactics div.combat div.sourcepoints {
-  height: 82px;
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
+  height: 62px;
   margin: 0 5px;
   border: 2px groove #eeede0;
   border-radius: 4px;
   text-align: center;
+  display: inline-block;
+  width: 110px;
+}
+.dragontactics div.combat div.sourcepoints h4.attribute-name {
+  line-height: 16px;
+  margin: 4px 8px 2px;
+  font-size: 18px;
+  border-bottom: 1px solid #b5b3a4;
 }
 .dragontactics div.combat div.sourcepoints .attribute-value {
-  height: 28px;
-  line-height: 28px;
   height: 32px;
   line-height: 32px;
 }
@@ -438,7 +444,7 @@
   display: inline;
   position: relative;
   top: 2px;
-  font-size: 28px;
+  font-size: 26px;
   color: #7a7971;
 }
 .dragontactics div.combat div.sourcepoints .attribute-value span.max {
