@@ -26,7 +26,7 @@
             <div class="tab input" data-group="primary" data-tab="input">
                 <h2>Basic Info</h2>
                 <label class="class source">Source:
-                    <select type="text" name="data.source" value="{{data.source}}" data-dtype="String">
+                    <select name="data.source" value="{{data.source}}" data-dtype="String">
                         {{#select data.source}}
                         <option value="arcane">Arcane</option>
                         <option value="divine">Divine</option>
@@ -38,7 +38,7 @@
                     </select>
                 </label>
                 <label class="class role">Role: 
-                    <select>
+                    <select name="data.role" value="{{data.role}}" data-dtype="String">
                         {{#select data.role}}
                         <option value="controller">Controller</option>
                         <option value="defender">Defender</option>
@@ -46,8 +46,6 @@
                         <option value="striker">Striker</option>
                         {{/select}}
                     </select>
-                    <input type="text" name="data.role" value="{{data.role}}" data-dtype="String"
-						placeholder="Role" title="Role, e.g. Defender" />
                 </label>
                 <br>
                 <label class="class keyabilities">Key Abilities: 

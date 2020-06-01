@@ -29,7 +29,6 @@
         <div class="tab biography active" data-group="primary" data-tab="description">
             <h2>Basic Info</h2>
             <div class="half">
-                <h3>Biography</h3>
                 <span class="race name clickable" value="{{data.race.name}}">{{data.race.name}}</span>
                 <input class="height" type="text" name="data.height" value="{{data.height}}" data-dtype="String"
                     placeholder="Height" title="Height, e.g. 6'1 " />
@@ -40,7 +39,6 @@
                     title="Quick Description, e.g. A tall and muscular, dark-haired human (he/him)">{{data.quick}}</textarea>
             </div>
             <div class="half">
-                <h3>Mechanics</h3>
                 <span class="class name clickable" value="{{data.class.name}}">{{data.class.name}}</span>
                 <input class="level" type="text" pattern="\d+" name="data.class.level" value="{{data.class.level}}"
                     data-dtype="Number" placeholder="Character Level" title="Character Level" />
@@ -205,19 +203,19 @@
                 </label>
             </div>
             <h2 class="powers">Powers</h2>
-            {{#if sourcepoints.exist}}
+            {{#if data.sourcepoints.exist}}
             <div class="sourcepoints">
                 <h4 class="attribute-name box-title">
-                {{#if class.source.arcane}}
+                {{#if data.class.source.arcane}}
                 Mana
                 {{/if}}
-                {{#if class.source.primal}}
+                {{#if data.class.source.primal}}
                 Primal Surge
                 {{/if}}
-                {{#if class.source.psionic}}
+                {{#if data.class.source.psionic}}
                 Power Points
                 {{/if}}
-                {{#if class.source.shadow}}
+                {{#if data.class.source.shadow}}
                 Umbra
                 {{/if}}
                 </h4>

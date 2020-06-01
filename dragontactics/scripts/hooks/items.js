@@ -18,8 +18,9 @@ Hooks.on('createOwnedItem', (actor, item) => {
       }
 
       for (let [key, value] of Object.entries(data.class.source)) {
-        value = item.data.source === key
+        data.class.source[key] = item.data.source === key
       }
+      data.sourcepoints.exist = data.class.source.arcane || data.class.source.primal || data.class.source.psionic || data.class.source.shadow 
 
       var features = data.features.class;
 
@@ -136,6 +137,12 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       for (let [key, value] of Object.entries(item.data.defense)) {
         data.class.defense[key] = value;
       }
+
+
+      for (let [key, value] of Object.entries(data.class.source)) {
+        data.class.source[key] = item.data.source === key
+      }
+      data.sourcepoints.exist = data.class.source.arcane || data.class.source.primal || data.class.source.psionic || data.class.source.shadow
 
       var features = data.features.class;
 
