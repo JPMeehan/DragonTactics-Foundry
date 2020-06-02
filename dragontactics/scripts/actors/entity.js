@@ -61,7 +61,7 @@ export class DragonTacticsActor extends Actor {
 
 
     let filters = false;
-    Object.values(data.powerfilters).forEach(bool => nofilters = filters || bool)
+    Object.values(data.powerfilters).forEach(bool => filters = filters || bool)
 
     const attacks = ["attack", "attackSecondary", "attackTertiary"]
     for (let [key, power] of Object.entries(data.powers)) {
