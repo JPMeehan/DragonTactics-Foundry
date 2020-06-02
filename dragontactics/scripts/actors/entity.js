@@ -68,8 +68,8 @@ export class DragonTacticsActor extends Actor {
 
       if (filters) {
         let action = power.action.toLowerCase();
-        if (action[0] === "f") {action = "free"}
-        else if (action[0] = "i") {action = "immediate"}
+        if (action.search("free")>=0) {action = "free"}
+        else if (action.search("immediate")>=0) {action = "immediate"}
         power.filtered = data.powerfilters[action]
       }
       else {power.filtered = true}
