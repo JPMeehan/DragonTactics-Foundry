@@ -106,9 +106,11 @@
     width: calc(50% - 2px);
     display: inline-block;
     vertical-align: top;
+
     &.left {
       float: left;
     }
+
     &.right {
       float: right;
     }
@@ -175,7 +177,7 @@
       margin: 0;
     }
 
-    
+
   }
 
   ol.repeating-list {
@@ -218,10 +220,11 @@
     margin: 0;
     padding: 0;
 
-    li { 
+    li {
       textarea {
         margin: 3px 0;
       }
+
       input {
         margin: 0 3px;
         height: 28px;
@@ -231,16 +234,20 @@
         border-radius: 0;
         border-bottom: 1px solid #AAA;
       }
+
       h3 {
         .nodesto();
       }
+
       p {
         text-indent: 20px;
       }
     }
+
     input.feature-key {
       width: 100px;
     }
+
     input.feature-label {
       width: calc(100% - 140px);
     }
@@ -259,7 +266,7 @@
   .filter-list {
     margin: 0;
     padding: 0;
-    line-height: 16px;
+    line-height: 26px;
 
     span.filter-title {
       .nodesto();
@@ -268,19 +275,26 @@
       font-size: 18px;
       margin: 0;
     }
+
     label.filter-item {
-        .nodesto();
-        display: inline-block;
-        text-align: center;
-        font-size: 12px;
-        margin: 0 6px;
-        white-space: nowrap;
-        span {
-          border-bottom: 3px solid #b5b3a4;
-        }
-        input:checked + span {
-          border-bottom: 3px solid #44191A;
-        }
+      .nodesto();
+      display: inline-block;
+      text-align: center;
+      font-size: 16px;
+      margin: 0 6px;
+      white-space: nowrap;
+
+      input {
+        display: none
+      }
+
+      span {
+        border-bottom: 3px solid #b5b3a4;
+      }
+
+      input:checked+span {
+        border-bottom: 3px solid #44191A;
+      }
     }
   }
 
@@ -288,19 +302,29 @@
   /* Description Tab */
 
   div.biography {
-    input, textarea {
+
+    input,
+    textarea {
       margin: 2px 0;
     }
-    span.race, span.class, span.paragon, span.epic {
+
+    span.race,
+    span.class,
+    span.paragon,
+    span.epic {
       font-size: larger;
     }
-    span.paragon, span.epic {
+
+    span.paragon,
+    span.epic {
       display: block;
     }
+
     span.class {
       display: inline-block;
       width: calc(100% - 34px);
     }
+
     input[data-dtype="Number"] {
       width: 30px;
     }
@@ -321,16 +345,20 @@
           text-align: center;
           border: none;
         }
+
         span.modifier {
           display: none;
         }
+
         h4 {
           font-size: large;
           .nodesto();
-          &:hover ~ input.score { 
+
+          &:hover~input.score {
             display: none;
           }
-          &:hover ~ span.modifier {
+
+          &:hover~span.modifier {
             display: inline-block;
             height: 24px;
           }
@@ -344,14 +372,15 @@
       display: inline-block;
       vertical-align: top;
 
-      h2, ol {
+      h2,
+      ol {
         margin: 0;
       }
 
       div.head {
         .nodesto();
         font-size: larger;
-  
+
       }
 
       p,
@@ -389,16 +418,18 @@
       p.misc {
         float: right;
       }
-    }   
+    }
   }
 
   /* Combat Tab  */
   div.combat {
     overflow-y: auto;
+
     h2.defense {
       width: calc(100% - 26px);
       display: inline-block
     }
+
     a.defense-edit {
       font-size: 1.25em;
       width: 22px;
@@ -409,12 +440,13 @@
       padding: 1px 2px;
       box-shadow: 0 0 1px #000;
     }
+
     ul.attributes {
       list-style: none;
       height: 82px;
       margin: 2px 0;
       padding: 0;
-  
+
       li.attribute {
         height: 82px;
         margin: 0 5px;
@@ -422,25 +454,26 @@
         border-radius: 4px;
         text-align: center;
         .nodesto();
-  
+
         &.health {
           width: 100px;
+
           input.healthvalue.bloody {
             color: darkred;
           }
         }
-  
+
         h4.attribute-name {
           line-height: 16px;
           margin: 4px 8px 2px;
           font-size: 18px;
           border-bottom: 1px solid #b5b3a4;
         }
-  
+
         .attribute-value {
           height: 32px;
           line-height: 32px;
-  
+
           input {
             display: inline;
             max-width: 80%;
@@ -449,7 +482,7 @@
             background-color: inherit;
             border: none;
           }
-  
+
           span.sep {
             display: inline;
             position: relative;
@@ -463,45 +496,51 @@
             display: inline-block;
             width: 33%;
           }
-  
+
           &.multiple {
-            input, span {
+
+            input,
+            span {
               max-width: 33%;
             }
-            
+
           }
-  
+
         }
-  
-  
+
+
         .attribute-footer {
           flex: 0 0 18px;
           margin-top: -1px;
           line-height: 18px;
           font-family: "Signika", "Palatino Linotype", serif;
           font-size: 12px;
-  
+
           span {
             font-size: larger;
           }
-  
+
           input.half {
             width: 48%;
           }
         }
       }
-  
+
     }
+
     div.defense-config {
       display: none;
+
       &.show {
         display: block;
       }
     }
+
     div.power.head {
       display: inline-block;
       width: calc(100% - 124px)
     }
+
     div.sourcepoints {
       .nodesto();
       height: 62px;
@@ -547,28 +586,28 @@
         }
 
         &.multiple {
-          input, span {
+
+          input,
+          span {
             max-width: 33%;
           }
-          
+
         }
 
       }
     }
+
     div.powers {
       overflow-y: auto;
-      li.powers {
 
-        &.false {
-          display: none;
-        }
+      li.powers {
         margin-bottom: 3px;
-    
+
         /* Header */
         div.powerheader {
           border-radius: 5px 5px 0 0;
           border: 1px solid black;
-    
+
           span.powername {
             width: calc(100% - 80px);
             display: inline-block;
@@ -582,26 +621,27 @@
             width: 60px;
           }
         }
-    
+
         &.atwill div.powerheader {
           background-color: rgba(0, 128, 0, .5);
         }
-    
+
         &.encounter div.powerheader {
           background-color: rgba(255, 0, 0, .8);
         }
-    
+
         &.daily div.powerheader {
           background-color: rgba(0, 0, 0, .4);
         }
-    
+
         div.powerheader.show {
           border-style: solid solid none;
-          ~ div.powerbody {
+
+          ~div.powerbody {
             display: block;
           }
         }
-    
+
         /* Body */
         .powerbody {
           display: none;
@@ -610,39 +650,39 @@
           border-style: none solid solid;
           border-radius: 0 0 5px 5px;
           overflow: hidden;
-    
+
           .power-row {
             padding: 3px 5px;
             font-size: 15px;
             overflow-wrap: break-word;
-    
+
             &:nth-child(2n) {
               background-color: rgba(211, 211, 211, 0.5);
             }
           }
-    
+
           span.trigger {
             font-style: italic;
           }
 
-          span.diamond { 
+          span.diamond {
             font-size: smaller;
           }
-    
+
           label.ready {
             float: right;
             width: 62px;
             margin: 0;
             padding: 0;
             font-size: inherit;
-    
+
             input {
               vertical-align: middle;
               display: inline-block;
               margin: 0;
             }
           }
-    
+
           span.powertext {
             font-style: italic;
           }
@@ -655,12 +695,13 @@
       }
     }
   }
-  
+
 
   /* Features Tab */
 
   div.features {
     overflow-y: auto;
+
     div.competencies,
     div.feats,
     div.flaws {
@@ -668,6 +709,7 @@
         width: calc(100% - 40px);
         display: inline-block;
       }
+
       div.item-controls {
         display: inline;
       }
@@ -678,29 +720,36 @@
 
   div.equipment {
     overflow-y: auto;
+
     div.currency {
       label {
         display: block;
       }
+
       input {
         width: 50px;
       }
     }
+
     div.worn {
       h3 {
         .nodesto();
       }
+
       ol {
         list-style-type: none;
         margin: 7px 0;
         padding: 0;
       }
+
       input[type=radio] {
         display: none;
-        &:checked ~ h4 {
+
+        &:checked~h4 {
           font-weight: bold;
         }
       }
+
       h4 {
         width: calc(100% - 90px);
         display: inline-block;
@@ -716,6 +765,7 @@
         display: inline-block;
         width: 80px;
       }
+
       div.armor-abil-select {
         display: inline-block;
         width: calc(100% - 84px);
@@ -730,6 +780,7 @@
       list-style-type: none;
       margin: 7px 0;
       padding: 0;
+
       li {
         div.ritual-head {
           h4 {
@@ -745,6 +796,7 @@
             width: 60px;
           }
         }
+
         div.ritual-body {
           display: none;
         }
@@ -788,6 +840,7 @@
     &.profs {
       width: 100%;
       text-align: right;
+
       input {
         text-align: left;
         width: calc(100% - 80px);
@@ -881,6 +934,7 @@
   label.race {
     display: block;
     margin: 3px;
+
     &.asi {
       input {
         width: calc(100% - 140px);
@@ -896,6 +950,7 @@
     &.speed {
       display: inline-block;
       width: calc(50% - 8px);
+
       input {
         width: calc(100% - 70px);
       }
@@ -904,6 +959,7 @@
     &.vision {
       display: inline-block;
       width: calc(50% - 8px);
+
       input {
         width: calc(100% - 47px);
       }
@@ -912,6 +968,7 @@
     &.languages {
       display: inline-block;
       width: calc(60% - 8px);
+
       input {
         width: calc(100% - 71px);
       }
@@ -920,6 +977,7 @@
     &.skills {
       display: inline-block;
       width: calc(40% - 8px);
+
       input {
         width: calc(100% - 43px);
       }
@@ -941,37 +999,48 @@
       width: calc(100% - 34px);
       margin-top: 5px;
     }
+
     input[data-dtype="Number"] {
       width: 30px;
     }
+
     h2.attack {
       display: inline-block;
       width: calc(100% - 25px);
     }
+
     input[type="checkbox"] {
       margin: 0;
       vertical-align: middle;
     }
+
     div.attack {
       display: none;
+
       h3 {
         margin: 3px;
       }
     }
-    input.enable:checked ~ div.attack {
+
+    input.enable:checked~div.attack {
       display: block;
     }
+
     input.dice {
       width: 90px;
     }
+
     span.plus {
       font-size: larger;
     }
+
     input.damagetype {
       width: 150px;
     }
+
     label.sustain {
       text-align: right;
+
       input {
         width: calc(100% - 60px);
       }
@@ -992,10 +1061,12 @@
 .dragontactics.sheet.item {
   min-width: 460px;
   min-height: 400px;
+
   div.tab {
     overflow-y: auto;
     overflow-x: hidden;
   }
+
   section.sheet-body {
     height: calc(100% - 145px);
   }

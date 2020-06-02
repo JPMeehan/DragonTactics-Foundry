@@ -232,7 +232,7 @@
 .dragontactics .filter-list {
   margin: 0;
   padding: 0;
-  line-height: 16px;
+  line-height: 26px;
 }
 .dragontactics .filter-list span.filter-title {
   font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
@@ -247,9 +247,12 @@
   font-size: 20px;
   display: inline-block;
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
   margin: 0 6px;
   white-space: nowrap;
+}
+.dragontactics .filter-list label.filter-item input {
+  display: none;
 }
 .dragontactics .filter-list label.filter-item span {
   border-bottom: 3px solid #b5b3a4;
@@ -492,9 +495,6 @@
   margin-bottom: 3px;
   /* Header */
   /* Body */
-}
-.dragontactics div.combat div.powers li.powers.false {
-  display: none;
 }
 .dragontactics div.combat div.powers li.powers div.powerheader {
   border-radius: 5px 5px 0 0;
