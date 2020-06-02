@@ -202,7 +202,32 @@
                         data-dtype="Number" title="Bonus surges" />
                 </label>
             </div>
-            <h2 class="powers">Powers</h2>
+            <div class="power head">
+                <h2 class="powers">Powers</h2>
+                <div class="filter-list powers" data-filter="powers">
+                    <span class="filter-title">Filter</span>
+                    <label class="filter-item" data-filter="Standard">
+                        <input class="filter" type="checkbox" name="data.powerfilters.standard" {{checked data.powerfilters.standard}} />
+                        <span>Standard</span>
+                    </label>
+                    <label class="filter-item" data-filter="Move">
+                        <input class="filter" type="checkbox" name="data.powerfilters.move" {{checked data.powerfilters.move}} />
+                        <span>Move</span>
+                    </label>
+                    <label class="filter-item" data-filter="Minor">
+                        <input class="filter" type="checkbox" name="data.powerfilters.minor" {{checked data.powerfilters.minor}} />
+                        <span>Minor</span>
+                    </label>
+                    <label class="filter-item" data-filter="Immediate">
+                        <input class="filter" type="checkbox" name="data.powerfilters.immediate" {{checked data.powerfilters.immediate}} />
+                        <span>Immediate</span>
+                    </label>
+                    <label class="filter-item" data-filter="Free">
+                        <input class="filter" type="checkbox" name="data.powerfilters.free" {{checked data.powerfilters.free}} />
+                        <span>Free</span>
+                    </label>
+                </div>
+            </div>
             {{#if data.sourcepoints.exist}}
             <div class="sourcepoints">
                 <h4 class="attribute-name box-title">
@@ -231,7 +256,8 @@
             <div class="powers">
                 <ol class="repeating-list">
                     {{#each data.powers as |power key|}}
-                        <li class="powers item {{usage}}" data-item-id="{{key}}" data-power="true">
+                    {{#if filtered}}
+                        <li class="powers item {{usage}} {{show}}" data-item-id="{{key}}" data-power="true">
                             <div class="powerheader item-head">
                                 <span class="powername">{{name}}</span>
                                 <div class="item-controls">
@@ -401,6 +427,7 @@
                                 {{/if}}
                             </div>
                         </li> 
+                    {{/if}}
                     {{/each}}
                 </ol>
             </div>
@@ -694,7 +721,13 @@
 
         {{!-- Rituals Tab --}}
         <div class="tab rituals" data-group="primary" data-tab="rituals">
-            <h2>Rituals</h2>
+            <div class="filter-list rituals" data-filter="rituals">
+                <span class="filter-title">Filter</span>
+                <!-- <label class="filter-item" data-filter="Standard">
+                    <input class="filter" type="checkbox" name="data.powerfilters.standard" {{checked data.powerfilters.standard}} />
+                    <span>Standard</span>
+                </label> -->
+            </div>
             <ol class="rituals">
                 {{#each data.rituals as |ritual key|}}
                 <li class="ritual item" data-item-id="{{key}}" data-ritual="{{category}}">

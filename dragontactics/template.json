@@ -290,6 +290,13 @@
         "exist": false
       },
       "powers": {},
+      "powerfilters": {
+        "standard": false,
+        "move": false,
+        "minor": false,
+        "immediate": false,
+        "free": false
+      },
       "features": {
         "race": [],
         "class": [],

@@ -11,6 +11,7 @@
   /* Sheet Tabs */
   /* Broad styles  */
   /* Feature List */
+  /* Filter List */
   /* Description Tab */
   /* Abilities and Skills Tab */
   /* Combat Tab  */
@@ -228,6 +229,34 @@
   line-height: 28px;
   border: none;
 }
+.dragontactics .filter-list {
+  margin: 0;
+  padding: 0;
+  line-height: 16px;
+}
+.dragontactics .filter-list span.filter-title {
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
+  display: inline-block;
+  color: #4b4a44;
+  font-size: 18px;
+  margin: 0;
+}
+.dragontactics .filter-list label.filter-item {
+  font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 6px;
+  white-space: nowrap;
+}
+.dragontactics .filter-list label.filter-item span {
+  border-bottom: 3px solid #b5b3a4;
+}
+.dragontactics .filter-list label.filter-item input:checked + span {
+  border-bottom: 3px solid #44191A;
+}
 .dragontactics div.biography input,
 .dragontactics div.biography textarea {
   margin: 2px 0;
@@ -407,7 +436,7 @@
 .dragontactics div.combat div.defense-config.show {
   display: block;
 }
-.dragontactics div.combat h2.powers {
+.dragontactics div.combat div.power.head {
   display: inline-block;
   width: calc(100% - 124px);
 }
@@ -463,6 +492,9 @@
   margin-bottom: 3px;
   /* Header */
   /* Body */
+}
+.dragontactics div.combat div.powers li.powers.false {
+  display: none;
 }
 .dragontactics div.combat div.powers li.powers div.powerheader {
   border-radius: 5px 5px 0 0;

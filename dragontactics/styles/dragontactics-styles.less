@@ -254,6 +254,37 @@
     }
   }
 
+  /* Filter List */
+
+  .filter-list {
+    margin: 0;
+    padding: 0;
+    line-height: 16px;
+
+    span.filter-title {
+      .nodesto();
+      display: inline-block;
+      color: #4b4a44;
+      font-size: 18px;
+      margin: 0;
+    }
+    label.filter-item {
+        .nodesto();
+        display: inline-block;
+        text-align: center;
+        font-size: 12px;
+        margin: 0 6px;
+        white-space: nowrap;
+        span {
+          border-bottom: 3px solid #b5b3a4;
+        }
+        input:checked + span {
+          border-bottom: 3px solid #44191A;
+        }
+    }
+  }
+
+
   /* Description Tab */
 
   div.biography {
@@ -467,7 +498,7 @@
         display: block;
       }
     }
-    h2.powers {
+    div.power.head {
       display: inline-block;
       width: calc(100% - 124px)
     }
@@ -527,6 +558,10 @@
     div.powers {
       overflow-y: auto;
       li.powers {
+
+        &.false {
+          display: none;
+        }
         margin-bottom: 3px;
     
         /* Header */

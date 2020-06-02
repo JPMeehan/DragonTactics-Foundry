@@ -59,8 +59,21 @@ export class DragonTacticsActor extends Actor {
       }
     }
 
+
+    let filters = false;
+    Object.values(data.powerfilters).forEach(bool => nofilters = filters || bool)
+
     const attacks = ["attack", "attackSecondary", "attackTertiary"]
     for (let [key, power] of Object.entries(data.powers)) {
+
+      if (filters) {
+        let action = power.action.toLowerCase();
+        if (action[0] === "f") {action = "free"}
+        else if (action[0] = "i") {action = "immediate"}
+        power.show = data.powerfilters[action]
+      }
+      else {power.show = true}
+
       for (let i = 0; i<3; i++ ) {
         if (power[attacks[i]].exist) {
           let prof = 0;
@@ -72,6 +85,8 @@ export class DragonTacticsActor extends Actor {
         }
       }
     }
+
+
   }
 
   _prepareNPCData(actorData) {

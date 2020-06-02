@@ -17,7 +17,6 @@ export class DragonTacticsActorSheet extends ActorSheet {
     }
 
 
-
     // Showing and hiding powers
     html.find('.item-details-toggle').click(this._showItemDescription.bind(this));
     
@@ -180,5 +179,4 @@ export class DragonTacticsActorSheet extends ActorSheet {
       });
     }
   }
-
 }
