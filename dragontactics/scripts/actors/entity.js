@@ -79,7 +79,7 @@ export class DragonTacticsActor extends Actor {
         if (power[attacks[i]].exist) {
           let prof = 0;
           if (power[attacks[i]].weapon) {
-            prof = power[attacks[i]].hit.weapon.use ? data.equipment.worn.weapons[power[attacks[i]].weapon].proficiency : data.equipment.worn.implements[power[attacks[i]].weapon].proficiency;
+            prof = Math.max(this.nullprop(data.equipment.worn.weapons[power[attacks[i]].weapon], "proficiency"), this.nullprop(data.equipment.worn.implements[power[attacks[i]].weapon], "proficiency"))
           }
           power[attacks[i]].hitbonus = data.class.quest + data.abilities[power[attacks[i]].stat].mod + power[attacks[i]].hit.miscAttack + prof;
           power[attacks[i]].flat = data.class.quest + this.nullprop(data.abilities[power[attacks[i]].hit.abi], "mod") + power[attacks[i]].hit.miscDamage;
