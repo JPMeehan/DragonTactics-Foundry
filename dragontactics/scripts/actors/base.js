@@ -209,38 +209,38 @@ export class DragonTacticsActorSheet extends ActorSheet {
     this.actor.rollDamage(power, attack, {event: event});
   }
   
-  // async _render(force = false, options = {}) {
-  //   this._saveScrollPos();
+  async _render(force = false, options = {}) {
+    this._saveScrollPos();
   
-  //   await super._render(force, options);
+    await super._render(force, options);
   
-  //   this._setScrollPos();
-  // }
+    this._setScrollPos();
+  }
 
-  // _saveScrollPos() {
-  //   if (this.form === null)
-  //     return;
+  _saveScrollPos() {
+    if (this.form === null)
+      return;
   
-  //   const html = $(this.form).parent();
+    const html = $(this.form).parent();
   
-  //   this.scrollPos = [];
+    this.scrollPos = [];
   
-  //   let lists = $(html.find(".save-scroll"));
+    let lists = $(html.find(".save-scroll"));
   
-  //   for (let list of lists) {
-  //     this.scrollPos.push($(list).scrollTop());
-  //   }
-  // }
+    for (let list of lists) {
+      this.scrollPos.push($(list).scrollTop());
+    }
+  }
   
-  // _setScrollPos() {
-  //   if (this.scrollPos) {
-  //     const html = $(this.form).parent();
+  _setScrollPos() {
+    if (this.scrollPos) {
+      const html = $(this.form).parent();
   
-  //     let lists = $(html.find(".save-scroll"));
+      let lists = $(html.find(".save-scroll"));
   
-  //     for (let i = 0; i < lists.length; i++) {
-  //       $(lists[i]).scrollTop(this.scrollPos[i]);
-  //     }
-  //   }
-  // }
+      for (let i = 0; i < lists.length; i++) {
+        $(lists[i]).scrollTop(this.scrollPos[i]);
+      }
+    }
+  }
 }

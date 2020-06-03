@@ -141,8 +141,8 @@ export class DragonTacticsActor extends Actor {
 
   }
 
-  rollAbilityCheck(abi, options={}) {
-    const abi = this.data.data.abilities[abi];
+  rollAbilityCheck(ability, options={}) {
+    const abi = this.data.data.abilities[ability];
 
     // Compose roll parts and data
     const parts = ["@mod"];
