@@ -1,4 +1,4 @@
-import { damageRoll } from "../dice";
+import { d20Roll, damageRoll } from "../dice.js";
 
 
 /**
@@ -176,12 +176,15 @@ export class DragonTacticsActor extends Actor {
     const parts = ["@damagedice", "@flatdamage"]
     const data = {damagedice: atk.damagedice, flatdamage: atk.flat}
 
-
-
     const weapon = data.equipment.worn.weapons[atk.weapon]
     const hicrit = weapon ? weapon.weapon.hicrit : false
-    const weapondie = hicrit ? weapon.weapon.damage : null
-
+    var weapondie = hicrit ? weapon.weapon.damage : null
+    if (weapon) {
+      if (weapon.weapon.brutal) {
+        data.damagedice+="r<=" + weapon.weapon.brutal;
+        weapondie = weapondie ? weapondie+="r<=" + weapon.weapon.brutal : null;
+      }
+    }
 
     return damageRoll(mergeObject(options, {
       parts: parts,
