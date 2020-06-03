@@ -99,7 +99,7 @@
                         <input type="text" class="dice" name="data.attack.hit.weapon.dice" value="{{data.attack.hit.weapon.dice}}" data-dtype="Number" pattern="\d+"
                         placeholder="##" title="Number of weapon dice, e.g. 2[W] with a 2d6 weapon deals 4d6 damage on a hit"/>
                             <span class="weapon">[W]</span>
-                        {{#else}}
+                        {{else}}
                         <input type="text" class="dice" name="data.attack.hit.dice" value="{{data.attack.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
                             placeholder="Damage Dice" title="Damage Dice, e.g. 2d6" />
                         {{/if}}
@@ -161,7 +161,7 @@
                         <input type="text" class="dice" name="data.attackSecondary.hit.weapon.dice" value="{{data.attackSecondary.hit.weapon.dice}}" data-dtype="Number" pattern="\d+"
                             placeholder="##" title="Number of weapon dice, e.g. 2[W] with a 2d6 weapon deals 4d6 damage on a hit"/>
                             <span class="weapon">[W]</span>
-                        {{#else}}
+                        {{else}}
                         <input type="text" class="dice" name="data.attackSecondary.hit.dice" value="{{data.attackSecondary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
                             placeholder="Damage Dice" title="Damage Dice, e.g. 2d6" />
                         {{/if}}
@@ -223,7 +223,7 @@
                     <input type="text" class="dice" name="data.attackTertiary.hit.weapon.dice" value="{{data.attackTertiary.hit.weapon.dice}}" data-dtype="Number" pattern="\d+"
                         placeholder="##" title="Number of weapon dice, e.g. 2[W] with a 2d6 weapon deals 4d6 damage on a hit"/>
                         <span class="weapon">[W]</span>
-                    {{#else}}
+                    {{else}}
                     <input type="text" class="dice" name="data.attackTertiary.hit.dice" value="{{data.attackTertiary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
                         placeholder="Damage Dice" title="Damage Dice, e.g. 2d6" />
                     {{/if}}
