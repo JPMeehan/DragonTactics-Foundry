@@ -227,7 +227,7 @@
                         <span>Free</span>
                     </label>
                 </div>
-                
+
             </div>
             {{#if data.sourcepoints.exist}}
             <div class="sourcepoints">
@@ -309,7 +309,7 @@
                                             {{#each @root.data.equipment.worn.weapons as |weapon weaponkey|}}
                                             <option value="{{weaponkey}}">{{weapon.label}}</option>
                                             {{/each}}
-                                            {{#else}}
+                                            {{else}}
                                             {{#each @root.data.equipment.worn.implements as |implement implementkey|}}
                                             <option value="{{implementkey}}">{{implement.label}}</option>
                                             {{/each}}
@@ -390,7 +390,7 @@
                                             {{#each @root.data.equipment.worn.weapons as |weapon weaponkey|}}
                                             <option value="{{weaponkey}}">{{weapon.label}}</option>
                                             {{/each}}
-                                            {{#else}}
+                                            {{else}}
                                             {{#each @root.data.equipment.worn.implements as |implement implementkey|}}
                                             <option value="{{implementkey}}">{{implement.label}}</option>
                                             {{/each}}

@@ -2,7 +2,7 @@
   "name": "dragontactics",
   "title": "Dragon Tactics",
   "description": "A 4th Edition D&D Variant",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "minimumCoreVersion": "0.5.7",
   "compatibleCoreVersion": "0.6.0",
   "templateVersion": 2,
