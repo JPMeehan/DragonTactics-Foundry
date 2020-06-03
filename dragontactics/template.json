@@ -394,7 +394,9 @@
       "weapon": {
         "proficiency": 3,
         "damage": "",
-        "range": ""
+        "range": "",
+        "brutal": 0,
+        "hicrit": false
       },
       "implement": {
         "proficiency": 0
@@ -440,7 +442,11 @@
           "damageType": "",
           "effect": "",
           "miscAttack": 0,
-          "miscDamage": 0
+          "miscDamage": 0,
+          "weapon": {
+            "use": false,
+            "dice": 1
+          }
         },
         "miss": ""
       },
@@ -492,6 +498,7 @@
     },
     "ritual": {
       "templates": ["basic"],
+      "level": "",
       "marketPrice": "25 gp",
       "category": "Divination",
       "componentCost": "5 gp",

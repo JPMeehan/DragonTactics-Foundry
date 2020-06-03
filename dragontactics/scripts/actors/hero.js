@@ -21,7 +21,8 @@ export class HeroDragonTacticsActorSheet extends DragonTacticsActorSheet {
         navSelector: ".sheet-tabs",
         contentSelector: ".sheet-body",
         initial: "description"
-      }]
+      }],
+      scrollY: [".save-scroll"]
     });
   }
 }

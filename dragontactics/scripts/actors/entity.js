@@ -1,3 +1,4 @@
+import { damageRoll } from "../dice";
 
 
 /**
@@ -78,10 +79,21 @@ export class DragonTacticsActor extends Actor {
         if (power[attacks[i]].exist) {
           let prof = 0;
           if (power[attacks[i]].weapon) {
-            prof = Math.max(this.nullprop(data.equipment.worn.weapons[power[attacks[i]].weapon], "proficiency"), this.nullprop(data.equipment.worn.implements[power[attacks[i]].weapon], "proficiency"))
+            prof = power[attacks[i]].hit.weapon.use ? data.equipment.worn.weapons[power[attacks[i]].weapon].proficiency : data.equipment.worn.implements[power[attacks[i]].weapon].proficiency;
           }
           power[attacks[i]].hitbonus = data.class.quest + data.abilities[power[attacks[i]].stat].mod + power[attacks[i]].hit.miscAttack + prof;
           power[attacks[i]].flat = data.class.quest + this.nullprop(data.abilities[power[attacks[i]].hit.abi], "mod") + power[attacks[i]].hit.miscDamage;
+          if (power[attacks[i]].hit.weapon.use ) {
+            const rgx = new RegExp(Die.rgx.die, "g");
+            power[attacks[i]].damagedice = data.equipment.worn.weapons[power[attacks[i]].weapon].weapon.damage.replace(rgx, (match, nd, d, mods) => {
+                nd = (nd * (power[attacks[i]].hit.weapon.dice || 1));
+                mods = mods || "";
+                return nd + "d" + d + mods
+            });
+          }
+          else {
+            power[attacks[i]].damagedice = power[attacks[i]].hit.dice
+          }
         }
       }
     }
@@ -111,5 +123,73 @@ export class DragonTacticsActor extends Actor {
 
   nullprop(obj, prop) {
     return( obj == null ? 0 : obj[prop] );
+  }
+
+  rollSkillCheck(skillId, options={}) {
+    const skl = this.data.data.skill[skillId];
+
+    // Compose roll parts and data
+    const parts = ["@mod"];
+    const data = {mod: skl.mod};
+    
+    return d20Roll(mergeObject(options, {
+      parts: parts,
+      data: data,
+      title: skl.label + "Skill Check" + " (" + skl.rank + ")",
+      speaker: ChatMessage.getSpeaker({actor: this})
+    }));
+
+  }
+
+  rollAbilityCheck(abi, options={}) {
+    const abi = this.data.data.abilities[abi];
+
+    // Compose roll parts and data
+    const parts = ["@mod"];
+    const data = {mod: abi.mod};
+
+    return d20Roll(mergeObject(options, {
+      parts: parts,
+      data: data,
+      title: abi.label + "Ability Check",
+      speaker: ChatMessage.getSpeaker({actor: this})
+    }));
+  }
+
+  rollAttack(power, attack, options={}) {
+    const atk = this.data.data.powers[power][attack]
+
+    const parts = ["@hitbonus"]
+    const data = {hitbonus: atk.hitbonus}
+
+    return d20Roll(mergeObject(options, {
+      parts: parts,
+      data: data,
+      title: this.data.data.powers[power].name,
+      speaker:  ChatMessage.getSpeaker({actor: this})
+    }))
+  }
+
+  rollDamage(power, attack, options={}) {
+    const atk = this.data.data.powers[power][attack]
+
+    const parts = ["@damagedice", "@flatdamage"]
+    const data = {damagedice: atk.damagedice, flatdamage: atk.flat}
+
+
+
+    const weapon = data.equipment.worn.weapons[atk.weapon]
+    const hicrit = weapon ? weapon.weapon.hicrit : false
+    const weapondie = hicrit ? weapon.weapon.damage : null
+
+
+    return damageRoll(mergeObject(options, {
+      parts: parts,
+      data: data,
+      title: this.data.data.powers[power].name,
+      speaker:  ChatMessage.getSpeaker({actor: this}),
+      hicrit: hicrit,
+      weapondie: weapondie
+    }))
   }
 }

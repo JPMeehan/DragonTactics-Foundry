@@ -93,30 +93,37 @@
                         <option value="Will">Will</option>
                         {{/select}}
                     </select>
-                    <h3>Hit</h3>
-                    <input type="text" class="dice" name="data.attack.hit.dice" value="{{data.attack.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
-                        placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
-                    <span class="plus">+</span>
-                    <select name="data.attack.hit.abi">
-                        {{#select data.attack.hit.abi}}
-                        <option selected value="none">None</option>
-                        <option value="strength">Strength</option>
-                        <option value="constitution">Constitution</option>
-                        <option value="dexterity">Dexterity</option>
-                        <option value="intelligence">Intelligence</option>
-                        <option value="wisdom">Wisdom</option>
-                        <option value="charisma">Charisma</option>
-                        {{/select}}
-                    </select>
-                    <input type="text" class="damagetype" name="data.attack.hit.damageType" value="{{data.attack.hit.damageType}}" data-dtype="String"
-                        placeholder="Damage Type" title="e.g. Fire or Weapon" />
-                    <span>damage</span>
-                    <input type="text" name="data.attack.hit.effect" value="{{data.attack.hit.effect}}" data-dtype="String"
-                        placeholder="Hit Effect"
-                        title="Hit effect, e.g. The target is slowed until the end of the next round" />
+                    <h3 class="hit">Hit</h3>
+                        <input type="checkbox" data-dtype="Boolean" name="data.attack.hit.weapon.use" {{checked data.attack.hit.weapon.use}} />
+                        {{#if data.attack.hit.weapon.use}}
+                        <input type="text" class="dice" name="data.attack.hit.weapon.dice" value="{{data.attack.hit.weapon.dice}}" data-dtype="Number" pattern="\d+"
+                        placeholder="##" title="Number of weapon dice, e.g. 2[W] with a 2d6 weapon deals 4d6 damage on a hit"/>
+                            <span class="weapon">[W]</span>
+                        {{#else}}
+                        <input type="text" class="dice" name="data.attack.hit.dice" value="{{data.attack.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
+                            placeholder="Damage Dice" title="Damage Dice, e.g. 2d6" />
+                        {{/if}}
+                        <span class="plus">+</span>
+                        <select name="data.attack.hit.abi">
+                            {{#select data.attack.hit.abi}}
+                            <option selected value="none">None</option>
+                            <option value="strength">Strength</option>
+                            <option value="constitution">Constitution</option>
+                            <option value="dexterity">Dexterity</option>
+                            <option value="intelligence">Intelligence</option>
+                            <option value="wisdom">Wisdom</option>
+                            <option value="charisma">Charisma</option>
+                            {{/select}}
+                        </select>
+                        <input type="text" class="damagetype" name="data.attack.hit.damageType" value="{{data.attack.hit.damageType}}" data-dtype="String"
+                            placeholder="Damage Type" title="e.g. Fire or Weapon" />
+                        <span>damage</span>
+                        <input type="text" name="data.attack.hit.effect" value="{{data.attack.hit.effect}}" data-dtype="String"
+                            placeholder="Hit Effect"
+                            title="Hit effect, e.g. The target is slowed until the end of the next round" />
                     <h3>Miss</h3>
-                    <input type="text" name="data.attack.miss" value="{{data.attack.miss}}" data-dtype="String" placeholder="Miss"
-                        title="Miss, e.g. Half Damage" />
+                        <input type="text" name="data.attack.miss" value="{{data.attack.miss}}" data-dtype="String" placeholder="Miss"
+                            title="Miss, e.g. Half Damage" />
                 </div>
             </div>
             <div class="attack-secondary">
@@ -148,9 +155,16 @@
                             <option value="Will">Will</option>
                             {{/select}}
                         </select>
-                    <h3>Hit</h3>
+                    <h3 class="hit">Hit</h3>
+                        <input type="checkbox" data-dtype="Boolean" name="data.attackSecondary.hit.weapon.use" {{checked data.attackSecondary.hit.weapon.use}} />
+                        {{#if data.attackSecondary.hit.weapon.use}}
+                        <input type="text" class="dice" name="data.attackSecondary.hit.weapon.dice" value="{{data.attackSecondary.hit.weapon.dice}}" data-dtype="Number" pattern="\d+"
+                            placeholder="##" title="Number of weapon dice, e.g. 2[W] with a 2d6 weapon deals 4d6 damage on a hit"/>
+                            <span class="weapon">[W]</span>
+                        {{#else}}
                         <input type="text" class="dice" name="data.attackSecondary.hit.dice" value="{{data.attackSecondary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
-                            placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
+                            placeholder="Damage Dice" title="Damage Dice, e.g. 2d6" />
+                        {{/if}}
                         <span class="plus">+</span>
                         <select name="data.attackSecondary.hit.abi">
                             {{#select data.attackSecondary.hit.abi}}
@@ -203,9 +217,16 @@
                         <option value="Will">Will</option>
                         {{/select}}
                     </select>
-                <h3>Hit</h3>
+                <h3 class="hit">Hit</h3>
+                    <input type="checkbox" data-dtype="Boolean" name="data.attackTertiary.hit.weapon.use" {{checked data.attackTertiary.hit.weapon.use}} />
+                    {{#if data.attackTertiary.hit.weapon.use}}
+                    <input type="text" class="dice" name="data.attackTertiary.hit.weapon.dice" value="{{data.attackTertiary.hit.weapon.dice}}" data-dtype="Number" pattern="\d+"
+                        placeholder="##" title="Number of weapon dice, e.g. 2[W] with a 2d6 weapon deals 4d6 damage on a hit"/>
+                        <span class="weapon">[W]</span>
+                    {{#else}}
                     <input type="text" class="dice" name="data.attackTertiary.hit.dice" value="{{data.attackTertiary.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
-                        placeholder="Damage Dice" title="Damage Dice, e.g. 1[W] or 2d6" />
+                        placeholder="Damage Dice" title="Damage Dice, e.g. 2d6" />
+                    {{/if}}
                     <span class="plus">+</span>
                     <select name="data.attackTertiary.hit.abi">
                         {{#select data.attackTertiary.hit.abi}}

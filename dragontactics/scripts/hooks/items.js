@@ -65,12 +65,15 @@ Hooks.on('createOwnedItem', (actor, item) => {
       newpower.attack["weapon"] = "";
       newpower.attack["hitbonus"] = "";
       newpower.attack["flat"] = "";
+      newpower.attack["damagedice"] = "";
       newpower.attackSecondary["weapon"] = "";
       newpower.attackSecondary["hitbonus"] = "";
       newpower.attackSecondary["flat"] = "";
+      newpower.attackSecondary["damagedice"] = "";
       newpower.attackTertiary["weapon"] = "";
       newpower.attackTertiary["hitbonus"] = "";
       newpower.attackTertiary["flat"] = "";
+      newpower.attackTertiary["damagedice"] = "";
       switch (newpower.recharge) {
         case "":
           newpower["usage"] = "atwill";

@@ -1,3 +1,5 @@
+import { d20Roll, damageRoll } from "../dice.js";
+
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -22,7 +24,10 @@ export class DragonTacticsActorSheet extends ActorSheet {
     
     
     // Rollable abilities.
-    html.find('.rollable').click(this._onRoll.bind(this));
+    html.find('.rollable.ability').click(this._onRollAbility.bind(this));
+    html.find('.rollable.skill').click(this._onRollSkill.bind(this));
+    html.fiind('.rollable.hit-damage').click(this._onRollDamage.bind(this));
+    html.find('.rollable.attack').click(this._onRollAttack.bind(this))
 
 
     // Everything below here is only needed if the sheet is editable
@@ -171,6 +176,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
     const dataset = element.dataset;
 
     if (dataset.roll) {
+
       let roll = new Roll(dataset.roll, this.actor.data.data);
       let label = dataset.label ? `Rolling ${dataset.label}` : '';
       roll.roll().toMessage({
@@ -179,4 +185,62 @@ export class DragonTacticsActorSheet extends ActorSheet {
       });
     }
   }
+  _onRollAbility(event) {
+    event.preventDefault();
+    const ability = event.currentTarget.dataset.ability;
+    this.actor.rollSkill(ability, {event: event});
+  }
+  _onRollSkill(event) {
+    event.preventDefault();
+    const skill = event.currentTarget.dataset.skill;
+    this.actor.rollSkill(skill, {event: event});
+  }
+
+  _onRollAttack(event) {
+    event.preventDefault();
+    const power = event.currentTarget.dataset.power;
+    const attack = event.currentTarget.dataset.attack;
+    this.actor.rollAttack(power, attack, {event: event});
+  }
+  _onRollDamage(event) {
+    event.preventDefault();
+    const power = event.currentTarget.dataset.power;
+    const attack = event.currentTarget.dataset.attack;
+    this.actor.rollDamage(power, attack, {event: event});
+  }
+  
+  // async _render(force = false, options = {}) {
+  //   this._saveScrollPos();
+  
+  //   await super._render(force, options);
+  
+  //   this._setScrollPos();
+  // }
+
+  // _saveScrollPos() {
+  //   if (this.form === null)
+  //     return;
+  
+  //   const html = $(this.form).parent();
+  
+  //   this.scrollPos = [];
+  
+  //   let lists = $(html.find(".save-scroll"));
+  
+  //   for (let list of lists) {
+  //     this.scrollPos.push($(list).scrollTop());
+  //   }
+  // }
+  
+  // _setScrollPos() {
+  //   if (this.scrollPos) {
+  //     const html = $(this.form).parent();
+  
+  //     let lists = $(html.find(".save-scroll"));
+  
+  //     for (let i = 0; i < lists.length; i++) {
+  //       $(lists[i]).scrollTop(this.scrollPos[i]);
+  //     }
+  //   }
+  // }
 }

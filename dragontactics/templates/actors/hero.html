@@ -61,7 +61,7 @@
                 <ol class="block-list">
                     {{#each data.abilities as |attr key|}}
                     <li>
-                        <h4 class="label rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{label}}">{{label}}</h4>
+                        <h4 class="label rollable ability" data-ability="{{key}}">{{label}}</h4>
                         <input class="score" type="text" pattern="\d+" name="data.abilities.{{key}}.score"
                             value="{{attr.score}}" data-dtype="Number" title="Ability Score" />
                         <span class="modifier" title="Ability Modifier" >{{numberFormat mod decimals=0 sign=true}}</span>
@@ -79,11 +79,11 @@
                     <p class="rank">Rank</p>
                     <p class="misc">Misc. Bonus</p>
                 </div>
-                <ol class="repeating-list">
+                <ol class="repeating-list save-scroll">
                     {{#each data.skill as |skill key|}}
                     <li class="{{skill.ability}}">
                         <p class="mod">{{numberFormat mod decimals=0 sign=true}}</p>
-                        <p class="label clickable rollable" data-roll="d20+@skill.{{key}}.mod" data-label="{{label}}">{{label}}</p>
+                        <p class="label clickable rollable skill" data-skill="{{key}}">{{label}}</p>
                         <p class="ability">{{ability_short}}</p>
                         <select class="rank" name="data.skill.{{key}}.rank" data-dtype="String">
                             {{#select skill.rank}}
@@ -105,7 +105,7 @@
         </div>
 
         {{!-- Combat Tab --}}
-        <div class="tab combat" data-group="primary" data-tab="combat">
+        <div class="tab combat save-scroll" data-group="primary" data-tab="combat">
             <h2 class="defense">Defenses</h2>
             <a class="defense-edit" title="Configure Defenses"><i class="fas fa-edit"></i></a>
             <div class="display">
@@ -227,6 +227,7 @@
                         <span>Free</span>
                     </label>
                 </div>
+                
             </div>
             {{#if data.sourcepoints.exist}}
             <div class="sourcepoints">
@@ -304,20 +305,23 @@
                                         </strong>
                                         <select class="power-weapon-select" name="data.powers.{{key}}.attack.weapon" data-dtype="String">
                                             {{#select attack.weapon}}
+                                            {{#if attack.hit.weapon.use}}
                                             {{#each @root.data.equipment.worn.weapons as |weapon weaponkey|}}
                                             <option value="{{weaponkey}}">{{weapon.label}}</option>
                                             {{/each}}
+                                            {{#else}}
                                             {{#each @root.data.equipment.worn.implements as |implement implementkey|}}
                                             <option value="{{implementkey}}">{{implement.label}}</option>
                                             {{/each}}
+                                            {{/if}}
                                             {{/select}}
                                         </select>
                                     </div>
-                                    <div class="power-row attack clickable rollable" data-roll="d20+@powers.{{key}}.attack.hitbonus" data-label="{{name}}">
+                                    <div class="power-row attack clickable rollable" data-power="{{key}}" data-attack="attack">
                                         <span>{{numberFormat attack.hitbonus decimals=0 sign=true}}</span> vs. 
                                         <span>{{attack.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage clickable rollable" data-roll="@powers.{{key}}.attack.hit.dice+@powers.{{key}}.attack.flat" data-label="{{name}}">
+                                    <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="attack">
                                         <span>{{attack.hit.dice}}</span>
                                         <span>{{numberFormat attack.flat decimals=0 sign=true}}</span>
                                         <span>{{attack.hit.damageType}} damage</span>
@@ -338,12 +342,15 @@
                                         <strong>Secondary Attack</strong>
                                         <select class="power-weapon-select" name="data.powers.{{key}}.attackSecondary.weapon" data-dtype="String">
                                             {{#select attackSecondary.weapon}}
+                                            {{#if attackSecondary.hit.weapon.use}}
                                             {{#each @root.data.equipment.worn.weapons as |weapon weaponkey|}}
                                             <option value="{{weaponkey}}">{{weapon.label}}</option>
                                             {{/each}}
+                                            {{else}}
                                             {{#each @root.data.equipment.worn.implements as |implement implementkey|}}
                                             <option value="{{implementkey}}">{{implement.label}}</option>
                                             {{/each}}
+                                            {{/if}}
                                             {{/select}}
                                         </select>
                                     </div>
@@ -354,11 +361,11 @@
                                             <span class="targets">{{attackSecondary.target}}</span>
                                         {{/if}}
                                     </div>
-                                    <div class="power-row attackSecondary clickable rollable" data-roll="d20+@powers.{{key}}.attackSecondary.hitbonus" data-label="{{name}}">
+                                    <div class="power-row attack secondary clickable rollable" data-power="{{key}}" data-attack="attackSecondary">
                                         <span>{{numberFormat attackSecondary.hitbonus decimals=0 sign=true}}</span> vs. 
                                         <span>{{attackSecondary.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage clickable rollable" data-roll="@powers.{{key}}.attackSecondary.hit.dice+@powers.{{key}}.attackSecondary.flat" data-label="{{name}}">
+                                    <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="attackSecondary">
                                         <span>{{attackSecondary.hit.dice}}</span>
                                         <span>{{numberFormat attackSecondary.flat decimals=0 sign=true}}</span>
                                         <span>{{attackSecondary.hit.damageType}} damage</span>
@@ -379,12 +386,15 @@
                                         <strong>Tertiary Attack</strong>
                                         <select class="power-weapon-select" name="data.powers.{{key}}.attackTertiary.weapon" data-dtype="String">
                                             {{#select attackTertiaryweapon}}
+                                            {{#if attackTertiary.hit.weapon.use}}
                                             {{#each @root.data.equipment.worn.weapons as |weapon weaponkey|}}
                                             <option value="{{weaponkey}}">{{weapon.label}}</option>
                                             {{/each}}
+                                            {{#else}}
                                             {{#each @root.data.equipment.worn.implements as |implement implementkey|}}
                                             <option value="{{implementkey}}">{{implement.label}}</option>
                                             {{/each}}
+                                            {{/if}}
                                             {{/select}}
                                         </select>
                                     </div>
@@ -395,11 +405,11 @@
                                             <span class="targets">{{attackTertiary.target}}</span>
                                         {{/if}}
                                     </div>
-                                    <div class="power-row attackTertiary clickable rollable" data-roll="d20+@powers.{{key}}.attackTertiary.hitbonus" data-label="{{name}}">
+                                    <div class="power-row attack tertiary clickable rollable" data-power="{{key}}" data-attack="attackTertiary">
                                         <span>{{numberFormat attackTertiary.hitbonus decimals=0 sign=true}}</span> vs. 
                                         <span>{{attackTertiary.def}}</span>
                                     </div>
-                                    <div class="power-row hit-damage clickable rollable" data-roll="@powers.{{key}}.attackTertiary.hit.dice+@powers.{{key}}.attackTertiary.flat" data-label="{{name}}">
+                                    <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="attackTertiary">
                                         <span>{{attackTertiary.hit.dice}}</span>
                                         <span>{{numberFormat attackTertiary.flat decimals=0 sign=true}}</span>
                                         <span>{{attackTertiary.hit.damageType}} damage</span>
@@ -434,7 +444,7 @@
         </div>
 
         {{!-- Features Tab --}}
-        <div class="tab features" data-group="primary" data-tab="features">
+        <div class="tab features save-scroll" data-group="primary" data-tab="features">
             <div class="race">
                 <h2>Race Features</h2>
                 <ol class="features-list">
@@ -506,7 +516,7 @@
         </div>
 
         {{!-- Equipment Tab --}}
-        <div class="tab equipment" data-group="primary" data-tab="equipment">
+        <div class="tab equipment save-scroll" data-group="primary" data-tab="equipment">
             <h2>Currency</h2>
             <div class="currency">
                 <h3>Heroic Tier</h3>
@@ -720,7 +730,7 @@
 
 
         {{!-- Rituals Tab --}}
-        <div class="tab rituals" data-group="primary" data-tab="rituals">
+        <div class="tab rituals save-scroll" data-group="primary" data-tab="rituals">
             <div class="filter-list rituals" data-filter="rituals">
                 <span class="filter-title">Filter</span>
                 <!-- <label class="filter-item" data-filter="Standard">

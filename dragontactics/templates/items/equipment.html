@@ -75,6 +75,13 @@
                         <input type="text" name="data.weapon.range" value="{{data.weapon.range}}" data-dtype="String" 
                             placeholder="Weapon Range" title="Weapon Range, e.g. 30'/60'" />
                     </label>
+                    <label class="equipment range">High Crit:
+                        <input type="checkbox" name="data.weapon.hicrit" {{checked data.weapon.hicrit}} data-dtype="Boolean"  title="High Crit, this weapon deals extra damage on crits" />
+                    </label>
+                    <label class="equipment range">Brutal:
+                        <input type="text" name="data.weapon.brutal" value="{{data.weapon.brutal}}" data-dtype="Number" 
+                            placeholder="0" title="Brutal value, e.g. Brutal 1" />
+                    </label>
                 {{/if}}
                 {{#if data.is.implement}}
                     <h2>Implement</h2>
