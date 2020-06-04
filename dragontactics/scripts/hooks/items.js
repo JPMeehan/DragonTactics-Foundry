@@ -150,6 +150,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       data.sourcepoints.exist = data.class.source.arcane || data.class.source.primal || data.class.source.psionic || data.class.source.shadow
 
       var features = data.features.class;
+      while (features.length) features.pop()
 
       for (let [key, value] of Object.entries(item.data.features)) {
         features.push({
@@ -162,6 +163,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       data.race.name = item.name;
 
       var features = data.features.race;
+      while (features.length) features.pop()
 
       for (let [key, value] of Object.entries(item.data.features)) {
         features.push({

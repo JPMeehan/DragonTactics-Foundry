@@ -730,7 +730,7 @@
 
 
         {{!-- Rituals Tab --}}
-        <div class="tab rituals save-scroll" data-group="primary" data-tab="rituals">
+        <div class="tab rituals " data-group="primary" data-tab="rituals">
             <div class="filter-list rituals" data-filter="rituals">
                 <span class="filter-title">Filter</span>
                 <!-- <label class="filter-item" data-filter="Standard">
@@ -738,7 +738,7 @@
                     <span>Standard</span>
                 </label> -->
             </div>
-            <ol class="rituals">
+            <ol class="rituals save-scroll">
                 {{#each data.rituals as |ritual key|}}
                 <li class="ritual item" data-item-id="{{key}}" data-ritual="{{category}}">
                     <div class="ritual-head item-head">
@@ -750,11 +750,11 @@
                         </div>
                     </div>
                     <div class="ritual-body individual-description save-toggle">
-                        <span>Component Cost: {{componentCost}}</span>
-                        <span>Casting Time: {{castingTime}}</span>
-                        <span>Duration: {{duration}}</span>
+                        <span><b>Component Cost:</b> {{componentCost}}</span>
+                        <span><b></b>Casting Time:</b> {{castingTime}}</span>
+                        <span><b></b>Duration:</b> {{duration}}</span>
                         <div class="description">
-                            {{data.properties}}
+                            {{data.description}}
                         </div>
                     </div>
                 </li>

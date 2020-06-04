@@ -628,6 +628,7 @@
   list-style-type: none;
   margin: 7px 0;
   padding: 0;
+  height: calc(100% - 30px);
 }
 .dragontactics div.rituals ol.rituals li div.ritual-head h4 {
   width: calc(100% - 80px);
