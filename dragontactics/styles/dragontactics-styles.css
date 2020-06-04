@@ -646,8 +646,8 @@
 .dragontactics div.rituals ol.rituals li div.ritual-body {
   display: none;
 }
-.dragontactics div.rituals ol.rituals li div.ritual-body div.description {
-  min-height: 20px;
+.dragontactics div.rituals ol.rituals li div.ritual-body div.description div.editor {
+  min-height: 10px;
 }
 .dragontactics label.class {
   display: inline-block;
