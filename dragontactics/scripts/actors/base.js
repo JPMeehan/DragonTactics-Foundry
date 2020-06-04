@@ -80,13 +80,13 @@ export class DragonTacticsActorSheet extends ActorSheet {
 
   _deleteFeature(itemId, itemType) {
     const features = this.actor.data.data.features[itemType];
-    delete features[itemId];
+    features["-=" + itemId] = null;
     this.actor.update({[`data.features.${itemType}`] : features})
   }
 
   _deletePower(itemId) {
     const powers = this.actor.data.data.powers;
-    delete powers[itemId];
+    powers["-=" + itemId] = null;
     this.actor.update({"data.powers" : powers});
   }
 
@@ -94,13 +94,13 @@ export class DragonTacticsActorSheet extends ActorSheet {
 
   _deleteEquipment(itemId, itemType) {
     const equipment = this.actor.data.data.equipment.worn[itemType];
-    delete equipment[itemId];
+    equipment["-=" + itemId] = null;
     this.actor.update({[`data.equipment.worn.${itemType}`] : equipment});
   }
 
   _deleteRitual(itemId) {
     const rituals = this.actor.data.data.rituals;
-    delete rituals[itemId];
+    rituals["-=" + itemId] = null;
     this.actor.update({"data.rituals" : rituals});
   }
 
