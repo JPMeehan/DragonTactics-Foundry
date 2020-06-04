@@ -770,6 +770,13 @@
 .dragontactics section.power div.attack h3 {
   margin: 3px;
 }
+.dragontactics section.power div.attack h3.hit {
+  display: inline-block;
+  width: calc(100% - 125px);
+}
+.dragontactics section.power div.attack input.dice.weapon {
+  width: 40px;
+}
 .dragontactics section.power input.enable:checked ~ div.attack {
   display: block;
 }

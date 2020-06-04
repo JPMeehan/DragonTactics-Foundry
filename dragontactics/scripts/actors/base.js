@@ -26,7 +26,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
     // Rollable abilities.
     html.find('.rollable.ability').click(this._onRollAbility.bind(this));
     html.find('.rollable.skill').click(this._onRollSkill.bind(this));
-    html.fiind('.rollable.hit-damage').click(this._onRollDamage.bind(this));
+    html.find('.rollable.hit-damage').click(this._onRollDamage.bind(this));
     html.find('.rollable.attack').click(this._onRollAttack.bind(this))
 
 

@@ -85,7 +85,7 @@ export class DragonTacticsActor extends Actor {
           power[attacks[i]].flat = data.class.quest + this.nullprop(data.abilities[power[attacks[i]].hit.abi], "mod") + power[attacks[i]].hit.miscDamage;
           if (power[attacks[i]].hit.weapon.use ) {
             const rgx = new RegExp(Die.rgx.die, "g");
-            power[attacks[i]].damagedice = data.equipment.worn.weapons[power[attacks[i]].weapon].weapon.damage.replace(rgx, (match, nd, d, mods) => {
+            power[attacks[i]].damagedice = data.equipment.worn.weapons[power[attacks[i]].weapon].damage.replace(rgx, (match, nd, d, mods) => {
                 nd = (nd * (power[attacks[i]].hit.weapon.dice || 1));
                 mods = mods || "";
                 return nd + "d" + d + mods
@@ -177,12 +177,12 @@ export class DragonTacticsActor extends Actor {
     const data = {damagedice: atk.damagedice, flatdamage: atk.flat}
 
     const weapon = data.equipment.worn.weapons[atk.weapon]
-    const hicrit = weapon ? weapon.weapon.hicrit : false
-    var weapondie = hicrit ? weapon.weapon.damage : null
+    const hicrit = weapon ? weapon.hicrit : false
+    var weapondie = hicrit ? weapon.damage : null
     if (weapon) {
       if (weapon.weapon.brutal) {
-        data.damagedice+="r<=" + weapon.weapon.brutal;
-        weapondie = weapondie ? weapondie+="r<=" + weapon.weapon.brutal : null;
+        data.damagedice+="r<=" + weapon.brutal;
+        weapondie = weapondie ? weapondie+="r<=" + weapon.brutal : null;
       }
     }
 
