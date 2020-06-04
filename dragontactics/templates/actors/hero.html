@@ -322,7 +322,7 @@
                                         <span>{{attack.def}}</span>
                                     </div>
                                     <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="attack">
-                                        <span>{{attack.hit.dice}}</span>
+                                        <span>{{attack.damagedice}}</span>
                                         <span>{{numberFormat attack.flat decimals=0 sign=true}}</span>
                                         <span>{{attack.hit.damageType}} damage</span>
                                     </div>
@@ -366,7 +366,7 @@
                                         <span>{{attackSecondary.def}}</span>
                                     </div>
                                     <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="attackSecondary">
-                                        <span>{{attackSecondary.hit.dice}}</span>
+                                        <span>{{attackSecondary.damagedice}}</span>
                                         <span>{{numberFormat attackSecondary.flat decimals=0 sign=true}}</span>
                                         <span>{{attackSecondary.hit.damageType}} damage</span>
                                     </div>
@@ -410,7 +410,7 @@
                                         <span>{{attackTertiary.def}}</span>
                                     </div>
                                     <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="attackTertiary">
-                                        <span>{{attackTertiary.hit.dice}}</span>
+                                        <span>{{attackTertiary.damagedice}}</span>
                                         <span>{{numberFormat attackTertiary.flat decimals=0 sign=true}}</span>
                                         <span>{{attackTertiary.hit.damageType}} damage</span>
                                     </div>
@@ -751,10 +751,10 @@
                     </div>
                     <div class="ritual-body individual-description save-toggle">
                         <span><b>Component Cost:</b> {{componentCost}}</span>
-                        <span><b></b>Casting Time:</b> {{castingTime}}</span>
-                        <span><b></b>Duration:</b> {{duration}}</span>
+                        <span><b>Casting Time:</b> {{castingTime}}</span>
+                        <span><b>Duration:</b> {{duration}}</span>
                         <div class="description">
-                            {{data.description}}
+                            {{description}}
                         </div>
                     </div>
                 </li>
