@@ -17,14 +17,13 @@
 
         {{!-- Description Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
-            <h1>Description</h1>
             <div class="description tinymceeditorbox">
                 {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
             </div>
         </div>
 
         {{!-- Input Tab --}}
-        <div class="tab input" data-group="primary" data-tab="input">
+        <div class="tab input save-scroll" data-group="primary" data-tab="input">
             <input class="source" type="text" name="data.source" value="{{data.source}}" data-dtype="String" 
                 placeholder="Source" title="Source" />
             <input type="text" pattern="\d+" name="data.level" value="{{data.level}}" data-dtype="Number"

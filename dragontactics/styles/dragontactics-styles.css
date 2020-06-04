@@ -97,6 +97,7 @@
 }
 .dragontactics div.tinymceeditorbox {
   min-height: 150px;
+  height: 100%;
 }
 .dragontactics div.half {
   width: calc(50% - 2px);
@@ -645,6 +646,9 @@
 .dragontactics div.rituals ol.rituals li div.ritual-body {
   display: none;
 }
+.dragontactics div.rituals ol.rituals li div.ritual-body div.description {
+  min-height: 20px;
+}
 .dragontactics label.class {
   display: inline-block;
   margin: 0 2px 6px;
@@ -777,6 +781,7 @@
 }
 .dragontactics section.power div.attack input.dice.weapon {
   width: 40px;
+  text-align: right;
 }
 .dragontactics section.power input.enable:checked ~ div.attack {
   display: block;

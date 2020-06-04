@@ -176,11 +176,11 @@ export class DragonTacticsActor extends Actor {
     const parts = ["@damagedice", "@flatdamage"]
     const data = {damagedice: atk.damagedice, flatdamage: atk.flat}
 
-    const weapon = data.equipment.worn.weapons[atk.weapon]
+    const weapon = this.data.data.equipment.worn.weapons[atk.weapon]
     const hicrit = weapon ? weapon.hicrit : false
     var weapondie = hicrit ? weapon.damage : null
     if (weapon) {
-      if (weapon.weapon.brutal) {
+      if (weapon.brutal) {
         data.damagedice+="r<=" + weapon.brutal;
         weapondie = weapondie ? weapondie+="r<=" + weapon.brutal : null;
       }
