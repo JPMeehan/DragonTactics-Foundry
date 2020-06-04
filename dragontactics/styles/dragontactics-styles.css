@@ -714,7 +714,7 @@
   width: 100px;
 }
 .dragontactics label.ritual.duration input {
-  width: 400px;
+  width: calc(100% - 65px);
 }
 .dragontactics label.race {
   display: block;

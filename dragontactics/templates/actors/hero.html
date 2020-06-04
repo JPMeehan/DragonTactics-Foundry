@@ -61,7 +61,7 @@
                 <ol class="block-list">
                     {{#each data.abilities as |attr key|}}
                     <li>
-                        <h4 class="label rollable ability" data-ability="{{key}}">{{label}}</h4>
+                        <h4 class="label rollable ability clickable" data-ability="{{key}}">{{label}}</h4>
                         <input class="score" type="text" pattern="\d+" name="data.abilities.{{key}}.score"
                             value="{{attr.score}}" data-dtype="Number" title="Ability Score" />
                         <span class="modifier" title="Ability Modifier" >{{numberFormat mod decimals=0 sign=true}}</span>

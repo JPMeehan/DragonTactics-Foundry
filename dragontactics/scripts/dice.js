@@ -50,7 +50,7 @@ export async function d20Roll({
     let rolled = false;
 
     // Define inner roll function
-    const _roll = function (parts, adv, edge = false, form = null) {
+    const _roll = function (parts, adv, form = null) {
 
         // Determine the d20 roll and modifiers
         let nd = 1;
@@ -69,8 +69,6 @@ export async function d20Roll({
             flavor += ` (${game.i18n.localize("DND5E.Disadvantage")})`;
             mods += "kl";
         }
-
-        mods += edge ? "+1d4" : "";
 
         // Prepend the d20 roll
         let formula = `${nd}d20${mods}`;
@@ -188,6 +186,7 @@ export async function damageRoll({
     parts,
     actor,
     data,
+    quest = 0,
     event = {},
     rollMode = null,
     template,
@@ -211,18 +210,20 @@ export async function damageRoll({
     let rolled = false;
 
     // Define inner roll function
+
     const _roll = function (parts, crit, form) {
         data['bonus'] = form ? form.bonus.value : 0;
         let roll = new Roll(parts.join("+"), data);
 
         // Modify the damage formula for critical hits
         if (crit === true) {
-            let q = actor.data.data.class.quest || 0;
             let rollmax = Roll.maximize(roll.formula)._total.toString();
-            let c = hicrit ? weapondie : "";
-            roll = new Roll(q + critdie + " + " + c + " + " + rollmax);
+            let c = hicrit ? weapondie + " + " : "";
+            let q = quest ? quest + critdie + " + " : ""
+            roll = new Roll(q + c + rollmax, data);
             flavor = `${flavor} (Critical Hit)`;
         }
+
 
         // Convert the roll to a chat message
         rollMode = form ? form.rollMode.value : rollMode;
@@ -233,6 +234,7 @@ export async function damageRoll({
             rollMode
         });
         rolled = true;
+
         return roll;
     };
 
@@ -244,6 +246,7 @@ export async function damageRoll({
     // Modify the roll and handle fast-forwarding
     if (fastForward) return _roll(parts, critical || event.altKey);
     else parts = parts.concat(["@bonus"]);
+
 
     // Render modal dialog
     template = template || "systems/dragontactics/templates/roll-dialog.html";
@@ -257,6 +260,7 @@ export async function damageRoll({
 
     // Create the Dialog window
     let roll;
+
     return new Promise(resolve => {
         new Dialog({
             title: title,

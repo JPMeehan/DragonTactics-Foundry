@@ -192,12 +192,12 @@ export class DragonTacticsActorSheet extends ActorSheet {
   _onRollAbility(event) {
     event.preventDefault();
     const ability = event.currentTarget.dataset.ability;
-    this.actor.rollSkill(ability, {event: event});
+    this.actor.rollAbilityCheck(ability, {event: event});
   }
   _onRollSkill(event) {
     event.preventDefault();
     const skill = event.currentTarget.dataset.skill;
-    this.actor.rollSkill(skill, {event: event});
+    this.actor.rollSkillCheck(skill, {event: event});
   }
 
   _onRollAttack(event) {

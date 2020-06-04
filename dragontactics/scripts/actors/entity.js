@@ -83,7 +83,7 @@ export class DragonTacticsActor extends Actor {
           }
           power[attacks[i]].hitbonus = data.class.quest + data.abilities[power[attacks[i]].stat].mod + power[attacks[i]].hit.miscAttack + prof;
           power[attacks[i]].flat = data.class.quest + this.nullprop(data.abilities[power[attacks[i]].hit.abi], "mod") + power[attacks[i]].hit.miscDamage;
-          if (power[attacks[i]].hit.weapon.use ) {
+          if (power[attacks[i]].hit.weapon.use  && data.equipment.worn.weapons[power[attacks[i]].weapon]) {
             const rgx = new RegExp(Die.rgx.die, "g");
             power[attacks[i]].damagedice = data.equipment.worn.weapons[power[attacks[i]].weapon].damage.replace(rgx, (match, nd, d, mods) => {
                 nd = (nd * (power[attacks[i]].hit.weapon.dice || 1));
@@ -189,6 +189,7 @@ export class DragonTacticsActor extends Actor {
     return damageRoll(mergeObject(options, {
       parts: parts,
       data: data,
+      quest: this.data.data.class.quest,
       title: this.data.data.powers[power].name,
       speaker:  ChatMessage.getSpeaker({actor: this}),
       hicrit: hicrit,
