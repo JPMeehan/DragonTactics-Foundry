@@ -11,7 +11,7 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Biography</a>
-        <a class="item" data-tab="items">Skills</a>
+        <a class="item" data-tab="abilities">Skills</a>
         <a class="item" data-tab="combat">Combat</a>
     </nav>
 
@@ -27,10 +27,11 @@
             <input class="fear" type="text" name="data.fear" value="{{data.fear}}" placeholder="Fears" />
             <input class="weakness" type="text" name="data.weakness" value="{{data.weakness}}" placeholder="Weaknesses" />
             <input class="secret" type="text" name="data.secret" value="{{data.secret}}" placeholder="Secrets" />
+            <textarea class="quick" name="data.quick" placeholder="Quick Description" >{{quick}}</textarea>
         </div>
 
         {{!-- Skills Tab --}}
-        <div class="tab skills" data-group="primary" data-tab="items">
+        <div class="tab abilities" data-group="primary" data-tab="abilities">
             
             <div class="ability">
                 <h2>Abilities</h2>
@@ -155,8 +156,7 @@
                     </footer>
                 </li>
             </ul>
-        </div>
-        <input class="damagemod resistances" type="text" name="data.statistics.resistances" placeholder="Resistances"
+            <input class="damagemod resistances" type="text" name="data.statistics.resistances" placeholder="Resistances"
             value="{{data.statistics.resistances}}" data-dtype="String"/>
         <input class="damagemod vulnerabilities" type="text" name="data.statistics.vulnerabilities" placeholder="Vulnerabilities"
             value="{{data.statistics.vulnerabilities}}" data-dtype="String"/>
@@ -182,6 +182,8 @@
             </li>
         {{/each}}
         </ol>
+        </div>
+        
 
 
     </section>

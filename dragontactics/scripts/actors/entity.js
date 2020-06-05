@@ -101,8 +101,8 @@ export class DragonTacticsActor extends Actor {
 
     for (let [key, ritual] of Object.entries(data.rituals)) {
       ritual.filtered = true
-      if (ritualfilters.level) {ritual.filtered = ritual.level == ritualfilters.level}
-      if (ritualfilters.category != "none") {ritual.filtered = ritual.filtered && (ritual.category.toLowerCase().indexOf(ritualfilters.category) >= 0)}
+      if (data.ritualfilters.level) {ritual.filtered = ritual.level == data.ritualfilters.level}
+      if (data.ritualfilters.category != "none") {ritual.filtered = ritual.filtered && (ritual.category.toLowerCase().indexOf(data.ritualfilters.category) >= 0)}
     }
 
 
