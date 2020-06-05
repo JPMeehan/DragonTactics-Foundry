@@ -174,21 +174,21 @@ export class DragonTacticsActorSheet extends ActorSheet {
    * @param {Event} event   The originating click event
    * @private
    */
-  _onRoll(event) {
-    event.preventDefault();
-    const element = event.currentTarget;
-    const dataset = element.dataset;
+  // _onRoll(event) {
+  //   event.preventDefault();
+  //   const element = event.currentTarget;
+  //   const dataset = element.dataset;
 
-    if (dataset.roll) {
+  //   if (dataset.roll) {
 
-      let roll = new Roll(dataset.roll, this.actor.data.data);
-      let label = dataset.label ? `Rolling ${dataset.label}` : '';
-      roll.roll().toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label
-      });
-    }
-  }
+  //     let roll = new Roll(dataset.roll, this.actor.data.data);
+  //     let label = dataset.label ? `Rolling ${dataset.label}` : '';
+  //     roll.roll().toMessage({
+  //       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+  //       flavor: label
+  //     });
+  //   }
+  // }
   _onRollAbility(event) {
     event.preventDefault();
     const ability = event.currentTarget.dataset.ability;

@@ -252,7 +252,7 @@
   margin: 0 6px;
   white-space: nowrap;
 }
-.dragontactics .filter-list label.filter-item input {
+.dragontactics .filter-list label.filter-item input[type=checkbox] {
   display: none;
 }
 .dragontactics .filter-list label.filter-item span {

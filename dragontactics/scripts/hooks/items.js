@@ -117,6 +117,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
         "label": item.name,
         "category": item.data.category,
         "componentCost": item.data.componentCost,
+        "level": item.data.level,
         "castingTime": item.data.castingTime,
         "duration": item.data.duration,
         "description": item.data.description
@@ -305,6 +306,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
       ritual["label"] = item.name;
       ritual["category"] = item.data.category;
       ritual["componentCost"] = item.data.componentCost;
+      ritual["level"] = item.data.level;
       ritual["castingTime"] = item.data.castingTime;
       ritual["duration"] = item.data.duration;
       ritual["description"] = item.data.description;

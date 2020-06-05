@@ -297,6 +297,10 @@
         "immediate": false,
         "free": false
       },
+      "ritualfilters": {
+        "category": "none",
+        "level": 0
+      },
       "features": {
         "race": [],
         "class": [],
@@ -355,7 +359,15 @@
         "fear": "",
         "weakness": "",
         "secret": ""
-      }
+      },
+      "statistics": {
+        "size": "medium",
+        "senses": "nightblind",
+        "resistances": "",
+        "vulnerabilities": "",
+        "immunities": ""
+      },
+      "powers": []
     }
   },
   "Item": {

@@ -99,6 +99,13 @@ export class DragonTacticsActor extends Actor {
     }
 
 
+    for (let [key, ritual] of Object.entries(data.rituals)) {
+      ritual.filtered = true
+      if (ritualfilters.level) {ritual.filtered = ritual.level == ritualfilters.level}
+      if (ritualfilters.category != "none") {ritual.filtered = ritual.filtered && (ritual.category.toLowerCase().indexOf(ritualfilters.category) >= 0)}
+    }
+
+
   }
 
   _prepareNPCData(actorData) {
@@ -135,7 +142,7 @@ export class DragonTacticsActor extends Actor {
     return d20Roll(mergeObject(options, {
       parts: parts,
       data: data,
-      title: skl.label + "Skill Check" + " (" + skl.rank + ")",
+      title: skl.label + " Skill Check" + " (" + skl.rank + ")",
       speaker: ChatMessage.getSpeaker({actor: this})
     }));
 
@@ -151,7 +158,7 @@ export class DragonTacticsActor extends Actor {
     return d20Roll(mergeObject(options, {
       parts: parts,
       data: data,
-      title: abi.label + "Ability Check",
+      title: abi.label + " Ability Check",
       speaker: ChatMessage.getSpeaker({actor: this})
     }));
   }

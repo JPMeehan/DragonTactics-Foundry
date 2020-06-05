@@ -5,43 +5,185 @@
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-            <div class="resource">
-                <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
-                <span> / </span>
-                <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
-            </div>
-            <div class="resource">
-                <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number"/>
-                <span> / </span>
-                <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number"/>
-            </div>
         </div>
     </header>
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="items">Items</a>
-        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="description">Biography</a>
+        <a class="item" data-tab="items">Skills</a>
+        <a class="item" data-tab="combat">Combat</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
         {{!-- Biography Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="description">
-            <h1>Biography</h1>
+        <div class="tab biography active" data-group="primary" data-tab="description">
+            <input class="race" type="text" name="data.race.name" value="{{data.race.name}}" placeholder="Race" />
+            <input class="speech" type="text" name="data.speech" value="{{data.speech}}" placeholder="Speaking Style" />
+            <input class="tic" type="text" name="data.tic" value="{{data.tic}}" placeholder="Speaking Tics" />
+            <input class="desire" type="text" name="data.desire" value="{{data.desire}}" placeholder="Desires" />
+            <input class="fear" type="text" name="data.fear" value="{{data.fear}}" placeholder="Fears" />
+            <input class="weakness" type="text" name="data.weakness" value="{{data.weakness}}" placeholder="Weaknesses" />
+            <input class="secret" type="text" name="data.secret" value="{{data.secret}}" placeholder="Secrets" />
         </div>
 
-        {{!-- Owned Items Tab --}}
-        <div class="tab items" data-group="primary" data-tab="items">
-            <h1>Owned Items</h1>
+        {{!-- Skills Tab --}}
+        <div class="tab skills" data-group="primary" data-tab="items">
+            
+            <div class="ability">
+                <h2>Abilities</h2>
+                <ol class="block-list">
+                    {{#each data.abilities as |attr key|}}
+                    <li>
+                        <h4 class="label rollable ability clickable" data-ability="{{key}}">{{label}}</h4>
+                        <input class="score" type="text" pattern="\d+" name="data.abilities.{{key}}.score"
+                            value="{{attr.score}}" data-dtype="Number" title="Ability Score" />
+                        <span class="modifier" title="Ability Modifier" >{{numberFormat mod decimals=0 sign=true}}</span>
+                    </li>
+                    {{/each}}
+                </ol>
+
+            </div>
+            <div class="skill">
+                <h2>Skills</h2>
+                <div class="head">
+                    <p class="mod">Mod</p>
+                    <p class="label">Skill</p>
+                    <p class="ability">Ability</p>
+                    <p class="rank">Rank</p>
+                    <p class="misc">Misc. Bonus</p>
+                </div>
+                <ol class="repeating-list save-scroll">
+                    {{#each data.skill as |skill key|}}
+                    <li class="{{skill.ability}}">
+                        <p class="mod">{{numberFormat mod decimals=0 sign=true}}</p>
+                        <p class="label clickable rollable skill" data-skill="{{key}}">{{label}}</p>
+                        <p class="ability">{{ability_short}}</p>
+                        <select class="rank" name="data.skill.{{key}}.rank" data-dtype="String">
+                            {{#select skill.rank}}
+                            <option value="Untrained" selected>Untrained</option>
+                            <option value="Adept">Adept</option>
+                            <option value="Trained">Trained</option>
+                            <option value="Experienced">Experienced</option>
+                            <option value="Expert">Expert</option>
+                            <option value="Master">Master</option>
+                            {{/select}}
+                        </select>
+                        <input class="miscbonus" type="text" pattern="\d+" name="data.skill.{{key}}.miscbonus"
+                            value="{{skill.miscbonus}}" data-dtype="Number"
+                            title="Miscellaneous bonuses, such as from your race, feats, or items" />
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+            
         </div>
 
-        {{!-- Attributes Tab --}}
-        <div class="tab attributes" data-group="primary" data-tab="attributes">
-            <h1>Attributes</h1>
+        {{!-- Combat Tab --}}
+        <div class="tab combat" data-group="primary" data-tab="combat">
+            <h2 class="defense">Defenses</h2>
+            <ul class="attributes flexrow">
+                <li class="attribute movement">
+                    <h4 class="attribute-name box-title">Speed</h4>
+                    <div class="attribute-value">
+                        <input name="data.attributes.speed.value" type="text" value="{{data.attributes.speed.value}}"
+                            placeholder="Land Speed" />
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" class="speed" name="data.attributes.speed.special"
+                            value="{{data.attributes.speed.special}}" placeholder="Special Movement" />
+                    </footer>
+                </li>
+                <li class="attribute health">
+                    <h4 class="attribute-name box-title">Health</h4>
+                    <div class="attribute-value multiple">
+                        <input class="healthvalue" name="data.health.value" type="text" pattern="\d+"
+                            value="{{data.health.value}}" data-dtype="Number" placeholder="10" />
+                        <span class="sep"> / </span>
+                        <input class="max" name="data.health.max" type="text" pattern="\d+"
+                            value="{{data.health.max}}" data-dtype="Number" placeholder="10"  />
+                    </div>
+                    <footer class="attribute-footer">
+                        <input name="data.health.temp" type="text" pattern="\d+" class="half" placeholder="+Temp"
+                            value="{{data.health.temp}}" data-dtype="Number" />
+                        <input name="data.health.tempmax" type="text" pattern="(-)?\d+" class="half"
+                            placeholder="+Temp Max" value="{{data.health.tempmax}}" data-dtype="Number" />
+                    </footer>
+                </li>
+            </ul>
+            <ul class="attributes flexrow">
+                <li class="attribute defense">
+                    <h4 class="attribute-name box-title">AC</h4>
+                    <div class="attribute-value">
+                        <span class="ac">{{data.ac.value}}</span>
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" pattern="\d+" name="data.ac.miscbonus" value="{{data.ac.miscbonus}}"
+                            placeholder="Misc. Bonus" data-dtype="Number" />
+                    </footer>
+                </li>
+                <li class="attribute defense">
+                    <h4 class="attribute-name box-title">Fortitude</h4>
+                    <div class="attribute-value">
+                        <span class="ac">{{data.fortitude.value}}</span>
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" pattern="\d+" name="data.fortitude.miscbonus"
+                            value="{{data.fortitude.miscbonus}}" placeholder="Misc. Bonus" data-dtype="Number" />
+                    </footer>
+                </li>
+                <li class="attribute defense">
+                    <h4 class="attribute-name box-title">Reflex</h4>
+                    <div class="attribute-value">
+                        <span class="ac">{{data.reflex.value}}</span>
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" pattern="\d+" name="data.reflex.miscbonus" value="{{data.reflex.miscbonus}}"
+                            placeholder="Misc. Bonus" data-dtype="Number" />
+                    </footer>
+                </li>
+                <li class="attribute defense">
+                    <h4 class="attribute-name box-title">Will</h4>
+                    <div class="attribute-value">
+                        <span class="ac">{{data.will.value}}</span>
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" pattern="\d+" name="data.will.miscbonus" value="{{data.will.miscbonus}}"
+                            placeholder="Misc. Bonus" data-dtype="Number" />
+                    </footer>
+                </li>
+            </ul>
         </div>
+        <input class="damagemod resistances" type="text" name="data.statistics.resistances" placeholder="Resistances"
+            value="{{data.statistics.resistances}}" data-dtype="String"/>
+        <input class="damagemod vulnerabilities" type="text" name="data.statistics.vulnerabilities" placeholder="Vulnerabilities"
+            value="{{data.statistics.vulnerabilities}}" data-dtype="String"/>
+        <input class="damagemod immunities" type="text" name="data.statistics.immunities" placeholder="Immunities"
+            value="{{data.statistics.immunities}}" data-dtype="String"/>
+        <h2>Powers</h2>
+        <ol class="power-list">
+        {{#each data.powers as |pwr key|}}
+            <li class="power" data-power="{{key}}">
+                <div class="power-header">
+                    <input class="name" name="data.powers.{{key}}.name" value="{{name}}" placeholder="Power Name" data-dtype="String" />
+                    <a class="power-control" data-action="delete"><i class="fas fa-trash"></i></a>
+                </div>
+                <div class="power-body">
+                    <input class="attack bonus" name="data.powers.{{key}}.attackbonus" value="{{attackbonus}}" data-dtype="Number" pattern="\d+"/>
+                    <span>vs.</span>
+                    <input class="attack defense" name="data.powers.{{key}}.attackdefense" value="{{attackdefense}}" data-dtype="String" pattern="\d+"/>
+                    <input class="damage dice" name="data.powers.{{key}}.damagedice" value="{{damagedice}}" data-dtype="String" placeholder="1d8+3" />
+                    <input class="damage type" name="data.powers.{{key}}.damagetype" value="{{damagetype}}" data-dtype="String" placeholder="Fire" />
+                    <span>damage</span>
+                    <textarea class="effect">{{effect}}</textarea>
+                </div>
+            </li>
+        {{/each}}
+        </ol>
+
+
     </section>
 </form>
 

@@ -733,13 +733,31 @@
         <div class="tab rituals " data-group="primary" data-tab="rituals">
             <div class="filter-list rituals" data-filter="rituals">
                 <span class="filter-title">Filter</span>
-                <!-- <label class="filter-item" data-filter="Standard">
-                    <input class="filter" type="checkbox" name="data.powerfilters.standard" {{checked data.powerfilters.standard}} />
-                    <span>Standard</span>
-                </label> -->
+                <label class="filter-item">
+                    Category:
+                    <select name="data.ritualfilters.category" data-dtype="String" >
+                        {{#select data.ritualfilters.category}}
+                        <option value="none" selected>No Filter</option>
+                        <option value="abjuration">Abjuration</option>
+                        <option value="accomodation">Accomodation</option>
+                        <option value="communication">Communicatioin</option>
+                        <option value="creation">Creation</option>
+                        <option value="deception">Deception</option>
+                        <option value="divination">Divination</option>
+                        <option value="environment">Environment</option>
+                        <option value="restoration">Restoration</option>
+                        <option value="travel">Travel</option>
+                        {{/select}}
+                    </select>
+                </label>
+                <label class="filter-item">
+                    Level:
+                    <input type="text" name="data.ritualfilters.level" value="{{data.ritualfilters.level}}" data-dtype="Number" />
+                </label>
             </div>
             <ol class="rituals save-scroll">
                 {{#each data.rituals as |ritual key|}}
+                {{#if filtered}}
                 <li class="ritual item" data-item-id="{{key}}" data-ritual="{{category}}">
                     <div class="ritual-head item-head">
                         <h4>{{label}}</h4>
@@ -750,6 +768,9 @@
                         </div>
                     </div>
                     <div class="ritual-body individual-description save-toggle">
+                        <span><b>Level:</b> {{level}}</span>
+                        <span><b>Category:</b> {{category}}</span>
+                        <br>
                         <span><b>Component Cost:</b> {{componentCost}}</span>
                         <span><b>Casting Time:</b> {{castingTime}}</span>
                         <span><b>Duration:</b> {{duration}}</span>
@@ -761,6 +782,7 @@
                 {{#if @last}}
                 {{else}}
                 <hr />
+                {{/if}}
                 {{/if}}
                 {{/each}}
             </ol>

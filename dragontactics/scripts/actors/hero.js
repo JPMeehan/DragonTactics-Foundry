@@ -3,7 +3,6 @@
  * @extends {DragonTacticsActorSheet}
  */
 
-
 import {
   DragonTacticsActorSheet
 } from "./base.js";
