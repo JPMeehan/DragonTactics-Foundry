@@ -190,7 +190,7 @@ export class DragonTacticsActor extends Actor {
       quest = this.data.data.class.quest;
       const weapon = this.data.data.equipment.worn.weapons[atk.weapon];
       hicrit = weapon ? weapon.hicrit : false
-      var weapondie = hicrit ? weapon.damage : null
+      weapondie = hicrit ? weapon.damage : null
       if (weapon) {
         if (weapon.brutal) {
           data.damagedice+="r<=" + weapon.brutal;
