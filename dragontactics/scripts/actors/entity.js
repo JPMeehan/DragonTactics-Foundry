@@ -179,25 +179,30 @@ export class DragonTacticsActor extends Actor {
   }
 
   rollDamage(power, attack, options={}) {
-    const atk = this.data.data.powers[power][attack]
+    const atk = this.data.data.powers[power][attack];
 
     const parts = ["@damagedice", "@flatdamage"]
     const data = {damagedice: atk.damagedice, flatdamage: atk.flat}
-    
-    const weapon = this.data.data.equipment.worn.weapons[atk.weapon]
-    const hicrit = weapon ? weapon.hicrit : false
-    var weapondie = hicrit ? weapon.damage : null
-    if (weapon) {
-      if (weapon.brutal) {
-        data.damagedice+="r<=" + weapon.brutal;
-        weapondie = weapondie ? weapondie+="r<=" + weapon.brutal : null;
+    let quest = 0;
+    let hicrit = false;
+    let weapondie = null;
+    if (this.datatype == "hero"){
+      quest = this.data.data.class.quest;
+      const weapon = this.data.data.equipment.worn.weapons[atk.weapon];
+      hicrit = weapon ? weapon.hicrit : false
+      var weapondie = hicrit ? weapon.damage : null
+      if (weapon) {
+        if (weapon.brutal) {
+          data.damagedice+="r<=" + weapon.brutal;
+          weapondie = weapondie ? weapondie+="r<=" + weapon.brutal : null;
+        }
       }
     }
 
     return damageRoll(mergeObject(options, {
       parts: parts,
       data: data,
-      quest: this.data.data.class.quest,
+      quest: quest,
       title: this.data.data.powers[power].name,
       speaker:  ChatMessage.getSpeaker({actor: this}),
       hicrit: hicrit,

@@ -146,31 +146,33 @@
         <input class="damagemod immunities" type="text" name="data.statistics.immunities" placeholder="Immunities"
             value="{{data.statistics.immunities}}" data-dtype="String"/>
         <h2>Powers</h2>
-        <ol class="features">
-            <header class="features-header flexrow">
-                <span class="feature-label">Name</span>
-                <a class="feature-control" data-action="create"><i class="fas fa-plus"></i></a>
-            </header>
+        <header class="features-header flexrow">
+            <span class="feature-label">Name</span>
+            <a class="feature-control" data-action="create"><i class="fas fa-plus"></i></a>
+        </header>
+        <ol class="features features-list powers">
         {{#each data.powers as |pwr key|}}
-            <li class="features-list" data-power="{{key}}">
+            <li class="power" data-power="{{key}}">
                 <div class="power-header">
-                    <input class="name" name="data.powers.{{key}}.name" value="{{name}}" placeholder="Power Name" data-dtype="String" />
+                    <input class="name" type="text" name="data.powers.{{key}}.name" value="{{name}}" placeholder="Power Name" data-dtype="String" />
                     <a class="power-control" data-action="delete"><i class="fas fa-trash"></i></a>
                 </div>
                 <div class="power-body">
-                    <input class="attack bonus" name="data.powers.{{key}}.hitbonus" value="{{attackbonus}}" data-dtype="Number" pattern="\d+"/>
+                    <input class="attack bonus" type="text" name="data.powers.{{key}}.attack.hitbonus" value="{{attack.hitbonus}}" data-dtype="Number" pattern="\d+" placeholder="0"/>
                     <span class="attack rollable clickable">vs.</span>
-                    <select class="attack defense" name="data.powers.{{key}}.attackdefense" data-dtype="String">
-                        {{#select attackdefense}}
-                            <option value="ac">AC</option>
-                            <option value="fortitude">Fort</option>
-                            <option value="reflex">Ref</option>
-                            <option value="will">Will</option>
+                    <select class="attack defense" name="data.powers.{{key}}.attack.def" data-dtype="String">
+                        {{#select attack.def}}
+                            <option value="Ac">AC</option>
+                            <option value="Fortitude">Fort</option>
+                            <option value="Reflex">Ref</option>
+                            <option value="Will">Will</option>
                         {{/select}}
                     </select>
-                    <input class="damage dice" name="data.powers.{{key}}.damagedice" value="{{damagedice}}" data-dtype="String" placeholder="1d8+3" />
-                    <input class="damage type" name="data.powers.{{key}}.damagetype" value="{{damagetype}}" data-dtype="String" placeholder="Fire" />
-                    <span class="damage rollable clickable">damage</span>
+                    <input class="damage dice" type="text" name="data.powers.{{key}}.attack.damagedice" value="{{attack.damagedice}}" data-dtype="String" placeholder="1d8" />
+                    <span>+</span>
+                    <input class="damage dice" type="text" name="data.powers.{{key}}.attack.flat" value="{{attack.flat}}" data-dtype="Number" placeholder="3" />
+                    <input class="damage type" type="text" name="data.powers.{{key}}.hit.damagetype" value="{{hit.damagetype}}" data-dtype="String" placeholder="Fire" />
+                    <span class="hit-damage rollable clickable">damage</span>
                     <textarea class="effect">{{effect}}</textarea>
                 </div>
             </li>

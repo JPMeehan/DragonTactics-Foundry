@@ -354,6 +354,7 @@
 }
 .dragontactics div.combat {
   overflow-y: auto;
+  /* NPC Powers */
 }
 .dragontactics div.combat h2.defense {
   width: calc(100% - 26px);
@@ -570,6 +571,15 @@
 .dragontactics div.combat div.powers li.powers .powerbody select.power-weapon-select {
   background-color: inherit;
   border: none;
+}
+.dragontactics div.combat ol.powers.features-list.features div.power-header input.name {
+  width: calc(100% - 30px);
+}
+.dragontactics div.combat ol.powers.features-list.features div.power-body input.attack.bonus {
+  width: 50px;
+}
+.dragontactics div.combat ol.powers.features-list.features div.power-body input.damage {
+  width: 100px;
 }
 .dragontactics div.features {
   overflow-y: auto;
