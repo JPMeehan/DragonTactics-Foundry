@@ -255,6 +255,9 @@
 .dragontactics .filter-list label.filter-item input[type=checkbox] {
   display: none;
 }
+.dragontactics .filter-list label.filter-item input[type=text] {
+  width: 30px;
+}
 .dragontactics .filter-list label.filter-item span {
   border-bottom: 3px solid #b5b3a4;
 }

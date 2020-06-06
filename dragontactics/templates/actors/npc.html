@@ -32,7 +32,6 @@
 
         {{!-- Skills Tab --}}
         <div class="tab abilities" data-group="primary" data-tab="abilities">
-            
             <div class="ability">
                 <h2>Abilities</h2>
                 <ol class="block-list">
@@ -118,42 +117,26 @@
                 <li class="attribute defense">
                     <h4 class="attribute-name box-title">AC</h4>
                     <div class="attribute-value">
-                        <span class="ac">{{data.ac.value}}</span>
+                        <input type="text" name="data.ac.value" value="{{data.ac.value}}" placeholder="ac" data-dtype="Number" pattern="\d+" />
                     </div>
-                    <footer class="attribute-footer">
-                        <input type="text" pattern="\d+" name="data.ac.miscbonus" value="{{data.ac.miscbonus}}"
-                            placeholder="Misc. Bonus" data-dtype="Number" />
-                    </footer>
                 </li>
                 <li class="attribute defense">
                     <h4 class="attribute-name box-title">Fortitude</h4>
                     <div class="attribute-value">
-                        <span class="ac">{{data.fortitude.value}}</span>
+                        <input type="text" name="data.fortitude.value" value="{{data.fortitude.value}}" placeholder="fortitude" data-dtype="Number" pattern="\d+" />
                     </div>
-                    <footer class="attribute-footer">
-                        <input type="text" pattern="\d+" name="data.fortitude.miscbonus"
-                            value="{{data.fortitude.miscbonus}}" placeholder="Misc. Bonus" data-dtype="Number" />
-                    </footer>
                 </li>
                 <li class="attribute defense">
                     <h4 class="attribute-name box-title">Reflex</h4>
                     <div class="attribute-value">
-                        <span class="ac">{{data.reflex.value}}</span>
+                        <input type="text" name="data.reflex.value" value="{{data.reflex.value}}" placeholder="reflex" data-dtype="Number" pattern="\d+" />
                     </div>
-                    <footer class="attribute-footer">
-                        <input type="text" pattern="\d+" name="data.reflex.miscbonus" value="{{data.reflex.miscbonus}}"
-                            placeholder="Misc. Bonus" data-dtype="Number" />
-                    </footer>
                 </li>
                 <li class="attribute defense">
                     <h4 class="attribute-name box-title">Will</h4>
                     <div class="attribute-value">
-                        <span class="ac">{{data.will.value}}</span>
+                        <input type="text" name="data.will.value" value="{{data.will.value}}" placeholder="will" data-dtype="Number" pattern="\d+" />
                     </div>
-                    <footer class="attribute-footer">
-                        <input type="text" pattern="\d+" name="data.will.miscbonus" value="{{data.will.miscbonus}}"
-                            placeholder="Misc. Bonus" data-dtype="Number" />
-                    </footer>
                 </li>
             </ul>
             <input class="damagemod resistances" type="text" name="data.statistics.resistances" placeholder="Resistances"
@@ -164,19 +147,30 @@
             value="{{data.statistics.immunities}}" data-dtype="String"/>
         <h2>Powers</h2>
         <ol class="power-list">
+            <header class="features-header flexrow">
+                <span class="feature-label">Name</span>
+                <a class="feature-control" data-action="create"><i class="fas fa-plus"></i></a>
+            </header>
         {{#each data.powers as |pwr key|}}
-            <li class="power" data-power="{{key}}">
+            <li class="features-list" data-power="{{key}}">
                 <div class="power-header">
                     <input class="name" name="data.powers.{{key}}.name" value="{{name}}" placeholder="Power Name" data-dtype="String" />
                     <a class="power-control" data-action="delete"><i class="fas fa-trash"></i></a>
                 </div>
                 <div class="power-body">
-                    <input class="attack bonus" name="data.powers.{{key}}.attackbonus" value="{{attackbonus}}" data-dtype="Number" pattern="\d+"/>
-                    <span>vs.</span>
-                    <input class="attack defense" name="data.powers.{{key}}.attackdefense" value="{{attackdefense}}" data-dtype="String" pattern="\d+"/>
+                    <input class="attack bonus" name="data.powers.{{key}}.hitbonus" value="{{attackbonus}}" data-dtype="Number" pattern="\d+"/>
+                    <span class="attack rollable clickable">vs.</span>
+                    <select class="attack defense" name="data.powers.{{key}}.attackdefense" data-dtype="String">
+                        {{#select data.powers.{{key}}.attackdefense}}
+                            <option value="ac">AC</option>
+                            <option value="fortitude">Fort</option>
+                            <option value="reflex">Ref</option>
+                            <option value="will">Will</option>
+                        {{/select}}
+                    </select>
                     <input class="damage dice" name="data.powers.{{key}}.damagedice" value="{{damagedice}}" data-dtype="String" placeholder="1d8+3" />
                     <input class="damage type" name="data.powers.{{key}}.damagetype" value="{{damagetype}}" data-dtype="String" placeholder="Fire" />
-                    <span>damage</span>
+                    <span class="damage rollable clickable">damage</span>
                     <textarea class="effect">{{effect}}</textarea>
                 </div>
             </li>

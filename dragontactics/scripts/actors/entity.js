@@ -16,8 +16,6 @@ export class DragonTacticsActor extends Actor {
     // Ability scores
     for (let abl of Object.values(data.abilities)) {
       abl.mod = Math.floor((abl.score - 10) / 2);
-      if (abl.mod < 0) abl.modifier = "" + abl.mod;
-      else abl.modifier = "+" + abl.mod;
     }
     // console.log("Ability scores done")
 
@@ -49,8 +47,6 @@ export class DragonTacticsActor extends Actor {
     for (let skill of Object.values(data.skill)) {
       skill.rank_bonus = this.training(skill.rank);
       skill.mod = data.abilities[skill.ability].mod + skill.rank_bonus + skill.miscbonus + data.class.quest;
-      if (skill.mod < 0) skill.modifier = "" + skill.mod;
-      else skill.modifier = "+" + skill.mod;
     }
 
     for (let type in  data.equipment.equipped) {
@@ -110,6 +106,11 @@ export class DragonTacticsActor extends Actor {
 
   _prepareNPCData(actorData) {
     const data = actorData.data;
+
+    for (let skill of Object.values(data.skill)) {
+      skill.rank_bonus = this.training(skill.rank);
+      skill.mod = data.abilities[skill.ability].mod + skill.rank_bonus + skill.miscbonus;
+    }
   }
 
   training(skill) {
@@ -182,7 +183,7 @@ export class DragonTacticsActor extends Actor {
 
     const parts = ["@damagedice", "@flatdamage"]
     const data = {damagedice: atk.damagedice, flatdamage: atk.flat}
-
+    
     const weapon = this.data.data.equipment.worn.weapons[atk.weapon]
     const hicrit = weapon ? weapon.hicrit : false
     var weapondie = hicrit ? weapon.damage : null
