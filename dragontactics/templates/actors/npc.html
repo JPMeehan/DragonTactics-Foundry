@@ -82,7 +82,7 @@
         </div>
 
         {{!-- Combat Tab --}}
-        <div class="tab combat" data-group="primary" data-tab="combat">
+        <div class="tab combat save-scroll" data-group="primary" data-tab="combat">
             <h2 class="defense">Defenses</h2>
             <ul class="attributes flexrow">
                 <li class="attribute movement">
@@ -163,7 +163,7 @@
                     </div>
                     <div class="power-body">
                         <input class="attack bonus" type="text" name="data.powers.{{key}}.attack.hitbonus" value="{{attack.hitbonus}}" data-dtype="Number" pattern="\d+" placeholder="0"/>
-                        <span class="attack rollable clickable">vs.</span>
+                        <span class="attack rollable clickable" data-power="{{key}}" data-attack="attack">vs.</span>
                         <select class="attack defense" name="data.powers.{{key}}.attack.def" data-dtype="String">
                             {{#select attack.def}}
                                 <option value="Ac">AC</option>
@@ -176,7 +176,7 @@
                         <span>+</span>
                         <input class="damage flat" type="text" name="data.powers.{{key}}.attack.flat" value="{{attack.flat}}" data-dtype="Number" placeholder="3" />
                         <input class="damage type" type="text" name="data.powers.{{key}}.hit.damagetype" value="{{hit.damagetype}}" data-dtype="String" placeholder="Fire" />
-                        <span class="hit-damage rollable clickable">damage</span>
+                        <span class="hit-damage rollable clickable" data-power="{{key}}" data-attack="attack">damage</span>
                         <textarea class="effect">{{effect}}</textarea>
                     </div>
                 </li>
