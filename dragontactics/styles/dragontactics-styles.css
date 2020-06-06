@@ -572,8 +572,11 @@
   background-color: inherit;
   border: none;
 }
+.dragontactics div.combat ol.powers.features-list.features div.power-header input.feature-key {
+  width: 30px;
+}
 .dragontactics div.combat ol.powers.features-list.features div.power-header input.name {
-  width: calc(100% - 30px);
+  width: calc(100% - 70px);
 }
 .dragontactics div.combat ol.powers.features-list.features div.power-body input.attack.bonus {
   width: 50px;

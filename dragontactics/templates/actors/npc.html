@@ -147,6 +147,7 @@
             value="{{data.statistics.immunities}}" data-dtype="String"/>
         <h2>Powers</h2>
         <header class="features-header flexrow">
+            <span class="feature-key">Feature Key</span>
             <span class="feature-label">Name</span>
             <a class="feature-control" data-action="create"><i class="fas fa-plus"></i></a>
         </header>
@@ -154,6 +155,8 @@
         {{#each data.powers as |pwr key|}}
             <li class="power" data-power="{{key}}">
                 <div class="power-header">
+                    <input class="feature-key" type="text" name="data.powers.{{key}}.key" 
+                        value="{{key}}" placeholder="Key"/>
                     <input class="name" type="text" name="data.powers.{{key}}.name" value="{{name}}" placeholder="Power Name" data-dtype="String" />
                     <a class="power-control" data-action="delete"><i class="fas fa-trash"></i></a>
                 </div>
@@ -170,7 +173,7 @@
                     </select>
                     <input class="damage dice" type="text" name="data.powers.{{key}}.attack.damagedice" value="{{attack.damagedice}}" data-dtype="String" placeholder="1d8" />
                     <span>+</span>
-                    <input class="damage dice" type="text" name="data.powers.{{key}}.attack.flat" value="{{attack.flat}}" data-dtype="Number" placeholder="3" />
+                    <input class="damage flat" type="text" name="data.powers.{{key}}.attack.flat" value="{{attack.flat}}" data-dtype="Number" placeholder="3" />
                     <input class="damage type" type="text" name="data.powers.{{key}}.hit.damagetype" value="{{hit.damagetype}}" data-dtype="String" placeholder="Fire" />
                     <span class="hit-damage rollable clickable">damage</span>
                     <textarea class="effect">{{effect}}</textarea>
