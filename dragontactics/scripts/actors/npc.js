@@ -33,20 +33,20 @@ export class NPCDragonTacticsActorSheet extends DragonTacticsActorSheet {
     if (!this.options.editable) return;
 
     // Add or Remove Attribute
-    html.find(".features").on("click", ".feature-control", this._onClickFeatureControl.bind(this));
+    html.find(".features").on("click", ".feature-control", this._onClickPowerControl.bind(this));
   }
 
 
   /**
-   * Listen for click events on an attribute control to modify the composition of features in the sheet
+   * Listen for click events on an attribute control to modify the composition of powers in the sheet
    * @param {MouseEvent} event    The originating left click event
    * @private
    */
-  async _onClickFeatureControl(event) {
+  async _onClickPowerControl(event) {
     event.preventDefault();
     const a = event.currentTarget;
     const action = a.dataset.action;
-    const attrs = this.object.data.data.features;
+    const attrs = this.object.data.data.powers;
     const form = this.form;
 
     // Add new attribute
