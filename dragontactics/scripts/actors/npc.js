@@ -33,7 +33,7 @@ export class NPCDragonTacticsActorSheet extends DragonTacticsActorSheet {
     if (!this.options.editable) return;
 
     // Add or Remove Attribute
-    html.find(".features").on("click", ".feature-control", this._onClickPowerControl.bind(this));
+    html.find(".powers").on("click", ".feature-control", this._onClickPowerControl.bind(this));
   }
 
 
