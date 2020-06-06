@@ -161,7 +161,7 @@
                     <input class="attack bonus" name="data.powers.{{key}}.hitbonus" value="{{attackbonus}}" data-dtype="Number" pattern="\d+"/>
                     <span class="attack rollable clickable">vs.</span>
                     <select class="attack defense" name="data.powers.{{key}}.attackdefense" data-dtype="String">
-                        {{#select data.powers.{{key}}.attackdefense}}
+                        {{#select attackdefense}}
                             <option value="ac">AC</option>
                             <option value="fortitude">Fort</option>
                             <option value="reflex">Ref</option>
