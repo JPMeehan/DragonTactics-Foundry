@@ -71,10 +71,9 @@ export class NPCDragonTacticsActorSheet extends DragonTacticsActorSheet {
   /** @override */
   _updateObject(event, formData) {
 
-    if (this.object.data.type === ("class" || "race")){
-      // Handle the free-form features list
-      const formAttrs = expandObject(formData).data.features || {};
-      const features = Object.values(formAttrs).reduce((obj, v) => {
+      // Handle the free-form powers list
+      const formAttrs = expandObject(formData).data.powers || {};
+      const powers = Object.values(formAttrs).reduce((obj, v) => {
         let k = v["key"].trim();
         if (/[\s\.]/.test(k)) return ui.notifications.error("Attribute keys may not contain spaces or periods");
         delete v["key"];
@@ -82,20 +81,19 @@ export class NPCDragonTacticsActorSheet extends DragonTacticsActorSheet {
         return obj;
       }, {});
 
-      // Remove features which are no longer used
-      for (let k of Object.keys(this.object.data.data.features)) {
-        if (!features.hasOwnProperty(k)) features[`-=${k}`] = null;
+      // Remove powers which are no longer used
+      for (let k of Object.keys(this.object.data.data.powers)) {
+        if (!powers.hasOwnProperty(k)) powers[`-=${k}`] = null;
       }
 
       // Re-combine formData
-      formData = Object.entries(formData).filter(e => !e[0].startsWith("data.features")).reduce((obj, e) => {
+      formData = Object.entries(formData).filter(e => !e[0].startsWith("data.powers")).reduce((obj, e) => {
         obj[e[0]] = e[1];
         return obj;
       }, {
         _id: this.object._id,
-        "data.features": features
+        "data.powers": powers
       });
-    }
     // Update the Item
     return this.object.update(formData);
   }
