@@ -24,7 +24,7 @@ if (form[el.name] instanceof RadioNodeList) {
     let values = "";
     values = inputs.map(i => i.checked ? i.value : false).filter(i => i);
 
-    FD.set(el.name, JSON.stringify(values[0]));
+    FD.set(el.name, values[0]);
     dtypes[el.name] = 'Radio';
 }
 

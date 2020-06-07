@@ -19,7 +19,7 @@ export class NPCDragonTacticsActorSheet extends DragonTacticsActorSheet {
       tabs: [{
         navSelector: ".sheet-tabs",
         contentSelector: ".sheet-body",
-        initial: "description"
+        initial: "combat"
       }]
     });
   }
