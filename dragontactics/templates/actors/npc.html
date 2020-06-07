@@ -10,13 +10,134 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="combat">Combat</a>
         <a class="item" data-tab="description">Biography</a>
         <a class="item" data-tab="abilities">Skills</a>
-        <a class="item" data-tab="combat">Combat</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
+
+        {{!-- Combat Tab --}}
+        <div class="tab combat save-scroll" data-group="primary" data-tab="combat">
+            <h2 class="defense">Defenses</h2>
+            <ul class="attributes flexrow">
+                <li class="attribute movement">
+                    <h4 class="attribute-name box-title">Speed</h4>
+                    <div class="attribute-value">
+                        <input name="data.attributes.speed.value" type="text" value="{{data.attributes.speed.value}}"
+                            placeholder="Land Speed" />
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" class="speed" name="data.attributes.speed.special"
+                            value="{{data.attributes.speed.special}}" placeholder="Special Movement" />
+                    </footer>
+                </li>
+                <li class="attribute health">
+                    <h4 class="attribute-name box-title">Health</h4>
+                    <div class="attribute-value multiple">
+                        <input class="healthvalue" name="data.health.value" type="text" pattern="\d+"
+                            value="{{data.health.value}}" data-dtype="Number" placeholder="10" />
+                        <span class="sep"> / </span>
+                        <input class="max" name="data.health.max" type="text" pattern="\d+"
+                            value="{{data.health.max}}" data-dtype="Number" placeholder="10"  />
+                    </div>
+                    <footer class="attribute-footer">
+                        <input name="data.health.temp" type="text" pattern="\d+" class="half" placeholder="+Temp"
+                            value="{{data.health.temp}}" data-dtype="Number" />
+                        <input name="data.health.tempmax" type="text" pattern="(-)?\d+" class="half"
+                            placeholder="+Temp Max" value="{{data.health.tempmax}}" data-dtype="Number" />
+                    </footer>
+                </li>
+            </ul>
+            <ul class="attributes flexrow">
+                <li class="attribute defense">
+                    <h4 class="attribute-name box-title">AC</h4>
+                    <div class="attribute-value">
+                        <input type="text" name="data.ac.value" value="{{data.ac.value}}" placeholder="ac" data-dtype="Number" pattern="\d+" />
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" pattern="\d+" name="data.ac.miscbonus" value="{{data.ac.miscbonus}}"
+                            placeholder="Misc. Bonus" data-dtype="Number" />
+                    </footer>
+                </li>
+                <li class="attribute defense">
+                    <h4 class="attribute-name box-title">Fortitude</h4>
+                    <div class="attribute-value">
+                        <input type="text" name="data.fortitude.value" value="{{data.fortitude.value}}" placeholder="fortitude" data-dtype="Number" pattern="\d+" />
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" pattern="\d+" name="data.fortitude.miscbonus"
+                            value="{{data.fortitude.miscbonus}}" placeholder="Misc. Bonus" data-dtype="Number" />
+                    </footer>
+                </li>
+                <li class="attribute defense">
+                    <h4 class="attribute-name box-title">Reflex</h4>
+                    <div class="attribute-value">
+                        <input type="text" name="data.reflex.value" value="{{data.reflex.value}}" placeholder="reflex" data-dtype="Number" pattern="\d+" />
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" pattern="\d+" name="data.reflex.miscbonus" value="{{data.reflex.miscbonus}}"
+                            placeholder="Misc. Bonus" data-dtype="Number" />
+                    </footer>
+                </li>
+                <li class="attribute defense">
+                    <h4 class="attribute-name box-title">Will</h4>
+                    <div class="attribute-value">
+                        <input type="text" name="data.will.value" value="{{data.will.value}}" placeholder="will" data-dtype="Number" pattern="\d+" />
+                    </div>
+                    <footer class="attribute-footer">
+                        <input type="text" pattern="\d+" name="data.will.miscbonus" value="{{data.will.miscbonus}}"
+                            placeholder="Misc. Bonus" data-dtype="Number" />
+                    </footer>
+                </li>
+            </ul>
+            <input class="damagemod resistances" type="text" name="data.statistics.resistances" placeholder="Resistances"
+            value="{{data.statistics.resistances}}" data-dtype="String"/>
+        <input class="damagemod vulnerabilities" type="text" name="data.statistics.vulnerabilities" placeholder="Vulnerabilities"
+            value="{{data.statistics.vulnerabilities}}" data-dtype="String"/>
+        <input class="damagemod immunities" type="text" name="data.statistics.immunities" placeholder="Immunities"
+            value="{{data.statistics.immunities}}" data-dtype="String"/>
+        <h2>Powers</h2>
+        <div class="powers">
+            <header class="features-header flexrow">
+                <span class="feature-key">Feature Key</span>
+                <span class="feature-label">Name</span>
+                <a class="feature-control" data-action="create"><i class="fas fa-plus"></i></a>
+            </header>
+            <ol class="features-list powers">
+            {{#each data.powers as |pwr key|}}
+                <li class="power" data-power="{{key}}">
+                    <div class="power-header">
+                        <input class="feature-key" type="text" name="data.powers.{{key}}.key" 
+                            value="{{key}}" placeholder="Key"/>
+                        <input class="name" type="text" name="data.powers.{{key}}.name" value="{{name}}" placeholder="Power Name" data-dtype="String" />
+                        <a class="power-control" data-action="delete"><i class="fas fa-trash"></i></a>
+                    </div>
+                    <div class="power-body">
+                        <input class="attack bonus" type="text" name="data.powers.{{key}}.attack.hitbonus" value="{{attack.hitbonus}}" data-dtype="Number" pattern="\d+" placeholder="0"/>
+                        <span class="attack rollable clickable" data-power="{{key}}" data-attack="attack">vs.</span>
+                        <select class="attack defense" name="data.powers.{{key}}.attack.def" data-dtype="String">
+                            {{#select attack.def}}
+                                <option value="Ac">AC</option>
+                                <option value="Fortitude">Fort</option>
+                                <option value="Reflex">Ref</option>
+                                <option value="Will">Will</option>
+                            {{/select}}
+                        </select>
+                        <input class="damage dice" type="text" name="data.powers.{{key}}.attack.damagedice" value="{{attack.damagedice}}" data-dtype="String" placeholder="1d8" />
+                        <span>+</span>
+                        <input class="damage flat" type="text" name="data.powers.{{key}}.attack.flat" value="{{attack.flat}}" data-dtype="Number" placeholder="3" />
+                        <input class="damage type" type="text" name="data.powers.{{key}}.hit.damagetype" value="{{hit.damagetype}}" data-dtype="String" placeholder="Fire" />
+                        <span class="hit-damage rollable clickable" data-power="{{key}}" data-attack="attack">damage</span>
+                        <textarea class="effect">{{effect}}</textarea>
+                    </div>
+                </li>
+            {{/each}}
+            </ol>
+
+        </div>
+        </div>
 
         {{!-- Biography Tab --}}
         <div class="tab biography active" data-group="primary" data-tab="description">
@@ -79,111 +200,6 @@
                 </ol>
             </div>
             
-        </div>
-
-        {{!-- Combat Tab --}}
-        <div class="tab combat save-scroll" data-group="primary" data-tab="combat">
-            <h2 class="defense">Defenses</h2>
-            <ul class="attributes flexrow">
-                <li class="attribute movement">
-                    <h4 class="attribute-name box-title">Speed</h4>
-                    <div class="attribute-value">
-                        <input name="data.attributes.speed.value" type="text" value="{{data.attributes.speed.value}}"
-                            placeholder="Land Speed" />
-                    </div>
-                    <footer class="attribute-footer">
-                        <input type="text" class="speed" name="data.attributes.speed.special"
-                            value="{{data.attributes.speed.special}}" placeholder="Special Movement" />
-                    </footer>
-                </li>
-                <li class="attribute health">
-                    <h4 class="attribute-name box-title">Health</h4>
-                    <div class="attribute-value multiple">
-                        <input class="healthvalue" name="data.health.value" type="text" pattern="\d+"
-                            value="{{data.health.value}}" data-dtype="Number" placeholder="10" />
-                        <span class="sep"> / </span>
-                        <input class="max" name="data.health.max" type="text" pattern="\d+"
-                            value="{{data.health.max}}" data-dtype="Number" placeholder="10"  />
-                    </div>
-                    <footer class="attribute-footer">
-                        <input name="data.health.temp" type="text" pattern="\d+" class="half" placeholder="+Temp"
-                            value="{{data.health.temp}}" data-dtype="Number" />
-                        <input name="data.health.tempmax" type="text" pattern="(-)?\d+" class="half"
-                            placeholder="+Temp Max" value="{{data.health.tempmax}}" data-dtype="Number" />
-                    </footer>
-                </li>
-            </ul>
-            <ul class="attributes flexrow">
-                <li class="attribute defense">
-                    <h4 class="attribute-name box-title">AC</h4>
-                    <div class="attribute-value">
-                        <input type="text" name="data.ac.value" value="{{data.ac.value}}" placeholder="ac" data-dtype="Number" pattern="\d+" />
-                    </div>
-                </li>
-                <li class="attribute defense">
-                    <h4 class="attribute-name box-title">Fortitude</h4>
-                    <div class="attribute-value">
-                        <input type="text" name="data.fortitude.value" value="{{data.fortitude.value}}" placeholder="fortitude" data-dtype="Number" pattern="\d+" />
-                    </div>
-                </li>
-                <li class="attribute defense">
-                    <h4 class="attribute-name box-title">Reflex</h4>
-                    <div class="attribute-value">
-                        <input type="text" name="data.reflex.value" value="{{data.reflex.value}}" placeholder="reflex" data-dtype="Number" pattern="\d+" />
-                    </div>
-                </li>
-                <li class="attribute defense">
-                    <h4 class="attribute-name box-title">Will</h4>
-                    <div class="attribute-value">
-                        <input type="text" name="data.will.value" value="{{data.will.value}}" placeholder="will" data-dtype="Number" pattern="\d+" />
-                    </div>
-                </li>
-            </ul>
-            <input class="damagemod resistances" type="text" name="data.statistics.resistances" placeholder="Resistances"
-            value="{{data.statistics.resistances}}" data-dtype="String"/>
-        <input class="damagemod vulnerabilities" type="text" name="data.statistics.vulnerabilities" placeholder="Vulnerabilities"
-            value="{{data.statistics.vulnerabilities}}" data-dtype="String"/>
-        <input class="damagemod immunities" type="text" name="data.statistics.immunities" placeholder="Immunities"
-            value="{{data.statistics.immunities}}" data-dtype="String"/>
-        <h2>Powers</h2>
-        <div class="powers">
-            <header class="features-header flexrow">
-                <span class="feature-key">Feature Key</span>
-                <span class="feature-label">Name</span>
-                <a class="feature-control" data-action="create"><i class="fas fa-plus"></i></a>
-            </header>
-            <ol class="features-list powers">
-            {{#each data.powers as |pwr key|}}
-                <li class="power" data-power="{{key}}">
-                    <div class="power-header">
-                        <input class="feature-key" type="text" name="data.powers.{{key}}.key" 
-                            value="{{key}}" placeholder="Key"/>
-                        <input class="name" type="text" name="data.powers.{{key}}.name" value="{{name}}" placeholder="Power Name" data-dtype="String" />
-                        <a class="power-control" data-action="delete"><i class="fas fa-trash"></i></a>
-                    </div>
-                    <div class="power-body">
-                        <input class="attack bonus" type="text" name="data.powers.{{key}}.attack.hitbonus" value="{{attack.hitbonus}}" data-dtype="Number" pattern="\d+" placeholder="0"/>
-                        <span class="attack rollable clickable" data-power="{{key}}" data-attack="attack">vs.</span>
-                        <select class="attack defense" name="data.powers.{{key}}.attack.def" data-dtype="String">
-                            {{#select attack.def}}
-                                <option value="Ac">AC</option>
-                                <option value="Fortitude">Fort</option>
-                                <option value="Reflex">Ref</option>
-                                <option value="Will">Will</option>
-                            {{/select}}
-                        </select>
-                        <input class="damage dice" type="text" name="data.powers.{{key}}.attack.damagedice" value="{{attack.damagedice}}" data-dtype="String" placeholder="1d8" />
-                        <span>+</span>
-                        <input class="damage flat" type="text" name="data.powers.{{key}}.attack.flat" value="{{attack.flat}}" data-dtype="Number" placeholder="3" />
-                        <input class="damage type" type="text" name="data.powers.{{key}}.hit.damagetype" value="{{hit.damagetype}}" data-dtype="String" placeholder="Fire" />
-                        <span class="hit-damage rollable clickable" data-power="{{key}}" data-attack="attack">damage</span>
-                        <textarea class="effect">{{effect}}</textarea>
-                    </div>
-                </li>
-            {{/each}}
-            </ol>
-
-        </div>
         </div>
         
 

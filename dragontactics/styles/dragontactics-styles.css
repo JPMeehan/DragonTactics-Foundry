@@ -573,10 +573,10 @@
   border: none;
 }
 .dragontactics div.combat ol.powers.features-list div.power-header input.feature-key {
-  width: 30px;
+  width: 70px;
 }
 .dragontactics div.combat ol.powers.features-list div.power-header input.name {
-  width: calc(100% - 70px);
+  width: calc(100% - 110px);
 }
 .dragontactics div.combat ol.powers.features-list div.power-body input.attack.bonus {
   width: 50px;
