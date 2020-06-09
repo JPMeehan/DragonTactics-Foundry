@@ -115,7 +115,7 @@ export class DragonTacticsActor extends Actor {
       skill.mod = data.abilities[skill.ability].mod + skill.rank_bonus + skill.miscbonus;
     }
 
-    if (hpscale === "minion") {data.health.max = 1}
+    if (data.config.scale === "minion") {data.health.max = 1}
     else {
       let config = {
         "low": {

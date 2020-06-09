@@ -357,6 +357,9 @@
   overflow-y: auto;
   /* NPC Powers */
 }
+.dragontactics div.combat input.level {
+  width: 30px;
+}
 .dragontactics div.combat h2.defense {
   width: calc(100% - 26px);
   display: inline-block;
