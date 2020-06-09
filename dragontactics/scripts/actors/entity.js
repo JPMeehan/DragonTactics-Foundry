@@ -117,35 +117,23 @@ export class DragonTacticsActor extends Actor {
 
     if (hpscale === "minion") {data.health.max = 1}
     else {
-      let hpmult, hpbase, hpscale;
-  
-      switch (data.config.hp) {
-        case "low":
-          hpmult = 5
-          hpbase = 17
-          break;
-        case "medium":
-          hpmult = 7
-          hpbase = 21
-          break;
-        case "high":
-          hpmult = 9
-          hpbase = 26
+      let config = {
+        "low": {
+          hpmult: 5,
+          hpbase: 17
+        },
+        "medium": {
+          hpmult: 7,
+          hpbase: 21
+        },
+        "high": {
+          hpmult: 9,
+          hpbase: 26
+        }
       }
-
-      switch (data.config.scale) {
-        case "normal":
-          hpscale = 1;
-          break;
-        case "elite":
-          hpscale = 2
-          break;
-        case "solo":
-          hpscale = 5
-          break;
-      }
+      let hpscale = (data.config.scale === "normal" ) ? 1 : (data.config.scale === "elite") ? 2 : 5;
   
-      data.health.max = (data.config.level * hpmult + hpbase)*hpscale;
+      data.health.max = (data.config.level * config[data.config.hp].hpmult + config[data.config.hp].hpbase)*hpscale;
       data.ac.value = 14 + data.config.level + data.ac.miscbonus;
       data.fortitude.value = 12 + data.config.level + data.fortitude.miscbonus;
       data.reflex.value = 12 + data.config.level + data.reflex.miscbonus;
