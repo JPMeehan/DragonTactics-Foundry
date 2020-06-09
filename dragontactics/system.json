@@ -2,7 +2,7 @@
   "name": "dragontactics",
   "title": "Dragon Tactics",
   "description": "A 4th Edition D&D Variant",
-  "version": "1.4.15",
+  "version": "1.4.16",
   "minimumCoreVersion": "0.5.7",
   "compatibleCoreVersion": "0.6.2",
   "templateVersion": 2,
@@ -36,10 +36,18 @@
     },
     {
       "name": "powers",
-      "label": "Powers",
+      "label": "Basic Powers",
       "system": "dragontactics",
       "module": "dragontactics",
       "path": "./packs/powers.db",
+      "entity": "Item"
+    },
+    {
+      "name": "cantrips",
+      "label": "Level 0 powers",
+      "system": "dragontactics",
+      "module": "dragontactics",
+      "path": "./packs/level-0-powers.db",
       "entity": "Item"
     },
     {

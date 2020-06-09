@@ -3,9 +3,7 @@
  * Author: ChaosOS
  */
 
-// import {myHooks} from "./hooks/items.js";
-
-import "./hooks/items.js";
+import "./items/hooks.js";
 
 import {DRAGONTACTICS} from "./config.js"
 import { rollInitiative, setupTurns } from "./initiative/cardInit.js"
