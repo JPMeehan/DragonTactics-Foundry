@@ -20,14 +20,14 @@
 
         {{!-- Biography Tab --}}
         <div class="tab biography active" data-group="primary" data-tab="description">
-            <input class="race" type="text" name="data.race.name" value="{{data.race.name}}" placeholder="Race" />
-            <input class="speech" type="text" name="data.speech" value="{{data.speech}}" placeholder="Speaking Style" />
-            <input class="tic" type="text" name="data.tic" value="{{data.tic}}" placeholder="Speaking Tics" />
-            <input class="desire" type="text" name="data.desire" value="{{data.desire}}" placeholder="Desires" />
-            <input class="fear" type="text" name="data.fear" value="{{data.fear}}" placeholder="Fears" />
-            <input class="weakness" type="text" name="data.weakness" value="{{data.weakness}}" placeholder="Weaknesses" />
-            <input class="secret" type="text" name="data.secret" value="{{data.secret}}" placeholder="Secrets" />
-            <textarea class="quick" name="data.quick" placeholder="Quick Description" >{{quick}}</textarea>
+            <input class="race" type="text" name="data.race.name" value="{{data.race.name}}" placeholder="Race" data-dtype="String" />
+            <input class="speech" type="text" name="data.speech" value="{{data.speech}}" placeholder="Speaking Style" data-dtype="String" />
+            <input class="tic" type="text" name="data.tic" value="{{data.tic}}" placeholder="Speaking Tics" data-dtype="String" />
+            <input class="desire" type="text" name="data.desire" value="{{data.desire}}" placeholder="Desires" data-dtype="String" />
+            <input class="fear" type="text" name="data.fear" value="{{data.fear}}" placeholder="Fears" data-dtype="String" />
+            <input class="weakness" type="text" name="data.weakness" value="{{data.weakness}}" placeholder="Weaknesses" data-dtype="String" />
+            <input class="secret" type="text" name="data.secret" value="{{data.secret}}" placeholder="Secrets" data-dtype="String" />
+            <textarea class="quick" name="data.quick" placeholder="Quick Description" data-dtype="String" >{{quick}}</textarea>
         </div>
 
         {{!-- Skills Tab --}}
@@ -83,6 +83,22 @@
 
         {{!-- Combat Tab --}}
         <div class="tab combat save-scroll" data-group="primary" data-tab="combat">
+            <label>Level: <input class="level" type="text" name="data.config.level" value="{{data.config.level}}" placeholder="0" data-dtype="Number" /></label>
+            <select name="data.config.hp">
+                {{#select data.config.hp}}
+                <option value="low">Low HP</option>
+                <option value="medium">Medium HP</option>
+                <option value="high">High HP</option>
+                {{/select}}
+            </select>
+            <select name="data.config.scale">
+                {{#select data.config.scale}}
+                <option value="minion">Minion</option>
+                <option value="normal">Normal</option>
+                <option value="elite">Elite</option>
+                <option value="solo">Solo</option>
+                {{/select}}
+            </select>
             <h2 class="defense">Defenses</h2>
             <ul class="attributes flexrow">
                 <li class="attribute movement">
@@ -102,8 +118,7 @@
                         <input class="healthvalue" name="data.health.value" type="text" pattern="\d+"
                             value="{{data.health.value}}" data-dtype="Number" placeholder="10" />
                         <span class="sep"> / </span>
-                        <input class="max" name="data.health.max" type="text" pattern="\d+"
-                            value="{{data.health.max}}" data-dtype="Number" placeholder="10"  />
+                        <span class="max" value="{{data.health.max}}">{{data.health.max}}</span>
                     </div>
                     <footer class="attribute-footer">
                         <input name="data.health.temp" type="text" pattern="\d+" class="half" placeholder="+Temp"
@@ -117,7 +132,7 @@
                 <li class="attribute defense">
                     <h4 class="attribute-name box-title">AC</h4>
                     <div class="attribute-value">
-                        <input type="text" name="data.ac.value" value="{{data.ac.value}}" placeholder="ac" data-dtype="Number" pattern="\d+" />
+                        <span class="ac">{{data.ac.value}}</span>
                     </div>
                     <footer class="attribute-footer">
                         <input type="text" pattern="\d+" name="data.ac.miscbonus" value="{{data.ac.miscbonus}}"
@@ -127,7 +142,7 @@
                 <li class="attribute defense">
                     <h4 class="attribute-name box-title">Fortitude</h4>
                     <div class="attribute-value">
-                        <input type="text" name="data.fortitude.value" value="{{data.fortitude.value}}" placeholder="fortitude" data-dtype="Number" pattern="\d+" />
+                        <span class="ac">{{data.fortitude.value}}</span>
                     </div>
                     <footer class="attribute-footer">
                         <input type="text" pattern="\d+" name="data.fortitude.miscbonus"
@@ -137,7 +152,7 @@
                 <li class="attribute defense">
                     <h4 class="attribute-name box-title">Reflex</h4>
                     <div class="attribute-value">
-                        <input type="text" name="data.reflex.value" value="{{data.reflex.value}}" placeholder="reflex" data-dtype="Number" pattern="\d+" />
+                        <span class="ac">{{data.reflex.value}}</span>
                     </div>
                     <footer class="attribute-footer">
                         <input type="text" pattern="\d+" name="data.reflex.miscbonus" value="{{data.reflex.miscbonus}}"
@@ -147,7 +162,7 @@
                 <li class="attribute defense">
                     <h4 class="attribute-name box-title">Will</h4>
                     <div class="attribute-value">
-                        <input type="text" name="data.will.value" value="{{data.will.value}}" placeholder="will" data-dtype="Number" pattern="\d+" />
+                        <span class="ac">{{data.will.value}}</span>
                     </div>
                     <footer class="attribute-footer">
                         <input type="text" pattern="\d+" name="data.will.miscbonus" value="{{data.will.miscbonus}}"

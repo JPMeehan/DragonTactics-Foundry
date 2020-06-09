@@ -81,11 +81,14 @@ export class DragonTacticsActor extends Actor {
           power[attacks[i]].flat = data.class.quest + this.nullprop(data.abilities[power[attacks[i]].hit.abi], "mod") + power[attacks[i]].hit.miscDamage;
           if (power[attacks[i]].hit.weapon.use  && data.equipment.worn.weapons[power[attacks[i]].weapon]) {
             const rgx = new RegExp(Die.rgx.die, "g");
-            power[attacks[i]].damagedice = data.equipment.worn.weapons[power[attacks[i]].weapon].damage.replace(rgx, (match, nd, d, mods) => {
-                nd = (nd * (power[attacks[i]].hit.weapon.dice || 1));
-                mods = mods || "";
-                return nd + "d" + d + mods
-            });
+            if (power[attacks[i]].hit.weapon.dice > 0){
+              power[attacks[i]].damagedice = data.equipment.worn.weapons[power[attacks[i]].weapon].damage.replace(rgx, (match, nd, d, mods) => {
+                  nd = (nd * (power[attacks[i]].hit.weapon.dice || 1));
+                  mods = mods || "";
+                  return nd + "d" + d + mods
+              });
+            }
+            else {power[attacks[i]].damagedice = ""}
           }
           else {
             power[attacks[i]].damagedice = power[attacks[i]].hit.dice
@@ -111,6 +114,45 @@ export class DragonTacticsActor extends Actor {
       skill.rank_bonus = this.training(skill.rank);
       skill.mod = data.abilities[skill.ability].mod + skill.rank_bonus + skill.miscbonus;
     }
+
+    if (hpscale === "minion") {data.health.max = 1}
+    else {
+      let hpmult, hpbase, hpscale;
+  
+      switch (data.config.hp) {
+        case "low":
+          hpmult = 5
+          hpbase = 17
+          break;
+        case "medium":
+          hpmult = 7
+          hpbase = 21
+          break;
+        case "high":
+          hpmult = 9
+          hpbase = 26
+      }
+
+      switch (data.config.scale) {
+        case "normal":
+          hpscale = 1;
+          break;
+        case "elite":
+          hpscale = 2
+          break;
+        case "solo":
+          hpscale = 5
+          break;
+      }
+  
+      data.health.max = (data.config.level * hpmult + hpbase)*hpscale;
+      data.ac.value = 14 + data.config.level + data.ac.miscbonus;
+      data.fortitude.value = 12 + data.config.level + data.fortitude.miscbonus;
+      data.reflex.value = 12 + data.config.level + data.reflex.miscbonus;
+      data.will.value = 12 + data.config.level + data.will.miscbonus;
+    }
+
+    
   }
 
   training(skill) {

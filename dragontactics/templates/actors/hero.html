@@ -321,11 +321,13 @@
                                         <span>{{numberFormat attack.hitbonus decimals=0 sign=true}}</span> vs. 
                                         <span>{{attack.def}}</span>
                                     </div>
+                                    {{#if attack.damagedice}}
                                     <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="attack">
                                         <span>{{attack.damagedice}}</span>
                                         <span>{{numberFormat attack.flat decimals=0 sign=true}}</span>
                                         <span>{{attack.hit.damageType}} damage</span>
                                     </div>
+                                    {{/if}}
                                     {{#if attack.hit.effect}}
                                     <div class="power-row hit-effect">
                                         <span><b>Hit:</b> {{attack.hit.effect}}</span>
@@ -365,11 +367,13 @@
                                         <span>{{numberFormat attackSecondary.hitbonus decimals=0 sign=true}}</span> vs. 
                                         <span>{{attackSecondary.def}}</span>
                                     </div>
+                                    {{#if attackSecondary.damagedice}}
                                     <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="attackSecondary">
                                         <span>{{attackSecondary.damagedice}}</span>
                                         <span>{{numberFormat attackSecondary.flat decimals=0 sign=true}}</span>
                                         <span>{{attackSecondary.hit.damageType}} damage</span>
                                     </div>
+                                    {{/if}}
                                     {{#if attackSecondary.hit.effect}}
                                     <div class="power-row hit-effect">
                                         <span><b>Hit:</b> {{attackSecondary.hit.effect}}</span>
@@ -409,11 +413,13 @@
                                         <span>{{numberFormat attackTertiary.hitbonus decimals=0 sign=true}}</span> vs. 
                                         <span>{{attackTertiary.def}}</span>
                                     </div>
+                                    {{#if attackTertiary.damagedice}}
                                     <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="attackTertiary">
                                         <span>{{attackTertiary.damagedice}}</span>
                                         <span>{{numberFormat attackTertiary.flat decimals=0 sign=true}}</span>
                                         <span>{{attackTertiary.hit.damageType}} damage</span>
                                     </div>
+                                    {{/if}}
                                     {{#if attackTertiary.hit.effect}}
                                     <div class="power-row hit-effect">
                                         <span><b>Hit:</b> {{attackTertiary.hit.effect}}</span>
@@ -513,7 +519,6 @@
                 </ol>
             </div>
         </div>
-        </div>
 
         {{!-- Equipment Tab --}}
         <div class="tab equipment save-scroll" data-group="primary" data-tab="equipment">
@@ -570,7 +575,7 @@
                     Ability to AC:
                     <select name="data.equipment.armor.ability" data-dtype="Number">
                         {{#select data.equipment.armor.ability}}
-                        <option value=0>None (Heavy Armor)</option>
+                        <option value="0">None (Heavy Armor)</option>
                         {{#each data.abilities as |attr key|}}
                         <option value="{{mod}}">{{full}}</option>
                         {{/each}}

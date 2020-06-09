@@ -352,6 +352,11 @@
     },
     "npc": {
       "templates": ["abilities","defenses", "description", "skill"],
+      "config": {
+        "level": 0,
+        "hp": "medium",
+        "scale": "normal"
+      },
       "roleplay": {
         "speech": "",
         "tic": "",
