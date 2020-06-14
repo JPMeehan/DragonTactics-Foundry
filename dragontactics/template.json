@@ -11,7 +11,10 @@
         "height": "",
         "weight": "",
         "quick": "",
-        "kanka": ""
+        "kanka": "",
+        "initiative": {
+          "alertness": false
+        }
       },
       "defenses": {
         "ac": {

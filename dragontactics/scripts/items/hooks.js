@@ -199,7 +199,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
               oldtype = featuretypes[type];
               oldfeatures = data.features[oldtype] || {};
               delete oldfeatures[item._id];
-              oldfeatures[key]["-=" + item._id] = null;
+              oldfeatures["-=" + item._id] = null;
             }
           }
         }
