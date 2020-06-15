@@ -6,6 +6,9 @@
   font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
   font-size: 20px;
 }
+/* ----------------------------------------- */
+/*  Character Sheet                          */
+/* ----------------------------------------- */
 .dragontactics {
   height: 100%;
   /* Sheet Tabs */
@@ -841,6 +844,15 @@
 }
 .dragontactics.sheet.item section.sheet-body {
   height: calc(100% - 145px);
+}
+/* ----------------------------------------- */
+/*  Combat Tracker                           */
+/* ----------------------------------------- */
+ol#combat-tracker li.combatant.bloodied {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+ol#combat-tracker li.combatant.bloodied.active {
+  background-color: rgba(255, 0, 0, 0.2);
 }
 /* ----------------------------------------- */
 /*  Flexbox                                  */
