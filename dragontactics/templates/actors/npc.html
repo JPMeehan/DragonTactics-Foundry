@@ -203,10 +203,10 @@
                                     <option value="Will">Will</option>
                                 {{/select}}
                             </select>
-                            <input class="damage dice" type="text" name="data.powers.{{key}}.attack.damagedice" value="{{attack.damagedice}}" data-dtype="String" placeholder="1d8" />
+                            <input class="damage dice" type="text" name="data.powers.{{key}}.attack.damagedice" value="{{attack.damagedice}}" data-dtype="String" placeholder="XdY" />
                             <span>+</span>
-                            <input class="damage flat" type="text" name="data.powers.{{key}}.attack.flat" value="{{attack.flat}}" data-dtype="Number" placeholder="3" />
-                            <input class="damage type" type="text" name="data.powers.{{key}}.hit.damagetype" value="{{hit.damagetype}}" data-dtype="String" placeholder="Fire" />
+                            <input class="damage flat" type="text" name="data.powers.{{key}}.attack.flat" value="{{attack.flat}}" data-dtype="Number" placeholder="0" />
+                            <input class="damage type" type="text" name="data.powers.{{key}}.hit.damagetype" value="{{hit.damagetype}}" data-dtype="String" placeholder="Type" />
                             <span class="hit-damage rollable clickable" data-power="{{key}}" data-attack="attack">damage</span>
                             <textarea class="effect" name="data.powers.{{key}}.effect">{{effect}}</textarea>
                         </div>

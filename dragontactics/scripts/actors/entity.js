@@ -134,10 +134,10 @@ export class DragonTacticsActor extends Actor {
       let hpscale = (data.config.scale === "normal" ) ? 1 : (data.config.scale === "elite") ? 2 : 5;
   
       data.health.max = (data.config.level * config[data.config.hp].hpmult + config[data.config.hp].hpbase)*hpscale;
-      data.ac.value = 14 + data.config.level + data.ac.miscbonus;
-      data.fortitude.value = 12 + data.config.level + data.fortitude.miscbonus;
-      data.reflex.value = 12 + data.config.level + data.reflex.miscbonus;
-      data.will.value = 12 + data.config.level + data.will.miscbonus;
+      data.ac.value = 15 + Math.floor(data.config.level/2) + data.ac.miscbonus;
+      data.fortitude.value = 13 + Math.floor(data.config.level/2) + data.fortitude.miscbonus;
+      data.reflex.value = 13 + Math.floor(data.config.level/2) + data.reflex.miscbonus;
+      data.will.value = 13 + Math.floor(data.config.level/2) + data.will.miscbonus;
     }
 
     

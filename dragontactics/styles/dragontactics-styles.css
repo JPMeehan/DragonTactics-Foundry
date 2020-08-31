@@ -854,6 +854,12 @@ ol#combat-tracker li.combatant.bloodied {
 ol#combat-tracker li.combatant.bloodied.active {
   background-color: rgba(255, 0, 0, 0.2);
 }
+ol#combat-tracker li.combatant.bloodied.active.hover {
+  background-color: rgba(255, 40, 40, 0.18);
+}
+ol#combat-tracker li.combatant.bloodied.hover {
+  background-color: rgba(255, 40, 40, 0.08);
+}
 /* ----------------------------------------- */
 /*  Flexbox                                  */
 /* ----------------------------------------- */
