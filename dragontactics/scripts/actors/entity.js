@@ -197,12 +197,14 @@ export class DragonTacticsActor extends Actor {
   rollAttack(power, attack, options={}) {
     const atk = this.data.data.powers[power][attack]
 
-    const parts = ["@hitbonus"]
-    const data = {hitbonus: atk.hitbonus}
+    const parts = ["@hitbonus"];
+    const data = {hitbonus: atk.hitbonus};
+    const flavor = this.data.data.powers[power].name + " vs. " + atk.def;
 
     return d20Roll(mergeObject(options, {
       parts: parts,
       data: data,
+      flavor: flavor,
       title: this.data.data.powers[power].name,
       speaker:  ChatMessage.getSpeaker({actor: this})
     }))

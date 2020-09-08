@@ -59,14 +59,14 @@ export async function d20Roll({
         // Handle advantage
         if (adv === 1) {
             nd = 2;
-            flavor += ` (${game.i18n.localize("DND5E.Advantage")})`;
+            flavor += ` (Advantage)`;
             mods += "kh";
         }
 
         // Handle disadvantage
         else if (adv === -1) {
             nd = 2;
-            flavor += ` (${game.i18n.localize("DND5E.Disadvantage")})`;
+            flavor += ` (Disadvantage)`;
             mods += "kl";
         }
 
