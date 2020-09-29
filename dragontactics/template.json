@@ -343,6 +343,11 @@
             "bonus": 0
           },
           "ability": 0
+        },
+        "encumbrance": {
+          "size": "Medium",
+          "value": 0,
+          "max": 30
         }
       },
       "rituals": {},

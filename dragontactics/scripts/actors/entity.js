@@ -104,6 +104,35 @@ export class DragonTacticsActor extends Actor {
       if (data.ritualfilters.category != "none") {ritual.filtered = ritual.filtered && (ritual.category.toLowerCase().indexOf(data.ritualfilters.category) >= 0)}
     }
 
+    const encumbrance = data.equipment.encumbrance;
+
+    switch (encumbrance.size) {
+      case "Tiny":
+        encumbrance.max = 6 + data.abilities.strength.score;
+        break;
+      case "Small":
+        encumbrance.max = 10 + data.abilities.strength.score;
+        break;
+      case "Medium":
+        encumbrance.max = 14 + data.abilities.strength.score;
+        break;
+      case "Large":
+        encumbrance.max = 18 + data.abilities.strength.score;
+        break;
+      default:
+        encumbrance.max = 14 + data.abilities.strength.score; 
+    }
+    encumbrance.value = 0
+
+    for (let [key, category] of Object.entries(data.equipment.worn)) {
+      if (isObjectEmpty(category)) {continue}
+      for (let [key, item] of Object.entries(category)) {
+        encumbrance.value += parseInt(item.size)
+      }
+    }
+
+    encumbrance.pct = encumbrance.value.toFixed / encumbrance.max
+
 
   }
 

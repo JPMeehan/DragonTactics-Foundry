@@ -91,7 +91,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
       const newequipment = {
         "label": item.name,
         "quantity": item.data.quantity,
-        "size": item.data.price,
+        "size": item.data.size,
         "equipped": false
       }
       if (item.data.is.weapon) {
@@ -246,7 +246,7 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
             const newequipment = {
               "label": item.name,
               "quantity": item.data.quantity,
-              "size": item.data.price,
+              "size": item.data.size,
               "equipped": false
             }
             if (item.data.is.weapon) {
