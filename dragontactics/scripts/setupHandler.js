@@ -79,7 +79,8 @@ export class DragonTacticsSetup {
 //     }
 //     // game.actors.get(i).update({"data.equipment.worn": actor.data.equipment.worn})
 // })
-
+// PCs = []
+// game.actors.forEach(i => {if(i.data.type == "hero"){PCs.push(i.data._id)}})
 // PCs.forEach(i => {
 //     actor = duplicate(game.actors.get(i));
 //     console.log(actor.data.equipment.worn)

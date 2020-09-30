@@ -131,7 +131,7 @@ export class DragonTacticsActor extends Actor {
       }
     }
 
-    encumbrance.pct = encumbrance.value.toFixed(2) / encumbrance.max.toFixed(2) * 100
+    encumbrance.pct = Math.round(encumbrance.value.toFixed(2) / encumbrance.max.toFixed(2) * 10000 + 1)/100
 
 
   }
