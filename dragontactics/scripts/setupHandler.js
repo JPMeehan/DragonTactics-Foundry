@@ -59,3 +59,28 @@ export class DragonTacticsSetup {
         // };
     }
 }
+
+// 
+// PCs.forEach(i => {
+//     actor = duplicate(game.actors.get(i));
+//     equipment = {}
+//     actor.items.forEach(
+//         j => {
+//             if(j.type == "equipment") {
+//                 equipment[j._id] = j.data;
+//             }
+//         }
+//     );
+//     for (let [key, category] of Object.entries(actor.data.equipment.worn)) {
+//         if (isObjectEmpty(category)) {continue}
+//         for (let [key, item] of Object.entries(category)) {
+//             console.log(item.size)
+//         }
+//     }
+//     // game.actors.get(i).update({"data.equipment.worn": actor.data.equipment.worn})
+// })
+
+// PCs.forEach(i => {
+//     actor = duplicate(game.actors.get(i));
+//     console.log(actor.data.equipment.worn)
+// })
