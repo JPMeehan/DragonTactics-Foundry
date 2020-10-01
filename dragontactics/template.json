@@ -347,6 +347,7 @@
         "encumbrance": {
           "size": "Medium",
           "value": 0,
+          "encumbered": false,
           "max": 30
         }
       },

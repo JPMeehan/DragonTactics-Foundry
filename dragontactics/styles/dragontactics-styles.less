@@ -813,19 +813,18 @@
 
     .encumbrance {
       background: #7a7971;
-      margin: 1px 15px 0 1px;
       border: 1px solid #191813;
       border-radius: 3px;
       position: absolute;
-      bottoM: 13px;
-      width: calc(100% - 28px)
+      bottom: 13px;
+      width: calc(100% - 28px);
   
       .encumbrance-bar {
         position: absolute;
         top: 1px;
         left: 1px;
         background: #6c8aa5;
-        height: 8px;
+        height: 13px;
         border: 1px solid #cde4ff;
         border-radius: 2px;
       }
@@ -834,8 +833,8 @@
         height: 10px;
         padding: 0 5px;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 1px;
+        right: 33%;
         font-size: 13px;
         line-height: 12px;
         text-align: right;
@@ -871,6 +870,9 @@
       &.encumbered {
         .arrow-up { border-bottom: 4px solid #000; }
         .arrow-down { border-top: 4px solid #000; }
+        .encumbrance-bar {
+          background-color: red;
+        }
       }
     }
   

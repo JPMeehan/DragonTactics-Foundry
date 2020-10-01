@@ -127,12 +127,12 @@ export class DragonTacticsActor extends Actor {
     for (let [key, category] of Object.entries(data.equipment.worn)) {
       if (isObjectEmpty(category)) {continue}
       for (let [key, item] of Object.entries(category)) {
-        encumbrance.value += parseInt(item.size)
+        encumbrance.value += parseInt(item.size) * parseInt(item.quantity)
       }
     }
 
-    encumbrance.pct = Math.round(encumbrance.value.toFixed(2) / encumbrance.max.toFixed(2) * 10000 + 1)/100
-
+    encumbrance.pct = Math.round(encumbrance.value.toFixed(2) / (encumbrance.max.toFixed(2) * 1.5) * 10000 + 1)/100
+    encumbrance.encumbered = encumbrance.value > encumbrance.max;
 
   }
 

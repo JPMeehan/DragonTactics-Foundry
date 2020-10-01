@@ -90,8 +90,8 @@ Hooks.on('createOwnedItem', (actor, item) => {
     case "equipment":
       const newequipment = {
         "label": item.name,
-        "quantity": item.data.quantity,
-        "size": item.data.size,
+        "quantity": parseInt(item.data.quantity),
+        "size": parseInt(item.data.size),
         "equipped": false
       }
       if (item.data.is.weapon) {
@@ -245,8 +245,8 @@ Hooks.on('updateOwnedItem', (actor, item, delta) => {
           if (key === item.data.type) {
             const newequipment = {
               "label": item.name,
-              "quantity": item.data.quantity,
-              "size": item.data.size,
+              "quantity": parseInt(item.data.quantity),
+              "size": parseInt(item.data.size),
               "equipped": false
             }
             if (item.data.is.weapon) {
