@@ -22,6 +22,8 @@ export class DragonTacticsActorSheet extends ActorSheet {
     // Showing and hiding powers
     html.find('.item-details-toggle').click(this._showItemDescription.bind(this));
     
+    // Showing and hiding equipment categories
+    html.find('.equipment-category-toggle').click(this._showEquipmentCategory.bind(this));
     
     // Rollable abilities.
     html.find('.rollable.ability').click(this._onRollAbility.bind(this));
@@ -92,7 +94,15 @@ export class DragonTacticsActorSheet extends ActorSheet {
     this.actor.update({"data.powers" : powers});
   }
 
-  
+  _showEquipmentCategory(event) {
+    event.preventDefault();
+
+    var category = $(event.currentTarget).closest("ol.equipment-category")
+
+    $(category).slideToggle(function() {
+      $(this.toggleClass("open"))
+    })
+  }
 
   _deleteEquipment(itemId, itemType) {
     const equipment = duplicate(this.actor.data.data.equipment.worn[itemType]);
@@ -108,16 +118,16 @@ export class DragonTacticsActorSheet extends ActorSheet {
     this.actor.update({"data.rituals" : rituals});
   }
 
-  _radioFix(event) {
-    event.preventDefault();    
-    let name = event.target.name;
-    if ( form[name] instanceof RadioNodeList ) {
-      const inputs = Array.from(form[name]);
-      let values = "";
-      values = inputs.map(i => i.checked ? i.value : false).filter(i => i);
-      this.actor.update({[`${name}`] : values[0]})
-    }
-  }
+  // _radioFix(event) {
+  //   event.preventDefault();    
+  //   let name = event.target.name;
+  //   if ( form[name] instanceof RadioNodeList ) {
+  //     const inputs = Array.from(form[name]);
+  //     let values = "";
+  //     values = inputs.map(i => i.checked ? i.value : false).filter(i => i);
+  //     this.actor.update({[`${name}`] : values[0]})
+  //   }
+  // }
 
   _showItemDescription(event) {
     event.preventDefault();
@@ -128,7 +138,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
     const description = item.find(".individual-description");
   
     $(description).slideToggle(function() {
-      $(this).toggleClass("open");
+      $(this).toggleClass("hide");
     });
   }
   

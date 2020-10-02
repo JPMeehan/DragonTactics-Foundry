@@ -617,11 +617,16 @@
 .dragontactics div.equipment div.worn h3 {
   font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
   font-size: 20px;
+  margin-left: 2px;
 }
-.dragontactics div.equipment div.worn ol {
+.dragontactics div.equipment div.worn ol.equipment-category {
+  display: none;
   list-style-type: none;
   margin: 7px 0;
   padding: 0;
+}
+.dragontactics div.equipment div.worn ol.equipment-category.open {
+  display: block;
 }
 .dragontactics div.equipment div.worn input[type=radio] {
   display: none;
@@ -644,7 +649,7 @@
 }
 .dragontactics div.equipment div.worn div.armor-abil-select {
   display: inline-block;
-  width: calc(100% - 84px);
+  width: calc(100% - 102px);
   text-align: right;
 }
 .dragontactics div.equipment .encumbrance {
