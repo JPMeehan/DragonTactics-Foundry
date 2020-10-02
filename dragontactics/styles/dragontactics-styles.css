@@ -618,6 +618,8 @@
   font-family: "Nodesto", "Signika", "Palatino Linotype", serif;
   font-size: 20px;
   margin-left: 2px;
+  display: inline-block;
+  width: 80px;
 }
 .dragontactics div.equipment div.worn ol.equipment-category {
   display: none;
@@ -642,10 +644,6 @@
   display: inline-block;
   text-align: right;
   width: 60px;
-}
-.dragontactics div.equipment div.worn h3.armor-head {
-  display: inline-block;
-  width: 80px;
 }
 .dragontactics div.equipment div.worn div.armor-abil-select {
   display: inline-block;

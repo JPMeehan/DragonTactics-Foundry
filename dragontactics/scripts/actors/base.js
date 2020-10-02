@@ -23,7 +23,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
     html.find('.item-details-toggle').click(this._showItemDescription.bind(this));
     
     // Showing and hiding equipment categories
-    html.find('.equipment-category-toggle').click(this._showEquipmentCategory.bind(this));
+    html.find('.equipment-toggle').click(this._showEquipmentCategory.bind(this));
     
     // Rollable abilities.
     html.find('.rollable.ability').click(this._onRollAbility.bind(this));
