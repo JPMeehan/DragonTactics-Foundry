@@ -622,9 +622,13 @@
   width: 80px;
 }
 .dragontactics div.equipment div.worn ol.equipment-category {
+  display: none;
   list-style-type: none;
   margin: 7px 0;
   padding: 0;
+}
+.dragontactics div.equipment div.worn ol.equipment-category.open {
+  display: block;
 }
 .dragontactics div.equipment div.worn input[type=radio] {
   display: none;
