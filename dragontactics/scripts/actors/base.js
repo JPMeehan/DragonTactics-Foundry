@@ -100,7 +100,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
     var category = $(event.currentTarget).nextUntil("a", "ol")
 
     $(category).slideToggle(function() {
-      $(this.toggleClass("open"))
+      $(this).toggleClass("open")
     })
   }
 
