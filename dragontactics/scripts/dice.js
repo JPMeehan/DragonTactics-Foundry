@@ -135,15 +135,15 @@ export async function d20Roll({
             buttons: {
                 advantage: {
                     label: "Advantage",
-                    callback: html => roll = _roll(parts, 1, html[0].children[0])
+                    callback: html => roll = _roll(parts, 1, html[0].querySelector("form"))
                 },
                 normal: {
                     label: "Normal",
-                    callback: html => roll = _roll(parts, 0, html[0].children[0])
+                    callback: html => roll = _roll(parts, 0, html[0].querySelector("form"))
                 },
                 disadvantage: {
                     label: "Disadvantage",
-                    callback: html => roll = _roll(parts, -1, html[0].children[0])
+                    callback: html => roll = _roll(parts, -1, html[0].querySelector("form"))
                 }
             },
             default: "normal",
@@ -269,11 +269,11 @@ export async function damageRoll({
                 critical: {
                     condition: allowCritical,
                     label: "Critical Hit",
-                    callback: html => roll = _roll(parts, true, html[0].children[0])
+                    callback: html => roll = _roll(parts, true, html[0].querySelector("form"))
                 },
                 normal: {
                     label: allowCritical ? "Normal" : "Roll",
-                    callback: html => roll = _roll(parts, false, html[0].children[0])
+                    callback: html => roll = _roll(parts, false, html[0].querySelector("form"))
                 },
             },
             default: "normal",
