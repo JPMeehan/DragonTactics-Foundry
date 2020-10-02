@@ -583,7 +583,10 @@
                     </select>
                 </div>
                 <ol class="armor">
-                    {{#each data.equipment.worn.armor as |item key|}}
+                    <div class="form-fields">
+                        {{radioBoxes data.equipment.equipped.armor data.equipment.worn.armor}}
+                    </div>
+                    <!-- {{#each data.equipment.worn.armor as |item key|}}
                     <li class="item" data-item-id="{{key}}" data-equipment="armor">
                         <label>
                             <input type="radio" name="data.equipment.equipped.armor" value="{{key}}" {{checked equipped}} data-dtype="Radio" />
@@ -598,7 +601,7 @@
                     {{else}}
                     <hr />
                     {{/if}}
-                    {{/each}}
+                    {{/each}} -->
                 </ol>
                 <h3>Arms</h3>
                 <ol class="arms">
@@ -718,7 +721,7 @@
                 <ol class="supplies">
                     {{#each data.equipment.worn.supplies as |item key|}}
                     <li class="item" data-item-id="{{key}}" data-equipment="supplies">
-                        <h4 class="clickable">{{label}}</h4>
+                        <h4>{{label}}</h4>
                         <div class="item-controls">
                             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
