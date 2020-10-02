@@ -619,6 +619,9 @@
   font-size: 20px;
   margin-left: 2px;
   display: inline-block;
+  width: calc(100% - 30px);
+}
+.dragontactics div.equipment div.worn h3.armor {
   width: 80px;
 }
 .dragontactics div.equipment div.worn ol.equipment-category {
