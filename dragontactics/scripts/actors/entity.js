@@ -80,7 +80,7 @@ export class DragonTacticsActor extends Actor {
           power[attacks[i]].hitbonus = data.class.quest + data.abilities[power[attacks[i]].stat].mod + power[attacks[i]].hit.miscAttack + prof;
           power[attacks[i]].flat = data.class.quest + this.nullprop(data.abilities[power[attacks[i]].hit.abi], "mod") + power[attacks[i]].hit.miscDamage;
           if (power[attacks[i]].hit.weapon.use  && data.equipment.worn.weapons[power[attacks[i]].weapon]) {
-            const rgx = new RegExp(Die.rgx.die, "g");
+            const rgx = new RegExp('([0-9]+)?[dD]([0-9fF]+)([a-z][a-z0-9<=>]+)?', "g");
             if (power[attacks[i]].hit.weapon.dice > 0){
               power[attacks[i]].damagedice = data.equipment.worn.weapons[power[attacks[i]].weapon].damage.replace(rgx, (match, nd, d, mods) => {
                   nd = (nd * (power[attacks[i]].hit.weapon.dice || 1));

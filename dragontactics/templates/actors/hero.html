@@ -558,7 +558,7 @@
                     {{#each data.equipment.worn.implements as |item key|}}
                     <li class="item" data-item-id="{{key}}" data-equipment="implements">
                         <label>
-                            <input type="check" name="data.equipment.equipped.implements" value="{{key}}" {{checked equipped}} data-dtype="Radio" />
+                            <input type="radio" name="data.equipment.equipped.implements" value="{{key}}" {{checked equipped}} data-dtype="Radio" />
                             <h4 class="clickable">{{label}}</h4>
                         </label>
                         <div class="item-controls">
