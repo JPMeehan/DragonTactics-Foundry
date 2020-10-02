@@ -97,7 +97,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
   _showEquipmentCategory(event) {
     event.preventDefault();
 
-    var category = $(event.currentTarget).closest("ol.equipment-category")
+    var category = $(event.currentTarget).nextUntil("a", "ol")
 
     $(category).slideToggle(function() {
       $(this.toggleClass("open"))
