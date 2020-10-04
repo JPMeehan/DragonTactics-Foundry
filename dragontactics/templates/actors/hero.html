@@ -82,7 +82,7 @@
                 <ol class="repeating-list save-scroll">
                     {{#each data.skill as |skill key|}}
                     <li class="{{skill.ability}}">
-                        <p class="mod {{#if skill.rank_bonus gte 4}}trained{{/if}}">{{numberFormat mod decimals=0 sign=true}}</p>
+                        <p class="mod {{#if (gte skill.rank_bonus 4)}}trained{{/if}}">{{numberFormat mod decimals=0 sign=true}}</p>
                         <p class="label clickable rollable skill" data-skill="{{key}}">{{label}}</p>
                         <p class="ability">{{ability_short}}</p>
                         <select class="rank" name="data.skill.{{key}}.rank" data-dtype="String">
