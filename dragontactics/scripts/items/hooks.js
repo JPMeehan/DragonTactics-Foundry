@@ -74,6 +74,7 @@ Hooks.on('createOwnedItem', (actor, item) => {
       newpower.attackTertiary["hitbonus"] = "";
       newpower.attackTertiary["flat"] = "";
       newpower.attackTertiary["damagedice"] = "";
+      newpower.effect_dice["flat"] = "";
       switch (newpower.recharge) {
         case "":
           newpower["usage"] = "atwill";

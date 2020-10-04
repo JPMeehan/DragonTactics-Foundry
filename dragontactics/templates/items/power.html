@@ -253,6 +253,36 @@
                 </div>
             </div>
             <h2>Effect</h2>
+            <select name="data.effect_dice.type">
+                {{#select data.effect_dice.type}}
+                <option selected value="">None</option>
+                <option value="damage">Damage</option>
+                <option value="healing">Healing</option>
+                {{/select}}
+            </select>
+            {{#if data.effect_dice.type}}
+                <input type="text" class="dice" name="data.effect_dice.dice" value="{{data.attack.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
+                placeholder="Damage Dice" title="Damage Dice, e.g. 2d6" />
+                <span class="plus">+</span>
+                        <select name="data.effect_dice.abi">
+                            {{#select data.effect_dice.abi}}
+                            <option selected value="none">None</option>
+                            <option value="strength">Strength</option>
+                            <option value="constitution">Constitution</option>
+                            <option value="dexterity">Dexterity</option>
+                            <option value="intelligence">Intelligence</option>
+                            <option value="wisdom">Wisdom</option>
+                            <option value="charisma">Charisma</option>
+                            {{/select}}
+                        </select>
+                        {{#if (eq data.effect_dice.type "damage")}}
+                            <input type="text" class="damagetype" name="data.effect_dice.damageType" value="{{data.attack.hit.damageType}}" data-dtype="String"
+                                placeholder="Damage Type" title="e.g. Fire or Weapon" />
+                            <span>damage</span>
+                        {{else}}
+                            <span>healing</span>
+                        {{/if}}
+            {{/if}}
             <textarea name="data.effect" data-dtype="String" placeholder="Effect" rows="5"
                 title="Effect, e.g. each ally within 25' gains a +2 bonus to AC">{{data.effect}}</textarea>
             <label class="sustain">Sustain:

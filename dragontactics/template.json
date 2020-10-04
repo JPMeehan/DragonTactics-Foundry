@@ -509,6 +509,13 @@
         "miss": ""
       },
       "effect": "",
+      "effect_dice": {
+        "type": "",
+        "dice": "",
+        "abi": "",
+        "damageType": ""
+
+      },
       "sustain": ""
     },
     "race": {

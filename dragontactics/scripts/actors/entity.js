@@ -95,6 +95,9 @@ export class DragonTacticsActor extends Actor {
           }
         }
       }
+      if (power.effect_dice.type) {
+        power.effect_dice.flat = this.nullprop(data.abilities[power[attacks[i]].hit.abi], "mod")
+      }
     }
 
 
@@ -243,11 +246,11 @@ export class DragonTacticsActor extends Actor {
     const atk = this.data.data.powers[power][attack];
 
     const parts = ["@damagedice", "@flatdamage"]
-    const data = {damagedice: atk.damagedice, flatdamage: atk.flat}
+    const data = attack === "effect_dice" ? {damagedice: atk.dice, flatdamage: atk.flat} : {damagedice: atk.damagedice, flatdamage: atk.flat} 
     let quest = 0;
     let hicrit = false;
     let weapondie = null;
-    if (this.datatype == "hero"){
+    if (this.datatype == "hero" && attack != "effect_dice"){
       quest = this.data.data.class.quest;
       const weapon = this.data.data.equipment.worn.weapons[atk.weapon];
       hicrit = weapon ? weapon.hicrit : false
