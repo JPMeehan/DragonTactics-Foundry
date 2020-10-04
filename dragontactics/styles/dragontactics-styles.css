@@ -340,6 +340,9 @@
 .dragontactics div.abilities div.skill p.mod {
   width: 25px;
 }
+.dragontactics div.abilities div.skill p.mod.trained {
+  font-weight: bold;
+}
 .dragontactics div.abilities div.skill p.label {
   width: 100px;
 }
@@ -349,6 +352,9 @@
 }
 .dragontactics div.abilities div.skill select.rank {
   background-color: rgba(0, 0, 0, 0.05);
+}
+.dragontactics div.abilities div.skill select.rank[value="Untrained"] {
+  background-color: rgba(255, 0, 0, 0.1);
 }
 .dragontactics div.abilities div.skill input.miscbonus {
   width: 30px;
@@ -517,6 +523,7 @@
   display: inline-block;
   font-size: large;
   margin: 5px;
+  color: black;
 }
 .dragontactics div.combat div.powers li.powers div.powerheader div.item-controls {
   display: inline-block;
@@ -527,7 +534,7 @@
   background-color: rgba(0, 128, 0, 0.5);
 }
 .dragontactics div.combat div.powers li.powers.encounter div.powerheader {
-  background-color: rgba(255, 0, 0, 0.8);
+  background-color: rgba(178, 34, 34, 0.8);
 }
 .dragontactics div.combat div.powers li.powers.daily div.powerheader {
   background-color: rgba(0, 0, 0, 0.4);
@@ -604,6 +611,12 @@
 .dragontactics div.features div.feats div.item-controls,
 .dragontactics div.features div.flaws div.item-controls {
   display: inline;
+}
+.dragontactics div.features ol {
+  margin-left: 10px;
+}
+.dragontactics div.features ol div.description {
+  margin: 0.5em 0;
 }
 .dragontactics div.equipment {
   overflow-y: auto;

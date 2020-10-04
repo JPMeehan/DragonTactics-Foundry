@@ -403,6 +403,9 @@
 
       p.mod {
         width: 25px;
+        &.trained {
+          font-weight: bold;
+        }
       }
 
       p.label {
@@ -421,6 +424,9 @@
 
       select.rank {
         background-color: rgba(0, 0, 0, 0.05);
+        &[value="Untrained"] {
+          background-color: rgba(255, 0, 0, .1)
+        }
       }
 
       input.miscbonus {
@@ -628,7 +634,8 @@
             width: calc(100% - 80px);
             display: inline-block;
             font-size: large;
-            margin: 5px
+            margin: 5px;
+            color: black;
           }
 
           div.item-controls {
@@ -643,7 +650,7 @@
         }
 
         &.encounter div.powerheader {
-          background-color: rgba(255, 0, 0, .8);
+          background-color: rgba(178, 34, 34, .8);
         }
 
         &.daily div.powerheader {
@@ -750,6 +757,13 @@
 
       div.item-controls {
         display: inline;
+      }
+    }
+
+    ol { 
+      margin-left: 10px;
+      div.description {
+        margin: 0.5em 0;
       }
     }
   }

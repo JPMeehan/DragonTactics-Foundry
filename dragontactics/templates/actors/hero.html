@@ -82,7 +82,7 @@
                 <ol class="repeating-list save-scroll">
                     {{#each data.skill as |skill key|}}
                     <li class="{{skill.ability}}">
-                        <p class="mod">{{numberFormat mod decimals=0 sign=true}}</p>
+                        <p class="mod {{#if skill.rank_bonus gte 4}}trained{{/if}}">{{numberFormat mod decimals=0 sign=true}}</p>
                         <p class="label clickable rollable skill" data-skill="{{key}}">{{label}}</p>
                         <p class="ability">{{ability_short}}</p>
                         <select class="rank" name="data.skill.{{key}}.rank" data-dtype="String">
@@ -468,7 +468,7 @@
                     {{#each data.features.class as |feat key|}}
                     <li>
                         <h3 class="name" name="data.features.class.{{key}}.label">{{label}}</h3>
-                        <p class="description">{{description}}</p>
+                        <div class="description">{{description}}</div>
                     </li>
                     {{/each}}
                 </ol>
