@@ -613,10 +613,10 @@
   display: inline;
 }
 .dragontactics div.features ol {
-  margin-left: 10px;
+  margin-left: 17px;
 }
 .dragontactics div.features ol div.description {
-  margin: 0.5em 0;
+  margin: -0.3em 0 1em 0;
 }
 .dragontactics div.equipment {
   overflow-y: auto;
