@@ -64,10 +64,13 @@ export class DragonTacticsActor extends Actor {
     for (let [key, power] of Object.entries(data.powers)) {
 
       if (filters) {
-        let action = power.action.toLowerCase();
+        let action = power.action.toLowerCase(); // establish the action filters
         if (action.search("free")>=0) {action = "free"}
         else if (action.search("immediate")>=0) {action = "immediate"}
-        power.filtered = data.powerfilters[action]
+        let ready = true;
+        if (power.recharge) {ready = !power.ready}
+
+        power.filtered = data.powerfilters[action] && ready
       }
       else {power.filtered = true}
 

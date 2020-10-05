@@ -144,11 +144,15 @@ export class DragonTacticsActorSheet extends ActorSheet {
   
   async _render(force = false, options = {}) {
     this._saveToggleState();
+    this._saveScrollPos();
   
     await super._render(force, options);
   
     this._setToggleState();
+  
+    this._setScrollPos();
   }
+
   
   _saveToggleState() {
     if (this.form === null)
@@ -203,13 +207,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
     this.actor.rollDamage(power, attack, {event: event});
   }
   
-  async _render(force = false, options = {}) {
-    this._saveScrollPos();
   
-    await super._render(force, options);
-  
-    this._setScrollPos();
-  }
 
   _saveScrollPos() {
     if (this.form === null)

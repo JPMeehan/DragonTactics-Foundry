@@ -298,7 +298,8 @@
         "move": false,
         "minor": false,
         "immediate": false,
-        "free": false
+        "free": false,
+        "ready": false
       },
       "ritualfilters": {
         "category": "none",
