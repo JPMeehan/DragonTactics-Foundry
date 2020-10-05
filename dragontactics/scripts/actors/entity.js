@@ -77,7 +77,7 @@ export class DragonTacticsActor extends Actor {
         }
         
         let ready = true;
-        if (power.recharge && powerfilters.ready) {ready = !power.ready}
+        if (power.recharge && data.powerfilters.ready) {ready = !power.ready}
         
         power.filtered = actionfilter && ready
       }
