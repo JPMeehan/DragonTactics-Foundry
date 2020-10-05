@@ -96,7 +96,7 @@ export class DragonTacticsActor extends Actor {
         }
       }
       if (power.effect_dice.type) {
-        power.effect_dice.flat = this.nullprop(data.abilities[power[attacks[i]].hit.abi], "mod")
+        power.effect_dice.flat = this.nullprop(data.abilities[power.effect_dice.abi], "mod")
       }
     }
 

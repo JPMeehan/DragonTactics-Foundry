@@ -212,12 +212,12 @@ export async function damageRoll({
     // Define inner roll function
 
     const _roll = function (parts, crit, form) {
-        data['bonus'] = form ? form.bonus.value : 0;
+        data['bonus'] = form.bonus.value ? form.bonus.value : 0;
         let roll = new Roll(parts.join("+"), data);
 
         // Modify the damage formula for critical hits
         if (crit === true) {
-            let rollmax = Roll.maximize(roll.formula)._total.toString();
+            let rollmax = roll.evaluate({maximize: true})._total.toString();
             let c = hicrit ? weapondie + " + " : "";
             let q = quest ? quest + critdie + " + " : ""
             roll = new Roll(q + c + rollmax, data);
