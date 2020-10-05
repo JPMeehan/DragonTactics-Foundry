@@ -138,7 +138,7 @@ export class DragonTacticsActorSheet extends ActorSheet {
     const description = item.find(".individual-description");
   
     $(description).slideToggle(function() {
-      $(this).toggleClass("hide");
+      $(this).toggleClass("open");
     });
   }
   
