@@ -261,7 +261,7 @@
                 {{/select}}
             </select>
             {{#if data.effect_dice.type}}
-                <input type="text" class="dice" name="data.effect_dice.dice" value="{{data.attack.hit.dice}}" data-dtype="String" pattern="\d+d\d+"
+                <input type="text" class="dice" name="data.effect_dice.dice" value="{{data.effect_dice.dice}}" data-dtype="String" pattern="\d+d\d+"
                 placeholder="Damage Dice" title="Damage Dice, e.g. 2d6" />
                 <span class="plus">+</span>
                         <select name="data.effect_dice.abi">
@@ -276,7 +276,7 @@
                             {{/select}}
                         </select>
                         {{#if (eq data.effect_dice.type "damage")}}
-                            <input type="text" class="damagetype" name="data.effect_dice.damageType" value="{{data.attack.hit.damageType}}" data-dtype="String"
+                            <input type="text" class="damagetype" name="data.effect_dice.damageType" value="{{data.effect_dice.damageType}}" data-dtype="String"
                                 placeholder="Damage Type" title="e.g. Fire or Weapon" />
                             <span>damage</span>
                         {{else}}
