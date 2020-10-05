@@ -438,7 +438,7 @@
                                     {{/if}}
                                 {{/if}}
                                 {{#if effect_dice.type}}
-                                <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="effect_dice">
+                                <div class="power-row hit-damage clickable rollable" data-power="{{key}}" data-attack="effect_dice">Effect: 
                                     <span>{{effect_dice.dice}}</span>
                                     <span>{{numberFormat effect_dice.flat decimals=0 sign=true}}</span>
                                     <span>{{#if (eq effect_dice.type "damage")}}{{effect_dice.damageType}}{{/if}} {{effect_dice.type}}</span>
